@@ -17,6 +17,7 @@ alias decrypt="sudo udisksctl unlock --block-device /dev/disk/by-uuid/2c50ea3e-0
 alias lock="xset dpms force off; i3lock-fancy"
 alias wm-class="xprop | grep WM_CLASS"
 alias wm-size="xprop | grep REGION"
+alias yayskip='yay -S --mflags --skipinteg'
 
 # packages
 alias remove-residual="dpkg -l | grep '^rc' | awk '{print $2}' | sudo xargs dpkg --purge"
