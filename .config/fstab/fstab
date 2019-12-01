@@ -1,0 +1,8 @@
+/dev/nvme0n1p2 /media/bitlocker/windows fuse.dislocker user-password=xxx,nofail 0 0
+/dev/nvme0n1p5 /media/bitlocker/documents fuse.dislocker user-password=xxx,nofail 0 0
+
+/media/bitlocker/windows/dislocker-file /media/windows auto nofail 0 0
+/media/bitlocker/documents/dislocker-file /media/documents auto nofail 0 0
+
+/media/documents/Games/ /home/used/games none defaults,bind 0 0
+/media/documents/Documents/ /home/used/documents none defaults,bind 0 0
