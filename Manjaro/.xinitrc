@@ -1,0 +1,3 @@
+# ~/.xinitrc
+
+startkde
