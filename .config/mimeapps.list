@@ -1,0 +1,22 @@
+[Default Applications]
+application/octet-stream=yuzu.desktop
+application/pdf=qpdfview.desktop
+application/pdf=qpdfview.desktop
+application/x-gettext-translation=mousepad.desktop
+application/xml=mousepad.desktop
+application/x-wine-extension-ini=mousepad.desktop
+text/plain=mousepad.desktop
+text/html=chromium.desktop
+x-scheme-handler/http=chromium.desktop
+x-scheme-handler/https=chromium.desktop
+x-scheme-handler/about=chromium.desktop
+x-scheme-handler/unknown=chromium.desktop
+x-scheme-handler/msteams=teams.desktop
+
+[Added Associations]
+image/jpeg=chromium.desktop;
+image/png=gimp.desktop;chromium.desktop;
+application/x-ms-dos-executable=wine.desktop;
+text/plain=visual-studio-code-insiders.desktop;
+application/octet-stream=yuzu.desktop;
+application/x-raw-disk-image=engrampa.desktop;
