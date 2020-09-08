@@ -2,7 +2,7 @@
 # KP_0 KP_1 ... KP_9 KP_Add KP_Subtract KP_Multiply KP_Divide KP_Enter KP_Separator
 
 set $mod Mod4
-font pango:mononoki Nerd Font 8
+font pango:Mononoki Nerd Font 20
 floating_modifier Mod1
 
 # start program
