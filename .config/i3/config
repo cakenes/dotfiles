@@ -12,8 +12,8 @@ bindsym $mod+Return		exec --no-startup-id alacritty
 bindsym $mod+Shift+Return       exec --no-startup-id mate-terminal
 bindsym $mod+m			exec --no-startup-id lollypop
 bindsym $mod+Ctrl+m		exec --no-startup-id spotify
-bindsym $mod+l			exec --no-startup-id sleep 0.5 && xset dpms force off
-bindsym $mod+Ctrl+l		exec --no-startup-id xdg-screensaver activate
+bindsym $mod+l			exec --no-startup-id xset s activate && sleep 0.5 && xset dpms force off
+bindsym $mod+Ctrl+l		exec --no-startup-id xset s activate
 bindsym Print                   exec --no-startup-id xfce4-screenshooter -cf
 bindsym $mod+Print		exec --no-startup-id xfce4-screenshooter -cw
 bindsym $mod+y			exec --no-startup-id pamac-manager
