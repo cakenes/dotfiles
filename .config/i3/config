@@ -2,7 +2,7 @@
 # KP_0 KP_1 ... KP_9 KP_Add KP_Subtract KP_Multiply KP_Divide KP_Enter KP_Separator
 
 set $mod Mod4
-font pango:mononoki Nerd Font 8
+font pango:mononoki Nerd Font 10
 floating_modifier Mod1
 
 # start program
@@ -12,7 +12,7 @@ bindsym $mod+Return		exec --no-startup-id alacritty
 bindsym $mod+Shift+Return       exec --no-startup-id mate-terminal
 bindsym $mod+m			exec --no-startup-id lollypop
 bindsym $mod+Ctrl+m		exec --no-startup-id spotify
-bindsym $mod+l                  exec --no-startup-id xset s activate && xset dpms force off
+bindsym $mod+l                  exec --no-startup-id xset s activate && sleep 0.5 && xset dpms force off
 bindsym $mod+Ctrl+l             exec --no-startup-id xset s activate
 bindsym Print                   exec --no-startup-id xfce4-screenshooter -f
 bindsym $mod+Print		exec --no-startup-id xfce4-screenshooter -w
@@ -25,7 +25,7 @@ bindsym $mod+d                  exec --no-startup-id dmenu_run -h 24 -nb '#1c202
 bindsym $mod+Shift+d		exec --no-startup-id rofi -show run
 
 # kill focused window
-bindsym $mod+q			kill
+bindsym $mod+q			exec --no-startup-id ~/.config/scripts/kill.sh
 
 # change focus
 bindsym $mod+Left focus left
@@ -151,12 +151,15 @@ exec --no-startup-id i3-msg 'workspace 1; exec discord'
 exec --no-startup-id i3-msg 'workspace 2; exec steam'
 exec --no-startup-id i3-msg 'workspace 2; exec lutris'
 
+
 # workspace assign
 assign [class="discord"] $ws1
 assign [class="Steam"] $ws2
 assign [class="Lutris"] $ws2
+assign [class="battle.net.exe"] $ws2
 assign [class="steam_app_238960"] $ws8
 assign [class="Minecraft*"] $ws8
+assign [class="wow.exe"] $ws8
 
 # floating
 for_window [title="galculator"] floating enable
