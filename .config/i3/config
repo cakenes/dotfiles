@@ -159,7 +159,7 @@ assign [class="Lutris"] $ws2
 assign [class="battle.net.exe"] $ws2
 assign [class="steam_app_238960"] $ws8
 assign [class="Minecraft*"] $ws8
-assign [class="wow.exe"] $ws8
+assign [class="wow*"] $ws8
 
 # floating
 for_window [title="galculator"] floating enable
@@ -172,6 +172,7 @@ for_window [title="GameConqueror*"] floating enable
 
 # games
 for_window [title="Console window for"] floating enable
+for_window [title="World of Warracft"] fullscreen disable
 
 # border
 for_window [title="xfce4-panel"] border none
@@ -187,6 +188,5 @@ exec_always --no-startup-id feh --bg-center --no-xinerama /home/used/documents/p
 exec_always --no-startup-id xss-lock -- betterlockscreen -l
 exec_always --no-startup-id polybar hdmi0
 exec_always --no-startup-id polybar hdmi1
-#exec_always --no-startup-id polybar hdmi2
 exec_always --no-startup-id picom
 exec_always --no-startup-id setxkbmap -option ctrl:nocaps
