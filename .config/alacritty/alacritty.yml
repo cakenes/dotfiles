@@ -6,10 +6,10 @@ window:
 # Fonts
 font:
   normal:
-    family: Monospace
+    family: Mononoki Nerd Font
     style: Regular
 #  size: 20
-  size: 12
+  size: 11
 
 # Colors (Breeze)
 colors:

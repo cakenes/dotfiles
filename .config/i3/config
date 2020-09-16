@@ -23,15 +23,15 @@ bindsym $mod+Shift+y		exec --no-startup-id manjaro-settings-manager
 bindsym $mod+c			exec --no-startup-id galculator
 bindsym $mod+n			exec --no-startup-id xfce4-taskmanager
 #bindsym $mod+d                  exec --no-startup-id dmenu_run -h 48 -nb '#1c2023' -sf '#FFFFFF' -sb '#2eb398' -nf '#FFFFFF' -fn 'Noto Mono-20'
-bindsym $mod+d                  exec --no-startup-id dmenu_run -h 24 -nb '#1c2023' -sf '#FFFFFF' -sb '#2eb398' -nf '#FFFFFF'
+bindsym $mod+d                  exec --no-startup-id dmenu_run -h 24 -nb '#1c2023' -sf '#FFFFFF' -sb '#2eb398' -nf '#FFFFFF' -fn 'Mononoki Nerd Font-10'
 bindsym $mod+Shift+d		exec --no-startup-id rofi -show run
 bindsym $mod+F12		exec --no-startup-id xrandr --output eDP1 --mode 3840x2160
 bindsym $mod+F11		exec --no-startup-id xrandr --output eDP1 --mode 1920x1080
 bindsym $mod+F10		exec --no-startup-id xrandr --output eDP1 --mode 1280x720
 
 # kill focused window
-bindsym $mod+q			kill
-bindsym $mod+Shift+q		[con_id="__focused__" instance="^(?!dropdown_).*$"] kill
+bindsym $mod+q			exec --no-startup-id ~/.config/scripts/kill.sh
+#bindsym $mod+Shift+q		[con_id="__focused__" instance="^(?!dropdown_).*$"] kill
 
 
 # change focus
@@ -152,6 +152,10 @@ workspace 9 output eDP1
 assign [class="discord"] $ws1
 assign [class="Steam"] $ws2
 assign [class="Lutris"] $ws2
+assign [class="battle.net.exe"] $ws2
+assign [class="steam_app_238960"] $ws8
+assign [class="Minecraft*"] $ws8
+assign [class="wow*"] $ws8
 
 # floating
 for_window [title="galculator"] floating enable
@@ -163,13 +167,23 @@ for_window [title="Add/Remove Software"] floating enable
 for_window [title="Steam Libary Folders"] floating enable
 for_window [title="GameConqueror*"] floating enable
 
+# games
+for_window [title="Console window for"] floating enable
+for_window [title="World of Warcraft"] windowed
+
 # border
 for_window [title="xfce4-panel"] border none
 
+# custom macros
+#bindsym F1 exec --no-startup-id ~/.config/scripts/poe-logout.sh
+#bindsym F5 exec --no-startup-id ~/.config/scripts/poe-hideout.sh
+#bindsym 66 exec --no-startup-id ~/.config/scripts/poe-flask.sh
+
 # autostart
-exec_always --no-startup-id feh --bg-center --no-xinerama /home/used/documents/pictures/wallpapers/current.jpg
+exec_always --no-startup-id feh --bg-center --no-xinerama /home/used/pictures/wallpapers/current.jpg
 exec_always --no-startup-id xss-lock -- betterlockscreen -l
 exec --no-startup-id polybar edp1
 exec_always --no-startup-id picom
 exec_always --no-startup-id setxkbmap -option ctrl:nocaps
 exec_always --no-startup-id xset s blank
+exec_always --no-startup-id xinput set-prop 12 332 0
