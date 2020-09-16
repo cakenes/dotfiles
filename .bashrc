@@ -1,8 +1,5 @@
 # ~/.bashrc
 
-# private
-source ~/.bash_private
-
 # settings
 stty stop ''; stty start '';
 #setxkbmap -option ctrl:nocaps

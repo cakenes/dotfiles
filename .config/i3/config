@@ -2,7 +2,8 @@
 # KP_0 KP_1 ... KP_9 KP_Add KP_Subtract KP_Multiply KP_Divide KP_Enter KP_Separator
 
 set $mod Mod4
-font pango:Mononoki Nerd Font 20
+#font pango:Mononoki Nerd Font 20
+font pango:Mononoki Nerd Font 10
 floating_modifier Mod1
 
 # start program
@@ -21,7 +22,8 @@ bindsym $mod+Ctrl+y		exec --no-startup-id xfce4-settings-manager
 bindsym $mod+Shift+y		exec --no-startup-id manjaro-settings-manager
 bindsym $mod+c			exec --no-startup-id galculator
 bindsym $mod+n			exec --no-startup-id xfce4-taskmanager
-bindsym $mod+d                  exec --no-startup-id dmenu_run -h 48 -nb '#1c2023' -sf '#FFFFFF' -sb '#2eb398' -nf '#FFFFFF' -fn 'Noto Mono-20'
+#bindsym $mod+d                  exec --no-startup-id dmenu_run -h 48 -nb '#1c2023' -sf '#FFFFFF' -sb '#2eb398' -nf '#FFFFFF' -fn 'Noto Mono-20'
+bindsym $mod+d                  exec --no-startup-id dmenu_run -h 24 -nb '#1c2023' -sf '#FFFFFF' -sb '#2eb398' -nf '#FFFFFF'
 bindsym $mod+Shift+d		exec --no-startup-id rofi -show run
 bindsym $mod+F12		exec --no-startup-id xrandr --output eDP1 --mode 3840x2160
 bindsym $mod+F11		exec --no-startup-id xrandr --output eDP1 --mode 1920x1080
@@ -81,7 +83,8 @@ client.focused		#2eb398 #2eb398 #FFFFFF #2eb398 #2eb398
 client.urgent		#3f5ea8 #3f5ea8 #FFFFFF #3f5ea8 #3f5ea8
 
 # i3gaps
-for_window [class="^.*"] border pixel 3
+#for_window [class="^.*"] border pixel 3
+for_window [class="^.*"] border pixel 2
 gaps inner 10
 gaps outer 0
 
@@ -169,3 +172,4 @@ exec_always --no-startup-id xss-lock -- betterlockscreen -l
 exec --no-startup-id polybar edp1
 exec_always --no-startup-id picom
 exec_always --no-startup-id setxkbmap -option ctrl:nocaps
+exec_always --no-startup-id xset s blank
