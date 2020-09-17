@@ -21,11 +21,12 @@ bindsym $mod+Ctrl+y		exec --no-startup-id xfce4-settings-manager
 bindsym $mod+Shift+y		exec --no-startup-id manjaro-settings-manager
 bindsym $mod+c			exec --no-startup-id galculator
 bindsym $mod+n			exec --no-startup-id xfce4-taskmanager
-bindsym $mod+d                  exec --no-startup-id dmenu_run -h 24 -nb '#1c2023' -sf '#FFFFFF' -sb '#2eb398' -nf '#FFFFFF'
+bindsym $mod+d                  exec --no-startup-id dmenu_run -h 24 -nb '#1c2023' -sf '#FFFFFF' -sb '#2eb398' -nf '#FFFFFF' -fn 'Mononoki Nerd Font-10'
 bindsym $mod+Shift+d		exec --no-startup-id rofi -show run
 
 # kill focused window
 bindsym $mod+q			exec --no-startup-id ~/.config/scripts/kill.sh
+#bindsym $mod+Shift+q		[con_id="__focused__" instance="^(?!dropdown_).*$"] kill
 
 # change focus
 bindsym $mod+Left focus left
@@ -172,16 +173,16 @@ for_window [title="GameConqueror*"] floating enable
 
 # games
 for_window [title="Console window for"] floating enable
-for_window [title="World of Warracft"] fullscreen disable
+for_window [title="World of Warracft"] windowed
 
 # border
 for_window [title="xfce4-panel"] border none
 
 # custom macros
-#bindsym $mod+l			exec --no-startup-id mate-screensaver-command -a
 #bindsym F1			exec --no-startup-id ~/.config/scripts/poe-logout.sh
 #bindsym F5			exec --no-startup-id ~/.config/scripts/poe-hideout.sh
 #bindcode 66			exec --no-startup-id ~/.config/scripts/poe-flask.sh
+bindcode 66			exec --no-startup-id ~/.config/scripts/mage-dps.sh
 
 # autostart
 exec_always --no-startup-id feh --bg-center --no-xinerama /home/used/documents/pictures/wallpapers/current.jpg
@@ -190,3 +191,4 @@ exec_always --no-startup-id polybar hdmi0
 exec_always --no-startup-id polybar hdmi1
 exec_always --no-startup-id picom
 exec_always --no-startup-id setxkbmap -option ctrl:nocaps
+exec_always --no-startup-id xset s blank

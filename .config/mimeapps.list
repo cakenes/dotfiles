@@ -14,7 +14,6 @@ text/plain=visual-studio-code-insiders.desktop;mousepad.desktop;
 application/x-java-archive=engrampa.desktop;
 text/x-csharp=visual-studio-code-insiders.desktop;
 image/png=gimp.desktop;
-application/octet-stream=yuzu.desktop;
+application/octet-stream=mousepad.desktop;yuzu.desktop;
 x-scheme-handler/http=exo-web-browser.desktop;
 x-scheme-handler/https=exo-web-browser.desktop;
-
