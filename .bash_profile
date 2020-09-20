@@ -10,6 +10,7 @@ export AUDIO=lollypop
 export EDITOR=nano
 export DOTNET_ROOT=/usr/share/dotnet
 export PATH=$PATH:/usr/share/dotnet
+export JDK_HOME=/usr/lib/jvm/java-14-openjdk
 
 #export GDK_SCALE=2
 #export GTK_DPI_SCALE=0.5

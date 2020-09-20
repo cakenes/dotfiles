@@ -180,7 +180,7 @@ for_window [title="xfce4-panel"] border none
 #bindsym 66 exec --no-startup-id ~/.config/scripts/poe-flask.sh
 
 # autostart
-exec_always --no-startup-id feh --bg-center --no-xinerama /home/used/pictures/wallpapers/current.jpg
+exec_always --no-startup-id feh --bg-scale --no-xinerama --auto-zoom /home/used/pictures/wallpapers/current.jpg
 exec_always --no-startup-id xss-lock -- betterlockscreen -l
 exec --no-startup-id polybar edp1
 exec_always --no-startup-id picom
