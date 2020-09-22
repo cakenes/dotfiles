@@ -179,10 +179,10 @@ for_window [title="World of Warracft"] windowed
 for_window [title="xfce4-panel"] border none
 
 # custom macros
-#bindsym F1			exec --no-startup-id ~/.config/scripts/poe-logout.sh
-#bindsym F5			exec --no-startup-id ~/.config/scripts/poe-hideout.sh
-#bindcode 66			exec --no-startup-id ~/.config/scripts/poe-flask.sh
-bindcode 66			exec --no-startup-id ~/.config/scripts/mage-dps.sh
+bindsym F1			exec --no-startup-id ~/.config/scripts/poe-logout.sh
+bindsym F5			exec --no-startup-id ~/.config/scripts/poe-hideout.sh
+bindcode 66			exec --no-startup-id ~/.config/scripts/poe-flask.sh
+#bindcode 66			exec --no-startup-id ~/.config/scripts/mage-dps.sh
 
 # autostart
 exec_always --no-startup-id feh --bg-center --no-xinerama /home/used/documents/pictures/wallpapers/current.jpg
@@ -191,4 +191,3 @@ exec_always --no-startup-id polybar hdmi0
 exec_always --no-startup-id polybar hdmi1
 exec_always --no-startup-id picom
 exec_always --no-startup-id setxkbmap -option ctrl:nocaps
-exec_always --no-startup-id xset s blank
