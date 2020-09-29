@@ -13,6 +13,8 @@ alias grep="grep --color=auto"
 alias wm-class="xprop | grep WM_CLASS"
 alias wm-name="xprop | grep 'WM_NAME(STRING)'"
 alias wm-size="xprop | grep REGION"
+#alias key-code="xev | awk -F'[ )]+' '/^KeyPress/ { a[NR+2] } NR in a { printf "%-3s %s\n", $5, $8 }'"
+
 alias yayskip="yay -S --mflags --skipinteg"
 alias spotify="/opt/spotify/spotify --force-device-scale-factor=2.5 %U"
 alias cpu-stats="watch -n.5 'cat /proc/cpuinfo | grep \"^[c]pu MHz\" && echo ----- && sensors | grep Core && echo ----- && sensors | grep fan'"
