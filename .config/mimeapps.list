@@ -5,6 +5,7 @@ application/x-gettext-translation=mousepad.desktop
 application/xml=mousepad.desktop
 application/x-wine-extension-ini=mousepad.desktop
 text/plain=mousepad.desktop
+x-scheme-handler/msteams=teams.desktop
 
 [Added Associations]
 application/x-shellscript=mousepad.desktop;vim.desktop;
