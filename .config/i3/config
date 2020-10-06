@@ -21,7 +21,8 @@ bindsym $mod+Ctrl+y		exec --no-startup-id xfce4-settings-manager
 bindsym $mod+Shift+y		exec --no-startup-id manjaro-settings-manager
 bindsym $mod+c			exec --no-startup-id galculator
 bindsym $mod+n			exec --no-startup-id xfce4-taskmanager
-bindsym $mod+d                  exec --no-startup-id dmenu_run -h 24 -nb '#1c2023' -sf '#FFFFFF' -sb '#2eb398' -nf '#FFFFFF' -fn 'Mononoki Nerd Font-10'
+#bindsym $mod+d                  exec --no-startup-id dmenu_run -h 24 -nb '#1c2023' -sf '#FFFFFF' -sb '#2eb398' -nf '#FFFFFF' -fn 'Mononoki Nerd Font-10'
+bindsym $mod+d                  exec --no-startup-id dmenu_run -h 24 -nb '#1c2023' -sf '#FFFFFF' -sb '#5294e2' -nf '#FFFFFF' -fn 'Mononoki Nerd Font-10'
 bindsym $mod+Shift+d		exec --no-startup-id rofi -show run
 
 # kill focused window
@@ -75,7 +76,7 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # i3wm
-client.focused		#2eb398 #2eb398 #FFFFFF #2eb398 #2eb398
+client.focused		#5294e2 #5294e2 #FFFFFF #5294e2 #5294e2
 client.urgent		#3f5ea8 #3f5ea8 #FFFFFF #3f5ea8 #3f5ea8
 #client.focused		#207e6b #207e6b #FFFFFF #207e6b #207e6b
 #client.urgent		#2eb398 #2eb398 #FFFFFF #2eb398 #2eb398
@@ -185,7 +186,7 @@ bindcode 66			exec --no-startup-id ~/.config/scripts/poe-flask.sh
 #bindcode 66			exec --no-startup-id ~/.config/scripts/wow-dps.sh
 
 # autostart
-exec_always --no-startup-id feh --bg-center --no-xinerama /home/used/documents/pictures/wallpapers/current.jpg
+exec_always --no-startup-id feh --bg-center --no-xinerama /home/used/pictures/wallpapers/current.jpg
 exec_always --no-startup-id xss-lock -- betterlockscreen -l
 exec_always --no-startup-id polybar hdmi0
 exec_always --no-startup-id polybar hdmi1
