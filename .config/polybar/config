@@ -24,7 +24,7 @@ pin-workspaces = true
 ; focused = Active workspace on focused monitor
 label-focused = %index%
 label-focused-foreground = #000000
-label-focused-background = #2eb398
+label-focused-background = #5294e2
 label-focused-padding = 1
 
 ; unfocused = Inactive workspace on any monitor
@@ -41,6 +41,6 @@ label-visible-padding = 1
 
 ; urgent = Workspace with urgency hint set
 label-urgent = %index%
-label-urgent-foreground = #2eb398
-label-urgent-background = #1b2224
+label-urgent-foreground = #000000
+label-urgent-background = #3f5ea8
 label-urgent-padding = 1
