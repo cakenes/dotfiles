@@ -13,15 +13,13 @@ alias grep="grep --color=auto"
 alias wm-class="xprop | grep WM_CLASS"
 alias wm-name="xprop | grep 'WM_NAME(STRING)'"
 alias wm-size="xprop | grep REGION"
-#alias key-code="xev | awk -F'[ )]+' '/^KeyPress/ { a[NR+2] } NR in a { printf "%-3s %s\n", $5, $8 }'"
-
+alias yayorphan="pacman -Rscn $(pacman -Qqdt)"
 alias yayskip="yay -S --mflags --skipinteg"
 alias spotify="/opt/spotify/spotify --force-device-scale-factor=2.5 %U"
 alias cpu-stats="watch -n.5 'cat /proc/cpuinfo | grep \"^[c]pu MHz\" && echo ----- && sensors | grep Core && echo ----- && sensors | grep fan'"
 alias cpu-speed="watch -n.5 'cat /proc/cpuinfo | grep \"^[c]pu MHz\"'"
 alias cpu-temp="watch -n.5 'sensors | grep Core'"
 alias cpu-fan="watch -n.5 'sensors | grep fan'"
-
 
 # logs
 function log-search() { sudo grep -rsh $1 /var/log | sort; }
