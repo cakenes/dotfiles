@@ -171,6 +171,7 @@ for_window [title="Add New Items"] floating enable
 for_window [title="Game Info"] floating enable
 for_window [title="Add/Remove Software"] floating enable
 for_window [title="GameConqueror*"] floating enable
+for_window [title="Bluetooth Devices"] floating enable
 
 # games
 for_window [title="Console window for"] floating enable
