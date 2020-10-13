@@ -14,7 +14,7 @@ x-scheme-handler/unknown=chromium.desktop
 x-scheme-handler/msteams=teams.desktop
 
 [Added Associations]
-image/jpeg=chromium.desktop;
+image/jpeg=gimp.desktop;chromium.desktop;
 image/png=gimp.desktop;chromium.desktop;
 application/x-ms-dos-executable=wine.desktop;
 text/plain=visual-studio-code.desktop;visual-studio-code-insiders.desktop;
