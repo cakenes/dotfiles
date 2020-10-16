@@ -16,4 +16,4 @@ application/x-java-archive=engrampa.desktop;
 text/x-csharp=visual-studio-code-insiders.desktop;
 image/png=gimp.desktop;
 application/octet-stream=mousepad.desktop;yuzu.desktop;
-
+application/x-alpm-package=xarchiver.desktop;
