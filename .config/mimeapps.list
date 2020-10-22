@@ -12,6 +12,7 @@ x-scheme-handler/https=chromium.desktop
 x-scheme-handler/about=chromium.desktop
 x-scheme-handler/unknown=chromium.desktop
 x-scheme-handler/msteams=teams.desktop
+x-scheme-handler/discord-471872241299226636=discord-471872241299226636.desktop
 
 [Added Associations]
 image/jpeg=gimp.desktop;chromium.desktop;
