@@ -174,9 +174,7 @@ for_window [title="World of Warcraft"] windowed
 for_window [title="xfce4-panel"] border none
 
 # custom macros
-#bindsym F1 exec --no-startup-id ~/.config/scripts/poe-logout.sh
-#bindsym F5 exec --no-startup-id ~/.config/scripts/poe-hideout.sh
-#bindsym 66 exec --no-startup-id ~/.config/scripts/poe-flask.sh
+bindsym $mod+Ctrl+BackSpace exec ~/.config/scripts/cpu-turbo.sh
 
 # autostart
 exec_always --no-startup-id feh --bg-scale --no-xinerama --auto-zoom /home/used/pictures/wallpapers/current.jpg
@@ -188,6 +186,6 @@ exec_always --no-startup-id xset s blank
 exec_always --no-startup-id xinput set-prop 12 332 0
 
 # power-manager fixes
-exec_always --no-startup-id xfce4-power-manager --restart
+exec_always --no-startup-id sleep 10 && xfce4-power-manager --restart
 #exec_always --no-startup-id xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/logind-handle-lid-switch -s true && sleep 0.5 && xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/logind-handle-lid-switch -s false
 #exec_always --no-startup-id xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/handle-brightness-keys -s false && sleep 0.5 && xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/handle-brightness-keys -s true
