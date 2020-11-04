@@ -21,3 +21,4 @@ application/x-ms-dos-executable=wine.desktop;
 text/plain=visual-studio-code.desktop;visual-studio-code-insiders.desktop;
 application/octet-stream=yuzu.desktop;
 application/x-raw-disk-image=engrampa.desktop;
+application/x-cd-image=xarchiver.desktop;
