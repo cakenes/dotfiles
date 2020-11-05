@@ -5,7 +5,7 @@ if [ -f ~/.bashrc ]; then
 fi
 
 export TERMINAL=alacritty
-export FILE=dolphin
+export FILE=thunar
 export AUDIO=lollypop
 export EDITOR=nano
 export DOTNET_ROOT=/usr/share/dotnet
