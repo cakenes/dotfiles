@@ -174,7 +174,7 @@ for_window [title="World of Warcraft"] windowed
 for_window [title="xfce4-panel"] border none
 
 # custom macros
-bindsym $mod+Ctrl+BackSpace exec ~/.config/scripts/cpu-turbo.sh
+bindsym $mod+Ctrl+BackSpace exec ~/.config/scripts/cpu-perf.sh
 
 # autostart
 exec_always --no-startup-id feh --bg-scale --no-xinerama --auto-zoom /home/used/pictures/wallpapers/current.jpg
