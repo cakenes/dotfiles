@@ -184,6 +184,7 @@ for_window [title="xfce4-panel"] border none
 #bindsym F5			exec --no-startup-id ~/.config/scripts/poe-hideout.sh
 #bindcode 66			exec --no-startup-id ~/.config/scripts/private/poe-flask.sh
 bindcode 66			exec --no-startup-id ~/.config/scripts/private/wow-dps.sh
+bindcode 104			exec --no-startup-id ~/.config/scripts/private/wow-fish.sh
 
 # autostart
 exec_always --no-startup-id feh --bg-center --no-xinerama /home/used/pictures/wallpapers/current.jpg
