@@ -190,7 +190,7 @@ exec_always --no-startup-id xinput set-prop 12 332 0
 #exec_always --no-startup-id xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/lid-action-on-battery -s 3 && sleep 0.5 && xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/lid-action-on-battery -s 0
 #exec_always --no-startup-id xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/logind-handle-lid-switch -s true && sleep 0.5 && xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/logind-handle-lid-switch -s false
 #exec_always --no-startup-id xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/handle-brightness-keys -s false && sleep 0.5 && xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/handle-brightness-keys -s true
-exec_always --no-startup-id sleep 30 && xfce4-power-manager --restart
+exec_always --no-startup-id sleep 10 && xfce4-power-manager --restart
 
 # cpu performance
-exec --no-startup-id sleep 30 && exec ~/.config/scripts/cpu-perf.sh
+exec --no-startup-id sleep 10 && exec ~/.config/scripts/cpu-perf.sh
