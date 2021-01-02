@@ -22,4 +22,4 @@ application/vnd.sqlite3=mousepad.desktop;
 text/x-c++src=mousepad.desktop;
 inode/directory=exo-file-manager.desktop;
 x-scheme-handler/trash=exo-file-manager.desktop;
-
+text/x-lua=visual-studio-code.desktop;
