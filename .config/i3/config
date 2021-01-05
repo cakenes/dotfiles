@@ -161,6 +161,7 @@ assign [class="battle.net.exe"] $ws2
 assign [class="steam_app_238960"] $ws8
 assign [class="Minecraft*"] $ws8
 assign [class="wow*"] $ws8
+assign [class="OxygenNotIncluded"] $ws8
 
 # floating
 for_window [title="galculator"] floating enable
