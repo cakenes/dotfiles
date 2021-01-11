@@ -148,13 +148,13 @@ workspace 8 output eDP1
 workspace 9 output eDP1
 
 # workspace assign
-assign [class="discord"] $ws1
-assign [class="Steam"] $ws2
-assign [class="Lutris"] $ws2
-assign [class="battle.net.exe"] $ws2
-assign [class="steam_app_238960"] $ws8
-assign [class="Minecraft*"] $ws8
-assign [class="wow*"] $ws8
+# assign [class="discord"] $ws1
+# assign [class="Steam"] $ws2
+# assign [class="Lutris"] $ws2
+# assign [class="battle.net.exe"] $ws2
+# assign [class="steam_app_238960"] $ws8
+# assign [class="Minecraft*"] $ws8
+# assign [class="wow*"] $ws8
 
 # floating
 for_window [title="galculator"] floating enable
@@ -193,4 +193,4 @@ exec_always --no-startup-id xinput set-prop 12 332 0
 exec_always --no-startup-id sleep 10 && xfce4-power-manager --restart
 
 # cpu performance
-exec --no-startup-id sleep 5 && exec ~/.config/scripts/cpu-perf.sh
+exec --no-startup-id sleep 10 && exec ~/.config/scripts/cpu-perf.sh
