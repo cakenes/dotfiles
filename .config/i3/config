@@ -193,4 +193,4 @@ exec_always --no-startup-id xinput set-prop 12 332 0
 exec_always --no-startup-id sleep 10 && xfce4-power-manager --restart
 
 # cpu performance
-exec --no-startup-id sleep 10 && exec ~/.config/scripts/cpu-perf.sh
+exec --no-startup-id sleep 5 && exec ~/.config/scripts/cpu-perf.sh
