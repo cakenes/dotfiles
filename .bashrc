@@ -9,11 +9,12 @@ HISTSIZE= HISTFILESIZE= # Infinite history.
 
 # alias
 alias ls="ls --color=auto"
+alias df="df -Tha --total"
+alias free="free -mt"
 alias grep="grep --color=auto"
 alias wm-class="xprop | grep WM_CLASS"
 alias wm-name="xprop | grep 'WM_NAME(STRING)'"
 alias wm-size="xprop | grep REGION"
-
 alias yayorphan="sudo pacman -Qtdq | sudo pacman -Rns -"
 alias yayskip="yay -S --mflags --skipinteg"
 alias spotify="/opt/spotify/spotify --force-device-scale-factor=2.5 %U"
