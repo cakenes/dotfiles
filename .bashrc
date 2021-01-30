@@ -9,6 +9,7 @@ HISTSIZE= HISTFILESIZE= # infinite history
 
 # alias
 alias ls="ls --color=auto"
+alias ll="ls -la --color=auto"
 alias df="df -Tha --total"
 alias free="free -mt"
 alias grep="grep --color=auto"
