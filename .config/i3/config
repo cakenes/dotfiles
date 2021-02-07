@@ -181,15 +181,19 @@ bindcode 66			exec --no-startup-id ~/.config/scripts/private/poe-flask.sh
 #bindcode 66			exec --no-startup-id ~/.config/scripts/private/wow-dps.sh
 #bindcode 135			exec --no-startup-id ~/.config/scripts/private/wow-fish.sh
 
-# autostart workspace-specific
+# autostart apps
+exec --no-startup-id joplin-desktop
 exec --no-startup-id i3-msg 'workspace 1; exec discord'
 exec --no-startup-id i3-msg 'workspace 2; exec steam'
 exec --no-startup-id i3-msg 'workspace 2; exec lutris'
 
 # autostart
-exec_always --no-startup-id feh --bg-center --no-xinerama /home/used/pictures/wallpapers/current.jpg
-exec_always --no-startup-id xss-lock -- betterlockscreen -l
+exec_always --no-startup-id picom
 exec_always --no-startup-id polybar hdmi0
 exec_always --no-startup-id polybar hdmi1
-exec_always --no-startup-id picom
 exec_always --no-startup-id setxkbmap -option ctrl:nocaps
+exec_always --no-startup-id xss-lock -- betterlockscreen -l
+exec_always --no-startup-id feh --bg-center --no-xinerama /home/used/pictures/wallpapers/current.jpg
+
+
+
