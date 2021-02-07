@@ -147,12 +147,6 @@ workspace 6 output HDMI-0
 workspace 7 output HDMI-0
 workspace 8 output HDMI-0
 
-# autostart workspace-specific
-exec --no-startup-id i3-msg 'workspace 1; exec discord'
-exec --no-startup-id i3-msg 'workspace 2; exec steam'
-exec --no-startup-id i3-msg 'workspace 2; exec lutris'
-
-
 # workspace assign
 assign [class="discord"] $ws1
 assign [class="Steam"] $ws2
@@ -186,6 +180,11 @@ bindsym F5			exec --no-startup-id ~/.config/scripts/poe-hideout.sh
 bindcode 66			exec --no-startup-id ~/.config/scripts/private/poe-flask.sh
 #bindcode 66			exec --no-startup-id ~/.config/scripts/private/wow-dps.sh
 #bindcode 135			exec --no-startup-id ~/.config/scripts/private/wow-fish.sh
+
+# autostart workspace-specific
+exec --no-startup-id i3-msg 'workspace 1; exec discord'
+exec --no-startup-id i3-msg 'workspace 2; exec steam'
+exec --no-startup-id i3-msg 'workspace 2; exec lutris'
 
 # autostart
 exec_always --no-startup-id feh --bg-center --no-xinerama /home/used/pictures/wallpapers/current.jpg
