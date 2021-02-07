@@ -176,14 +176,17 @@ for_window [title="xfce4-panel"] border none
 # custom macros
 bindsym $mod+Ctrl+BackSpace exec ~/.config/scripts/cpu-perf.sh
 
+# autostart apps
+exec --no-startup-id joplin-desktop
+
 # autostart
-exec_always --no-startup-id feh --bg-scale --no-xinerama --auto-zoom /home/used/pictures/wallpapers/current.jpg
-exec_always --no-startup-id xss-lock -- betterlockscreen -l
-exec --no-startup-id polybar edp1
 exec_always --no-startup-id picom
-exec_always --no-startup-id setxkbmap -option ctrl:nocaps
 exec_always --no-startup-id xset s blank
+exec_always --no-startup-id polybar edp1
 exec_always --no-startup-id xinput set-prop 12 332 0
+exec_always --no-startup-id setxkbmap -option ctrl:nocaps
+exec_always --no-startup-id xss-lock -- betterlockscreen -l
+exec_always --no-startup-id feh --bg-scale --no-xinerama --auto-zoom /home/used/pictures/wallpapers/current.jpg
 
 # power-manager fixes
 #exec_always --no-startup-id xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/lid-action-on-ac -s 3 && sleep 0.5 && xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/lid-action-on-ac -s 0
