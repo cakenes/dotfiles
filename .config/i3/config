@@ -193,8 +193,8 @@ exec_always --no-startup-id feh --bg-scale --no-xinerama --auto-zoom /home/used/
 #exec_always --no-startup-id xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/lid-action-on-battery -s 3 && sleep 0.5 && xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/lid-action-on-battery -s 0
 #exec_always --no-startup-id xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/logind-handle-lid-switch -s true && sleep 0.5 && xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/logind-handle-lid-switch -s false
 #exec_always --no-startup-id xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/handle-brightness-keys -s false && sleep 0.5 && xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/handle-brightness-keys -s true
-exec_always --no-startup-id xfce4-power-manager
-exec_always --no-startup-id xfce4-power-manager --restart
+exec_always --no-startup-id xfce4-power-manager --daemon
+exec_always --no-startup-id sleep 5 && xfce4-power-manager --daemon --restart
 
 # cpu performance
 exec --no-startup-id sleep 5 && exec ~/.config/scripts/cpu-perf.sh
