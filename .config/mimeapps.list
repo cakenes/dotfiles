@@ -28,3 +28,4 @@ text/x-csrc=visual-studio-code.desktop;
 text/x-modelica=visual-studio-code.desktop;
 text/x-python=visual-studio-code.desktop;
 text/html=mousepad.desktop;
+image/svg+xml=org.inkscape.Inkscape.desktop;
