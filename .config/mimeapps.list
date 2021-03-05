@@ -1,5 +1,5 @@
 [Default Applications]
-application/octet-stream=yuzu.desktop
+application/octet-stream=mousepad.desktop
 application/pdf=qpdfview.desktop
 application/x-gettext-translation=mousepad.desktop
 application/xml=mousepad.desktop
@@ -29,3 +29,4 @@ text/x-modelica=visual-studio-code.desktop;
 text/x-python=visual-studio-code.desktop;
 text/html=mousepad.desktop;
 image/svg+xml=org.inkscape.Inkscape.desktop;
+image/jpeg=gimp.desktop;

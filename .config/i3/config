@@ -104,6 +104,9 @@ bindsym $mod+5 workspace $ws5
 bindsym $mod+6 workspace $ws6
 bindsym $mod+7 workspace $ws7
 bindsym $mod+8 workspace $ws8
+bindsym --whole-window $mod+button4 workspace next
+bindsym --whole-window $mod+button5 workspace prev
+bindsym $mod+Tab workspace next
 
 # switch to workspace alternative
 bindsym Mod1+Shift+Ctrl+1 workspace $ws1
@@ -138,14 +141,17 @@ bindsym $mod+Ctrl+7 move container to workspace $ws7
 bindsym $mod+Ctrl+8 move container to workspace $ws8
 
 # workspaces on monitors
-workspace 1 output HDMI-1
-workspace 2 output HDMI-1
-workspace 3 output HDMI-1
-workspace 4 output HDMI-0
-workspace 5 output HDMI-0
-workspace 6 output HDMI-0
-workspace 7 output HDMI-0
-workspace 8 output HDMI-0
+# workspace 1 output HDMI-1
+# workspace 2 output HDMI-1
+# workspace 3 output HDMI-1
+# workspace 4 output HDMI-0
+# workspace 5 output HDMI-0
+# workspace 6 output HDMI-0
+# workspace 7 output HDMI-0
+# workspace 8 output HDMI-0
+
+# workspace layout
+# for_window [workspace=$ws2] layout tabbed 
 
 # workspace assign
 assign [class="discord"] $ws1
@@ -166,6 +172,7 @@ for_window [title="Game Info"] floating enable
 for_window [title="Add/Remove Software"] floating enable
 for_window [title="GameConqueror*"] floating enable
 for_window [title="Bluetooth Devices"] floating enable
+for_window [title="Volume Control"] floating enable
 
 # games
 for_window [title="Console window for"] floating enable
@@ -189,8 +196,9 @@ exec --no-startup-id i3-msg 'workspace 2; exec lutris'
 
 # autostart
 exec_always --no-startup-id picom
-exec_always --no-startup-id polybar hdmi0
-exec_always --no-startup-id polybar hdmi1
+#exec_always --no-startup-id polybar hdmi0
+#exec_always --no-startup-id polybar hdmi1
+exec_always --no-startup-id polybar dp0
 exec_always --no-startup-id setxkbmap -option ctrl:nocaps
 exec_always --no-startup-id xss-lock -- betterlockscreen -l
 exec_always --no-startup-id feh --bg-center --no-xinerama /home/used/pictures/wallpapers/current.jpg

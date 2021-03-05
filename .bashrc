@@ -29,6 +29,7 @@ function log-search() { sudo grep -rsh $1 /var/log | sort; }
 # connections
 alias ssh-connections="sudo netstat -tnpa | grep 'ESTABLISHED.*sshd'"
 alias smb-connections="sudo smbstatus -S && sudo smbstatus -L"
+function sshc(){ ssh 192.168.100."$1" -p 80"$1"; }
 
 # airmon
 alias air-start="sudo airmon-ng start wlp5s0"
