@@ -29,4 +29,4 @@ text/x-modelica=visual-studio-code.desktop;
 text/x-python=visual-studio-code.desktop;
 text/html=mousepad.desktop;
 image/svg+xml=org.inkscape.Inkscape.desktop;
-image/jpeg=gimp.desktop;
+image/jpeg=feh.desktop;gimp.desktop;

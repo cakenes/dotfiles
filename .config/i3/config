@@ -162,6 +162,8 @@ assign [class="steam_app_238960"] $ws8
 assign [class="Minecraft*"] $ws8
 assign [class="wow*"] $ws8
 assign [class="OxygenNotIncluded"] $ws8
+assign [class="rsi launcher.exe"] $ws8
+assign [class="starcitizen.exe"] $ws8
 
 # floating
 for_window [title="galculator"] floating enable
@@ -173,6 +175,9 @@ for_window [title="Add/Remove Software"] floating enable
 for_window [title="GameConqueror*"] floating enable
 for_window [title="Bluetooth Devices"] floating enable
 for_window [title="Volume Control"] floating enable
+for_window [title="Appearance"] floating enable
+for_window [title="Settings"] floating enable
+
 
 # games
 for_window [title="Console window for"] floating enable
@@ -190,9 +195,7 @@ bindcode 66			exec --no-startup-id ~/.config/scripts/private/poe-flask.sh
 
 # autostart apps
 exec --no-startup-id joplin-desktop
-exec --no-startup-id i3-msg 'workspace 1; exec discord'
-exec --no-startup-id i3-msg 'workspace 2; exec steam'
-exec --no-startup-id i3-msg 'workspace 2; exec lutris'
+exec --no-startup-id redshift-gtk -t 5500:4500
 
 # autostart
 exec_always --no-startup-id picom
@@ -203,5 +206,14 @@ exec_always --no-startup-id setxkbmap -option ctrl:nocaps
 exec_always --no-startup-id xss-lock -- betterlockscreen -l
 exec_always --no-startup-id feh --bg-center --no-xinerama /home/used/pictures/wallpapers/current.jpg
 
+# workspace 2
+exec --no-startup-id "i3-msg 'workspace 2; append_layout ~/.config/i3/workspace-2.json'"
+exec --no-startup-id "i3-msg 'workspace 2; exec steam'"
+exec --no-startup-id "i3-msg 'workspace 2; exec lutris'"
+exec --no-startup-id "i3-msg 'workspace 2; exec alacritty'"
 
-
+# workspace 1
+exec --no-startup-id "i3-msg 'workspace 1; append_layout ~/.config/i3/workspace-1.json'"
+exec --no-startup-id "i3-msg 'workspace 1; exec discord'"
+exec --no-startup-id "i3-msg 'workspace 1; exec chromium'"
+exec --no-startup-id "i3-msg 'workspace 1; exec alacritty'"

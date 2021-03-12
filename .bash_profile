@@ -4,7 +4,7 @@ if [ -f ~/.bashrc ]; then
   . ~/.bashrc
 fi
 
-export TERMINAL=alacritty
+export TERM=linux
 export FILE=thunar
 export AUDIO=lollypop
 export EDITOR=nano
