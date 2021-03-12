@@ -4,8 +4,8 @@ if [ -f ~/.bashrc ]; then
   . ~/.bashrc
 fi
 
-export TERMINAL=alacritty
-export FILE=dolphin
+export TERM=linux
+export FILE=thunars
 export AUDIO=lollypop
 export EDITOR=nano
 export DOTNET_ROOT=/usr/share/dotnet
@@ -20,6 +20,8 @@ export JDK_HOME=/usr/lib/jvm/java-14-openjdk
 #export QT_SCALE_FACTOR=2
 #export QT_FONT_DPI=96
 #export ELM_SCALE=2
+
+export DOTNET_CLI_TELEMETRY_OPTOUT=1
 
 # autostart xfce
 [ "$(tty)" = "/dev/tty1" ] && ! pgrep -x xfce4-session >/dev/null && exec startx

@@ -1,5 +1,5 @@
 [Default Applications]
-application/octet-stream=yuzu.desktop
+application/octet-stream=mousepad.desktop
 application/pdf=qpdfview.desktop
 application/pdf=qpdfview.desktop
 application/x-gettext-translation=mousepad.desktop
@@ -19,6 +19,6 @@ image/jpeg=gimp.desktop;chromium.desktop;
 image/png=gimp.desktop;chromium.desktop;
 application/x-ms-dos-executable=wine.desktop;
 text/plain=visual-studio-code.desktop;visual-studio-code-insiders.desktop;
-application/octet-stream=visual-studio-code.desktop;yuzu.desktop;
+application/octet-stream=mousepad.desktop;visual-studio-code.desktop;yuzu.desktop;
 application/x-raw-disk-image=engrampa.desktop;
 application/x-cd-image=xarchiver.desktop;
