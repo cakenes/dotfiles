@@ -6,7 +6,8 @@ window:
 # Fonts
 font:
   normal:
-    family: Mononoki Nerd Font
+    family: NotoMono Nerd Font
+#    family: Mononoki Nerd Font
     style: Regular
   size: 10
 

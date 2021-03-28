@@ -7,7 +7,7 @@ fi
 export TERM=linux
 export FILE=thunar
 export AUDIO=lollypop
-export EDITOR=nano
+export EDITOR=/usr/bin/nano
 export DOTNET_ROOT=/usr/share/dotnet
 export PATH=$PATH:/usr/share/dotnet
 

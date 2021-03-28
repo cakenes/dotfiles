@@ -2,7 +2,7 @@
 # KP_0 KP_1 ... KP_9 KP_Add KP_Subtract KP_Multiply KP_Divide KP_Enter KP_Separator
 
 set $mod Mod4
-font pango:mononoki Nerd Font 10
+font pango:NotoMono Nerd Font 10
 floating_modifier Mod1
 
 # start program
@@ -21,8 +21,9 @@ bindsym $mod+Ctrl+y		exec --no-startup-id xfce4-settings-manager
 bindsym $mod+Shift+y		exec --no-startup-id manjaro-settings-manager
 bindsym $mod+c			exec --no-startup-id galculator
 bindsym $mod+n			exec --no-startup-id xfce4-taskmanager
-bindsym $mod+d                  exec --no-startup-id dmenu_run -h 24 -nb '#1c2023' -sf '#FFFFFF' -sb '#5294e2' -nf '#FFFFFF' -fn 'Mononoki Nerd Font-10'
+bindsym $mod+d                  exec --no-startup-id dmenu_run -h 24 -nb '#1c2023' -sf '#FFFFFF' -sb '#5294e2' -nf '#FFFFFF' -fn 'NotoMono Nerd Font-10'
 bindsym $mod+Shift+d		exec --no-startup-id rofi -show run
+bindsym $mod+F12		exec --no-startup-id xrandr --output DP-0 --mode 3440x1440 --rate 75
 
 # kill focused window
 bindsym $mod+q			exec --no-startup-id ~/.config/scripts/kill.sh
@@ -167,17 +168,20 @@ assign [class="starcitizen.exe"] $ws8
 
 # floating
 for_window [title="galculator"] floating enable
+for_window [title="Task Manager"] floating enable
 for_window [title="Manjaro Settings Manager"] floating enable
 for_window [title="Panel Preferences"] floating enable
 for_window [title="Add New Items"] floating enable
 for_window [title="Game Info"] floating enable
 for_window [title="Add/Remove Software"] floating enable
+for_window [title="Steam Library Folders"] floating enable
 for_window [title="GameConqueror*"] floating enable
 for_window [title="Bluetooth Devices"] floating enable
 for_window [title="Volume Control"] floating enable
+for_window [title="PulseAudio Equalizer"] floating enable
 for_window [title="Appearance"] floating enable
 for_window [title="Settings"] floating enable
-
+for_window [title="Power Manager"] floating enable
 
 # games
 for_window [title="Console window for"] floating enable
@@ -195,8 +199,7 @@ bindcode 66			exec --no-startup-id ~/.config/scripts/private/poe-flask.sh
 
 # autostart apps
 exec --no-startup-id joplin-desktop
-exec --no-startup-id pulseaudio-equalizer enable
-exec --no-startup-id redshift-gtk -t 5500:4500
+exec_always --no-startup-id pulseaudio-equalizer enable
 
 # autostart
 exec_always --no-startup-id picom
