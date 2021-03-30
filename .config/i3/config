@@ -158,23 +158,17 @@ workspace 9 output DP2
 # assign [class="wow*"] $ws8
 
 # floating
-for_window [title="galculator"] floating enable
-for_window [title="Task Manager"] floating enable
-for_window [title="Manjaro Settings Manager"] floating enable
-for_window [title="Panel Preferences"] floating enable
-for_window [title="Add New Items"] floating enable
-for_window [title="Game Info"] floating enable
-for_window [title="Add/Remove Software"] floating enable
-for_window [title="Steam Libary Folders"] floating enable
-for_window [title="GameConqueror*"] floating enable
-for_window [title="Bluetooth Devices"] floating enable
-for_window [title="Volume Control"] floating enable
-for_window [title="PulseAudio Equalizer"] floating enable
-for_window [title="Appearance"] floating enable
-for_window [title="Settings"] floating enable
-for_window [title="Power Manager"] floating enable
+for_window [class="Galculator"] floating enable
+for_window [class="Pavucontrol"] floating enable
+for_window [class="Joplin"] floating enable
+for_window [class="Nm-connection-editor"] floating enable
+for_window [class="Blueman-manager"] floating enable
+for_window [class="qt5ct"] floating enable
+for_window [class="Xfce4-.*settings.*"] floating enable
+for_window [class="Xfce4-.*manager.*"] floating enable
 
 # games
+for_window [title="Steam .*"] floating enable
 for_window [title="Console window for"] floating enable
 for_window [title="World of Warcraft"] windowed
 
@@ -193,18 +187,9 @@ exec_always --no-startup-id picom
 exec_always --no-startup-id xset s blank
 exec_always --no-startup-id polybar edp1
 # exec_always --no-startup-id polybar dp2
-# exec_always --no-startup-id xinput set-prop 12 332 0
 exec_always --no-startup-id setxkbmap -option ctrl:nocaps
 exec_always --no-startup-id xss-lock -- betterlockscreen -l
 exec_always --no-startup-id feh --bg-fill --no-xinerama --auto-zoom /home/used/pictures/wallpapers/current.jpg
-
-# power-manager fixes
-# exec_always --no-startup-id xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/lid-action-on-ac -s 3 && sleep 0.5 && xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/lid-action-on-ac -s 0
-# exec_always --no-startup-id xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/lid-action-on-battery -s 3 && sleep 0.5 && xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/lid-action-on-battery -s 0
-# exec_always --no-startup-id xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/logind-handle-lid-switch -s true && sleep 0.5 && xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/logind-handle-lid-switch -s false
-# exec_always --no-startup-id xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/handle-brightness-keys -s false && sleep 0.5 && xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/handle-brightness-keys -s true
-exec_always --no-startup-id xfce4-power-manager --daemon
-exec_always --no-startup-id sleep 10 && xfce4-power-manager --daemon --restart
 
 # cpu performance
 exec --no-startup-id sleep 5 && exec ~/.config/scripts/cpu-perf.sh
