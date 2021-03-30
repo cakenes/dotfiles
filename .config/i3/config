@@ -167,23 +167,17 @@ assign [class="rsi launcher.exe"] $ws8
 assign [class="starcitizen.exe"] $ws8
 
 # floating
-for_window [title="galculator"] floating enable
-for_window [title="Task Manager"] floating enable
-for_window [title="Manjaro Settings Manager"] floating enable
-for_window [title="Panel Preferences"] floating enable
-for_window [title="Add New Items"] floating enable
-for_window [title="Game Info"] floating enable
-for_window [title="Add/Remove Software"] floating enable
-for_window [title="Steam Library Folders"] floating enable
-for_window [title="GameConqueror*"] floating enable
-for_window [title="Bluetooth Devices"] floating enable
-for_window [title="Volume Control"] floating enable
-for_window [title="PulseAudio Equalizer"] floating enable
-for_window [title="Appearance"] floating enable
-for_window [title="Settings"] floating enable
-for_window [title="Power Manager"] floating enable
+for_window [class="Galculator"] floating enable
+for_window [class="Pavucontrol"] floating enable
+for_window [class="Joplin"] floating enable
+for_window [class="Nm-connection-editor"] floating enable
+for_window [class="Blueman-manager"] floating enable
+for_window [class="qt5ct"] floating enable
+for_window [class="Xfce4-.*settings.*"] floating enable
+for_window [class="Xfce4-.*manager.*"] floating enable
 
 # games
+for_window [title="Steam .*"] floating enable
 for_window [title="Console window for"] floating enable
 for_window [title="World of Warracft"] windowed
 
@@ -199,7 +193,6 @@ bindcode 66			exec --no-startup-id ~/.config/scripts/private/poe-flask.sh
 
 # autostart apps
 exec --no-startup-id joplin-desktop
-exec_always --no-startup-id pulseaudio-equalizer enable
 
 # autostart
 exec_always --no-startup-id picom
