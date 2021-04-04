@@ -153,9 +153,9 @@ workspace 9 output DP2
 # assign [class="Steam"] $ws2
 # assign [class="Lutris"] $ws2
 # assign [class="battle.net.exe"] $ws2
-# assign [class="steam_app_238960"] $ws8
-# assign [class="Minecraft*"] $ws8
-# assign [class="wow*"] $ws8
+assign [class="Minecraft*"] $ws8
+assign [class="wow.*"] $ws8
+assign [class="steam_app.*"] $ws8
 
 # floating
 for_window [class="Galculator"] floating enable
@@ -191,5 +191,11 @@ exec_always --no-startup-id setxkbmap -option ctrl:nocaps
 exec_always --no-startup-id xss-lock -- betterlockscreen -l
 exec_always --no-startup-id feh --bg-fill --no-xinerama --auto-zoom /home/used/pictures/wallpapers/current.jpg
 
+# fix xbacklight
+xbacklight +1
+
 # cpu performance
 exec --no-startup-id sleep 5 && exec ~/.config/scripts/cpu-perf.sh
+
+# workspace 8
+workspace $ws8 gaps inner 0
