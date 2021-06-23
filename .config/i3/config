@@ -24,6 +24,7 @@ bindsym $mod+n			exec --no-startup-id xfce4-taskmanager
 bindsym $mod+d                  exec --no-startup-id dmenu_run -h 24 -nb '#1c2023' -sf '#FFFFFF' -sb '#5294e2' -nf '#FFFFFF' -fn 'NotoMono Nerd Font-10'
 bindsym $mod+Shift+d		exec --no-startup-id rofi -show run
 bindsym $mod+F12		exec --no-startup-id xrandr --output DP-0 --mode 3440x1440 --rate 75
+bindsym $mod+F11		exec --no-startup-id xrandr --output DP-0 --mode 1920x1080 --rate 75
 
 # kill focused window
 bindsym $mod+q			exec --no-startup-id ~/.config/scripts/kill.sh
@@ -159,12 +160,14 @@ assign [class="discord"] $ws1
 assign [class="Steam"] $ws2
 assign [class="Lutris"] $ws2
 assign [class="battle.net.exe"] $ws2
-assign [class="steam_app_238960"] $ws8
 assign [class="Minecraft*"] $ws8
 assign [class="wow*"] $ws8
 assign [class="OxygenNotIncluded"] $ws8
 assign [class="rsi launcher.exe"] $ws8
 assign [class="starcitizen.exe"] $ws8
+assign [class="steam_app_1455840"] $ws8
+assign [class="steam_app.*"] $ws8
+assign [class="anno1800.exe"] $ws8
 
 # floating
 for_window [class="Galculator"] floating enable
@@ -177,15 +180,19 @@ for_window [class="Xfce4-.*settings.*"] floating enable
 for_window [class="Xfce4-.*manager.*"] floating enable
 
 # games
-for_window [title="Steam .*"] floating enable
+for_window [title="^Steam .*$"] floating enable
 for_window [title="Console window for"] floating enable
 for_window [title="World of Warracft"] windowed
+for_window [class="awakened-poe-trade"] floating enable
+for_window [class="XenonTrade"] floating enable, border none
 
 # border
 for_window [title="xfce4-panel"] border none
+for_window [class="OxygenNotIncluded"] border none
+for_window [class="steam_app.*"] border none
 
 # custom macros
-bindsym F1			exec --no-startup-id ~/.config/scripts/poe-logout.sh
+#bindsym F1			exec --no-startup-id ~/.config/scripts/poe-logout.sh
 bindsym F5			exec --no-startup-id ~/.config/scripts/poe-hideout.sh
 bindcode 66			exec --no-startup-id ~/.config/scripts/private/poe-flask.sh
 #bindcode 66			exec --no-startup-id ~/.config/scripts/private/wow-dps.sh
