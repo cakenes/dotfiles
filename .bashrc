@@ -2,7 +2,7 @@
 
 # settings
 stty stop ''; stty start '';
-# setxkbmap -option ctrl:nocaps
+setxkbmap -option ctrl:nocaps
 shopt -s autocd # Allows cd without cd.
 shopt -s checkwinsize # Check window size.
 HISTSIZE= HISTFILESIZE= # Infinite history.

@@ -7,6 +7,9 @@ application/x-wine-extension-ini=mousepad.desktop
 text/plain=mousepad.desktop
 x-scheme-handler/msteams=teams.desktop
 x-scheme-handler/discord-471872241299226636=discord-471872241299226636.desktop
+x-scheme-handler/eclipse+command=_usr_lib_dbeaver_.desktop
+x-scheme-handler/discord-712465656758665259=discord-712465656758665259.desktop
+x-scheme-handler/discord-478576776990425110=discord-478576776990425110.desktop
 
 [Added Associations]
 application/x-shellscript=mousepad.desktop;vim.desktop;
