@@ -35,3 +35,4 @@ image/svg+xml=org.inkscape.Inkscape.desktop;
 image/jpeg=gimp.desktop;feh.desktop;
 audio/mpeg=mousepad.desktop;
 video/x-matroska=org.kde.kdenlive.desktop;
+video/mp4=vlc.desktop;

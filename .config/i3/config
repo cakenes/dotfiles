@@ -213,7 +213,6 @@ exec_always --no-startup-id feh --bg-center --no-xinerama /home/used/pictures/wa
 exec --no-startup-id "i3-msg 'workspace 2; append_layout ~/.config/i3/workspace-2.json'"
 exec --no-startup-id "i3-msg 'workspace 2; exec steam'"
 exec --no-startup-id "i3-msg 'workspace 2; exec lutris'"
-exec --no-startup-id "i3-msg 'workspace 2; exec alacritty'"
 
 # workspace 1
 exec --no-startup-id "i3-msg 'workspace 1; append_layout ~/.config/i3/workspace-1.json'"
