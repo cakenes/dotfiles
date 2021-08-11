@@ -12,7 +12,7 @@ bindsym $mod+Return		exec --no-startup-id alacritty
 bindsym $mod+Shift+Return       exec --no-startup-id mate-terminal
 bindsym $mod+m			exec --no-startup-id lollypop
 bindsym $mod+Ctrl+m		exec --no-startup-id spotify
-bindsym $mod+l                  exec --no-startup-id xset dpms force off; xss-lock
+bindsym $mod+l                  exec --no-startup-id sleep 1 && xset dpms force off
 bindsym Print                   exec --no-startup-id xfce4-screenshooter -f
 bindsym $mod+Print		exec --no-startup-id xfce4-screenshooter -w
 bindsym $mod+y			exec --no-startup-id pamac-manager
