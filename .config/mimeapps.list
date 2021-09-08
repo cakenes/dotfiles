@@ -13,9 +13,9 @@ x-scheme-handler/discord-478576776990425110=discord-478576776990425110.desktop
 
 [Added Associations]
 application/x-shellscript=mousepad.desktop;vim.desktop;
-application/pdf=chromium.desktop;libreoffice-draw.desktop;
+application/pdf=gimp.desktop;krita_pdf.desktop;chromium.desktop;libreoffice-draw.desktop;
 application/x-ms-dos-executable=wine.desktop;
-text/plain=vim.desktop;visual-studio-code.desktop;visual-studio-code-insiders.desktop;mousepad.desktop;
+text/plain=visual-studio-code.desktop;vim.desktop;visual-studio-code-insiders.desktop;mousepad.desktop;
 application/x-java-archive=engrampa.desktop;
 text/x-csharp=mousepad.desktop;visual-studio-code-insiders.desktop;
 image/png=gimp.desktop;chromium.desktop;
@@ -31,8 +31,8 @@ text/x-csrc=visual-studio-code.desktop;
 text/x-modelica=visual-studio-code.desktop;
 text/x-python=visual-studio-code.desktop;
 text/html=mousepad.desktop;
-image/svg+xml=org.inkscape.Inkscape.desktop;
+image/svg+xml=gimp.desktop;org.inkscape.Inkscape.desktop;
 image/jpeg=gimp.desktop;feh.desktop;
 audio/mpeg=mousepad.desktop;
-video/x-matroska=org.kde.kdenlive.desktop;
+video/x-matroska=vlc.desktop;org.kde.kdenlive.desktop;
 video/mp4=vlc.desktop;

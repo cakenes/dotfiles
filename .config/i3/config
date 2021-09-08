@@ -167,6 +167,7 @@ assign [class="starcitizen.exe"] $ws8
 assign [class="steam_app_1455840"] $ws8
 assign [class="steam_app.*"] $ws8
 assign [class="anno1800.exe"] $ws8
+assign [class="War Thunder"] $ws8
 
 # floating
 for_window [class="Galculator"] floating enable
@@ -184,6 +185,7 @@ for_window [title="Console window for"] floating enable
 for_window [title="World of Warracft"] windowed
 for_window [class="awakened-poe-trade"] floating enable
 for_window [class="XenonTrade"] floating enable, border none
+for_window [class="Minecraft*"] floating enable
 
 # border
 for_window [title="xfce4-panel"] border none
