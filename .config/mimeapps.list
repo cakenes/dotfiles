@@ -13,10 +13,10 @@ x-scheme-handler/discord-478576776990425110=discord-478576776990425110.desktop
 
 [Added Associations]
 application/x-shellscript=mousepad.desktop;vim.desktop;
-application/pdf=gimp.desktop;krita_pdf.desktop;chromium.desktop;libreoffice-draw.desktop;
+application/pdf=chromium.desktop;libreoffice-draw.desktop;krita_pdf.desktop;gimp.desktop;
 application/x-ms-dos-executable=wine.desktop;
 text/plain=visual-studio-code.desktop;vim.desktop;visual-studio-code-insiders.desktop;mousepad.desktop;
-application/x-java-archive=xarchiver.desktop;engrampa.desktop;
+application/x-java-archive=sun-java-jre8.desktop;xarchiver.desktop;engrampa.desktop;
 text/x-csharp=mousepad.desktop;visual-studio-code-insiders.desktop;
 image/png=gimp.desktop;chromium.desktop;
 application/octet-stream=mousepad.desktop;yuzu.desktop;
