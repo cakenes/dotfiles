@@ -13,13 +13,13 @@ x-scheme-handler/discord-478576776990425110=discord-478576776990425110.desktop
 
 [Added Associations]
 application/x-shellscript=mousepad.desktop;vim.desktop;
-application/pdf=chromium.desktop;libreoffice-draw.desktop;krita_pdf.desktop;gimp.desktop;
+application/pdf=libreoffice-draw.desktop;chromium.desktop;krita_pdf.desktop;gimp.desktop;
 application/x-ms-dos-executable=wine.desktop;
-text/plain=visual-studio-code.desktop;vim.desktop;visual-studio-code-insiders.desktop;mousepad.desktop;
-application/x-java-archive=sun-java-jre8.desktop;xarchiver.desktop;engrampa.desktop;
+text/plain=org.xfce.mousepad.desktop;libreoffice-writer.desktop;visual-studio-code.desktop;vim.desktop;visual-studio-code-insiders.desktop;mousepad.desktop;
+application/x-java-archive=xarchiver.desktop;sun-java-jre8.desktop;engrampa.desktop;
 text/x-csharp=mousepad.desktop;visual-studio-code-insiders.desktop;
 image/png=gimp.desktop;chromium.desktop;
-application/octet-stream=mousepad.desktop;yuzu.desktop;
+application/octet-stream=org.xfce.mousepad.desktop;mousepad.desktop;yuzu.desktop;
 application/x-alpm-package=xarchiver.desktop;
 application/vnd.sqlite3=mousepad.desktop;
 text/x-c++src=mousepad.desktop;
@@ -36,3 +36,4 @@ image/jpeg=gimp.desktop;feh.desktop;
 audio/mpeg=mousepad.desktop;
 video/x-matroska=vlc.desktop;org.kde.kdenlive.desktop;
 video/mp4=vlc.desktop;
+text/csv=libreoffice-calc.desktop;libreoffice-writer.desktop;org.xfce.mousepad.desktop;

@@ -180,12 +180,13 @@ for_window [class="Xfce4-.*settings.*"] floating enable
 for_window [class="Xfce4-.*manager.*"] floating enable
 
 # games
-for_window [title="^Steam .*$"] floating enable
+# for_window [title="^Steam .*$"] floating enable
 for_window [title="Console window for"] floating enable
 for_window [title="World of Warracft"] windowed
 for_window [class="awakened-poe-trade"] floating enable
 for_window [class="XenonTrade"] floating enable, border none
 for_window [class="Minecraft*"] floating enable
+for_window [class="d2r.exe"] floating enable
 
 # border
 for_window [title="xfce4-panel"] border none
@@ -203,10 +204,10 @@ bindcode 66			exec --no-startup-id ~/.config/scripts/private/poe-flask.sh
 exec --no-startup-id joplin-desktop
 
 # autostart
-exec_always --no-startup-id picom
-#exec_always --no-startup-id polybar hdmi0
-#exec_always --no-startup-id polybar hdmi1
-exec_always --no-startup-id polybar dp0
+# exec_always --no-startup-id picom
+# exec_always --no-startup-id polybar hdmi0
+# exec_always --no-startup-id polybar hdmi1
+# exec_always --no-startup-id polybar dp0
 exec_always --no-startup-id setxkbmap -option ctrl:nocaps
 exec_always --no-startup-id xss-lock -- betterlockscreen -l
 exec_always --no-startup-id feh --bg-center --no-xinerama /home/used/pictures/wallpapers/current.jpg
