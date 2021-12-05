@@ -13,7 +13,7 @@ x-scheme-handler/discord-478576776990425110=discord-478576776990425110.desktop
 
 [Added Associations]
 application/x-shellscript=mousepad.desktop;vim.desktop;
-application/pdf=libreoffice-draw.desktop;chromium.desktop;krita_pdf.desktop;gimp.desktop;
+application/pdf=chromium.desktop;libreoffice-draw.desktop;krita_pdf.desktop;gimp.desktop;
 application/x-ms-dos-executable=wine.desktop;
 text/plain=org.xfce.mousepad.desktop;libreoffice-writer.desktop;visual-studio-code.desktop;vim.desktop;visual-studio-code-insiders.desktop;mousepad.desktop;
 application/x-java-archive=xarchiver.desktop;sun-java-jre8.desktop;engrampa.desktop;
@@ -37,3 +37,5 @@ audio/mpeg=mousepad.desktop;
 video/x-matroska=vlc.desktop;org.kde.kdenlive.desktop;
 video/mp4=vlc.desktop;
 text/csv=libreoffice-calc.desktop;libreoffice-writer.desktop;org.xfce.mousepad.desktop;
+application/json=vim.desktop;visual-studio-code.desktop;
+application/x-wine-extension-ini=org.xfce.mousepad.desktop;

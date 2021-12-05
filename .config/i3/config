@@ -181,6 +181,7 @@ for_window [class="Xfce4-.*manager.*"] floating enable
 
 # games
 # for_window [title="^Steam .*$"] floating enable
+for_window [class="trackmania.exe"] floating enable
 for_window [title="Console window for"] floating enable
 for_window [title="World of Warracft"] windowed
 for_window [class="awakened-poe-trade"] floating enable
@@ -194,11 +195,13 @@ for_window [class="OxygenNotIncluded"] border none
 for_window [class="steam_app.*"] border none
 
 # custom macros
-#bindsym F1			exec --no-startup-id ~/.config/scripts/poe-logout.sh
-bindsym F5			exec --no-startup-id ~/.config/scripts/poe-hideout.sh
-bindcode 66			exec --no-startup-id ~/.config/scripts/private/poe-flask.sh
+##bindsym F1			exec --no-startup-id ~/.config/scripts/poe-logout.sh
+#bindsym F5			exec --no-startup-id ~/.config/scripts/poe-hideout.sh
+#bindcode 66			exec --no-startup-id ~/.config/scripts/private/poe-flask.sh
 #bindcode 66			exec --no-startup-id ~/.config/scripts/private/wow-dps.sh
 #bindcode 135			exec --no-startup-id ~/.config/scripts/private/wow-fish.sh
+bindcode 69			exec --no-startup-id ~/.config/scripts/private/ark-autofeed.sh
+bindcode 72			exec --no-startup-id ~/.config/scripts/private/ark-autorun.sh
 
 # autostart apps
 exec --no-startup-id joplin-desktop
@@ -209,7 +212,7 @@ exec --no-startup-id joplin-desktop
 # exec_always --no-startup-id polybar hdmi1
 # exec_always --no-startup-id polybar dp0
 exec_always --no-startup-id setxkbmap -option ctrl:nocaps
-exec_always --no-startup-id xss-lock -- betterlockscreen -l
+exec_always --no-startup-id xss-lock -- betterlockscreen -l -- -p default
 exec_always --no-startup-id feh --bg-center --no-xinerama /home/used/pictures/wallpapers/current.jpg
 
 # workspace 2
