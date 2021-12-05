@@ -2,7 +2,7 @@
     elected-normal-foreground:  rgba ( 249, 249, 249, 100 % );
     foreground:                  rgba ( 196, 203, 212, 100 % );
     normal-foreground:           @foreground;
-    alternate-normal-background: rgba ( 64, 69, 82, 59 % );
+    //alternate-normal-background: rgba ( 64, 69, 82, 59 % );
     red:                         rgba ( 220, 50, 47, 100 % );
     selected-urgent-foreground:  rgba ( 249, 249, 249, 100 % );
     blue:                        rgba ( 38, 139, 210, 100 % );
@@ -30,7 +30,7 @@
 }
 window {
     background-color: @background;
-    border:           2;
+    border:           1;
     padding:          5;
     width:	    30%;
 }

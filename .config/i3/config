@@ -82,7 +82,7 @@ client.urgent		#3f5ea8 #3f5ea8 #FFFFFF #3f5ea8 #3f5ea8
 #client.urgent		#2eb398 #2eb398 #FFFFFF #2eb398 #2eb398
 
 # i3gaps
-for_window [class="^.*"] border pixel 2
+for_window [class="^.*"] border pixel 1
 gaps inner 10
 gaps outer 0
 
