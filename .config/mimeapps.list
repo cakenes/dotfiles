@@ -12,7 +12,7 @@ x-scheme-handler/discord-712465656758665259=discord-712465656758665259.desktop
 x-scheme-handler/discord-478576776990425110=discord-478576776990425110.desktop
 
 [Added Associations]
-application/x-shellscript=mousepad.desktop;vim.desktop;
+application/x-shellscript=org.xfce.mousepad.desktop;mousepad.desktop;vim.desktop;
 application/pdf=chromium.desktop;libreoffice-draw.desktop;krita_pdf.desktop;gimp.desktop;
 application/x-ms-dos-executable=wine.desktop;
 text/plain=org.xfce.mousepad.desktop;libreoffice-writer.desktop;visual-studio-code.desktop;vim.desktop;visual-studio-code-insiders.desktop;mousepad.desktop;
