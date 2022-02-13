@@ -28,3 +28,4 @@ text/vnd.trolltech.linguist=visual-studio-code.desktop;mousepad.desktop;
 application/pdf=libreoffice-draw.desktop;chromium.desktop;krita_pdf.desktop;gimp.desktop;
 video/x-matroska=org.xfce.Parole.desktop;vlc.desktop;
 application/x-shellscript=mousepad.desktop;
+inode/directory=visual-studio-code.desktop;

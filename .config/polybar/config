@@ -51,7 +51,7 @@ label-unfocused-padding = 1
 
 ; visible = Active workspace on unfocused monitor
 label-visible = %index%
-label-visible-foreground = #fffff
+label-visible-foreground = #ffffff
 label-visible-background = #1b2224
 label-visible-padding = 1
 
