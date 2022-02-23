@@ -184,8 +184,10 @@ bindsym $mod+Alt+BackSpace exec ~/.config/scripts/touchpad.sh
 exec --no-startup-id joplin-desktop
 
 # autostart
-exec_always --no-startup-id picom
+# exec_always --no-startup-id picom
 exec_always --no-startup-id xset s blank
+exec_always --no-startup-id nm-applet
+# exec_always --no-startup-id blueman-applet
 # exec_always --no-startup-id polybar edp1
 # exec_always --no-startup-id polybar dp2
 exec_always --no-startup-id setxkbmap -option ctrl:nocaps
