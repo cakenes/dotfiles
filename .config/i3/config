@@ -183,13 +183,14 @@ for_window [class="qt5ct"] floating enable
 for_window [class="Xfce4-.*settings.*"] floating enable
 for_window [class="Xfce4-.*manager.*"] floating enable
 
+# steam
+for_window [class="Steam" title="Friends List"] floating enable
+for_window [class="Steam" title="Settings"] floating enable
+for_window [class="Steam" title="Friends List"] floating enable
+
 # games
-# for_window [title="^Steam .*$"] floating enable
 for_window [class="trackmania.exe"] floating enable
-for_window [title="Console window for"] floating enable
 for_window [title="World of Warracft"] windowed
-for_window [class="awakened-poe-trade"] floating enable
-for_window [class="XenonTrade"] floating enable, border none
 for_window [class="Minecraft*"] floating enable
 for_window [class="d2r.exe"] floating enable
 for_window [class="Project Zomboid"] floating enable
@@ -200,8 +201,8 @@ for_window [class="OxygenNotIncluded"] border none
 for_window [class="steam_app.*"] border none
 
 # custom macros
-bindsym F1			exec --no-startup-id ~/.config/scripts/poe-logout.sh
-bindsym F5			exec --no-startup-id ~/.config/scripts/poe-hideout.sh
+# bindsym F1			exec --no-startup-id ~/.config/scripts/poe-logout.sh
+# bindsym F5			exec --no-startup-id ~/.config/scripts/poe-hideout.sh
 # bindcode 66			exec --no-startup-id ~/.config/scripts/private/poe-flask.sh
 # bindcode 66			exec --no-startup-id ~/.config/scripts/private/wow-dps.sh
 # bindcode 135			exec --no-startup-id ~/.config/scripts/private/wow-fish.sh
@@ -213,6 +214,8 @@ bindsym F5			exec --no-startup-id ~/.config/scripts/poe-hideout.sh
 exec --no-startup-id joplin-desktop
 
 # autostart
+exec_always --no-startup-id nm-applet
+# exec_always --no-startup-id blueman-applet
 # exec_always --no-startup-id picom
 # exec_always --no-startup-id polybar hdmi0
 # exec_always --no-startup-id polybar hdmi1
@@ -222,12 +225,12 @@ exec_always --no-startup-id xss-lock -- betterlockscreen -l -- -p default
 exec_always --no-startup-id feh --bg-center --no-xinerama /home/used/pictures/wallpapers/current.jpg
 
 # workspace 2
-exec --no-startup-id "i3-msg 'workspace 2; append_layout ~/.config/i3/workspace-2.json'"
+# exec --no-startup-id "i3-msg 'workspace 2; append_layout ~/.config/i3/workspace-2.json'"
 exec --no-startup-id "i3-msg 'workspace 2; exec steam'"
 exec --no-startup-id "i3-msg 'workspace 2; exec lutris'"
 
 # workspace 1
-exec --no-startup-id "i3-msg 'workspace 1; append_layout ~/.config/i3/workspace-1.json'"
+# exec --no-startup-id "i3-msg 'workspace 1; append_layout ~/.config/i3/workspace-1.json'"
 exec --no-startup-id "i3-msg 'workspace 1; exec discord'"
 exec --no-startup-id "i3-msg 'workspace 1; exec chromium https://open.spotify.com/'"
 exec --no-startup-id "i3-msg 'workspace 1; exec alacritty'"
