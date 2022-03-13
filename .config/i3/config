@@ -1,14 +1,14 @@
 # keybinds
 # KP_0 KP_1 ... KP_9 KP_Add KP_Subtract KP_Multiply KP_Divide KP_Enter KP_Separator
 
-set $mod Mod4
+set $mod Mod1
 #font pango:Mononoki Nerd Font 20
 font pango:Mononoki Nerd Font 10
-floating_modifier Mod1
+floating_modifier Mod4
 
 # start program
 bindsym $mod+e			exec --no-startup-id thunar
-bindsym $mod+w                  exec --no-startup-id chromium
+bindsym $mod+w                  exec --no-startup-id firefox-developer-edition
 bindsym $mod+Return		exec --no-startup-id alacritty
 bindsym $mod+Shift+Return       exec --no-startup-id mate-terminal
 bindsym $mod+m			exec --no-startup-id lollypop
@@ -41,8 +41,8 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focus workspace
-bindsym $mod+Mod1+Right move workspace to output right
-bindsym $mod+Mod1+Left move workspace to output left
+#bindsym $mod+Mod1+Right move workspace to output right
+#bindsym $mod+Mod1+Left move workspace to output left
 
 # move focus window
 bindsym $mod+Shift+Left move left
@@ -74,8 +74,8 @@ bindsym $mod+Shift+s layout tabbed
 bindsym $mod+Ctrl+s layout tabbed
 
 # reload, restart, exit
-bindsym $mod+Shift+c reload
-bindsym $mod+Shift+r restart
+bindsym $mod+Shift+r reload
+bindsym $mod+Shift+c restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # i3wm
@@ -178,7 +178,7 @@ for_window [title="xfce4-panel"] border none
 
 # custom macros
 bindsym $mod+Ctrl+BackSpace exec ~/.config/scripts/cpu-perf.sh
-bindsym $mod+Alt+BackSpace exec ~/.config/scripts/touchpad.sh
+bindsym $mod+BackSpace exec ~/.config/scripts/touchpad.sh
 
 # autostart apps
 exec --no-startup-id joplin-desktop
