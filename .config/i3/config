@@ -7,7 +7,7 @@ floating_modifier Mod1
 
 # start program
 bindsym $mod+e			exec --no-startup-id thunar
-bindsym $mod+w                  exec --no-startup-id chromium
+bindsym $mod+w                  exec --no-startup-id firefox-developer-edition
 bindsym $mod+Return		exec --no-startup-id alacritty
 bindsym $mod+Shift+Return       exec --no-startup-id mate-terminal
 bindsym $mod+m			exec --no-startup-id lollypop
@@ -23,8 +23,8 @@ bindsym $mod+n			exec --no-startup-id xfce4-taskmanager
 # bindsym $mod+d                  exec --no-startup-id dmenu_run -h 24 -nb '#1c2023' -sf '#FFFFFF' -sb '#5294e2' -nf '#FFFFFF' -fn 'NotoMono Nerd Font-10'
 bindsym $mod+d			exec --no-startup-id rofi -show run
 bindsym $mod+Shift+d		exec --no-startup-id rofi -show run
-bindsym $mod+F12		exec --no-startup-id xrandr --output DP-0 --mode 3440x1440 --rate 75
-bindsym $mod+F11		exec --no-startup-id xrandr --output DP-0 --mode 1920x1080 --rate 75
+bindsym $mod+Shift+F12		exec --no-startup-id xrandr --output DP-0 --mode 3440x1440 --rate 75
+bindsym $mod+Shift+F11		exec --no-startup-id xrandr --output DP-0 --mode 1920x1080 --rate 75
 
 # kill focused window
 bindsym $mod+q			exec --no-startup-id ~/.config/scripts/kill.sh
@@ -171,6 +171,8 @@ assign [class="steam_app_1455840"] $ws8
 assign [class="steam_app.*"] $ws8
 assign [class="anno1800.exe"] $ws8
 assign [class="War Thunder"] $ws8
+assign [class="overwatch.exe"] $ws8
+
 
 # floating
 for_window [class="Galculator"] floating enable
@@ -194,6 +196,7 @@ for_window [title="World of Warracft"] windowed
 for_window [class="Minecraft*"] floating enable
 for_window [class="d2r.exe"] floating enable
 for_window [class="Project Zomboid"] floating enable
+for_window [class="scrcpy"] floating enable
 
 # border
 for_window [title="xfce4-panel"] border none
@@ -225,14 +228,13 @@ exec_always --no-startup-id xss-lock -- betterlockscreen -l -- -p default
 exec_always --no-startup-id feh --bg-center --no-xinerama /home/used/pictures/wallpapers/current.jpg
 
 # workspace 2
-# exec --no-startup-id "i3-msg 'workspace 2; append_layout ~/.config/i3/workspace-2.json'"
 exec --no-startup-id "i3-msg 'workspace 2; exec steam'"
 exec --no-startup-id "i3-msg 'workspace 2; exec lutris'"
 
 # workspace 1
-# exec --no-startup-id "i3-msg 'workspace 1; append_layout ~/.config/i3/workspace-1.json'"
+exec --no-startup-id "i3-msg 'workspace 1; append_layout ~/.config/i3/workspace-1.json'"
 exec --no-startup-id "i3-msg 'workspace 1; exec discord'"
-exec --no-startup-id "i3-msg 'workspace 1; exec chromium https://open.spotify.com/'"
+exec --no-startup-id "i3-msg 'workspace 1; exec firefox-developer-edition https://open.spotify.com/'"
 exec --no-startup-id "i3-msg 'workspace 1; exec alacritty'"
 
 # workspace 8

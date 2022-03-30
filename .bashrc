@@ -3,6 +3,10 @@
 # settings
 stty stop ''; stty start '';
 setxkbmap -option ctrl:nocaps
+
+#xmodmap -e "keycode 135 = Super_L"
+#xmodmap -e "keycode 133 = Menu"
+
 shopt -s autocd # Allows cd without cd.
 shopt -s checkwinsize # Check window size.
 HISTSIZE= HISTFILESIZE= # Infinite history.
