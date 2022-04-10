@@ -23,6 +23,7 @@ export JDK_HOME=/usr/lib/jvm/java-14-openjdk
 
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
 export VDPAU_DRIVER=va_gl
+export LVM_SUPPRESS_FD_WARNINGS=1
 
 # autostart xfce
 [ "$(tty)" = "/dev/tty1" ] && ! pgrep -x xfce4-session >/dev/null && exec startx
