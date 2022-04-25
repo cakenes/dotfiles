@@ -229,6 +229,7 @@ exec_always --no-startup-id feh --bg-center --no-xinerama /home/used/pictures/wa
 
 # workspace 2
 exec --no-startup-id "i3-msg 'workspace 2; exec steam'"
+exec --no-startup-id "i3-msg 'lutris lutris:rungameid/1'"
 exec --no-startup-id "i3-msg 'workspace 2; exec lutris'"
 
 # workspace 1
