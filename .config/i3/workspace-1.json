@@ -1,0 +1,42 @@
+{
+    "border": "pixel",
+    "current_border_width": 1,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 1079,
+       "width": 1919,
+       "x": 0,
+       "y": 0
+    },
+    "marks": [],
+    "name": "Discord",
+    "percent": 0.45,
+    "swallows": [
+       {
+       "class": "^discord$",
+       "title": "^Discord$"
+       }
+    ],
+    "type": "con"
+}
+
+{
+    "border": "pixel",
+    "current_border_width": 1,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 1031,
+       "width": 1898,
+       "x": 11,
+       "y": 38
+    },
+    "marks": [],
+    "name": "Chromium",
+    "percent": 0.55,
+    "swallows": [
+       {
+       "class": "^Chromium$"
+       }
+    ],
+    "type": "con"
+}

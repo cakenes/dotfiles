@@ -200,5 +200,12 @@ exec --no-startup-id xbacklight +1
 # cpu performance
 exec --no-startup-id sleep 5 && exec ~/.config/scripts/cpu-perf.sh
 
+# layout
+exec --no-startup-id "i3-msg 'workspace 1; append_layout /home/used/.config/i3/workspace-1.json'"
+
+# workspace 1
+exec --no-startup-id "i3-msg 'workspace 1; exec discord'"
+exec --no-startup-id "i3-msg 'workspace 1; exec chromium https://kauppalehti.fi'"
+
 # workspace 8
 workspace $ws8 gaps inner 0
