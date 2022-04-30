@@ -1,0 +1,83 @@
+{
+    "border": "normal",
+    "floating": "auto_off",
+    "layout": "splitv",
+    "marks": [],
+    "percent": 0.45,
+    "type": "con",
+    "nodes": [
+        {
+            "border": "normal",
+            "floating": "auto_off",
+            "layout": "splith",
+            "marks": [],
+            "percent": 0.85,
+            "type": "con",
+            "nodes": [
+                {
+                    "border": "pixel",
+                    "current_border_width": 1,
+                    "floating": "auto_off",
+                    "geometry": {
+                       "height": 1113,
+                       "width": 1703,
+                       "x": 11,
+                       "y": 38
+                    },
+                    "marks": [],
+                    "name": "Discord",
+                    "percent": 1,
+                    "swallows": [
+                       {
+                       "class": "^discord$",
+		       "title": "^Discord$"
+                       }
+                    ],
+                    "type": "con"
+                }
+            ]
+        },
+        {
+            "border": "pixel",
+            "current_border_width": 1,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 600,
+               "width": 800,
+               "x": 0,
+               "y": 0
+            },
+            "marks": [],
+            "name": "Alacritty",
+            "percent": 0.15,
+            "swallows": [
+               {
+               "class": "^Alacritty$"
+               }
+            ],
+            "type": "con"
+        }
+    ]
+}
+
+{
+    "border": "pixel",
+    "current_border_width": 1,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 1391,
+       "width": 1135,
+       "x": 1152,
+       "y": 38
+    },
+    "marks": [],
+    "name": "Spotify – Web Player - Chromium",
+    "percent": 0.55,
+    "swallows": [
+       {
+       "class": "^Chromium$"
+       }
+    ],
+    "type": "con"
+}
+

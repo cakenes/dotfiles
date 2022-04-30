@@ -227,15 +227,17 @@ exec_always --no-startup-id setxkbmap -option ctrl:nocaps
 exec_always --no-startup-id xss-lock -- betterlockscreen -l -- -p default
 exec_always --no-startup-id feh --bg-center --no-xinerama /home/used/pictures/wallpapers/current.jpg
 
+# layout
+exec --no-startup-id "i3-msg 'workspace 1; append_layout /home/used/.config/i3/workspace-1.json'"
+
 # workspace 2
 exec --no-startup-id "i3-msg 'workspace 2; exec steam'"
-exec --no-startup-id "i3-msg 'lutris lutris:rungameid/1'"
+exec --no-startup-id "lutris lutris:rungameid/1"
 exec --no-startup-id "i3-msg 'workspace 2; exec lutris'"
 
 # workspace 1
-exec --no-startup-id "i3-msg 'workspace 1; append_layout ~/.config/i3/workspace-1.json'"
 exec --no-startup-id "i3-msg 'workspace 1; exec discord'"
-exec --no-startup-id "i3-msg 'workspace 1; exec firefox-developer-edition https://open.spotify.com/'"
+exec --no-startup-id "i3-msg 'workspace 1; exec chromium https://open.spotify.com/'"
 exec --no-startup-id "i3-msg 'workspace 1; exec alacritty'"
 
 # workspace 8
