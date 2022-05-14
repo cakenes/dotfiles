@@ -232,7 +232,7 @@ exec --no-startup-id "i3-msg 'workspace 1; append_layout /home/used/.config/i3/w
 
 # workspace 2
 exec --no-startup-id "i3-msg 'workspace 2; exec steam'"
-exec --no-startup-id "lutris lutris:rungameid/1"
+exec --no-startup-id "i3-msg 'workspace 2; exec lutris lutris:rungameid/1'"
 exec --no-startup-id "i3-msg 'workspace 2; exec lutris'"
 
 # workspace 1
