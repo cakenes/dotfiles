@@ -157,7 +157,7 @@ bindsym $mod+Ctrl+8 move container to workspace $ws8
 
 # workspace assign
 assign [class="discord"] $ws1
-assign [class="Xfce4-screenshooter"] $ws1
+# assign [class="Xfce4-screenshooter"] $ws1
 assign [class="Steam"] $ws2
 assign [class="Lutris"] $ws2
 assign [class="battle.net.exe"] $ws2
@@ -169,6 +169,7 @@ assign [class="rsi launcher.exe"] $ws8
 assign [class="starcitizen.exe"] $ws8
 assign [class="steam_app_1455840"] $ws8
 assign [class="steam_app.*"] $ws8
+assign [class="steam_app_1794680"] $ws1
 assign [class="anno1800.exe"] $ws8
 assign [class="War Thunder"] $ws8
 assign [title="Overwatch"] $ws8
