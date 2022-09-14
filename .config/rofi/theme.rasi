@@ -1,5 +1,5 @@
 * {
-    elected-normal-foreground:  rgba ( 249, 249, 249, 100 % );
+    selected-normal-foreground:  rgba ( 249, 249, 249, 100 % );
     foreground:                  rgba ( 196, 203, 212, 100 % );
     normal-foreground:           @foreground;
     alternate-normal-background: rgba ( 51, 55, 64, 100 % );
