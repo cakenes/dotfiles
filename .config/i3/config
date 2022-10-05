@@ -191,8 +191,8 @@ exec_always --no-startup-id nm-applet
 # exec_always --no-startup-id polybar edp1
 # exec_always --no-startup-id polybar dp2
 exec_always --no-startup-id setxkbmap -option ctrl:nocaps
-exec_always --no-startup-id xss-lock -- betterlockscreen -l
-exec_always --no-startup-id feh --bg-fill --no-xinerama --auto-zoom /home/used/pictures/wallpapers/current.jpg
+exec_always --no-startup-id xss-lock -- i3lock -i ~/pictures/wallpapers/current.jpg -u -F -e
+exec_always --no-startup-id feh --bg-fill --no-xinerama --auto-zoom ~/pictures/wallpapers/current.jpg
 
 # fix xbacklight
 exec --no-startup-id xbacklight +1
