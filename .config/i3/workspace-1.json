@@ -25,12 +25,12 @@
                        "y": 38
                     },
                     "marks": [],
-                    "name": "Discord",
+                    "name": "^Discord$",
                     "percent": 1,
                     "swallows": [
                        {
                        "class": "^discord$",
-		       "title": "^Discord$"
+		       "title": "^Friends - Discord$"
                        }
                     ],
                     "type": "con"

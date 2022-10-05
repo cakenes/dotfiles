@@ -173,6 +173,7 @@ assign [class="steam_app_1794680"] $ws1
 assign [class="anno1800.exe"] $ws8
 assign [class="War Thunder"] $ws8
 assign [title="Overwatch"] $ws8
+assign [class="ChildrenOfMorta"] $ws8
 
 # floating
 for_window [class="Galculator"] floating enable
@@ -225,16 +226,16 @@ exec_always --no-startup-id nm-applet
 # exec_always --no-startup-id polybar hdmi1
 # exec_always --no-startup-id polybar dp0
 exec_always --no-startup-id setxkbmap -option ctrl:nocaps
-exec_always --no-startup-id xss-lock -- betterlockscreen -l -- -p default
-exec_always --no-startup-id feh --bg-center --no-xinerama /home/used/pictures/wallpapers/current.jpg
+exec_always --no-startup-id xss-lock -- i3lock -i ~/pictures/wallpapers/current.jpg -u -F -e
+exec_always --no-startup-id feh --bg-center --no-xinerama ~/pictures/wallpapers/current.jpg
 
 # layout
 exec --no-startup-id "i3-msg 'workspace 1; append_layout /home/used/.config/i3/workspace-1.json'"
 
 # workspace 2
 exec --no-startup-id "i3-msg 'workspace 2; exec steam'"
-exec --no-startup-id "i3-msg 'workspace 2; exec lutris lutris:rungameid/1'"
-exec --no-startup-id "i3-msg 'workspace 2; exec lutris'"
+# exec --no-startup-id "i3-msg 'workspace 2; exec lutris lutris:rungameid/1'"
+# exec --no-startup-id "i3-msg 'workspace 2; exec lutris'"
 
 # workspace 1
 exec --no-startup-id "i3-msg 'workspace 1; exec discord'"
