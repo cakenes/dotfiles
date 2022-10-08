@@ -2,24 +2,32 @@
 # KP_0 KP_1 ... KP_9 KP_Add KP_Subtract KP_Multiply KP_Divide KP_Enter KP_Separator
 
 set $mod Mod4
-font pango:mononoki Nerd Font 8
-floating_modifier $mod
+font pango:NotoMono Nerd Font 10
+floating_modifier Mod1
 
 # start program
-bindsym $mod+r		        exec --no-startup-id pcmanfm
-bindsym $mod+e			exec --no-startup-id st -e ranger
-bindsym $mod+w                  exec --no-startup-id firefox
-bindsym $mod+Return             exec --no-startup-id st
-bindsym $mod+m			exec --no-startup-id deadbeef
+bindsym $mod+e			exec --no-startup-id thunar
+bindsym $mod+w                  exec --no-startup-id chromium
+bindsym $mod+Return		exec --no-startup-id alacritty
+bindsym $mod+Shift+Return       exec --no-startup-id mate-terminal
+bindsym $mod+m			exec --no-startup-id lollypop
 bindsym $mod+Ctrl+m		exec --no-startup-id spotify
-bindsym Print                   exec --no-startup-id gnome-screenshot
-bindsym $mod+Print		exec --no-startup-id gnome-screenshot -w
-bindsym $mod+c	                exec --no-startup-id gnome-calculator
-bindsym $mod+n	                exec --no-startup-id gnome-system-monitor
-bindsym $mod+d                  exec dmenu_run -nb '#1c2023' -sf '#FFFFFF' -sb '#3a9fd3' -nf '#FFFFFF' -fn 'mononoki Nerd Font-10'
+bindsym $mod+l                  exec --no-startup-id ~/.config/scripts/screen-off.sh
+bindsym Print                   exec --no-startup-id xfce4-screenshooter -f
+bindsym $mod+Print		exec --no-startup-id xfce4-screenshooter -w
+bindsym $mod+y			exec --no-startup-id pamac-manager
+bindsym $mod+Ctrl+y		exec --no-startup-id xfce4-settings-manager
+bindsym $mod+Shift+y		exec --no-startup-id manjaro-settings-manager
+bindsym $mod+c			exec --no-startup-id galculator
+bindsym $mod+n			exec --no-startup-id xfce4-taskmanager
+# bindsym $mod+d                  exec --no-startup-id dmenu_run -h 24 -nb '#1c2023' -sf '#FFFFFF' -sb '#5294e2' -nf '#FFFFFF' -fn 'NotoMono Nerd Font-10'
+bindsym $mod+d			exec --no-startup-id rofi -show run
+bindsym $mod+Shift+d		exec --no-startup-id rofi -show run
+bindsym $mod+Shift+F12		exec --no-startup-id xrandr --output DP-0 --mode 3440x1440 --rate 75
+bindsym $mod+Shift+F11		exec --no-startup-id xrandr --output DP-0 --mode 1920x1080 --rate 75
 
 # kill focused window
-bindsym $mod+q			kill
+bindsym $mod+q			exec --no-startup-id ~/.config/scripts/kill.sh
 bindsym $mod+Shift+q		[con_id="__focused__" instance="^(?!dropdown_).*$"] kill
 
 # change focus
@@ -27,6 +35,8 @@ bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
+
+bindsym Mod1+left focus left
 
 # move focus workspace
 bindsym $mod+Mod1+Right move workspace to output right
@@ -53,7 +63,7 @@ bindsym $mod+h split h
 
 # layout fullscreen / gaps
 bindsym $mod+f fullscreen toggle
-bindsym $mod+KP_Add gaps inner current set 15; gaps outer current set 15
+bindsym $mod+KP_Add gaps inner current set 10; gaps outer current set 0
 bindsym $mod+KP_Subtract gaps inner current set 0; gaps outer current set 0
 
 # layout split / tabbed
@@ -67,75 +77,25 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # i3wm
-client.focused          #3a9fd3 #3a9fd3 #FFFFFF #3a9fd3 #3a9fd3
-client.urgent		#c795ae #c795ae #FFFFFF #c795ae #c795ae
-
-# i3blocks
-bar {
-	output HDMI-0
-#	font pango:"mononoki Nerd Font" 10
-	status_command i3blocks
-	position top
-	mode dock
-	modifier None
-	height 19
-  colors {
-	background #1c2023
-	statusline #FFFFFF
-	separator  #3a9fd3
-	focused_workspace #FFFFFF #3a9fd3 #FFFFFF
-	active_workspace #1c2023 #1c2023 #FFFFFF
-	inactive_workspace #1c2023 #1c2023 #FFFFFF
-	urgent_workspace #1c2023 #c795ae #FFFFFF
-	}
-}
-
-bar {
-	output HDMI-1
-#	font pango:"mononoki Nerd Font" 10
-	tray_output HDMI-1
-	status_command i3blocks -c ~/.config/i3blocks/empty
-	position top
-	mode dock
-	modifier None
-	height 19
-  colors {
-	background #1c2023
-	statusline #FFFFFF
-	separator  #3a9fd3
-	focused_workspace #FFFFFF #3a9fd3 #FFFFFF
-	active_workspace #1c2023 #1c2023 #FFFFFF
-	inactive_workspace #1c2023 #1c2023 #FFFFFF
-	urgent_workspace #1c2023 #c795ae #FFFFFF
-	}
-}
+client.focused		#5294e2 #5294e2 #FFFFFF #5294e2 #5294e2
+client.urgent		#3f5ea8 #3f5ea8 #FFFFFF #3f5ea8 #3f5ea8
+#client.focused		#207e6b #207e6b #FFFFFF #207e6b #207e6b
+#client.urgent		#2eb398 #2eb398 #FFFFFF #2eb398 #2eb398
 
 # i3gaps
-for_window [class="^.*"] border pixel 3
-gaps inner 15
-gaps outer 15
+for_window [class="^.*"] border pixel 1
+gaps inner 10
+gaps outer 0
 
 #workspace names
-set $ws1 " 1 "
-set $ws2 " 2 "
-set $ws3 " 3 "
-set $ws4 " 4 "
-set $ws5 " 5 "
-set $ws6 " 6 "
-set $ws7 " 7 "
-set $ws8 " 8 "
-
-# workspace assign
-#assign [class="claws-mail"] $ws1
-#assign [class="spotify"] $ws1
-#assign [class="Deadbeef"] $ws1
-#assign [class="discord"] $ws2
-#assign [class="obs"] $ws3
-#assign [class="pavucontrol"] $ws3
-#assign [class="Firefox-esr"] $ws4
-#assign [class="Steam"] $ws5
-#assign [class="Lutris"] $ws5
-#assign [class="Code"] $ws6
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8" 
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -146,6 +106,21 @@ bindsym $mod+5 workspace $ws5
 bindsym $mod+6 workspace $ws6
 bindsym $mod+7 workspace $ws7
 bindsym $mod+8 workspace $ws8
+bindsym --whole-window $mod+button4 workspace next
+bindsym --whole-window $mod+button5 workspace prev
+bindsym $mod+Tab workspace next
+
+# switch to workspace alternative
+bindsym Mod1+Shift+Ctrl+1 workspace $ws1
+bindsym Mod1+Shift+Ctrl+2 workspace $ws2
+bindsym Mod1+Shift+Ctrl+3 workspace $ws3
+bindsym Mod1+Shift+Ctrl+4 workspace $ws4
+bindsym Mod1+Shift+Ctrl+5 workspace $ws5
+bindsym Mod1+Shift+Ctrl+6 workspace $ws6
+bindsym Mod1+Shift+Ctrl+7 workspace $ws7
+bindsym Mod1+Shift+Ctrl+8 workspace $ws8
+bindsym Mod1+Shift+Ctrl+9 exec --no-startup-id xdotool mousemove 950 530 && xdotool mousemove_relative 10 10
+bindsym Mod1+Shift+Ctrl+0 exec --no-startup-id xdotool mousemove 2870 530 && xdotool mousemove_relative 10 10
 
 # move to workspace
 bindsym $mod+Shift+1 move container to workspace $ws1
@@ -167,26 +142,106 @@ bindsym $mod+Ctrl+6 move container to workspace $ws6
 bindsym $mod+Ctrl+7 move container to workspace $ws7
 bindsym $mod+Ctrl+8 move container to workspace $ws8
 
-# autostart workspace-specific
-#exec --no-startup-id i3-msg 'workspace 1; exec claws-mail'
-#exec --no-startup-id i3-msg 'workspace 1; exec deadbeef'
-#exec --no-startup-id i3-msg 'workspace 1; exec discord'
-#exec --no-startup-id i3-msg 'workspace 3; exec obs'
-#exec --no-startup-id i3-msg 'workspace 3; exec pavucontrol'
-#exec --no-startup-id i3-msg 'workspace 4; exec firefox'
-#exec --no-startup-id i3-msg 'workspace 5; exec steam'
-
 # workspaces on monitors
-#workspace 1 output HDMI-1
-#workspace 2 output HDMI-1
-#workspace 3 output HDMI-1
-#workspace 4 output HDMI-0
-#workspace 5 output HDMI-0
-#workspace 6 output HDMI-0
-#workspace 7 output HDMI-0
+# workspace 1 output HDMI-1
+# workspace 2 output HDMI-1
+# workspace 3 output HDMI-1
+# workspace 4 output HDMI-0
+# workspace 5 output HDMI-0
+# workspace 6 output HDMI-0
+# workspace 7 output HDMI-0
+# workspace 8 output HDMI-0
+
+# workspace layout
+# for_window [workspace=$ws2] layout tabbed 
+
+# workspace assign
+assign [class="discord"] $ws1
+# assign [class="Xfce4-screenshooter"] $ws1
+assign [class="Steam"] $ws2
+assign [class="Lutris"] $ws2
+assign [class="battle.net.exe"] $ws2
+assign [class="riotclientux.exe"] $ws2
+assign [class="Minecraft*"] $ws8
+assign [class="wow*"] $ws8
+assign [class="OxygenNotIncluded"] $ws8
+assign [class="rsi launcher.exe"] $ws8
+assign [class="starcitizen.exe"] $ws8
+assign [class="steam_app_1455840"] $ws8
+# assign [class="steam_app.*"] $ws8
+assign [class="steam_app_1794680"] $ws1
+assign [class="anno1800.exe"] $ws8
+assign [class="War Thunder"] $ws8
+assign [title="Overwatch"] $ws8
+assign [class="ChildrenOfMorta"] $ws8
+assign [class="steam_app_899770"] $ws8 #Last epoch
+
+# floating
+for_window [class="Galculator"] floating enable
+for_window [class="Pavucontrol"] floating enable
+for_window [class="Joplin"] floating enable
+for_window [class="Nm-connection-editor"] floating enable
+for_window [class="Blueman-manager"] floating enable
+for_window [class="Usbimager"] floating enable
+for_window [class="qt5ct"] floating enable
+for_window [class="Xfce4-.*settings.*"] floating enable
+for_window [class="Xfce4-.*manager.*"] floating enable
+
+# steam
+for_window [class="Steam" title="Friends List"] floating enable
+for_window [class="Steam" title="Settings"] floating enable
+for_window [class="Steam" title="Friends List"] floating enable
+
+# games
+for_window [class="trackmania.exe"] floating enable
+for_window [title="World of Warracft"] windowed
+for_window [class="Minecraft*"] floating enable
+for_window [class="d2r.exe"] floating enable
+for_window [class="Project Zomboid"] floating enable
+for_window [class="scrcpy"] floating enable
+for_window [title="Vampire Survivors"] floating enable
+
+# border
+for_window [title="xfce4-panel"] border none
+for_window [class="OxygenNotIncluded"] border none
+for_window [class="steam_app.*"] border none
 
 # custom macros
-bindsym $mod+l			exec --no-startup-id ~/.macro/screen-lock.sh
-bindsym F1			exec --no-startup-id ~/.macro/poe-logout.sh
-bindsym F5			exec --no-startup-id ~/.macro/poe-hideout.sh
-bindcode 66			exec --no-startup-id ~/.macro/poe-flask.sh
+# bindsym F1			exec --no-startup-id ~/.config/scripts/poe-logout.sh
+# bindsym F5			exec --no-startup-id ~/.config/scripts/poe-hideout.sh
+# bindcode 66			exec --no-startup-id ~/.config/scripts/private/poe-flask.sh
+# bindcode 66			exec --no-startup-id ~/.config/scripts/private/wow-dps.sh
+# bindcode 135			exec --no-startup-id ~/.config/scripts/private/wow-fish.sh
+# bindcode 69			exec --no-startup-id ~/.config/scripts/private/ark-autofeed.sh
+# bindcode 71			exec --no-startup-id ~/.config/scripts/private/ark-autoattack.sh
+# bindcode 72			exec --no-startup-id ~/.config/scripts/private/ark-autorun.sh
+
+# autostart apps
+exec --no-startup-id joplin-desktop
+
+# autostart
+exec_always --no-startup-id nm-applet
+# exec_always --no-startup-id blueman-applet
+# exec_always --no-startup-id picom
+# exec_always --no-startup-id polybar hdmi0
+# exec_always --no-startup-id polybar hdmi1
+# exec_always --no-startup-id polybar dp0
+exec_always --no-startup-id setxkbmap -option ctrl:nocaps
+exec_always --no-startup-id xss-lock -- i3lock -i ~/pictures/wallpapers/current.jpg -u -F -e
+exec_always --no-startup-id feh --bg-center --no-xinerama ~/pictures/wallpapers/current.jpg
+
+# layout
+exec --no-startup-id "i3-msg 'workspace 1; append_layout /home/used/.config/i3/workspace-1.json'"
+
+# workspace 2
+exec --no-startup-id "i3-msg 'workspace 2; exec steam'"
+# exec --no-startup-id "i3-msg 'workspace 2; exec lutris lutris:rungameid/1'"
+# exec --no-startup-id "i3-msg 'workspace 2; exec lutris'"
+
+# workspace 1
+exec --no-startup-id "i3-msg 'workspace 1; exec discord'"
+exec --no-startup-id "i3-msg 'workspace 1; exec chromium https://open.spotify.com/'"
+exec --no-startup-id "i3-msg 'workspace 1; exec alacritty'"
+
+# workspace 8
+workspace $ws8 gaps inner 0
