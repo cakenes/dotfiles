@@ -174,6 +174,7 @@ assign [class="anno1800.exe"] $ws8
 assign [class="War Thunder"] $ws8
 assign [title="Overwatch"] $ws8
 assign [class="ChildrenOfMorta"] $ws8
+assign [class="steam_app_899770"] $ws8 #Last epoch
 
 # floating
 for_window [class="Galculator"] floating enable
