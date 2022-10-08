@@ -9,12 +9,6 @@ font:
     family: NotoMono Nerd Font
 #    family: Mononoki Nerd Font
     style: Regular
-<<<<<<< HEAD
-  size: 9
-=======
-#  size: 20
-  size: 10
->>>>>>> 059399a893ce41726188a7ed79f1bf213922d112
 
 # Colors (Breeze)
 colors:

