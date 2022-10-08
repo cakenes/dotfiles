@@ -1,0 +1,11 @@
+clock
+indicator
+daemonize
+image=/home/used/pictures/wallpapers/current.jpg
+text-color=ffffff
+ring-color=ffffff
+ring-clear-color=ffffff
+inside-color=00000050
+key-hl-color=00000050
+bs-hl-color=00000050
+indicator-thickness=5

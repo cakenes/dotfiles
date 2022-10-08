@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ! special
 *.foreground:   #c7ccd1
 *.background:   #1c2023
@@ -35,3 +36,12 @@
 *.color7:       #c7ccd1
 *.color15:      #f3f4f5
 
+=======
+Xft.dpi: 96
+Xft.autohint: 0
+Xft.lcdfilter:  lcddefault
+Xft.hintstyle:  hintfull
+Xft.hinting: 1
+Xft.antialias: 1
+Xft.rgba: rgb
+>>>>>>> 059399a893ce41726188a7ed79f1bf213922d112

@@ -2,8 +2,14 @@
 # KP_0 KP_1 ... KP_9 KP_Add KP_Subtract KP_Multiply KP_Divide KP_Enter KP_Separator
 
 set $mod Mod4
+<<<<<<< HEAD
 font pango:NotoMono Nerd Font 10
 floating_modifier Mod1
+=======
+#font pango:Mononoki Nerd Font 20
+font pango:Mononoki Nerd Font 10
+floating_modifier Mod4
+>>>>>>> 059399a893ce41726188a7ed79f1bf213922d112
 
 # start program
 bindsym $mod+e			exec --no-startup-id thunar
@@ -12,7 +18,12 @@ bindsym $mod+Return		exec --no-startup-id alacritty
 bindsym $mod+Shift+Return       exec --no-startup-id mate-terminal
 bindsym $mod+m			exec --no-startup-id lollypop
 bindsym $mod+Ctrl+m		exec --no-startup-id spotify
+<<<<<<< HEAD
 bindsym $mod+l                  exec --no-startup-id ~/.config/scripts/screen-off.sh
+=======
+bindsym $mod+l			exec --no-startup-id ~/.config/scripts/screen-off.sh
+bindsym $mod+Ctrl+l		exec --no-startup-id xset s activate
+>>>>>>> 059399a893ce41726188a7ed79f1bf213922d112
 bindsym Print                   exec --no-startup-id xfce4-screenshooter -f
 bindsym $mod+Print		exec --no-startup-id xfce4-screenshooter -w
 bindsym $mod+y			exec --no-startup-id pamac-manager
@@ -20,6 +31,7 @@ bindsym $mod+Ctrl+y		exec --no-startup-id xfce4-settings-manager
 bindsym $mod+Shift+y		exec --no-startup-id manjaro-settings-manager
 bindsym $mod+c			exec --no-startup-id galculator
 bindsym $mod+n			exec --no-startup-id xfce4-taskmanager
+<<<<<<< HEAD
 # bindsym $mod+d                  exec --no-startup-id dmenu_run -h 24 -nb '#1c2023' -sf '#FFFFFF' -sb '#5294e2' -nf '#FFFFFF' -fn 'NotoMono Nerd Font-10'
 bindsym $mod+d			exec --no-startup-id rofi -show run
 bindsym $mod+Shift+d		exec --no-startup-id rofi -show run
@@ -29,6 +41,19 @@ bindsym $mod+Shift+F11		exec --no-startup-id xrandr --output DP-0 --mode 1920x10
 # kill focused window
 bindsym $mod+q			exec --no-startup-id ~/.config/scripts/kill.sh
 bindsym $mod+Shift+q		[con_id="__focused__" instance="^(?!dropdown_).*$"] kill
+=======
+# bindsym $mod+d                  exec --no-startup-id dmenu_run -h 24 -nb '#1c2023' -sf '#FFFFFF' -sb '#5294e2' -nf '#FFFFFF' -fn 'Mononoki Nerd Font-10'
+bindsym $mod+d			exec --no-startup-id rofi -show run
+bindsym $mod+Shift+d		exec --no-startup-id rofi -show run
+bindsym $mod+F12		exec --no-startup-id xrandr --output eDP1 --mode 3840x2160
+bindsym $mod+F11		exec --no-startup-id xrandr --output eDP1 --mode 1920x1080
+bindsym $mod+F10		exec --no-startup-id xrandr --output eDP1 --mode 1280x720
+bindsym $mod+F9			exec --no-startup-id xrandr --output eDP1 --mode 960x540
+
+# kill focused window
+bindsym $mod+q			exec --no-startup-id ~/.config/scripts/kill.sh
+#bindsym $mod+Shift+q		[con_id="__focused__" instance="^(?!dropdown_).*$"] kill
+>>>>>>> 059399a893ce41726188a7ed79f1bf213922d112
 
 # change focus
 bindsym $mod+Left focus left
@@ -36,11 +61,17 @@ bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
+<<<<<<< HEAD
 bindsym Mod1+left focus left
 
 # move focus workspace
 bindsym $mod+Mod1+Right move workspace to output right
 bindsym $mod+Mod1+Left move workspace to output left
+=======
+# move focus workspace
+#bindsym $mod+Mod1+Right move workspace to output right
+#bindsym $mod+Mod1+Left move workspace to output left
+>>>>>>> 059399a893ce41726188a7ed79f1bf213922d112
 
 # move focus window
 bindsym $mod+Shift+Left move left
@@ -63,7 +94,11 @@ bindsym $mod+h split h
 
 # layout fullscreen / gaps
 bindsym $mod+f fullscreen toggle
+<<<<<<< HEAD
 bindsym $mod+KP_Add gaps inner current set 10; gaps outer current set 0
+=======
+bindsym $mod+KP_Add gaps inner current set 15; gaps outer current set 15
+>>>>>>> 059399a893ce41726188a7ed79f1bf213922d112
 bindsym $mod+KP_Subtract gaps inner current set 0; gaps outer current set 0
 
 # layout split / tabbed
@@ -72,17 +107,28 @@ bindsym $mod+Shift+s layout tabbed
 bindsym $mod+Ctrl+s layout tabbed
 
 # reload, restart, exit
+<<<<<<< HEAD
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
+=======
+bindsym $mod+Shift+r reload
+bindsym $mod+Shift+c restart
+>>>>>>> 059399a893ce41726188a7ed79f1bf213922d112
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # i3wm
 client.focused		#5294e2 #5294e2 #FFFFFF #5294e2 #5294e2
 client.urgent		#3f5ea8 #3f5ea8 #FFFFFF #3f5ea8 #3f5ea8
+<<<<<<< HEAD
 #client.focused		#207e6b #207e6b #FFFFFF #207e6b #207e6b
 #client.urgent		#2eb398 #2eb398 #FFFFFF #2eb398 #2eb398
 
 # i3gaps
+=======
+
+# i3gaps
+#for_window [class="^.*"] border pixel 3
+>>>>>>> 059399a893ce41726188a7ed79f1bf213922d112
 for_window [class="^.*"] border pixel 1
 gaps inner 10
 gaps outer 0
@@ -95,7 +141,11 @@ set $ws4 "4"
 set $ws5 "5"
 set $ws6 "6"
 set $ws7 "7"
+<<<<<<< HEAD
 set $ws8 "8" 
+=======
+set $ws8 "8"
+>>>>>>> 059399a893ce41726188a7ed79f1bf213922d112
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -106,6 +156,7 @@ bindsym $mod+5 workspace $ws5
 bindsym $mod+6 workspace $ws6
 bindsym $mod+7 workspace $ws7
 bindsym $mod+8 workspace $ws8
+<<<<<<< HEAD
 bindsym --whole-window $mod+button4 workspace next
 bindsym --whole-window $mod+button5 workspace prev
 bindsym $mod+Tab workspace next
@@ -122,6 +173,10 @@ bindsym Mod1+Shift+Ctrl+8 workspace $ws8
 bindsym Mod1+Shift+Ctrl+9 exec --no-startup-id xdotool mousemove 950 530 && xdotool mousemove_relative 10 10
 bindsym Mod1+Shift+Ctrl+0 exec --no-startup-id xdotool mousemove 2870 530 && xdotool mousemove_relative 10 10
 
+=======
+bindsym $mod+Tab workspace next
+
+>>>>>>> 059399a893ce41726188a7ed79f1bf213922d112
 # move to workspace
 bindsym $mod+Shift+1 move container to workspace $ws1
 bindsym $mod+Shift+2 move container to workspace $ws2
@@ -142,6 +197,7 @@ bindsym $mod+Ctrl+6 move container to workspace $ws6
 bindsym $mod+Ctrl+7 move container to workspace $ws7
 bindsym $mod+Ctrl+8 move container to workspace $ws8
 
+<<<<<<< HEAD
 # workspaces on monitors
 # workspace 1 output HDMI-1
 # workspace 2 output HDMI-1
@@ -175,6 +231,36 @@ assign [class="War Thunder"] $ws8
 assign [title="Overwatch"] $ws8
 assign [class="ChildrenOfMorta"] $ws8
 assign [class="steam_app_899770"] $ws8 #Last epoch
+=======
+# autostart workspace-specific
+# exec --no-startup-id i3-msg 'workspace 1; exec claws-mail'
+# exec --no-startup-id i3-msg 'workspace 1; exec deadbeef'
+# exec --no-startup-id i3-msg 'workspace 1; exec discord'
+# exec --no-startup-id i3-msg 'workspace 3; exec obs'
+# exec --no-startup-id i3-msg 'workspace 3; exec pavucontrol'
+# exec --no-startup-id i3-msg 'workspace 4; exec firefox'
+# exec --no-startup-id i3-msg 'workspace 5; exec steam'
+
+# workspaces on monitors
+workspace 1 output eDP1
+workspace 2 output eDP1
+workspace 3 output eDP1
+workspace 4 output DP2
+workspace 5 output DP2
+workspace 6 output DP2
+workspace 7 output DP2
+workspace 8 output DP2
+workspace 9 output DP2
+
+# workspace assign
+# assign [class="discord"] $ws1
+# assign [class="Steam"] $ws2
+# assign [class="Lutris"] $ws2
+# assign [class="battle.net.exe"] $ws2
+assign [class="Minecraft*"] $ws8
+assign [class="wow.*"] $ws8
+assign [class="steam_app.*"] $ws8
+>>>>>>> 059399a893ce41726188a7ed79f1bf213922d112
 
 # floating
 for_window [class="Galculator"] floating enable
@@ -182,11 +268,15 @@ for_window [class="Pavucontrol"] floating enable
 for_window [class="Joplin"] floating enable
 for_window [class="Nm-connection-editor"] floating enable
 for_window [class="Blueman-manager"] floating enable
+<<<<<<< HEAD
 for_window [class="Usbimager"] floating enable
+=======
+>>>>>>> 059399a893ce41726188a7ed79f1bf213922d112
 for_window [class="qt5ct"] floating enable
 for_window [class="Xfce4-.*settings.*"] floating enable
 for_window [class="Xfce4-.*manager.*"] floating enable
 
+<<<<<<< HEAD
 # steam
 for_window [class="Steam" title="Friends List"] floating enable
 for_window [class="Steam" title="Settings"] floating enable
@@ -215,11 +305,25 @@ for_window [class="steam_app.*"] border none
 # bindcode 69			exec --no-startup-id ~/.config/scripts/private/ark-autofeed.sh
 # bindcode 71			exec --no-startup-id ~/.config/scripts/private/ark-autoattack.sh
 # bindcode 72			exec --no-startup-id ~/.config/scripts/private/ark-autorun.sh
+=======
+# games
+for_window [title="Steam .*"] floating enable
+for_window [title="Console window for"] floating enable
+for_window [title="World of Warcraft"] windowed
+
+# border
+for_window [title="xfce4-panel"] border none
+
+# custom macros
+bindsym $mod+Ctrl+BackSpace exec ~/.config/scripts/cpu-perf.sh
+bindsym $mod+BackSpace exec ~/.config/scripts/touchpad.sh
+>>>>>>> 059399a893ce41726188a7ed79f1bf213922d112
 
 # autostart apps
 exec --no-startup-id joplin-desktop
 
 # autostart
+<<<<<<< HEAD
 exec_always --no-startup-id nm-applet
 # exec_always --no-startup-id blueman-applet
 # exec_always --no-startup-id picom
@@ -229,10 +333,28 @@ exec_always --no-startup-id nm-applet
 exec_always --no-startup-id setxkbmap -option ctrl:nocaps
 exec_always --no-startup-id xss-lock -- i3lock -i ~/pictures/wallpapers/current.jpg -u -F -e
 exec_always --no-startup-id feh --bg-center --no-xinerama ~/pictures/wallpapers/current.jpg
+=======
+exec_always --no-startup-id picom
+exec_always --no-startup-id xset s blank
+exec_always --no-startup-id nm-applet
+# exec_always --no-startup-id blueman-applet
+# exec_always --no-startup-id polybar edp1
+# exec_always --no-startup-id polybar dp2
+exec_always --no-startup-id setxkbmap -option ctrl:nocaps
+exec_always --no-startup-id xss-lock -- i3lock -i ~/pictures/wallpapers/current.jpg -u -F -e
+exec_always --no-startup-id feh --bg-fill --no-xinerama --auto-zoom ~/pictures/wallpapers/current.jpg
+
+# fix xbacklight
+exec --no-startup-id xbacklight +1
+
+# cpu performance
+exec --no-startup-id sleep 5 && exec ~/.config/scripts/cpu-perf.sh
+>>>>>>> 059399a893ce41726188a7ed79f1bf213922d112
 
 # layout
 exec --no-startup-id "i3-msg 'workspace 1; append_layout /home/used/.config/i3/workspace-1.json'"
 
+<<<<<<< HEAD
 # workspace 2
 exec --no-startup-id "i3-msg 'workspace 2; exec steam'"
 # exec --no-startup-id "i3-msg 'workspace 2; exec lutris lutris:rungameid/1'"
@@ -242,6 +364,11 @@ exec --no-startup-id "i3-msg 'workspace 2; exec steam'"
 exec --no-startup-id "i3-msg 'workspace 1; exec discord'"
 exec --no-startup-id "i3-msg 'workspace 1; exec chromium https://open.spotify.com/'"
 exec --no-startup-id "i3-msg 'workspace 1; exec alacritty'"
+=======
+# workspace 1
+exec --no-startup-id "i3-msg 'workspace 1; exec discord'"
+exec --no-startup-id "i3-msg 'workspace 1; exec chromium https://kauppalehti.fi'"
+>>>>>>> 059399a893ce41726188a7ed79f1bf213922d112
 
 # workspace 8
 workspace $ws8 gaps inner 0

@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
     "border": "normal",
     "floating": "auto_off",
     "layout": "splitv",
@@ -58,6 +59,27 @@
             "type": "con"
         }
     ]
+=======
+    "border": "pixel",
+    "current_border_width": 1,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 1079,
+       "width": 1919,
+       "x": 0,
+       "y": 0
+    },
+    "marks": [],
+    "name": "Discord",
+    "percent": 0.45,
+    "swallows": [
+       {
+       "class": "^discord$",
+       "title": "^Friends - Discord$"
+       }
+    ],
+    "type": "con"
+>>>>>>> 059399a893ce41726188a7ed79f1bf213922d112
 }
 
 {
@@ -65,6 +87,7 @@
     "current_border_width": 1,
     "floating": "auto_off",
     "geometry": {
+<<<<<<< HEAD
        "height": 1391,
        "width": 1135,
        "x": 1152,
@@ -72,6 +95,15 @@
     },
     "marks": [],
     "name": "Spotify – Web Player - Chromium",
+=======
+       "height": 1031,
+       "width": 1898,
+       "x": 11,
+       "y": 38
+    },
+    "marks": [],
+    "name": "Chromium",
+>>>>>>> 059399a893ce41726188a7ed79f1bf213922d112
     "percent": 0.55,
     "swallows": [
        {
@@ -80,4 +112,7 @@
     ],
     "type": "con"
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 059399a893ce41726188a7ed79f1bf213922d112
