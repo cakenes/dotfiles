@@ -13,7 +13,6 @@ HISTSIZE= HISTFILESIZE= # Infinite history.
 
 # alias
 alias ls="ls --color=auto"
-=======
 #setxkbmap -option ctrl:nocaps
 shopt -s autocd # allows cd without cd
 shopt -s checkwinsize # check window size
