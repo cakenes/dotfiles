@@ -175,6 +175,7 @@ assign [class="War Thunder"] $ws8
 assign [title="Overwatch"] $ws8
 assign [class="ChildrenOfMorta"] $ws8
 assign [class="steam_app_899770"] $ws8 #Last epoch
+assign [class="csgo_linux64"] $ws8
 
 # floating
 for_window [class="Galculator"] floating enable
@@ -186,6 +187,9 @@ for_window [class="Usbimager"] floating enable
 for_window [class="qt5ct"] floating enable
 for_window [class="Xfce4-.*settings.*"] floating enable
 for_window [class="Xfce4-.*manager.*"] floating enable
+for_window [class="iriunwebcam"] floating enable
+for_window [title="Emulator"] floating enable
+
 
 # steam
 for_window [class="Steam" title="Friends List"] floating enable
@@ -200,6 +204,7 @@ for_window [class="d2r.exe"] floating enable
 for_window [class="Project Zomboid"] floating enable
 for_window [class="scrcpy"] floating enable
 for_window [title="Vampire Survivors"] floating enable
+for_window [class="d2r.exe"] floating enable
 
 # border
 for_window [title="xfce4-panel"] border none
@@ -209,6 +214,7 @@ for_window [class="steam_app.*"] border none
 # custom macros
 # bindsym F1			exec --no-startup-id ~/.config/scripts/poe-logout.sh
 # bindsym F5			exec --no-startup-id ~/.config/scripts/poe-hideout.sh
+bindcode 72			exec --no-startup-id ~/.config/scripts/private/d2r-color.sh
 # bindcode 66			exec --no-startup-id ~/.config/scripts/private/poe-flask.sh
 # bindcode 66			exec --no-startup-id ~/.config/scripts/private/wow-dps.sh
 # bindcode 135			exec --no-startup-id ~/.config/scripts/private/wow-fish.sh
