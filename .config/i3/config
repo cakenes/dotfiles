@@ -214,7 +214,7 @@ for_window [class="steam_app.*"] border none
 # custom macros
 # bindsym F1			exec --no-startup-id ~/.config/scripts/poe-logout.sh
 # bindsym F5			exec --no-startup-id ~/.config/scripts/poe-hideout.sh
-bindcode 72			exec --no-startup-id ~/.config/scripts/private/d2r-color.sh
+# bindcode 72			exec --no-startup-id ~/.config/scripts/private/d2r-color.sh
 # bindcode 66			exec --no-startup-id ~/.config/scripts/private/poe-flask.sh
 # bindcode 66			exec --no-startup-id ~/.config/scripts/private/wow-dps.sh
 # bindcode 135			exec --no-startup-id ~/.config/scripts/private/wow-fish.sh
