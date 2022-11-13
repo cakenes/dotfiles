@@ -197,9 +197,6 @@ exec_always --no-startup-id feh --bg-fill --no-xinerama --auto-zoom ~/pictures/w
 # fix xbacklight
 exec --no-startup-id xbacklight +1
 
-# cpu performance
-exec --no-startup-id sleep 5 && exec ~/.config/scripts/cpu-perf.sh
-
 # layout
 exec --no-startup-id "i3-msg 'workspace 1; append_layout ~/.config/i3/workspace-1.json'"
 
