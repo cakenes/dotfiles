@@ -233,7 +233,7 @@ exec_always --no-startup-id nm-applet
 # exec_always --no-startup-id polybar hdmi1
 # exec_always --no-startup-id polybar dp0
 exec_always --no-startup-id setxkbmap -option ctrl:nocaps
-exec_always --no-startup-id xss-lock -- i3lock -i ~/pictures/wallpapers/current.jpg -u -F -e
+exec_always --no-startup-id xss-lock -- i3lock -i ~/pictures/wallpapers/current.jpg -u -F -e --composite
 exec_always --no-startup-id feh --bg-center --no-xinerama ~/pictures/wallpapers/current.jpg
 
 # layout

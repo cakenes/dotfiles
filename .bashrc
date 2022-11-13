@@ -33,7 +33,6 @@ alias samsung-web="scrcpy --v4l2-sink /dev/video0 --crop=1040:2200:20:0 --turn-s
 alias samsung-web-fullhd="scrcpy --v4l2-sink /dev/video0 --crop=1080:1900:0:240 --turn-screen-off --window-width=1920"
 alias oneplus-web="scrcpy --v4l2-sink /dev/video0 --crop=1080:2155:0:65 --turn-screen-off --max-fps=30 --window-width=1024"
 
-
 # logs
 function log-search() { sudo grep -rsh $1 /var/log | sort; }
 
