@@ -3,6 +3,5 @@
 ### Branches
 
 ```shell
-Master - Desktop
-Laptop - Laptop
+Desktop & Laptop
 ```
