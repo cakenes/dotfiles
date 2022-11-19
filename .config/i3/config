@@ -160,6 +160,7 @@ assign [class="discord"] $ws1
 # assign [class="Xfce4-screenshooter"] $ws1
 assign [class="Steam"] $ws2
 assign [class="Lutris"] $ws2
+assign [class="bottles"] $ws2
 assign [class="battle.net.exe"] $ws2
 assign [class="riotclientux.exe"] $ws2
 assign [class="Minecraft*"] $ws8
@@ -189,7 +190,6 @@ for_window [class="Xfce4-.*settings.*"] floating enable
 for_window [class="Xfce4-.*manager.*"] floating enable
 for_window [class="iriunwebcam"] floating enable
 for_window [title="Emulator"] floating enable
-
 
 # steam
 for_window [class="Steam" title="Friends List"] floating enable

@@ -15,12 +15,16 @@ export ANDROID_SDK_ROOT=/opt/android-sdk
 export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
 export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
 
-export QT_QPA_PLATFORMTHEME="qt5ct"
+export QT_QPA_PLATFORMTHEME=qt5ct
 export QT_AUTO_SCREEN_SCALE_FACTOR=0
-export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
+export GTK2_RC_FILES=$HOME/.gtkrc-2.0
 
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
 export LVM_SUPPRESS_FD_WARNINGS=1
+
+export NODE_OPTIONS=--openssl-legacy-provider
+
+export GTK_THEME=Arc-Dark
 
 # autostart xfce
 [ "$(tty)" = "/dev/tty1" ] && ! pgrep -x xfce4-session >/dev/null && exec startx
