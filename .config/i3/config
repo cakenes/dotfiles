@@ -77,8 +77,10 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # i3wm
-client.focused		#5294e2 #5294e2 #FFFFFF #5294e2 #5294e2
-client.urgent		#3f5ea8 #3f5ea8 #FFFFFF #3f5ea8 #3f5ea8
+client.focused		#195092 #195092 #FFFFFF #195092 #195092
+client.urgent		#5294e2 #5294e2 #FFFFFF #5294e2 #5294e2
+#client.focused		#5294e2 #5294e2 #FFFFFF #5294e2 #5294e2
+#client.urgent		#3f5ea8 #3f5ea8 #FFFFFF #3f5ea8 #3f5ea8
 #client.focused		#207e6b #207e6b #FFFFFF #207e6b #207e6b
 #client.urgent		#2eb398 #2eb398 #FFFFFF #2eb398 #2eb398
 
@@ -106,8 +108,8 @@ bindsym $mod+5 workspace $ws5
 bindsym $mod+6 workspace $ws6
 bindsym $mod+7 workspace $ws7
 bindsym $mod+8 workspace $ws8
-bindsym --whole-window $mod+button4 workspace next
-bindsym --whole-window $mod+button5 workspace prev
+bindsym --whole-window $mod+button4 workspace prev
+bindsym --whole-window $mod+button5 workspace next
 bindsym $mod+Tab workspace next
 
 # switch to workspace alternative
@@ -190,6 +192,7 @@ for_window [class="Xfce4-.*settings.*"] floating enable
 for_window [class="Xfce4-.*manager.*"] floating enable
 for_window [class="iriunwebcam"] floating enable
 for_window [title="Emulator"] floating enable
+for_window [class="Nvidia-settings"] floating enable
 
 # steam
 for_window [class="Steam" title="Friends List"] floating enable
