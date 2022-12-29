@@ -1,5 +1,7 @@
 # ~/.bashrc
 
+eval "$(starship init bash)"
+
 # settings
 stty stop ''; stty start '';
 setxkbmap -option ctrl:nocaps
