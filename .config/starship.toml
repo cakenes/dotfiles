@@ -1,4 +1,4 @@
-format = '''$git_branch$directory$rust$package$character'''
+format = '''$git_status$git_branch$directory$rust$package$character'''
 
 # Get editor completions based on the config schema
 "$schema" = 'https://starship.rs/config-schema.json'
@@ -26,4 +26,10 @@ disabled = true
 
 [git_branch]
 format = '[$branch(:$remote_branch)]($style) '
+style = 'dimmed blue'
+
+[git_status]
+ahead = '⇡${count}'
+diverged = '⇕⇡${ahead_count}⇣${behind_count}'
+behind = '⇣${count}'
 style = 'dimmed blue'
