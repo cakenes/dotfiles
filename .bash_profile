@@ -3,6 +3,8 @@
 if [ -f ~/.bashrc ]; then
   . ~/.bashrc
 fi
+ 
+source /usr/share/nvm/init-nvm.sh
 
 export TERM=linux
 export FILE=thunar

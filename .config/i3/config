@@ -36,8 +36,6 @@ bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
-bindsym Mod1+left focus left
-
 # move focus workspace
 bindsym $mod+Mod1+Right move workspace to output right
 bindsym $mod+Mod1+Left move workspace to output left
@@ -56,6 +54,7 @@ bindsym $mod+Ctrl+Left resize grow width 5 px or 5 ppt
 
 # toggle tiling / floating
 bindsym $mod+space floating toggle
+tiling_drag off
 
 # split in direction
 bindsym $mod+v split v
@@ -215,7 +214,7 @@ for_window [class="OxygenNotIncluded"] border none
 for_window [class="steam_app.*"] border none
 
 # custom macros
-# bindsym F1			exec --no-startup-id ~/.config/scripts/poe-logout.sh
+bindsym F1			exec --no-startup-id ~/.config/scripts/poe-logout.sh
 # bindsym F5			exec --no-startup-id ~/.config/scripts/poe-hideout.sh
 # bindcode 72			exec --no-startup-id ~/.config/scripts/private/d2r-color.sh
 # bindcode 66			exec --no-startup-id ~/.config/scripts/private/poe-flask.sh
@@ -238,6 +237,8 @@ exec_always --no-startup-id nm-applet
 exec_always --no-startup-id setxkbmap -option ctrl:nocaps
 exec_always --no-startup-id xss-lock -- i3lock -i ~/pictures/wallpapers/current.jpg -u -F -e --composite
 exec_always --no-startup-id feh --bg-center --no-xinerama ~/pictures/wallpapers/current.jpg
+exec_always --no-startup-id sh /home/used/.config/scripts/autolock.sh 2 5
+exec_always --no-startup-id barrier
 
 # layout
 exec --no-startup-id "i3-msg 'workspace 1; append_layout /home/used/.config/i3/workspace-1.json'"
