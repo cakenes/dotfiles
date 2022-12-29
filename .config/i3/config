@@ -238,7 +238,7 @@ exec_always --no-startup-id setxkbmap -option ctrl:nocaps
 exec_always --no-startup-id xss-lock -- i3lock -i ~/pictures/wallpapers/current.jpg -u -F -e --composite
 exec_always --no-startup-id feh --bg-center --no-xinerama ~/pictures/wallpapers/current.jpg
 exec_always --no-startup-id sh /home/used/.config/scripts/autolock.sh 2 5
-exec_always --no-startup-id barrier
+exec_always --no-startup-id barriers --no-tray --disable-crypto --no-restart --name Debused -c ~/.config/barrier.conf --address :24800
 
 # layout
 exec --no-startup-id "i3-msg 'workspace 1; append_layout /home/used/.config/i3/workspace-1.json'"
