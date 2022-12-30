@@ -7,7 +7,7 @@ floating_modifier Mod1
 
 # start program
 bindsym $mod+e			exec --no-startup-id thunar
-bindsym $mod+w                  exec --no-startup-id chromium
+bindsym $mod+w                  exec --no-startup-id brave
 bindsym $mod+Return		exec --no-startup-id alacritty
 bindsym $mod+Shift+Return       exec --no-startup-id mate-terminal
 bindsym $mod+m			exec --no-startup-id lollypop
@@ -250,7 +250,7 @@ exec --no-startup-id "i3-msg 'workspace 2; exec steam'"
 
 # workspace 1
 exec --no-startup-id "i3-msg 'workspace 1; exec discord'"
-exec --no-startup-id "i3-msg 'workspace 1; exec chromium https://open.spotify.com/'"
+exec --no-startup-id "i3-msg 'workspace 1; exec brave https://open.spotify.com/'"
 exec --no-startup-id "i3-msg 'workspace 1; exec alacritty'"
 
 # workspace 8

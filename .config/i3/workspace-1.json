@@ -71,11 +71,11 @@
        "y": 38
     },
     "marks": [],
-    "name": "Spotify – Web Player - Chromium",
+    "name": "Spotify – Web Player - Brave",
     "percent": 0.55,
     "swallows": [
        {
-       "class": "^Chromium$"
+       "class": "^Brave-browser$"
        }
     ],
     "type": "con"
