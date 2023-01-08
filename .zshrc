@@ -18,6 +18,7 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 alias run-pihlapotilas="cd ~/git/pihlapotilas && yarn start"
 alias run-pihlaserver="cd ~/git/pihla-server && yarn run local"
 alias run-prosecco="cd ~/git/prosecco && yarn local"
+alias run-pihladoctor="cd ~/git/pihla-doctor && yarn local"
 
 alias git-pp-local="pushd ~/git/pihlapotilas && arch -x86_64 npx react-native run-ios --scheme 'pihlapotilas local' --simulator='iPhone 14 Pro' && popd"
 alias git-pp-staging="pushd ~/git/pihlapotilas && arch -x86_64 npx react-native run-ios --scheme 'pihlapotilas staging' --simulator='iPhone 14 Pro' && popd"
