@@ -3,6 +3,7 @@
 # settings
 stty stop ''; stty start '';
 setxkbmap -option ctrl:nocaps
+source /usr/share/nvm/init-nvm.sh
 
 #xmodmap -e "keycode 135 = Super_L"
 #xmodmap -e "keycode 133 = Menu"
