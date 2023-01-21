@@ -14,4 +14,4 @@ yabai -m config focus_follows_mouse	autofocus
 yabai -m config mouse_modifier		cmd
 
 # Rules
-yabai -m rule --add app!="^(Alacritty|Brave Browser|Code|Discord|Docker Desktop|Finder|Slack)$" manage=off
+yabai -m rule --add app!="^(Alacritty|Brave Browser|Code|DBeaver|Discord|Docker Desktop|Finder|Slack)$" manage=off

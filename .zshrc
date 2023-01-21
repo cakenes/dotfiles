@@ -4,6 +4,7 @@ alias ls="ls --color=auto"
 alias df="df -Tha --total"
 alias free="free -mt"
 alias grep="grep --color=auto"
+alias xcode="open -a Xcode"
 
 setopt autocd
 HISTSIZE=999999999

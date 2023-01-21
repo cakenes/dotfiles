@@ -9,7 +9,7 @@ window:
   dynamic_padding: false
 
   # full, none, transparent, buttonless
-  decorations: none
+  decorations: buttonless
 
   # Windowed, Maximized, FullScreen, SimpleFullscreen
   startup_mode: Windowed
