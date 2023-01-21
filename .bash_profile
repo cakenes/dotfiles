@@ -3,8 +3,6 @@
 if [ -f ~/.bashrc ]; then
   . ~/.bashrc
 fi
- 
-source /usr/share/nvm/init-nvm.sh
 
 export TERM=linux
 export FILE=thunar
@@ -23,8 +21,6 @@ export GTK2_RC_FILES=$HOME/.gtkrc-2.0
 
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
 export LVM_SUPPRESS_FD_WARNINGS=1
-
-#export NODE_OPTIONS=--openssl-legacy-provider
 
 export GTK_THEME=Arc-Dark
 
