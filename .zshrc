@@ -5,6 +5,7 @@ alias df="df -Tha --total"
 alias free="free -mt"
 alias grep="grep --color=auto"
 alias xcode="open -a Xcode"
+alias android="open -a Android\ Studio"
 
 setopt autocd
 HISTSIZE=999999999
@@ -51,3 +52,4 @@ load-nvmrc
 source /Users/Used/.docker/init-zsh.sh || true # Added by Docker Desktop
 
 eval "$(starship init zsh)"
+eval "$(rbenv init - )"

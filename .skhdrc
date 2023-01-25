@@ -41,6 +41,7 @@ cmd + alt + shift - 8 : yabai -m window --space 16
 
 # Tiling
 cmd - space : yabai -m window --toggle float
+cmd + shift - s : yabai -m window --toggle split
 cmd + shift - space : yabai -m window --toggle zoom-fullscreen
 
 cmd - up    : yabai -m window --focus north
@@ -53,7 +54,9 @@ cmd + shift - right : yabai -m window --swap east || $(yabai -m window --display
 cmd + shift - down : yabai -m window --swap south || $(yabai -m window --display south; yabai -m display --focus south)
 cmd + shift - left : yabai -m window --swap west || $(yabai -m window --display west; yabai -m display --focus west)
 
+# cmd + ctrl - up : [[ $(yabai -m query --windows --window | jq .frame.y) -gt "52" ]] && yabai -m window --resize down:-100:0 || yabai -m window --resize up:100:0
 cmd + ctrl - right : [[ $(yabai -m query --windows --window | jq .frame.x) == "8" ]] && yabai -m window --resize right:100:0 || yabai -m window --resize left:100:0
+# cmd + ctrl - down : [[ $(yabai -m query --windows --window | jq .frame.y) -gt "52" ]] && yabai -m window --resize down:100:0 || yabai -m window --resize up:-100:0
 cmd + ctrl - left : [[ $(yabai -m query --windows --window | jq .frame.x) == "8" ]] && yabai -m window --resize right:-100:0 || yabai -m window --resize left:-100:0
 
 ctrl + alt + cmd - m : [[ $(yabai -m config focus_follows_mouse) = "disabled" ]] && yabai -m config focus_follows_mouse autofocus || yabai -m config focus_follows_mouse off
