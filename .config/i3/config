@@ -62,7 +62,7 @@ bindsym $mod+h split h
 
 # layout fullscreen / gaps
 bindsym $mod+f fullscreen toggle
-bindsym $mod+KP_Add gaps inner current set 10; gaps outer current set 0
+bindsym $mod+KP_Add gaps inner current set 8; gaps outer current set 0
 bindsym $mod+KP_Subtract gaps inner current set 0; gaps outer current set 0
 
 # layout split / tabbed
@@ -85,7 +85,7 @@ client.urgent		#5294e2 #5294e2 #FFFFFF #5294e2 #5294e2
 
 # i3gaps
 for_window [class="^.*"] border pixel 1
-gaps inner 10
+gaps inner 8
 gaps outer 0
 
 #workspace names
@@ -238,7 +238,7 @@ exec_always --no-startup-id xfce4-panel -r
 exec_always --no-startup-id setxkbmap -option ctrl:nocaps
 exec_always --no-startup-id xss-lock -- i3lock -i ~/pictures/wallpapers/current.jpg -u -F -e --composite
 exec_always --no-startup-id feh --bg-center --no-xinerama ~/pictures/wallpapers/current.jpg
-exec_always --no-startup-id sh /home/used/.config/scripts/autolock.sh 2 5
+exec_always --no-startup-id sh /home/used/.config/scripts/autolock.sh 5 10
 exec_always --no-startup-id barriers --no-tray --disable-crypto --no-restart --name Debused -c ~/.config/barrier.conf --address :24800
 
 # layout

@@ -8,6 +8,7 @@ source /usr/share/nvm/init-nvm.sh
 #xmodmap -e "keycode 135 = Super_L"
 #xmodmap -e "keycode 133 = Menu"
 
+# history
 shopt -s autocd # Allows cd without cd.
 shopt -s checkwinsize # Check window size.
 HISTSIZE= HISTFILESIZE= # Infinite history.
