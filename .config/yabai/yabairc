@@ -1,5 +1,8 @@
 #!/usr/bin/env sh
 
+yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
+sudo yabai --load-sa
+
 # Layout
 yabai -m config layout			bsp
 yabai -m config top_padding		8
@@ -10,8 +13,11 @@ yabai -m config window_gap		8
 
 # Options
 yabai -m config window_topmost		on
+yabai -m config window_shadow		off
 yabai -m config focus_follows_mouse	autofocus
 yabai -m config mouse_modifier		cmd
 
 # Rules
-yabai -m rule --add app!="^(Alacritty|Brave Browser|Code|DBeaver|Discord|Docker Desktop|Finder|Slack)$" manage=off
+tiling="(Alacritty|Brave Browser|Code|DBeaver|Discord|Docker Desktop|Finder|Slack|Xcode)"
+yabai -m rule --add app="^${tiling}$" manage=on layer=below
+yabai -m rule --add app!="ˆ${tiling}$" manage=off

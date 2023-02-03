@@ -6,6 +6,8 @@ alias free="free -mt"
 alias grep="grep --color=auto"
 alias xcode="open -a Xcode"
 alias android="open -a Android\ Studio"
+alias simulator="open -a Simulator.app"
+alias simulator2="open -a Simuatlor.app"
 
 setopt autocd
 HISTSIZE=999999999
@@ -23,8 +25,8 @@ alias run-prosecco="cd ~/git/prosecco && yarn local"
 alias run-pihladoctor="cd ~/git/pihla-doctor && yarn local"
 
 alias git-pp-local="pushd ~/git/pihlapotilas && arch -x86_64 npx react-native run-ios --scheme 'pihlapotilas local' --simulator='iPhone 14 Pro' && popd"
+alias git-pp-local-se="pushd ~/git/pihlapotilas && arch -x86_64 npx react-native run-ios --scheme 'pihlapotilas local' --simulator='iPhone SE' && popd"
 alias git-pp-staging="pushd ~/git/pihlapotilas && arch -x86_64 npx react-native run-ios --scheme 'pihlapotilas staging' --simulator='iPhone 14 Pro' && popd"
-alias simulator="open -a Simulator.app"
 
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
 [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
