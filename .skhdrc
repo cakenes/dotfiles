@@ -14,22 +14,14 @@ cmd - 7 : yabai -m space --focus $(yabai -m query --displays --display | jq -r '
 cmd - 8 : yabai -m space --focus $(yabai -m query --displays --display | jq -r '.spaces[7]')
 
 # Move spaces
-cmd + alt - 1 : yabai -m window --space 1
-cmd + alt - 2 : yabai -m window --space 2
-cmd + alt - 3 : yabai -m window --space 3
-cmd + alt - 4 : yabai -m window --space 4
-cmd + alt - 5 : yabai -m window --space 5
-cmd + alt - 6 : yabai -m window --space 6
-cmd + alt - 7 : yabai -m window --space 7
-cmd + alt - 8 : yabai -m window --space 8
-cmd + alt + shift - 1 : yabai -m window --space 9
-cmd + alt + shift - 2 : yabai -m window --space 10
-cmd + alt + shift - 3 : yabai -m window --space 11
-cmd + alt + shift - 4 : yabai -m window --space 12
-cmd + alt + shift - 5 : yabai -m window --space 13
-cmd + alt + shift - 6 : yabai -m window --space 14
-cmd + alt + shift - 7 : yabai -m window --space 15
-cmd + alt + shift - 8 : yabai -m window --space 16
+cmd + ctrl - 1 : yabai -m window --space $(yabai -m query --displays --display | jq -r '.spaces[0]')
+cmd + ctrl - 2 : yabai -m window --space $(yabai -m query --displays --display | jq -r '.spaces[1]')
+cmd + ctrl - 3 : yabai -m window --space $(yabai -m query --displays --display | jq -r '.spaces[2]')
+cmd + ctrl - 4 : yabai -m window --space $(yabai -m query --displays --display | jq -r '.spaces[3]')
+cmd + ctrl - 5 : yabai -m window --space $(yabai -m query --displays --display | jq -r '.spaces[4]')
+cmd + ctrl - 6 : yabai -m window --space $(yabai -m query --displays --display | jq -r '.spaces[5]')
+cmd + ctrl - 7 : yabai -m window --space $(yabai -m query --displays --display | jq -r '.spaces[6]')
+cmd + ctrl - 8 : yabai -m window --space $(yabai -m query --displays --display | jq -r '.spaces[7]')
 
 # Tiling
 cmd - space : yabai -m window --toggle float

@@ -20,5 +20,6 @@ yabai -m config window_placement	second_child
 
 # Rules
 tiling="(Alacritty|Brave Browser|Code|DBeaver|Discord|Docker Desktop|Finder|Microsoft Teams|Slack|Xcode)"
-yabai -m rule --add app=".*" layer=below
+
+yabai -m rule --add app="^*" manage=on layer=below
 yabai -m rule --add app!="^${tiling}$" manage=off
