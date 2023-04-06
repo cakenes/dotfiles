@@ -1,42 +1,43 @@
 # Programs
-cmd - return : open -na /Applications/Alacritty.app/
-cmd - w : open -na '/Applications/Brave Browser.app/'
-cmd - e : open ~/
+ctrl + cmd - return : open -na /Applications/Alacritty.app/
+ctrl + cmd - w : open -na '/Applications/Brave Browser.app/'
+ctrl + cmd - e : open ~/
+ctrl - q : kill $(yabai -m query --windows --window | jq .pid)
 
 # Focus spaces
-cmd - 1 : yabai -m space --focus $(yabai -m query --displays --display | jq -r '.spaces[0]')
-cmd - 2 : yabai -m space --focus $(yabai -m query --displays --display | jq -r '.spaces[1]')
-cmd - 3 : yabai -m space --focus $(yabai -m query --displays --display | jq -r '.spaces[2]')
-cmd - 4 : yabai -m space --focus $(yabai -m query --displays --display | jq -r '.spaces[3]')
-cmd - 5 : yabai -m space --focus $(yabai -m query --displays --display | jq -r '.spaces[4]')
-cmd - 6 : yabai -m space --focus $(yabai -m query --displays --display | jq -r '.spaces[5]')
-cmd - 7 : yabai -m space --focus $(yabai -m query --displays --display | jq -r '.spaces[6]')
-cmd - 8 : yabai -m space --focus $(yabai -m query --displays --display | jq -r '.spaces[7]')
+ctrl - 1 : yabai -m space --focus $(yabai -m query --displays --display | jq -r '.spaces[0]')
+ctrl - 2 : yabai -m space --focus $(yabai -m query --displays --display | jq -r '.spaces[1]')
+ctrl - 3 : yabai -m space --focus $(yabai -m query --displays --display | jq -r '.spaces[2]')
+ctrl - 4 : yabai -m space --focus $(yabai -m query --displays --display | jq -r '.spaces[3]')
+ctrl - 5 : yabai -m space --focus $(yabai -m query --displays --display | jq -r '.spaces[4]')
+ctrl - 6 : yabai -m space --focus $(yabai -m query --displays --display | jq -r '.spaces[5]')
+ctrl - 7 : yabai -m space --focus $(yabai -m query --displays --display | jq -r '.spaces[6]')
+ctrl - 8 : yabai -m space --focus $(yabai -m query --displays --display | jq -r '.spaces[7]')
 
 # Move spaces
-cmd + ctrl - 1 : yabai -m window --space $(yabai -m query --displays --display | jq -r '.spaces[0]')
-cmd + ctrl - 2 : yabai -m window --space $(yabai -m query --displays --display | jq -r '.spaces[1]')
-cmd + ctrl - 3 : yabai -m window --space $(yabai -m query --displays --display | jq -r '.spaces[2]')
-cmd + ctrl - 4 : yabai -m window --space $(yabai -m query --displays --display | jq -r '.spaces[3]')
-cmd + ctrl - 5 : yabai -m window --space $(yabai -m query --displays --display | jq -r '.spaces[4]')
-cmd + ctrl - 6 : yabai -m window --space $(yabai -m query --displays --display | jq -r '.spaces[5]')
-cmd + ctrl - 7 : yabai -m window --space $(yabai -m query --displays --display | jq -r '.spaces[6]')
-cmd + ctrl - 8 : yabai -m window --space $(yabai -m query --displays --display | jq -r '.spaces[7]')
+ctrl + cmd - 1 : yabai -m window --space $(yabai -m query --displays --display | jq -r '.spaces[0]')
+ctrl + cmd - 2 : yabai -m window --space $(yabai -m query --displays --display | jq -r '.spaces[1]')
+ctrl + cmd - 3 : yabai -m window --space $(yabai -m query --displays --display | jq -r '.spaces[2]')
+ctrl + cmd - 4 : yabai -m window --space $(yabai -m query --displays --display | jq -r '.spaces[3]')
+ctrl + cmd - 5 : yabai -m window --space $(yabai -m query --displays --display | jq -r '.spaces[4]')
+ctrl + cmd - 6 : yabai -m window --space $(yabai -m query --displays --display | jq -r '.spaces[5]')
+ctrl + cmd - 7 : yabai -m window --space $(yabai -m query --displays --display | jq -r '.spaces[6]')
+ctrl + cmd - 8 : yabai -m window --space $(yabai -m query --displays --display | jq -r '.spaces[7]')
 
 # Tiling
-cmd - space : yabai -m window --toggle float
-cmd + shift - s : yabai -m window --toggle split
-cmd + shift - space : yabai -m window --toggle zoom-fullscreen
+ctrl - space : yabai -m window --toggle float
+ctrl + shift - s : yabai -m window --toggle split
+ctrl + shift - space : yabai -m window --toggle zoom-fullscreen
 
-cmd - up    : yabai -m window --focus north
-cmd - right : yabai -m window --focus east
-cmd - down  : yabai -m window --focus south
-cmd - left  : yabai -m window --focus west
+ctrl - up    : yabai -m window --focus north
+ctrl - right : yabai -m window --focus east
+ctrl - down  : yabai -m window --focus south
+ctrl - left  : yabai -m window --focus west
 
-cmd + shift - up : yabai -m window --swap north || $(yabai -m window --display north; yabai -m display --focus north)
-cmd + shift - right : yabai -m window --swap east || $(yabai -m window --display east; yabai -m display --focus east)
-cmd + shift - down : yabai -m window --swap south || $(yabai -m window --display south; yabai -m display --focus south)
-cmd + shift - left : yabai -m window --swap west || $(yabai -m window --display west; yabai -m display --focus west)
+ctrl + shift - up : yabai -m window --swap north || $(yabai -m window --display north; yabai -m display --focus north)
+ctrl + shift - right : yabai -m window --swap east || $(yabai -m window --display east; yabai -m display --focus east)
+ctrl + shift - down : yabai -m window --swap south || $(yabai -m window --display south; yabai -m display --focus south)
+ctrl + shift - left : yabai -m window --swap west || $(yabai -m window --display west; yabai -m display --focus west)
 
 # cmd + ctrl - up : [[ $(yabai -m query --windows --window | jq .frame.y) -gt "52" ]] && yabai -m window --resize down:-100:0 || yabai -m window --resize up:100:0
 cmd + ctrl - right : [[ $(yabai -m query --windows --window | jq .frame.x) == "8" ]] && yabai -m window --resize right:100:0 || yabai -m window --resize left:100:0

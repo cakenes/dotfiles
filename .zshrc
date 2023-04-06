@@ -12,7 +12,14 @@ alias simulator2="open -a Simuatlor.app"
 setopt autocd
 HISTSIZE=999999999
 
+# Postgresql
+export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
+export LDFLAGS="-L/opt/homebrew/opt/postgresql@15/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/postgresql@15/include"
+export PKG_CONFIG_PATH="/opt/homebrew/opt/postgresql@15/lib/pkgconfig"
+
 export PATH=/opt/homebrew/bin:$PATH
+export PATH="/opt/homebrew/sbin:$PATH"
 export LSCOLORS=ExGxBxDxCxEgEdxbxgxcxd
 export PS1=$'\033[01;34m%n\033[01;34m:\033[00m%~\033[m\$ '
 export PYENV_ROOT="$HOME/.pyenv"
@@ -24,8 +31,11 @@ alias run-pihlaserver="cd ~/git/pihla-server && yarn run local"
 alias run-prosecco="cd ~/git/prosecco && yarn local"
 alias run-pihladoctor="cd ~/git/pihla-doctor && yarn local"
 
+alias git-pr="gh search prs --state=open --review-requested=@me"
+# alias git-changes="git log --oneline --ancestry-path '$1'..'$2' | grep 'Merge'"
+function git-changes() { "git log --oneline --ancestry-path "$1".."$2" | grep 'Merge'" }
 alias git-pp-local="pushd ~/git/pihlapotilas && arch -x86_64 npx react-native run-ios --scheme 'pihlapotilas local' --simulator='iPhone 14 Pro' && popd"
-alias git-pp-local-se="pushd ~/git/pihlapotilas && arch -x86_64 npx react-native run-ios --scheme 'pihlapotilas local' --simulator='iPhone SE' && popd"
+alias git-pp-local-se="pushd ~/git/pihlapotilas && arch -x86_64 npx react-native run-ios --scheme 'pihlapotilas local' --simulator='iPhone SE (3rd generation)' && popd"
 alias git-pp-staging="pushd ~/git/pihlapotilas && arch -x86_64 npx react-native run-ios --scheme 'pihlapotilas staging' --simulator='iPhone 14 Pro' && popd"
 
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"

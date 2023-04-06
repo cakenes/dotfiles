@@ -115,8 +115,6 @@ key_bindings:
   - { key: LBracket, mods: Command,       chars: "\x02;"                       }  # select last (previously used) pane
   - { key: F,        mods: Command,       chars: "\x02/"                       }  # search (upwards) (see tmux.conf)
 
-alt_send_esc: false
-
 mouse:
   double_click: { threshold: 300 }
   triple_click: { threshold: 300 }
