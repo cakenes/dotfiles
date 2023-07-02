@@ -23,9 +23,9 @@ bindsym $mod+n			exec --no-startup-id xfce4-taskmanager
 # bindsym $mod+d                  exec --no-startup-id dmenu_run -h 24 -nb '#1c2023' -sf '#FFFFFF' -sb '#5294e2' -nf '#FFFFFF' -fn 'NotoMono Nerd Font-10'
 bindsym $mod+d			exec --no-startup-id rofi -show run
 bindsym $mod+Shift+d		exec --no-startup-id rofi -show run
-bindsym $mod+Shift+F12		exec --no-startup-id xrandr --output DP-0 --mode 3440x1440 --rate 75
-bindsym $mod+Shift+F11		exec --no-startup-id xrandr --output DP-0 --mode 1920x1080 --rate 75
-bindsym $mod+Shift+F10		exec --no-startup-id xrandr --output DP-0 --mode 1720x1440 --rate 60
+bindsym $mod+Shift+F12		exec --no-startup-id xrandr --output DP-0 --mode 3440x1440 --rate 75 --output DP-2 --mode 3440x1440 --rate 120 --below DP-0
+bindsym $mod+Shift+F11		exec --no-startup-id xrandr --output DP-0 --mode 3440x1440 --rate 75 --output DP-2 --off
+bindsym $mod+Shift+F0		exec --no-startup-id xrandr --output DP-0 --mode 1720x1440 --rate 60
 
 # kill focused window
 bindsym $mod+q			exec --no-startup-id ~/.config/scripts/kill.sh
@@ -98,6 +98,7 @@ set $ws5 "5"
 set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8" 
+set $ws9 "9"
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -108,6 +109,7 @@ bindsym $mod+5 workspace $ws5
 bindsym $mod+6 workspace $ws6
 bindsym $mod+7 workspace $ws7
 bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
 bindsym --whole-window $mod+button4 workspace prev
 bindsym --whole-window $mod+button5 workspace next
 bindsym $mod+Tab workspace next
@@ -121,8 +123,9 @@ bindsym Mod1+Shift+Ctrl+5 workspace $ws5
 bindsym Mod1+Shift+Ctrl+6 workspace $ws6
 bindsym Mod1+Shift+Ctrl+7 workspace $ws7
 bindsym Mod1+Shift+Ctrl+8 workspace $ws8
-bindsym Mod1+Shift+Ctrl+9 exec --no-startup-id xdotool mousemove 950 530 && xdotool mousemove_relative 10 10
-bindsym Mod1+Shift+Ctrl+0 exec --no-startup-id xdotool mousemove 2870 530 && xdotool mousemove_relative 10 10
+bindsym Mod1+Shift+Ctrl+9 workspace $ws9
+# bindsym Mod1+Shift+Ctrl+9 exec --no-startup-id xdotool mousemove 950 530 && xdotool mousemove_relative 10 10
+# bindsym Mod1+Shift+Ctrl+0 exec --no-startup-id xdotool mousemove 2870 530 && xdotool mousemove_relative 10 10
 
 # move to workspace
 bindsym $mod+Shift+1 move container to workspace $ws1
@@ -133,6 +136,7 @@ bindsym $mod+Shift+5 move container to workspace $ws5
 bindsym $mod+Shift+6 move container to workspace $ws6
 bindsym $mod+Shift+7 move container to workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8
+bindsym $mod+Shift+9 move container to workspace $ws9
 
 # move alternative
 bindsym $mod+Ctrl+1 move container to workspace $ws1
@@ -143,16 +147,18 @@ bindsym $mod+Ctrl+5 move container to workspace $ws5
 bindsym $mod+Ctrl+6 move container to workspace $ws6
 bindsym $mod+Ctrl+7 move container to workspace $ws7
 bindsym $mod+Ctrl+8 move container to workspace $ws8
+bindsym $mod+Ctrl+9 move container to workspace $ws9
 
 # workspaces on monitors
-# workspace 1 output HDMI-1
-# workspace 2 output HDMI-1
-# workspace 3 output HDMI-1
-# workspace 4 output HDMI-0
-# workspace 5 output HDMI-0
-# workspace 6 output HDMI-0
-# workspace 7 output HDMI-0
-# workspace 8 output HDMI-0
+workspace 1 output DP-0
+workspace 2 output DP-0
+workspace 3 output DP-0
+workspace 4 output DP-0
+workspace 5 output DP-0
+workspace 6 output DP-0
+workspace 7 output DP-0
+workspace 8 output DP-0
+workspace 9 output DP-2
 
 # workspace layout
 # for_window [workspace=$ws2] layout tabbed 
@@ -226,7 +232,7 @@ bindcode 66			exec --no-startup-id ~/.config/scripts/private/poe-flask.sh
 # bindcode 72			exec --no-startup-id ~/.config/scripts/private/ark-autorun.sh
 
 # autostart apps
-exec --no-startup-id joplin-desktop
+# exec --no-startup-id joplin-desktop
 
 # autostart
 exec_always --no-startup-id nm-applet
@@ -235,12 +241,13 @@ exec_always --no-startup-id nm-applet
 # exec_always --no-startup-id polybar hdmi0
 # exec_always --no-startup-id polybar hdmi1
 # exec_always --no-startup-id polybar dp0
-exec_always --no-startup-id xfce4-panel -r
+exec_always --no-startup-id xfce4-panel -d
 exec_always --no-startup-id setxkbmap -option ctrl:nocaps
 exec_always --no-startup-id xss-lock -- i3lock -i ~/pictures/wallpapers/current.jpg -u -F -e --composite
-exec_always --no-startup-id feh --bg-center --no-xinerama ~/pictures/wallpapers/current.jpg
+exec_always --no-startup-id feh --bg-center ~/pictures/wallpapers/current.jpg
 exec_always --no-startup-id sh /home/used/.config/scripts/autolock.sh 5 10
-exec_always --no-startup-id barriers --no-tray --disable-crypto --no-restart --name Debused -c ~/.config/barrier.conf --address :24800
+# exec_always --no-startup-id synergys -n "Debused" -c "/home/used/.config/synergy" -a ":24800" -1
+exec_always --no-startup-id barriers --no-tray --disable-crypto --no-restart --name Debused -c /home/used/.config/barrier.conf  --address :24800
 
 # layout
 exec --no-startup-id "i3-msg 'workspace 1; append_layout /home/used/.config/i3/workspace-1.json'"
@@ -256,4 +263,5 @@ exec --no-startup-id "i3-msg 'workspace 1; exec brave https://open.spotify.com/'
 exec --no-startup-id "i3-msg 'workspace 1; exec alacritty'"
 
 # workspace 8
-workspace $ws8 gaps inner 0
+# workspace $ws8 gaps inner 0
+# workspace $ws9 gaps inner 0

@@ -34,8 +34,3 @@ fi
 
 # start wm / de
 exec xfce4-session
-
-# support for screen off
-xset s off
-xset -dpms
-xset s nblank
