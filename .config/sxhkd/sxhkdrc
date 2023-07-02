@@ -1,0 +1,84 @@
+# wm independent
+
+super + Return
+	alacritty
+
+super + w
+	brave
+
+super + e
+	thunar
+
+Print
+	xfce4-screenshooter -f
+
+super + Print
+	xfce4-screenshooter -w
+
+super + m
+	lollypop
+
+super + ctrl + m
+	spotify
+
+super + d
+	rofi -show run
+
+super + c
+	galculator
+
+super + n
+	xfce4-taskmanager
+
+super + shift + F12
+	xrandr --output DP-0 --mode 3440x1440 --rate 75 --output DP-2 --mode 3440x1440 --rate 120 --below DP-0
+
+super + shift + F11
+	xrandr --output DP-0 --mode 3440x1440 --rate 75 --output DP-2 --off
+
+super + shift + F10
+	xrandr --output DP-0 --mode 1720x1440 --rate 60
+
+super + ctrl + r
+	pkill -USR1 -x sxhkd
+
+super + l
+	env XSECURELOCK_BLANK_TIMEOUT=5 XSECURELOCK_AUTH_TIMEOUT=15 XSECURELOCK_SAVER=saver_blank XSECURELOCK_DISCARD_FIRST_KEYPRESS=0 xsecurelock
+
+# bspwm hotkeys
+
+super + {_,shift + }q
+        bspc node -{c,k}
+
+super + shift + r
+	bspc wm -r
+
+super + space
+	bspc node -t ~floating
+
+super + ctrl + space
+	bspc node -t ~tiled
+
+super + s
+	bspc node -s biggest.window
+
+super + f
+	bspc node -t ~fullscreen
+
+super + g
+	bspc node -g ~sticky
+
+super + {_,shift + }{Left,Down,Up,Right}
+        bspc node -{f,s} {west,south,north,east}
+
+super + ctrl + {Left,Down,Up,Right}
+	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+
+super + {_,ctrl + }{1-9,0}
+        bspc {desktop -f,node -d} '^{1-9,10}'
+
+super + {button4,button5}
+        bspc desktop -f {prev,next}.local
+
+super + {_,shift + }{1-9,0}
+	bspc {desktop -f,node -d} '^{1-9,10}'

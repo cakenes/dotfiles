@@ -1,0 +1,32 @@
+#! /bin/sh
+
+xsetroot -cursor_name left_ptr
+bspc monitor -d 1 2 3 4 5 6 7 8
+
+# autostart
+/usr/bin/feh --bg-center ~/pictures/wallpapers/current.jpg
+/usr/bin/barriers --no-tray --disable-crypto --no-restart --name Debused -c ~/.config/barrier.conf  --address :24800
+
+# workspace autostart
+bspc rule -a discord desktop='^1' && discord &
+bspc rule -a -o Brave desktop='^1' follow=off && brave &
+bspc rule -a steam desktop='^2' follow=off && steam &
+
+# config
+bspc config border_width        	1
+bspc config window_gap          	12
+bspc config split_ratio         	0.52
+bspc config borderless_monocle  	true
+bspc config gapless_monocle     	true
+bspc config focus_follows_pointer	true
+bspc config focused_border_color	"#195092"
+
+bspc config automatic_scheme		alternate
+bspc config ignore_ewmh_focus		true
+bspc config -m DP-0 top_padding 	22
+bspc config pointer_modifier		mod1
+
+bspc rule -a Xfce4-panel state=floating border=off
+bspc rule -a xfce4-popup-whiskermenu state=floating border=off
+bspc rule -a Whisker\ Menu state=floating border=off
+bspc rule -a Wrapper-2.0 state=floating border=off focus=on
