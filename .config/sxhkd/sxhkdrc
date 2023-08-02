@@ -72,7 +72,7 @@ super + {_,shift + }{Left,Down,Up,Right}
         bspc node -{f,s} {west,south,north,east}
 
 super + ctrl + {Left,Down,Up,Right}
-	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+	bspc node -z {left -40 0,bottom 0 40,top 0 -40,right 40 0}
 
 super + {_,ctrl + }{1-9,0}
         bspc {desktop -f,node -d} '^{1-9,10}'

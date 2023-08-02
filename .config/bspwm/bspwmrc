@@ -6,6 +6,7 @@ bspc monitor -d 1 2 3 4 5 6 7 8
 # autostart
 /usr/bin/feh --bg-center ~/pictures/wallpapers/current.jpg
 /usr/bin/barriers --no-tray --disable-crypto --no-restart --name Debused -c ~/.config/barrier.conf  --address :24800
+sh ~/.config/scripts/autolock.sh 5 10 &
 
 # workspace autostart
 bspc rule -a discord desktop='^1' && discord &
@@ -30,3 +31,13 @@ bspc rule -a Xfce4-panel state=floating border=off
 bspc rule -a xfce4-popup-whiskermenu state=floating border=off
 bspc rule -a Whisker\ Menu state=floating border=off
 bspc rule -a Wrapper-2.0 state=floating border=off focus=on
+
+bspc rule -a Galculator state=floating border=off
+bspc rule -a Pavucontrol state=floating border=off
+bspc rule -a Nvidia-settings state=floating border=off
+bspc rule -a Blueman-manager state=floating border=off
+bspc rule -a Xfce4-.*manager.* state=floating border=off
+bspc rule -a Xfce4-.*settings.* state=floating border=off
+bspc rule -a Nm-connection-editor state=floating border=off
+bspc rule -a *:*:Friends\ List state=floating border=off
+
