@@ -31,6 +31,8 @@ alias run-pihlaserver="cd ~/git/pihla-server && yarn run local"
 alias run-prosecco="cd ~/git/prosecco && yarn local"
 alias run-pihladoctor="cd ~/git/pihla-doctor && yarn local"
 
+alias check="yarn format:check && yarn typecheck:partial && yarn lint"
+
 alias git-pr="gh search prs --state=open --review-requested=@me"
 # alias git-changes="git log --oneline --ancestry-path '$1'..'$2' | grep 'Merge'"
 function git-changes() { "git log --oneline --ancestry-path "$1".."$2" | grep 'Merge'" }
