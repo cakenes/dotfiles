@@ -7,7 +7,6 @@ alias grep="grep --color=auto"
 alias xcode="open -a Xcode"
 alias android="open -a Android\ Studio"
 alias simulator="open -a Simulator.app"
-alias simulator2="open -a Simuatlor.app"
 
 setopt autocd
 HISTSIZE=999999999
