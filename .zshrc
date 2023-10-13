@@ -33,11 +33,11 @@ alias run-pihladoctor="cd ~/git/pihla-doctor && yarn local"
 alias check="yarn format:check && yarn typecheck:partial && yarn lint"
 
 alias git-pr="gh search prs --state=open --review-requested=@me"
-# alias git-changes="git log --oneline --ancestry-path '$1'..'$2' | grep 'Merge'"
-function git-changes() { "git log --oneline --ancestry-path "$1".."$2" | grep 'Merge'" }
-alias git-pp-local="pushd ~/git/pihlapotilas && arch -x86_64 npx react-native run-ios --scheme 'pihlapotilas local' --simulator='iPhone 14 Pro' && popd"
+#alias git-changes="git log --oneline --ancestry-path '$1'..'$2' | grep 'Merge'"
+#function git-changes() { "git log --oneline --ancestry-path "$1".."$2" | grep 'Merge'" }
+alias git-pp-local="pushd ~/git/pihlapotilas && arch -x86_64 npx react-native run-ios --scheme 'pihlapotilas local' --simulator='iPhone 15 Pro' && popd"
 alias git-pp-local-se="pushd ~/git/pihlapotilas && arch -x86_64 npx react-native run-ios --scheme 'pihlapotilas local' --simulator='iPhone SE (3rd generation)' && popd"
-alias git-pp-staging="pushd ~/git/pihlapotilas && arch -x86_64 npx react-native run-ios --scheme 'pihlapotilas staging' --simulator='iPhone 14 Pro' && popd"
+alias git-pp-staging="pushd ~/git/pihlapotilas && arch -x86_64 npx react-native run-ios --scheme 'pihlapotilas staging' --simulator='iPhone 15 Pro' && popd"
 
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
 [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
@@ -62,7 +62,7 @@ load-nvmrc() {
 add-zsh-hook chpwd load-nvmrc
 load-nvmrc
 
-source /Users/Used/.docker/init-zsh.sh || true # Added by Docker Desktop
+source ~/.docker/init-zsh.sh || true # Added by Docker Desktop
 
 eval "$(starship init zsh)"
 eval "$(rbenv init - )"
