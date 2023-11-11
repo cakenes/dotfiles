@@ -31,24 +31,30 @@ super + n
 	xfce4-taskmanager
 
 super + shift + F12
-	xrandr --output DP-0 --mode 3440x1440 --rate 75 --output DP-2 --mode 3440x1440 --rate 120 --below DP-0
+	xrandr --output DP-2 --mode 3440x1440 --rate 75 --output DP-0 --mode 3440x1440 --rate 120 --left-of DP-2
 
 super + shift + F11
-	xrandr --output DP-0 --mode 3440x1440 --rate 75 --output DP-2 --off
+	xrandr --output DP-2 --mode 3440x1440 --rate 75 --output DP-0 --mode 3440x1440 --rate 120 --right-of DP-2
 
 super + shift + F10
-	xrandr --output DP-0 --mode 1720x1440 --rate 60
+	xrandr --output DP-2 --mode 1720x1440 --rate 60
 
 super + ctrl + r
 	pkill -USR1 -x sxhkd
 
 super + l
-	env XSECURELOCK_BLANK_TIMEOUT=5 XSECURELOCK_AUTH_TIMEOUT=15 XSECURELOCK_SAVER=saver_blank XSECURELOCK_DISCARD_FIRST_KEYPRESS=0 xsecurelock
+	env XSECURELOCK_BLANK_TIMEOUT=10 XSECURELOCK_AUTH_TIMEOUT=15 XSECURELOCK_SAVER=saver_blank XSECURELOCK_DISCARDo_FIRST_KEYPRESS=0 xsecurelock
 
 # bspwm hotkeys
 
-super + {_,shift + }q
-        bspc node -{c,k}
+super + q
+        sh ~/.config/scripts/kill.sh &
+
+super + shift + q
+         bspc node -k
+
+#super + {_,shift + }q
+#        bspc node -{c,k}
 
 super + shift + r
 	bspc wm -r
