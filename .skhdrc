@@ -46,4 +46,4 @@ cmd + ctrl - left : [[ $(yabai -m query --windows --window | jq .frame.x) == "8"
 
 ctrl + alt + cmd - m : [[ $(yabai -m config focus_follows_mouse) = "disabled" ]] && yabai -m config focus_follows_mouse autofocus || yabai -m config focus_follows_mouse off
 ctrl + alt + cmd - l : [[ $(yabai -m config layout) = "float" ]] && yabai -m config layout bsp || yabai -m config layout float
-ctrl + alt + cmd - r : yabai --restart-service && sxhkd --restart-service
+ctrl + alt + cmd - r : yabai --restart-service && skhd --restart-service
