@@ -7,23 +7,16 @@ floating_modifier Mod1
 
 # start program
 bindsym $mod+e			exec --no-startup-id thunar
-bindsym $mod+w                  exec --no-startup-id brave
+bindsym $mod+w                  exec --no-startup-id chromium
 bindsym $mod+Return		exec --no-startup-id alacritty
-bindsym $mod+Shift+Return       exec --no-startup-id mate-terminal
-bindsym $mod+m			exec --no-startup-id lollypop
-bindsym $mod+Ctrl+m		exec --no-startup-id spotify
-bindsym $mod+l                  exec --no-startup-id ~/.config/scripts/screen-off.sh
 bindsym Print                   exec --no-startup-id xfce4-screenshooter -f
 bindsym $mod+Print		exec --no-startup-id xfce4-screenshooter -w
-bindsym $mod+y			exec --no-startup-id pamac-manager
 bindsym $mod+Ctrl+y		exec --no-startup-id xfce4-settings-manager
-bindsym $mod+Shift+y		exec --no-startup-id manjaro-settings-manager
 bindsym $mod+c			exec --no-startup-id galculator
 bindsym $mod+n			exec --no-startup-id xfce4-taskmanager
-# bindsym $mod+d                  exec --no-startup-id dmenu_run -h 24 -nb '#1c2023' -sf '#FFFFFF' -sb '#5294e2' -nf '#FFFFFF' -fn 'NotoMono Nerd Font-10'
 bindsym $mod+d			exec --no-startup-id rofi -show run
 bindsym $mod+Shift+d		exec --no-startup-id rofi -show run
-bindsym $mod+Shift+F12		exec --no-startup-id xrandr --output DP-0 --mode 3440x1440 --rate 75 --output DP-2 --mode 3440x1440 --rate 120 --below DP-0
+bindsym $mod+Shift+F12		exec --no-startup-id xrandr --output DP-0 --mode 3440x1440 --rate 75 --output DP-2 --mode 3440x1440 --rate 120 --left-of DP-0
 bindsym $mod+Shift+F11		exec --no-startup-id xrandr --output DP-0 --mode 3440x1440 --rate 75 --output DP-2 --off
 bindsym $mod+Shift+F0		exec --no-startup-id xrandr --output DP-0 --mode 1720x1440 --rate 60
 
@@ -124,8 +117,6 @@ bindsym Mod1+Shift+Ctrl+6 workspace $ws6
 bindsym Mod1+Shift+Ctrl+7 workspace $ws7
 bindsym Mod1+Shift+Ctrl+8 workspace $ws8
 bindsym Mod1+Shift+Ctrl+9 workspace $ws9
-# bindsym Mod1+Shift+Ctrl+9 exec --no-startup-id xdotool mousemove 950 530 && xdotool mousemove_relative 10 10
-# bindsym Mod1+Shift+Ctrl+0 exec --no-startup-id xdotool mousemove 2870 530 && xdotool mousemove_relative 10 10
 
 # move to workspace
 bindsym $mod+Shift+1 move container to workspace $ws1
@@ -160,13 +151,9 @@ workspace 7 output DP-0
 workspace 8 output DP-0
 workspace 9 output DP-2
 
-# workspace layout
-# for_window [workspace=$ws2] layout tabbed 
-
 # workspace assign
 assign [class="discord"] $ws1
-# assign [class="Xfce4-screenshooter"] $ws1
-assign [class="Steam"] $ws2
+assign [class="steam"] $ws2
 assign [class="Lutris"] $ws2
 assign [class="bottles"] $ws2
 assign [class="battle.net.exe"] $ws2
@@ -177,7 +164,6 @@ assign [class="OxygenNotIncluded"] $ws8
 assign [class="rsi launcher.exe"] $ws8
 assign [class="starcitizen.exe"] $ws8
 assign [class="steam_app_1455840"] $ws8
-# assign [class="steam_app.*"] $ws8
 assign [class="steam_app_1794680"] $ws1
 assign [class="anno1800.exe"] $ws8
 assign [class="War Thunder"] $ws8
@@ -231,37 +217,21 @@ bindcode 66			exec --no-startup-id ~/.config/scripts/private/poe-flask.sh
 # bindcode 71			exec --no-startup-id ~/.config/scripts/private/ark-autoattack.sh
 # bindcode 72			exec --no-startup-id ~/.config/scripts/private/ark-autorun.sh
 
-# autostart apps
-# exec --no-startup-id joplin-desktop
-
 # autostart
 exec_always --no-startup-id nm-applet
-# exec_always --no-startup-id blueman-applet
-# exec_always --no-startup-id picom
-# exec_always --no-startup-id polybar hdmi0
-# exec_always --no-startup-id polybar hdmi1
-# exec_always --no-startup-id polybar dp0
-exec_always --no-startup-id xfce4-panel -d
-exec_always --no-startup-id setxkbmap -option ctrl:nocaps
-exec_always --no-startup-id xss-lock -- i3lock -i ~/pictures/wallpapers/current.jpg -u -F -e --composite
+exec_always --no-startup-id blueman-applet
 exec_always --no-startup-id feh --bg-center ~/pictures/wallpapers/current.jpg
-exec_always --no-startup-id sh /home/used/.config/scripts/autolock.sh 5 10
-# exec_always --no-startup-id synergys -n "Debused" -c "/home/used/.config/synergy" -a ":24800" -1
-exec_always --no-startup-id barriers --no-tray --disable-crypto --no-restart --name Debused -c /home/used/.config/barrier.conf  --address :24800
+exec_always --no-startup-id barriers --no-tray --disable-crypto --no-restart --name arch -c /home/used/.config/barrier.conf  --address :24800
+exec --no-startup-id xfce4-panel -d
+exec --no-startup-id xrandr --output DP-0 --mode 3440x1440 --rate 75 --output DP-2 --mode 3440x1440 --rate 120 --left-of DP-0
 
 # layout
 exec --no-startup-id "i3-msg 'workspace 1; append_layout /home/used/.config/i3/workspace-1.json'"
 
 # workspace 2
 exec --no-startup-id "i3-msg 'workspace 2; exec steam'"
-# exec --no-startup-id "i3-msg 'workspace 2; exec lutris lutris:rungameid/1'"
-# exec --no-startup-id "i3-msg 'workspace 2; exec lutris'"
 
 # workspace 1
 exec --no-startup-id "i3-msg 'workspace 1; exec discord'"
-exec --no-startup-id "i3-msg 'workspace 1; exec brave https://open.spotify.com/'"
+exec --no-startup-id "i3-msg 'workspace 1; exec chromium https://music.youtube.com/'"
 exec --no-startup-id "i3-msg 'workspace 1; exec alacritty'"
-
-# workspace 8
-# workspace $ws8 gaps inner 0
-# workspace $ws9 gaps inner 0
