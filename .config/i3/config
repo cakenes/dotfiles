@@ -16,9 +16,9 @@ bindsym $mod+c			exec --no-startup-id galculator
 bindsym $mod+n			exec --no-startup-id xfce4-taskmanager
 bindsym $mod+d			exec --no-startup-id rofi -show run
 bindsym $mod+Shift+d		exec --no-startup-id rofi -show run
-bindsym $mod+Shift+F12		exec --no-startup-id xrandr --output DP-0 --mode 3440x1440 --rate 75 --output DP-2 --mode 3440x1440 --rate 120 --left-of DP-0
-bindsym $mod+Shift+F11		exec --no-startup-id xrandr --output DP-0 --mode 3440x1440 --rate 75 --output DP-2 --off
-bindsym $mod+Shift+F0		exec --no-startup-id xrandr --output DP-0 --mode 1720x1440 --rate 60
+bindsym $mod+Shift+F12		exec --no-startup-id xrandr --output DP-2 --mode 3440x1440 --rate 75 --output DP-0 --mode 3440x1440 --rate 120 --left-of DP-2
+bindsym $mod+Shift+F11		exec --no-startup-id xrandr --output DP-2 --mode 3440x1440 --rate 75 --output DP-0 --off
+bindsym $mod+Shift+F0		exec --no-startup-id xrandr --output DP-2 --mode 1720x1440 --rate 60
 
 # kill focused window
 bindsym $mod+q			exec --no-startup-id ~/.config/scripts/kill.sh
@@ -141,15 +141,15 @@ bindsym $mod+Ctrl+8 move container to workspace $ws8
 bindsym $mod+Ctrl+9 move container to workspace $ws9
 
 # workspaces on monitors
-workspace 1 output DP-0
-workspace 2 output DP-0
-workspace 3 output DP-0
-workspace 4 output DP-0
-workspace 5 output DP-0
-workspace 6 output DP-0
-workspace 7 output DP-0
-workspace 8 output DP-0
-workspace 9 output DP-2
+workspace 1 output DP-2
+workspace 2 output DP-2
+workspace 3 output DP-2
+workspace 4 output DP-2
+workspace 5 output DP-2
+workspace 6 output DP-2
+workspace 7 output DP-2
+workspace 8 output DP-2
+workspace 9 output DP-0
 
 # workspace assign
 assign [class="discord"] $ws1
@@ -223,7 +223,7 @@ exec_always --no-startup-id blueman-applet
 exec_always --no-startup-id feh --bg-center ~/pictures/wallpapers/current.jpg
 exec_always --no-startup-id barriers --no-tray --disable-crypto --no-restart --name arch -c /home/used/.config/barrier.conf  --address :24800
 exec --no-startup-id xfce4-panel -d
-exec --no-startup-id xrandr --output DP-0 --mode 3440x1440 --rate 75 --output DP-2 --mode 3440x1440 --rate 120 --left-of DP-0
+exec --no-startup-id xrandr --output DP-2 --mode 3440x1440 --rate 75 --output DP-0 --mode 3440x1440 --rate 120 --left-of DP-2
 
 # layout
 exec --no-startup-id "i3-msg 'workspace 1; append_layout /home/used/.config/i3/workspace-1.json'"
