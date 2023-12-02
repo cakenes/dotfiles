@@ -15,7 +15,6 @@ bindsym $mod+Ctrl+y		exec --no-startup-id xfce4-settings-manager
 bindsym $mod+c			exec --no-startup-id galculator
 bindsym $mod+n			exec --no-startup-id xfce4-taskmanager
 bindsym $mod+d			exec --no-startup-id rofi -show run
-bindsym $mod+Shift+d		exec --no-startup-id rofi -show run
 bindsym $mod+Shift+F12		exec --no-startup-id xrandr --output DP-2 --mode 3440x1440 --rate 75 --output DP-0 --mode 3440x1440 --rate 120 --left-of DP-2
 bindsym $mod+Shift+F11		exec --no-startup-id xrandr --output DP-2 --mode 3440x1440 --rate 75 --output DP-0 --off
 bindsym $mod+Shift+F0		exec --no-startup-id xrandr --output DP-2 --mode 1720x1440 --rate 60

@@ -55,9 +55,9 @@ function air-decrypt() { sudo aircrack-ng -z "$1" -w "$2"; }
 
 # gdrive
 function gdrive () {
-  CONFIRM=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate "https://docs.google.com/uc?export=download&id=$1" -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')
-  wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$CONFIRM&id=$1" -O $2
-  rm -rf /tmp/cookies.txt
+    CONFIRM=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate "https://docs.google.com/uc?export=download&id=$1" -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')
+    wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$CONFIRM&id=$1" -O $2
+    rm -rf /tmp/cookies.txt
 }
 
 # shell
@@ -68,3 +68,27 @@ function shell-listen() { sudo nc -nvlp "$1"; }
 PS1='\[\033[01;34m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 
 eval "$(starship init bash)"
+eval "$(pyenv init -)"
+
+# automatic nvm
+enter_directory() {
+    if [[ $PWD == $PREV_PWD ]]; then
+        return
+    fi
+
+    if [[ "$PWD" =~ "$PREV_PWD" && ! -f ".nvmrc" ]]; then
+        return
+    fi
+
+    PREV_PWD=$PWD
+    
+    if [[ -f ".nvmrc" ]]; then
+        nvm use
+        NVM_DIRTY=true
+    elif [[ $NVM_DIRTY = true ]]; then
+       nvm use default
+       NVM_DIRTY=false
+    fi
+}
+
+export PROMPT_COMMAND="$PROMPT_COMMAND; enter_directory"
