@@ -66,3 +66,4 @@ source ~/.docker/init-zsh.sh || true # Added by Docker Desktop
 
 eval "$(starship init zsh)"
 eval "$(rbenv init - )"
+eval "$(pyenv init --path)"

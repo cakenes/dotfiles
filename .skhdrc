@@ -4,25 +4,35 @@ ctrl + cmd - w : open -na '/Applications/Brave Browser.app/'
 ctrl + cmd - e : open ~/
 ctrl - q : kill $(yabai -m query --windows --window | jq .pid)
 
-# Focus spaces
-ctrl - 1 : yabai -m space --focus $(yabai -m query --displays --display | jq -r '.spaces[0]')
-ctrl - 2 : yabai -m space --focus $(yabai -m query --displays --display | jq -r '.spaces[1]')
-ctrl - 3 : yabai -m space --focus $(yabai -m query --displays --display | jq -r '.spaces[2]')
-ctrl - 4 : yabai -m space --focus $(yabai -m query --displays --display | jq -r '.spaces[3]')
-ctrl - 5 : yabai -m space --focus $(yabai -m query --displays --display | jq -r '.spaces[4]')
-ctrl - 6 : yabai -m space --focus $(yabai -m query --displays --display | jq -r '.spaces[5]')
-ctrl - 7 : yabai -m space --focus $(yabai -m query --displays --display | jq -r '.spaces[6]')
-ctrl - 8 : yabai -m space --focus $(yabai -m query --displays --display | jq -r '.spaces[7]')
+# Focus spaces - mission control
+ctrl - 1: [[ $(yabai -m query --displays --display | jq -r '.spaces[0]') -gt "8" ]] && skhd -k "ctrl + alt + cmd - 1" || skhd -k "ctrl + shift + alt - 1"
+ctrl - 2: [[ $(yabai -m query --displays --display | jq -r '.spaces[1]') -gt "8" ]] && skhd -k "ctrl + alt + cmd - 2" || skhd -k "ctrl + shift + alt - 2"
+ctrl - 3: [[ $(yabai -m query --displays --display | jq -r '.spaces[2]') -gt "8" ]] && skhd -k "ctrl + alt + cmd - 3" || skhd -k "ctrl + shift + alt - 3"
+ctrl - 4: [[ $(yabai -m query --displays --display | jq -r '.spaces[3]') -gt "8" ]] && skhd -k "ctrl + alt + cmd - 4" || skhd -k "ctrl + shift + alt - 4"
+ctrl - 5: [[ $(yabai -m query --displays --display | jq -r '.spaces[4]') -gt "8" ]] && skhd -k "ctrl + alt + cmd - 5" || skhd -k "ctrl + shift + alt - 5"
+ctrl - 6: [[ $(yabai -m query --displays --display | jq -r '.spaces[5]') -gt "8" ]] && skhd -k "ctrl + alt + cmd - 6" || skhd -k "ctrl + shift + alt - 6"
+ctrl - 7: [[ $(yabai -m query --displays --display | jq -r '.spaces[6]') -gt "8" ]] && skhd -k "ctrl + alt + cmd - 7" || skhd -k "ctrl + shift + alt - 7"
+ctrl - 8: [[ $(yabai -m query --displays --display | jq -r '.spaces[7]') -gt "8" ]] && skhd -k "ctrl + alt + cmd - 8" || skhd -k "ctrl + shift + alt - 8"
 
-# Move spaces
-ctrl + cmd - 1 : yabai -m window --space $(yabai -m query --displays --display | jq -r '.spaces[0]')
-ctrl + cmd - 2 : yabai -m window --space $(yabai -m query --displays --display | jq -r '.spaces[1]')
-ctrl + cmd - 3 : yabai -m window --space $(yabai -m query --displays --display | jq -r '.spaces[2]')
-ctrl + cmd - 4 : yabai -m window --space $(yabai -m query --displays --display | jq -r '.spaces[3]')
-ctrl + cmd - 5 : yabai -m window --space $(yabai -m query --displays --display | jq -r '.spaces[4]')
-ctrl + cmd - 6 : yabai -m window --space $(yabai -m query --displays --display | jq -r '.spaces[5]')
-ctrl + cmd - 7 : yabai -m window --space $(yabai -m query --displays --display | jq -r '.spaces[6]')
-ctrl + cmd - 8 : yabai -m window --space $(yabai -m query --displays --display | jq -r '.spaces[7]')
+# Focus spaces - yabai
+# ctrl - 1 : yabai -m space --focus $(yabai -m query --displays --display | jq -r '.spaces[0]')
+# ctrl - 2 : yabai -m space --focus $(yabai -m query --displays --display | jq -r '.spaces[1]')
+# ctrl - 3 : yabai -m space --focus $(yabai -m query --displays --display | jq -r '.spaces[2]')
+# ctrl - 4 : yabai -m space --focus $(yabai -m query --displays --display | jq -r '.spaces[3]')
+# ctrl - 5 : yabai -m space --focus $(yabai -m query --displays --display | jq -r '.spaces[4]')
+# ctrl - 6 : yabai -m space --focus $(yabai -m query --displays --display | jq -r '.spaces[5]')
+# ctrl - 7 : yabai -m space --focus $(yabai -m query --displays --display | jq -r '.spaces[6]')
+# ctrl - 8 : yabai -m space --focus $(yabai -m query --displays --display | jq -r '.spaces[7]')
+
+# Move spaces - yabai
+# ctrl + cmd - 1 : yabai -m window --space $(yabai -m query --displays --display | jq -r '.spaces[0]')
+# ctrl + cmd - 2 : yabai -m window --space $(yabai -m query --displays --display | jq -r '.spaces[1]')
+# ctrl + cmd - 3 : yabai -m window --space $(yabai -m query --displays --display | jq -r '.spaces[2]')
+# ctrl + cmd - 4 : yabai -m window --space $(yabai -m query --displays --display | jq -r '.spaces[3]')
+# ctrl + cmd - 5 : yabai -m window --space $(yabai -m query --displays --display | jq -r '.spaces[4]')
+# ctrl + cmd - 6 : yabai -m window --space $(yabai -m query --displays --display | jq -r '.spaces[5]')
+# ctrl + cmd - 7 : yabai -m window --space $(yabai -m query --displays --display | jq -r '.spaces[6]')
+# ctrl + cmd - 8 : yabai -m window --space $(yabai -m query --displays --display | jq -r '.spaces[7]')
 
 # Tiling
 ctrl - space : yabai -m window --toggle float
@@ -39,9 +49,7 @@ ctrl + shift - right : yabai -m window --swap east || $(yabai -m window --displa
 ctrl + shift - down : yabai -m window --swap south || $(yabai -m window --display south; yabai -m display --focus south)
 ctrl + shift - left : yabai -m window --swap west || $(yabai -m window --display west; yabai -m display --focus west)
 
-# cmd + ctrl - up : [[ $(yabai -m query --windows --window | jq .frame.y) -gt "52" ]] && yabai -m window --resize down:-100:0 || yabai -m window --resize up:100:0
 cmd + ctrl - right : [[ $(yabai -m query --windows --window | jq .frame.x) == "8" ]] && yabai -m window --resize right:100:0 || yabai -m window --resize left:100:0
-# cmd + ctrl - down : [[ $(yabai -m query --windows --window | jq .frame.y) -gt "52" ]] && yabai -m window --resize down:100:0 || yabai -m window --resize up:-100:0
 cmd + ctrl - left : [[ $(yabai -m query --windows --window | jq .frame.x) == "8" ]] && yabai -m window --resize right:-100:0 || yabai -m window --resize left:-100:0
 
 ctrl + alt + cmd - m : [[ $(yabai -m config focus_follows_mouse) = "disabled" ]] && yabai -m config focus_follows_mouse autofocus || yabai -m config focus_follows_mouse off
