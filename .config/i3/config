@@ -153,7 +153,7 @@ workspace 9 output DP-0
 
 # workspace assign
 assign [class="discord"] $ws1
-assign [class="steam"] $ws2
+# assign [class="steam"] $ws2
 assign [class="Lutris"] $ws2
 assign [class="bottles"] $ws2
 assign [class="battle.net.exe"] $ws2
