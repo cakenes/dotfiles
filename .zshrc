@@ -24,6 +24,7 @@ export PS1=$'\033[01;34m%n\033[01;34m:\033[00m%~\033[m\$ '
 export PYENV_ROOT="$HOME/.pyenv"
 export NVM_DIR="$HOME/.nvm"
 export PATH="$PYENV_ROOT/bin:$PATH"
+export EDITOR=nano
 
 alias run-pihlapotilas="cd ~/git/pihlapotilas && yarn start"
 alias run-pihlaserver="cd ~/git/pihla-server && yarn run local"

@@ -34,8 +34,13 @@ ctrl - 8: [[ $(yabai -m query --displays --display | jq -r '.spaces[7]') -gt "8"
 # ctrl + cmd - 7 : yabai -m window --space $(yabai -m query --displays --display | jq -r '.spaces[6]')
 # ctrl + cmd - 8 : yabai -m window --space $(yabai -m query --displays --display | jq -r '.spaces[7]')
 
+# Remember float
+ctrl - space : app=$(yabai -m query --windows --window mouse | jq -r '.app' | tr ' ' '_');\
+               yabai -m window --toggle float &&\
+               yabai -m signal --remove autofloat_$app || yabai -m signal --add event=window_created app=$app label=autofloat_$app action="yabai -m window $YABAI_WINDOW_ID --toggle float"
+
 # Tiling
-ctrl - space : yabai -m window --toggle float
+# ctrl - space : yabai -m window --toggle float
 ctrl + shift - s : yabai -m window --toggle split
 ctrl + shift - space : yabai -m window --toggle zoom-fullscreen
 
