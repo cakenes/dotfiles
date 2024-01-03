@@ -153,24 +153,11 @@ workspace 9 output DP-0
 
 # workspace assign
 assign [class="discord"] $ws1
-# assign [class="steam"] $ws2
+assign [class="steam" title="Steam"] $ws2
 assign [class="Lutris"] $ws2
 assign [class="bottles"] $ws2
 assign [class="battle.net.exe"] $ws2
 assign [class="riotclientux.exe"] $ws2
-assign [class="Minecraft*"] $ws8
-assign [class="wow*"] $ws8
-assign [class="OxygenNotIncluded"] $ws8
-assign [class="rsi launcher.exe"] $ws8
-assign [class="starcitizen.exe"] $ws8
-assign [class="steam_app_1455840"] $ws8
-assign [class="steam_app_1794680"] $ws1
-assign [class="anno1800.exe"] $ws8
-assign [class="War Thunder"] $ws8
-assign [title="Overwatch"] $ws8
-assign [class="ChildrenOfMorta"] $ws8
-assign [class="steam_app_899770"] $ws8 #Last epoch
-assign [class="csgo_linux64"] $ws8
 
 # floating
 for_window [class="Galculator"] floating enable
@@ -187,9 +174,9 @@ for_window [title="Emulator"] floating enable
 for_window [class="Nvidia-settings"] floating enable
 
 # steam
-for_window [class="Steam" title="Friends List"] floating enable
-for_window [class="Steam" title="Settings"] floating enable
-for_window [class="Steam" title="Friends List"] floating enable
+for_window [class="steam" title="Friends List"] floating enable
+for_window [class="steam" title="Settings"] floating enable
+for_window [class="steam" title="Friends List"] floating enable
 
 # games
 for_window [class="trackmania.exe"] floating enable
@@ -207,7 +194,7 @@ for_window [class="OxygenNotIncluded"] border none
 for_window [class="steam_app.*"] border none
 
 # custom macros
-bindsym F1 --release		exec --no-startup-id ~/.config/scripts/poe-logout.sh
+# bindsym F1 --release		exec --no-startup-id ~/.config/scripts/poe-logout.sh
 bindsym F5 --release		exec --no-startup-id ~/.config/scripts/poe-hideout.sh
 # bindcode 72			exec --no-startup-id ~/.config/scripts/private/d2r-color.sh
 bindcode 66			exec --no-startup-id ~/.config/scripts/private/poe-flask.sh
