@@ -17,6 +17,7 @@ export LDFLAGS="-L/opt/homebrew/opt/postgresql@15/lib"
 export CPPFLAGS="-I/opt/homebrew/opt/postgresql@15/include"
 export PKG_CONFIG_PATH="/opt/homebrew/opt/postgresql@15/lib/pkgconfig"
 
+export PATH="/opt/homebrew/opt/openssl@1.1/bin:$PATH"
 export PATH=/opt/homebrew/bin:$PATH
 export PATH="/opt/homebrew/sbin:$PATH"
 export LSCOLORS=ExGxBxDxCxEgEdxbxgxcxd
@@ -43,28 +44,9 @@ alias git-pp-staging="pushd ~/git/pihlapotilas && arch -x86_64 npx react-native 
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
 [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
 
-# Automatic nvmrc
-autoload -U add-zsh-hook
-
-load-nvmrc() {
-    local nvmrc_path="$(nvm_find_nvmrc)"
-
-    if [ -n "$nvmrc_path" ]; then
-       local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
-
-        if [ "$nvmrc_node_version" = "N/A" ]; then
-            nvm install
-        elif [ "$nvmrc_node_version" != "$(nvm version)" ]; then
-            nvm use
-        fi
-    fi
-}
-
-add-zsh-hook chpwd load-nvmrc
-load-nvmrc
-
 source ~/.docker/init-zsh.sh || true # Added by Docker Desktop
 
+eval "$(fnm env --use-on-cd)"
 eval "$(starship init zsh)"
 eval "$(rbenv init - )"
 eval "$(pyenv init --path)"
