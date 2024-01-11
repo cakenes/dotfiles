@@ -48,7 +48,7 @@ bindsym $mod+Ctrl+Left resize grow width 5 px or 5 ppt
 
 # toggle tiling / floating
 bindsym $mod+space floating toggle
-tiling_drag off
+# tiling_drag on
 
 # split in direction
 bindsym $mod+v split v
@@ -187,6 +187,8 @@ for_window [class="Project Zomboid"] floating enable
 for_window [class="scrcpy"] floating enable
 for_window [title="Vampire Survivors"] floating enable
 for_window [class="d2r.exe"] floating enable
+for_window [class="awakened-poe-trade"] floating enable
+
 
 # border
 for_window [title="xfce4-panel"] border none
@@ -194,6 +196,7 @@ for_window [class="OxygenNotIncluded"] border none
 for_window [class="steam_app.*"] border none
 
 # custom macros
+bindsym Ctrl+Shift+z		exec --no-startup-id ~/.config/scripts/poe-autoclick.sh
 # bindsym F1 --release		exec --no-startup-id ~/.config/scripts/poe-logout.sh
 bindsym F5 --release		exec --no-startup-id ~/.config/scripts/poe-hideout.sh
 # bindcode 72			exec --no-startup-id ~/.config/scripts/private/d2r-color.sh
@@ -203,6 +206,7 @@ bindcode 66			exec --no-startup-id ~/.config/scripts/private/poe-flask.sh
 # bindcode 69			exec --no-startup-id ~/.config/scripts/private/ark-autofeed.sh
 # bindcode 71			exec --no-startup-id ~/.config/scripts/private/ark-autoattack.sh
 # bindcode 72			exec --no-startup-id ~/.config/scripts/private/ark-autorun.sh
+
 
 # autostart
 exec_always --no-startup-id nm-applet
