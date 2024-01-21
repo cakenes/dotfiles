@@ -188,7 +188,7 @@ for_window [class="scrcpy"] floating enable
 for_window [title="Vampire Survivors"] floating enable
 for_window [class="d2r.exe"] floating enable
 for_window [class="awakened-poe-trade"] floating enable
-
+for_window [class="awakened-poe-trade"] resize set 460 1000
 
 # border
 for_window [title="xfce4-panel"] border none
@@ -197,6 +197,7 @@ for_window [class="steam_app.*"] border none
 
 # custom macros
 bindsym Ctrl+Shift+z		exec --no-startup-id ~/.config/scripts/poe-autoclick.sh
+bindsym Ctrl+Shift+s		exec --no-startup-id ~/.config/scripts/poe-spam.sh
 # bindsym F1 --release		exec --no-startup-id ~/.config/scripts/poe-logout.sh
 bindsym F5 --release		exec --no-startup-id ~/.config/scripts/poe-hideout.sh
 # bindcode 72			exec --no-startup-id ~/.config/scripts/private/d2r-color.sh

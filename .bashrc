@@ -3,7 +3,6 @@
 # settings
 stty stop ''; stty start '';
 setxkbmap -option ctrl:nocaps
-source /usr/share/nvm/init-nvm.sh
 
 # history
 shopt -s autocd # Allows cd without cd.
@@ -48,26 +47,4 @@ PS1='\[\033[01;34m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 
 eval "$(starship init bash)"
 eval "$(pyenv init -)"
-
-# automatic nvm
-enter_directory() {
-    if [[ $PWD == $PREV_PWD ]]; then
-        return
-    fi
-
-    if [[ "$PWD" =~ "$PREV_PWD" && ! -f ".nvmrc" ]]; then
-        return
-    fi
-
-    PREV_PWD=$PWD
-    
-    if [[ -f ".nvmrc" ]]; then
-        nvm use
-        NVM_DIRTY=true
-    elif [[ $NVM_DIRTY = true ]]; then
-       nvm use default
-       NVM_DIRTY=false
-    fi
-}
-
-export PROMPT_COMMAND="$PROMPT_COMMAND; enter_directory"
+eval "$(fnm env --use-on-cd)"
