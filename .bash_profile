@@ -25,6 +25,7 @@ export GTK2_RC_FILES=$HOME/.gtkrc-2.0
 export GTK_THEME=Arc-Dark
 
 export LIBVA_DRIVER_NAME=nvidia
+export DXVK_FRAME_RATE=120
 
 # autostart xfce
 [ "$(tty)" = "/dev/tty1" ] && ! pgrep -x xfce4-session >/dev/null && exec startx

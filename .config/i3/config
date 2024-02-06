@@ -10,15 +10,16 @@ bindsym $mod+e			exec --no-startup-id thunar
 bindsym $mod+w                  exec --no-startup-id chromium
 bindsym $mod+Return		exec --no-startup-id alacritty
 bindsym Print                   exec --no-startup-id xfce4-screenshooter -f
-bindsym $mod+Print		exec --no-startup-id xfce4-screenshooter -w
+bindsym $mod+Print		exec --no-startup-id xfce4-screenshooter -w -c
 bindsym $mod+Ctrl+y		exec --no-startup-id xfce4-settings-manager
 bindsym $mod+c			exec --no-startup-id galculator
 bindsym $mod+n			exec --no-startup-id xfce4-taskmanager
 bindsym $mod+d			exec --no-startup-id rofi -show run
 bindsym $mod+l			exec --no-startup-id xset s activate
+bindsym $mod+Shift+F9		exec --no-startup-id xrandr --output DP-2 --off output DP-0 --off
 bindsym $mod+Shift+F12		exec --no-startup-id xrandr --output DP-2 --mode 3440x1440 --rate 75 --output DP-0 --mode 3440x1440 --rate 120 --left-of DP-2
 bindsym $mod+Shift+F11		exec --no-startup-id xrandr --output DP-2 --mode 3440x1440 --rate 75 --output DP-0 --off
-bindsym $mod+Shift+F0		exec --no-startup-id xrandr --output DP-2 --mode 1720x1440 --rate 60
+bindsym $mod+Shift+F10		exec --no-startup-id xrandr --output DP-2 --mode 1720x1440 --rate 60
 
 # kill focused window
 bindsym $mod+q			exec --no-startup-id ~/.config/scripts/kill.sh
@@ -198,7 +199,7 @@ for_window [class="steam_app.*"] border none
 # custom macros
 bindsym Ctrl+Shift+z		exec --no-startup-id ~/.config/scripts/poe-autoclick.sh
 bindsym Ctrl+Shift+s		exec --no-startup-id ~/.config/scripts/poe-spam.sh
-# bindsym F1 --release		exec --no-startup-id ~/.config/scripts/poe-logout.sh
+bindsym F1 --release		exec --no-startup-id ~/.config/scripts/poe-logout.sh
 bindsym F5 --release		exec --no-startup-id ~/.config/scripts/poe-hideout.sh
 # bindcode 72			exec --no-startup-id ~/.config/scripts/private/d2r-color.sh
 bindcode 66			exec --no-startup-id ~/.config/scripts/private/poe-flask.sh
