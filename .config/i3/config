@@ -15,8 +15,8 @@ bindsym $mod+Ctrl+y		exec --no-startup-id xfce4-settings-manager
 bindsym $mod+c			exec --no-startup-id galculator
 bindsym $mod+n			exec --no-startup-id xfce4-taskmanager
 bindsym $mod+d			exec --no-startup-id rofi -show run
-bindsym $mod+l			exec --no-startup-id xset s activate
-bindsym $mod+Shift+F9		exec --no-startup-id xrandr --output DP-2 --off output DP-0 --off
+bindsym $mod+l			exec --no-startup-id env XSECURELOCK_BLANK_TIMEOUT=5 XSECURELOCK_AUTH_TIMEOUT=15 XSECURELOCK_SAVER=saver_blank XSECURELOCK_DISCARD_FIRST_KEYPRESS=0 xsecurelock
+bindsym $mod+Shift+F9		exec --no-startup-id xrandr --output DP-2 --off --output DP-0 --off
 bindsym $mod+Shift+F12		exec --no-startup-id xrandr --output DP-2 --mode 3440x1440 --rate 75 --output DP-0 --mode 3440x1440 --rate 120 --left-of DP-2
 bindsym $mod+Shift+F11		exec --no-startup-id xrandr --output DP-2 --mode 3440x1440 --rate 75 --output DP-0 --off
 bindsym $mod+Shift+F10		exec --no-startup-id xrandr --output DP-2 --mode 1720x1440 --rate 60
@@ -216,6 +216,7 @@ exec_always --no-startup-id blueman-applet
 exec_always --no-startup-id feh --bg-center ~/pictures/wallpapers/current.jpg
 exec_always --no-startup-id barriers --no-tray --disable-crypto --no-restart --name arch -c /home/used/.config/barrier.conf  --address :24800
 exec --no-startup-id xfce4-panel -d
+exec --no-startup-id sh /home/used/.config/scripts/autolock.sh 900 900 5
 #exec --no-startup-id xrandr --output DP-2 --mode 3440x1440 --rate 75 --output DP-0 --mode 3440x1440 --rate 120 --left-of DP-2
 
 # layout
