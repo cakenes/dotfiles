@@ -205,6 +205,7 @@ exec_always --no-startup-id nm-applet
 exec_always --no-startup-id blueman-applet
 exec_always --no-startup-id feh --bg-center ~/pictures/wallpapers/current.jpg
 exec_always --no-startup-id barriers --no-tray --disable-crypto --no-restart --name arch -c /home/used/.config/barrier.conf  --address :24800
+exec --no-startup-id xrandr --output DP-2 --mode 3440x1440 --rate 75 --output DP-0 --off
 exec --no-startup-id xfce4-panel -d
 exec --no-startup-id xautolock -time 10 -locker xsecurelock
 
