@@ -50,3 +50,9 @@ eval "$(fnm env --use-on-cd)"
 eval "$(starship init zsh)"
 eval "$(rbenv init - )"
 eval "$(pyenv init --path)"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/Used/git/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/Used/git/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/Used/git/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/Used/git/google-cloud-sdk/completion.zsh.inc'; fi

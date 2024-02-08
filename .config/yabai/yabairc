@@ -29,7 +29,7 @@ fn - t : app=$(yabai -m query --windows --window mouse | jq -r '.app' | tr ' ' '
 # Rules
 yabai -m rule --add app="Simulator" sticky=on layer=above manage=off
 yabai -m rule --add app="qemu-system-aarch64" sticky=on layer=above manage=off
-yabai -m rule --add app="System Settings" sticky=on layer=above manage=off
+yabai -m rule --add app="System Settings" manage=off
 
 #yabai -m rule --add label="Finder" app="^Finder$" title="(Co(py|nnect)|Move|Info|Pref|Settings)" manage=off
 #yabai -m rule --add label="Safari" app="^Safari$" title="^(General|(Tab|Password|Website|Extension)s|AutoFill|Se(arch|curity)|Privacy|Advance)$" manage=off
