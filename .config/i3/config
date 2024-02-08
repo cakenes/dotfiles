@@ -15,7 +15,7 @@ bindsym $mod+Ctrl+y		exec --no-startup-id xfce4-settings-manager
 bindsym $mod+c			exec --no-startup-id galculator
 bindsym $mod+n			exec --no-startup-id xfce4-taskmanager
 bindsym $mod+d			exec --no-startup-id rofi -show run
-bindsym $mod+l			exec --no-startup-id env XSECURELOCK_BLANK_TIMEOUT=5 XSECURELOCK_AUTH_TIMEOUT=15 XSECURELOCK_SAVER=saver_blank XSECURELOCK_DISCARD_FIRST_KEYPRESS=0 xsecurelock
+bindsym $mod+l			exec --no-startup-id xsecurelock
 bindsym $mod+Shift+F9		exec --no-startup-id xrandr --output DP-2 --off --output DP-0 --off
 bindsym $mod+Shift+F12		exec --no-startup-id xrandr --output DP-2 --mode 3440x1440 --rate 75 --output DP-0 --mode 3440x1440 --rate 120 --left-of DP-2
 bindsym $mod+Shift+F11		exec --no-startup-id xrandr --output DP-2 --mode 3440x1440 --rate 75 --output DP-0 --off
@@ -197,18 +197,8 @@ for_window [class="OxygenNotIncluded"] border none
 for_window [class="steam_app.*"] border none
 
 # custom macros
-bindsym Ctrl+Shift+z		exec --no-startup-id ~/.config/scripts/poe-autoclick.sh
-bindsym Ctrl+Shift+s		exec --no-startup-id ~/.config/scripts/poe-spam.sh
 bindsym F1 --release		exec --no-startup-id ~/.config/scripts/poe-logout.sh
 bindsym F5 --release		exec --no-startup-id ~/.config/scripts/poe-hideout.sh
-# bindcode 72			exec --no-startup-id ~/.config/scripts/private/d2r-color.sh
-bindcode 66			exec --no-startup-id ~/.config/scripts/private/poe-flask.sh
-# bindcode 66			exec --no-startup-id ~/.config/scripts/private/wow-dps.sh
-# bindcode 135			exec --no-startup-id ~/.config/scripts/private/wow-fish.sh
-# bindcode 69			exec --no-startup-id ~/.config/scripts/private/ark-autofeed.sh
-# bindcode 71			exec --no-startup-id ~/.config/scripts/private/ark-autoattack.sh
-# bindcode 72			exec --no-startup-id ~/.config/scripts/private/ark-autorun.sh
-
 
 # autostart
 exec_always --no-startup-id nm-applet
@@ -216,8 +206,7 @@ exec_always --no-startup-id blueman-applet
 exec_always --no-startup-id feh --bg-center ~/pictures/wallpapers/current.jpg
 exec_always --no-startup-id barriers --no-tray --disable-crypto --no-restart --name arch -c /home/used/.config/barrier.conf  --address :24800
 exec --no-startup-id xfce4-panel -d
-exec --no-startup-id sh /home/used/.config/scripts/autolock.sh 900 900 5
-#exec --no-startup-id xrandr --output DP-2 --mode 3440x1440 --rate 75 --output DP-0 --mode 3440x1440 --rate 120 --left-of DP-2
+exec --no-startup-id xautolock -time 10 -locker xsecurelock
 
 # layout
 exec --no-startup-id "i3-msg 'workspace 1; append_layout /home/used/.config/i3/workspace-1.json'"
