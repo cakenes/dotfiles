@@ -1,0 +1,14 @@
+android-studio
+chromium-extension-web-store
+cockpit-navigator
+fnm
+geekbench
+i3ipc-glib-git
+mkinitcpio-firmware
+postman-bin
+proton-ge-custom-bin
+smassh
+ungoogled-chromium-bin
+unigine-heaven
+visual-studio-code-bin
+yay
