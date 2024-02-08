@@ -20,7 +20,8 @@ alias yayskip="yay -S --mflags --skipinteg --sudoloop"
 alias yay="yay --sudoloop"
 alias cpu-stats="watch -n1 'cat /proc/cpuinfo | grep \"^[c]pu MHz\" && echo ----- && sensors | grep Core && echo ----- && sensors | grep fan'"
 alias inhibit="echo Power: && dbus-send --session --print-reply --dest=org.freedesktop.PowerManagement /org/freedesktop/PowerManagement/Inhibit org.freedesktop.PowerManagement.Inhibit.GetInhibitors && echo Screensaver: && dbus-send --session --print-reply --dest=org.xfce.ScreenSaver / org.xfce.ScreenSaver.GetInhibitors" 
-alias savePackages="pacman -Qqen > ~/.config/system/packages/pkglist.md && pacman -Qqem > ~/.config/system/packages/aurlist.md"
+alias pacman-backup="pacman -Qqen > ~/.config/system/packages/pkglist.md && pacman -Qqem > ~/.config/system/packages/aurlist.md"
+alias pacman-restore="yay -S --needed - < ~/.config/system/packages/pkglist.md && yay -S --needed - < ~/.config/system/packages/aurlist.md"
 
 # logs
 function log-search() { sudo grep -rsh $1 /var/log | sort; }
