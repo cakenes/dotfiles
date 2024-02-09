@@ -11,6 +11,7 @@ bindsym $mod+w                  exec --no-startup-id chromium
 bindsym $mod+Return		exec --no-startup-id alacritty
 bindsym Print                   exec --no-startup-id xfce4-screenshooter -f
 bindsym $mod+Print		exec --no-startup-id xfce4-screenshooter -w -c
+bindsym $mod+Shift+Print	exec --no-startup-id xfce4-screenshooter -r -c 
 bindsym $mod+Ctrl+y		exec --no-startup-id xfce4-settings-manager
 bindsym $mod+c			exec --no-startup-id galculator
 bindsym $mod+n			exec --no-startup-id xfce4-taskmanager
