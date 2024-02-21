@@ -8,6 +8,7 @@ mkinitcpio-firmware
 postman-bin
 proton-ge-custom-bin
 smassh
+tpm
 ungoogled-chromium-bin
 unigine-heaven
 visual-studio-code-bin

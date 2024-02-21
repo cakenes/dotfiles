@@ -115,6 +115,7 @@ qemu-base
 qemu-img
 ristretto
 rofi
+speedtest-cli
 starship
 steam
 stress
@@ -124,6 +125,7 @@ thunar-archive-plugin
 thunar-media-tags-plugin
 thunar-volman
 tk
+tmux
 ttf-0xproto-nerd
 ttf-3270-nerd
 ttf-agave-nerd
@@ -193,6 +195,7 @@ xfce4-clipman-plugin
 xfce4-panel
 xfce4-pulseaudio-plugin
 xfce4-screenshooter
+xfce4-sensors-plugin
 xfce4-taskmanager
 xfce4-xkb-plugin
 xfconf
