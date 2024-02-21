@@ -189,8 +189,6 @@ for_window [class="Project Zomboid"] floating enable
 for_window [class="scrcpy"] floating enable
 for_window [title="Vampire Survivors"] floating enable
 for_window [class="d2r.exe"] floating enable
-for_window [class="awakened-poe-trade"] floating enable
-for_window [class="awakened-poe-trade"] resize set 460 1000
 
 # border
 for_window [title="xfce4-panel"] border none
@@ -208,7 +206,7 @@ exec_always --no-startup-id feh --bg-center ~/pictures/wallpapers/current.jpg
 exec_always --no-startup-id barriers --no-tray --disable-crypto --no-restart --name arch -c /home/used/.config/barrier.conf  --address :24800
 exec --no-startup-id xrandr --output DP-2 --mode 3440x1440 --rate 75 --output DP-0 --off
 exec --no-startup-id xfce4-panel -d
-exec --no-startup-id xautolock -time 10 -locker xsecurelock
+exec --no-startup-id xautolock -time 15 -locker xsecurelock
 
 # layout
 exec --no-startup-id "i3-msg 'workspace 1; append_layout /home/used/.config/i3/workspace-1.json'"
