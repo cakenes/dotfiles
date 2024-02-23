@@ -34,9 +34,8 @@ alias run-pihladoctor="cd ~/git/pihla-doctor && yarn local"
 
 alias check="yarn format:check && yarn typecheck:partial && yarn lint"
 
+function git-merges() { git --no-pager log $1..$2 --merges --pretty=format:%b; }
 alias git-pr="gh search prs --state=open --review-requested=@me"
-#alias git-changes="git log --oneline --ancestry-path '$1'..'$2' | grep 'Merge'"
-#function git-changes() { "git log --oneline --ancestry-path "$1".."$2" | grep 'Merge'" }
 alias git-pp-local="pushd ~/git/pihlapotilas && arch -x86_64 npx react-native run-ios --scheme 'pihlapotilas local' --simulator='iPhone 15 Pro' && popd"
 alias git-pp-local-se="pushd ~/git/pihlapotilas && arch -x86_64 npx react-native run-ios --scheme 'pihlapotilas local' --simulator='iPhone SE (3rd generation)' && popd"
 alias git-pp-staging="pushd ~/git/pihlapotilas && arch -x86_64 npx react-native run-ios --scheme 'pihlapotilas staging' --simulator='iPhone 15 Pro' && popd"
@@ -50,6 +49,7 @@ eval "$(fnm env --use-on-cd)"
 eval "$(starship init zsh)"
 eval "$(rbenv init - )"
 eval "$(pyenv init --path)"
+eval "$(zoxide init zsh --cmd cd)"
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/Used/git/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/Used/git/google-cloud-sdk/path.zsh.inc'; fi
