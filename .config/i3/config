@@ -1,4 +1,4 @@
-# keybinds
+# keybind
 # KP_0 KP_1 ... KP_9 KP_Add KP_Subtract KP_Multiply KP_Divide KP_Enter KP_Separator
 
 set $mod Mod4
@@ -14,7 +14,7 @@ bindsym $mod+Print		exec --no-startup-id xfce4-screenshooter -w -c
 bindsym $mod+Shift+Print	exec --no-startup-id xfce4-screenshooter -r -c 
 bindsym $mod+Ctrl+y		exec --no-startup-id xfce4-settings-manager
 bindsym $mod+c			exec --no-startup-id galculator
-bindsym $mod+n			exec --no-startup-id xfce4-taskmanager
+bindsym $mod+n			exec --no-startup-id alacritty --class btop -o "window.dimensions.lines=40" -o "window.dimensions.columns=180" -e btop
 bindsym $mod+d			exec --no-startup-id rofi -show run
 bindsym $mod+l			exec --no-startup-id xsecurelock
 bindsym $mod+Shift+F9		exec --no-startup-id xrandr --output DP-2 --off --output DP-0 --off
@@ -174,6 +174,7 @@ for_window [class="Xfce4-.*manager.*"] floating enable
 for_window [class="iriunwebcam"] floating enable
 for_window [title="Emulator"] floating enable
 for_window [class="Nvidia-settings"] floating enable
+for_window [class="btop"] floating enable
 
 # steam
 for_window [class="steam" title="Friends List"] floating enable
