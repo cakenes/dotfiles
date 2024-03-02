@@ -4,14 +4,18 @@ return {
         keys = {
             {
                 "<leader>fp",
+                function()
+                    require("telescope.builtin").find_files({ cwd = require("lazy.core.config").options.root })
+                end,
                 desc = "Find Plugin File",
             },
         },
         dependencies = {
-            {
-                "nvim-telescope/telescope-live-grep-args.nvim",
-                "nvim-telescope/telescope-fzf-native.nvim",
-            },
+            "nvim-telescope/telescope-fzf-native.nvim",
+            build = "make",
+            config = function()
+                require("telescope").load_extension("fzf")
+            end,
         },
         opts = {
             defaults = {
@@ -21,10 +25,5 @@ return {
                 winblend = 0,
             },
         },
-        config = function()
-            require("telescope.builtin").find_files({ cwd = require("lazy.core.config").options.root })
-            require("telescope").load_extension("fzf")
-            require("telescope").load_extension("live_grep_args")
-        end,
     },
 }
