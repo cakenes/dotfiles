@@ -16,20 +16,14 @@ return {
             end,
         },
 
-        ---@class PluginLspOpts
-        opts = {
-            ---@type lspconfig.options
-            servers = {
+        opts = function(_, opts)
+            opts.servers = {
                 tsserver = {},
                 pyright = {},
-            },
-            ---@type table<string, fun(server:string, opts:_.lspconfig.options):boolean?>
-            setup = {
-                tsserver = function(_, opts)
-                    require("typescript").setup({ server = opts })
-                    return true
-                end,
-            },
-        },
+            }
+            opts.setup = {
+                require("typescript").setup({ server = opts }),
+            }
+        end,
     },
 }
