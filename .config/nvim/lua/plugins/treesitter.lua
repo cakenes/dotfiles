@@ -1,8 +1,8 @@
 return {
     {
         "nvim-treesitter/nvim-treesitter",
-        opts = {
-            ensure_installed = {
+        opts = function(_, opts)
+            opts.ensure_installed = {
                 "bash",
                 "html",
                 "css",
@@ -19,8 +19,7 @@ return {
                 "typescript",
                 "vim",
                 "yaml",
-            },
-        },
+            }
+        end,
     },
 }
-

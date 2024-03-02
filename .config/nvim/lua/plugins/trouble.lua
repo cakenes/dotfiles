@@ -1,7 +1,8 @@
 return {
     {
         "folke/trouble.nvim",
-        opts = { use_diagnostic_signs = true },
+        opts = function(_, opts)
+            opts.use_diagnostic_signs = true
+        end,
     },
 }
-

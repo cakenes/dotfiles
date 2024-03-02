@@ -15,6 +15,7 @@ return {
                 end)
             end,
         },
+
         ---@class PluginLspOpts
         opts = {
             ---@type lspconfig.options

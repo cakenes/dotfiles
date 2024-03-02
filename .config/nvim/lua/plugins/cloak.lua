@@ -2,10 +2,10 @@ return {
     {
         "laytan/cloak.nvim",
         enabled = true,
-        opts = {
-            cloak_character = "*",
-            highlight_group = "Comment",
-            patterns = {
+        opts = function(_, opts)
+            opts.cloak_character = "*"
+            opts.highlight_group = "Comment"
+            opts.patterns = {
                 {
                     file_pattern = {
                         ".env*",
@@ -14,7 +14,7 @@ return {
                     },
                     cloak_pattern = "=.+",
                 },
-            },
-        },
+            }
+        end,
     },
 }
