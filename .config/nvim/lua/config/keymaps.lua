@@ -1,3 +1,15 @@
--- Keymaps are automatically loaded on the VeryLazy event
--- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
--- Add any additional keymaps here
+local set = vim.keymap.set
+
+set("n", "<C-Left>", "<C-w>h", { desc = "Go to left window", remap = true })
+set("n", "<C-Down>", "<C-w>j", { desc = "Go to lower window", remap = true })
+set("n", "<C-Up>", "<C-w>k", { desc = "Go to upper window", remap = true })
+set("n", "<C-Right>", "<C-w>l", { desc = "Go to right window", remap = true })
+
+set("n", "<C-k>", "<cmd>resize +2<cr>", { desc = "Increase window height" })
+set("n", "<C-j>", "<cmd>resize -2<cr>", { desc = "Decrease window height" })
+set("n", "<C-h>", "<cmd>vertical resize -2<cr>", { desc = "Decrease window width" })
+set("n", "<C-l>", "<cmd>vertical resize +2<cr>", { desc = "Increase window width" })
+
+set("n", "<C-Tab>", "<cmd>bprevious<cr>", { desc = "Prev buffer" })
+set("n", "<Tab>", "<cmd>bnext<cr>", { desc = "Next buffer" })
+set("n", "<C-Esc>", "<cmd>bdelete<cr>", { desc = "Delete buffer" })
