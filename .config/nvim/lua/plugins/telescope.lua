@@ -1,10 +1,9 @@
 return {
     {
         "nvim-telescope/telescope.nvim",
-        keys = {
-            { "<leader><space>", "<cmd>Telescope git_files<cr>", desc = "Find git files" },
-        },
+        event = "VimEnter",
         dependencies = {
+       'nvim-telescope/telescope-ui-select.nvim',
             "nvim-telescope/telescope-live-grep-args.nvim",
             "nvim-telescope/telescope-fzf-native.nvim",
         },
