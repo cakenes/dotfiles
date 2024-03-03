@@ -2,12 +2,17 @@ return {
     {
         "nvim-telescope/telescope.nvim",
         keys = {
-            "<leader>fp",
-            desc = "Find Plugin File",
+            { "<leader><space>", "<cmd>Telescope git_files<cr>", desc = "Find git files" },
         },
         dependencies = {
             "nvim-telescope/telescope-live-grep-args.nvim",
             "nvim-telescope/telescope-fzf-native.nvim",
+        },
+        extensions = {
+            media_files = {
+                filetypes = { "png", "webp", "jpg", "jpeg" },
+                find_cmd = "rg",
+            },
         },
         opts = function(_, opts)
             opts.defaults = {
