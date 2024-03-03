@@ -29,10 +29,13 @@ return {
             opts.experimental.ghost_text = false
 
             opts.mapping = vim.tbl_extend("force", opts.mapping, {
-                ["<Tab>"] = cmp.mapping(function(fallback)
+                ["<C-Tab>"] = cmp.mapping(function(fallback)
                     if copilot.is_visible() then
                         copilot.accept()
-                    elseif cmp.visible() then
+                    end
+                end, { "i", "s" }),
+                ["<Tab>"] = cmp.mapping(function(fallback)
+                    if cmp.visible() then
                         cmp.select_next_item()
                     elseif luasnip.expand_or_jumpable() then
                         luasnip.expand_or_jump()

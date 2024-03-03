@@ -8,12 +8,6 @@ return {
             "nvim-telescope/telescope-live-grep-args.nvim",
             "nvim-telescope/telescope-fzf-native.nvim",
         },
-        extensions = {
-            media_files = {
-                filetypes = { "png", "webp", "jpg", "jpeg" },
-                find_cmd = "rg",
-            },
-        },
         opts = function(_, opts)
             opts.defaults = {
                 layout_strategy = "horizontal",
