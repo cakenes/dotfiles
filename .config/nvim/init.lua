@@ -10,8 +10,6 @@ set("n", "<C-k>", "<cmd>resize +2<cr>", { desc = "Increase window height" })
 set("n", "<C-j>", "<cmd>resize -2<cr>", { desc = "Decrease window height" })
 set("n", "<C-h>", "<cmd>vertical resize -2<cr>", { desc = "Decrease window width" })
 set("n", "<C-l>", "<cmd>vertical resize +2<cr>", { desc = "Increase window width" })
-set("n", "<C-Tab>", "<cmd>bprevious<cr>", { desc = "Prev buffer" })
-set("n", "<Tab>", "<cmd>bnext<cr>", { desc = "Next buffer" })
 set("n", "<C-Esc>", "<cmd>bdelete<cr>", { desc = "Delete buffer" })
 
 -- Trouble keybinds
@@ -24,7 +22,11 @@ set("n", "<leader>td", "<cmd>TroubleToggle lsp_diagnostics<cr>", { desc = "Troub
 -- Telescope
 set("n", "<leader><leader>", "<cmd>Telescope git_files<cr>", { desc = "Find git filles" })
 
-
+-- buffer
+set("n", "<Tab>", "<cmd>bnext<cr>", { desc = "Next buffer" })
+set("n", "<C-Tab>", "<cmd>bprevious<cr>", { desc = "Prev buffer" })
+set("n", "<leader>bb", "<cmd>Telescope buffers<cr>", { desc = "Switch buffer" })
+set("n", "<leader>bd", "<cmd>bd<cr>", { desc = "Delete buffer" })
 
 
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')

@@ -3,7 +3,7 @@ return {
         "nvim-telescope/telescope.nvim",
         event = "VimEnter",
         dependencies = {
-       'nvim-telescope/telescope-ui-select.nvim',
+            'nvim-telescope/telescope-ui-select.nvim',
             "nvim-telescope/telescope-live-grep-args.nvim",
             "nvim-telescope/telescope-fzf-native.nvim",
         },
