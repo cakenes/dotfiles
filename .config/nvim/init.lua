@@ -13,9 +13,10 @@ vim.opt.rtp:prepend(lazypath)
 
 vim.g.mapleader = " "
 
+require("keymap")
+require("options")
 require("lazy").setup({
   spec = {
-    { import = "options" },
     { import = "plugins" },
   }
 })
