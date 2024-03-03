@@ -6,7 +6,6 @@ return {
             "L3MON4D3/LuaSnip",
         },
 
-        ---@param opts cmp.ConfigSchema
         opts = function(_, opts)
             table.insert(opts.sources, { { name = "emoji" }, { name = "luasnip" } })
             local has_words_before = function()
@@ -29,13 +28,10 @@ return {
             opts.experimental.ghost_text = false
 
             opts.mapping = vim.tbl_extend("force", opts.mapping, {
-                ["<C-Tab>"] = cmp.mapping(function(fallback)
+                ["<Tab>"] = cmp.mapping(function(fallback)
                     if copilot.is_visible() then
                         copilot.accept()
-                    end
-                end, { "i", "s" }),
-                ["<Tab>"] = cmp.mapping(function(fallback)
-                    if cmp.visible() then
+                    elseif cmp.visible() then
                         cmp.select_next_item()
                     elseif luasnip.expand_or_jumpable() then
                         luasnip.expand_or_jump()
