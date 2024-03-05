@@ -1,30 +1,19 @@
-return{
-  "folke/which-key.nvim",
-  event = "VeryLazy",
-  opts = {
-    plugins = { spelling = true },
-    defaults = {
-      mode = { "n", "v" },
-      ["g"] = { name = "+goto" },
-      ["gs"] = { name = "+surround" },
-      ["]"] = { name = "+next" },
-      ["["] = { name = "+prev" },
-      ["<leader><tab>"] = { name = "+tabs" },
-      ["<leader>b"] = { name = "+buffer" },
-      ["<leader>c"] = { name = "+code" },
-      ["<leader>f"] = { name = "+file/find" },
-      ["<leader>g"] = { name = "+git" },
-      ["<leader>gh"] = { name = "+hunks" },
-      ["<leader>q"] = { name = "+quit/session" },
-      ["<leader>s"] = { name = "+search" },
-      ["<leader>u"] = { name = "+ui" },
-      ["<leader>w"] = { name = "+windows" },
-      ["<leader>x"] = { name = "+diagnostics/quickfix" },
-    },
-  },
-  config = function(_, opts)
-    local wk = require("which-key")
-    wk.setup(opts)
-    wk.register(opts.defaults)
-  end,
+return {
+    'folke/which-key.nvim',
+    event = 'VimEnter',
+    config = function()
+        require('which-key').setup()
+        require('which-key').register {
+            ['<leader>b'] = { name = '[B]uffer', _ = 'which_key_ignore' },
+            ['<leader>c'] = { name = '[C]ode', _ = 'which_key_ignore' },
+            ['<leader>d'] = { name = '[D]ebug', _ = 'which_key_ignore' },
+            ['<leader>d'] = { name = '[F]ind', _ = 'which_key_ignore' },
+            ['<leader>g'] = { name = '[G]oto', _ = 'which_key_ignore' },
+            ['<leader>r'] = { name = '[R]ename', _ = 'which_key_ignore' },
+            ['<leader>s'] = { name = '[S]earch', _ = 'which_key_ignore' },
+            ['<leader>w'] = { name = '[W]orkspace', _ = 'which_key_ignore' },
+            ['<leader>f'] = { name = '[F]iles', _ = 'which_key_ignore' },
+            ['<leader>t'] = { name = '[T]rouble', _ = 'which_key_ignore' },
+        }
+    end,
 }
