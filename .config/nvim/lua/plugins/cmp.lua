@@ -1,33 +1,46 @@
 return {
-    {
-        "hrsh7th/nvim-cmp",
-        dependencies = {
-            "hrsh7th/cmp-emoji",
+    "hrsh7th/nvim-cmp",
+    event = "InsertEnter",
+    dependencies = {
+        {
             "L3MON4D3/LuaSnip",
+            build = (function()
+                if vim.fn.has("win32") == 1 or vim.fn.executable("make") == 0 then
+                    return
+                end
+                return "make install_jsregexp"
+            end)(),
         },
-
-        opts = function(_, opts)
-            table.insert(opts.sources, { { name = "emoji" }, { name = "luasnip" } })
-            local has_words_before = function()
-                unpack = unpack or table.unpack
-                local line, col = unpack(vim.api.nvim_win_get_cursor(0))
-                return col ~= 0
-                    and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
-            end
-
-            local luasnip = require("luasnip")
-            local cmp = require("cmp")
-            local copilot = require("copilot.suggestion")
-
-            opts.window = {
+        "saadparwaiz1/cmp_luasnip",
+        "hrsh7th/cmp-nvim-lsp",
+        "hrsh7th/cmp-path",
+        "rafamadriz/friendly-snippets",
+    },
+    config = function()
+        local has_words_before = function()
+            unpack = unpack or table.unpack
+            local line, col = unpack(vim.api.nvim_win_get_cursor(0))
+            return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
+        end
+        local cmp = require("cmp")
+        local luasnip = require("luasnip")
+        local copilot = require("copilot.suggestion")
+        luasnip.config.setup({})
+        ---@diagnostic disable-next-line: redundant-parameter
+        cmp.setup({
+            snippet = {
+                expand = function(args)
+                    luasnip.lsp_expand(args.body)
+                end,
+            },
+            window = {
                 completion = cmp.config.window.bordered(),
                 documentation = cmp.config.window.bordered(),
-            }
-
-            opts.window.completion.scrollbar = false
-            opts.experimental.ghost_text = false
-
-            opts.mapping = vim.tbl_extend("force", opts.mapping, {
+            },
+            experimental = { ghost_text = false },
+            completion = { completeopt = "menu,menuone,noinsert", scrollbar = false },
+            mapping = cmp.mapping.preset.insert({
+                ["<CR>"] = cmp.mapping.confirm({ select = true }),
                 ["<Tab>"] = cmp.mapping(function(fallback)
                     if copilot.is_visible() then
                         copilot.accept()
@@ -42,15 +55,18 @@ return {
                     end
                 end, { "i", "s" }),
                 ["<S-Tab>"] = cmp.mapping(function(fallback)
-                    if cmp.visible() then
-                        cmp.select_prev_item()
-                    elseif luasnip.jumpable(-1) then
-                        luasnip.jump(-1)
+                    if copilot.is_visible() then
+                        copilot.dismiss()
                     else
                         fallback()
                     end
                 end, { "i", "s" }),
-            })
-        end,
-    },
+            }),
+            sources = {
+                { name = "nvim_lsp" },
+                { name = "luasnip" },
+                { name = "path" },
+            },
+        })
+    end,
 }
