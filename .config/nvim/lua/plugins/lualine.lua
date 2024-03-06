@@ -1,154 +1,121 @@
+local function process_sections(sections)
+    for name, section in pairs(sections) do
+        local left = name:sub(9, 10) < 'x'
+        for pos = 1, name ~= 'lualine_z' and #section or #section - 1 do
+            table.insert(section, pos * 2, { empty, color = { fg = '#f3f3f3', bg = '#f3f3f3' } })
+        end
+        for id, comp in ipairs(section) do
+            if type(comp) ~= 'table' then
+                comp = { comp }
+                section[id] = comp
+            end
+            comp.separator = left and { right = '' } or { left = '' }
+        end
+    end
+    return sections
+end
+
+local function search_result()
+    if vim.v.hlsearch == 0 then
+        return ''
+    end
+    local last_search = vim.fn.getreg '/'
+    if not last_search or last_search == '' then
+        return ''
+    end
+    local searchcount = vim.fn.searchcount { maxcount = 9999 }
+    return last_search .. '(' .. searchcount.current .. '/' .. searchcount.total .. ')'
+end
+
+local function modified()
+    if vim.bo.modified then
+        return '+'
+    elseif vim.bo.modifiable == false or vim.bo.readonly == true then
+        return '-'
+    end
+    return ''
+end
+
 return {
-    "nvim-lualine/lualine.nvim",
+    'nvim-lualine/lualine.nvim',
     init = function()
-      vim.g.lualine_laststatus = vim.o.laststatus
-      if vim.fn.argc(-1) > 0 then
-        vim.o.statusline = " "
-      else
-        vim.o.laststatus = 0
-      end
+        vim.g.lualine_laststatus = vim.o.laststatus
+        if vim.fn.argc(-1) > 0 then
+            vim.o.statusline = ' '
+        else
+            vim.o.laststatus = 0
+        end
     end,
     opts = function()
-
-      local lualine_require = require("lualine_require")
-      lualine_require.require = require
-  
-      vim.o.laststatus = vim.g.lualine_laststatus
-  
-      return {
-        options = {
-          theme = "auto",
-          globalstatus = true,
-          disabled_filetypes = { statusline = { "dashboard", "alpha", "starter" } },
-          section_separators = { left = '', right = '' },
-        },
-        sections = {
-          lualine_a = { "mode" },
-          lualine_b = { "branch" },
-  
-          lualine_c = {
-            {
-              "diagnostics",
-              symbols = {
-                    error = " ",
-                    warn = " ",
-                    info = " ",
-                    hint = " ",
-              },
-            },
-            { "filetype", icon_only = true, separator = "", padding = { left = 1, right = 0 } },
-          },
-          lualine_x = {
-            -- stylua: ignore
-            {
-              function() return require("noice").api.status.command.get() end,
-              cond = function() return package.loaded["noice"] and require("noice").api.status.command.has() end,
-
-            },
-            -- stylua: ignore
-            {
-              function() return require("noice").api.status.mode.get() end,
-              cond = function() return package.loaded["noice"] and require("noice").api.status.mode.has() end,
-
-            },
-            -- stylua: ignore
-            {
-              function() return "  " .. require("dap").status() end,
-              cond = function () return package.loaded["dap"] and require("dap").status() ~= "" end,
-
+        local lualine_require = require 'lualine_require'
+        lualine_require.require = require
+        vim.o.laststatus = vim.g.lualine_laststatus
+        return {
+            options = {
+                theme = {
+                    normal = {
+                        a = { fg = '#f3f3f3', bg = '#383a42' },
+                        b = { fg = '#f3f3f3', bg = '#a0a1a7' },
+                        c = { fg = '#383a42', bg = '#f3f3f3' },
+                        z = { fg = '#f3f3f3', bg = '#383a42' },
+                    },
+                    insert = { a = { fg = '#383a42', bg = '#83a598' } },
+                    visual = { a = { fg = '#383a42', bg = '#fe8019' } },
+                    replace = { a = { fg = '#383a42', bg = '#8ec07c' } },
+                },
             },
             {
-              require("lazy.status").updates,
-              cond = require("lazy.status").has_updates,
-
+                component_separators = '',
+                section_separators = { left = '', right = '' },
             },
-            {
-              "diff",
-              symbols = {
-                    added    = " ",
-                    modified = " ",
-                    removed  = " ",
-              },
-              source = function()
-                local gitsigns = vim.b.gitsigns_status_dict
-                if gitsigns then
-                  return {
-                    added = gitsigns.added,
-                    modified = gitsigns.changed,
-                    removed = gitsigns.removed,
-                  }
-                end
-              end,
+            sections = process_sections {
+                lualine_a = { 'mode' },
+                lualine_b = {
+                    'branch',
+                    'diff',
+                    {
+                        'diagnostics',
+                        source = { 'nvim' },
+                        sections = { 'error' },
+                        diagnostics_color = { error = { bg = '#ca1243', fg = '#f3f3f3' } },
+                    },
+                    {
+                        'diagnostics',
+                        source = { 'nvim' },
+                        sections = { 'warn' },
+                        diagnostics_color = { warn = { bg = '#fe8019', fg = '#f3f3f3' } },
+                    },
+                    { 'filename', file_status = false, path = 1 },
+                    { modified, color = { bg = '#ca1243' } },
+                    {
+                        '%w',
+                        cond = function()
+                            return vim.wo.previewwindow
+                        end,
+                    },
+                    {
+                        '%r',
+                        cond = function()
+                            return vim.bo.readonly
+                        end,
+                    },
+                    {
+                        '%q',
+                        cond = function()
+                            return vim.bo.buftype == 'quickfix'
+                        end,
+                    },
+                },
+                lualine_c = {},
+                lualine_x = {},
+                lualine_y = { search_result, 'filetype' },
+                lualine_z = { '%l:%c', '%p%%/%L' },
             },
-          },
-          lualine_y = {
-            { "progress", separator = " ", padding = { left = 1, right = 0 } },
-            { "location", padding = { left = 0, right = 1 } },
-          },
-          lualine_z = {
-            function()
-              return " " .. os.date("%R")
-            end,
-          },
-        },
-      }
+            inactive_sections = {
+                lualine_c = { '%f %y %m' },
+                lualine_x = {},
+            },
+        }
     end,
-  }
+}
 
-
-  
---   require('lualine').setup {
---     options = {
---       theme = theme,
---       component_separators = '',
---       section_separators = { left = '', right = '' },
---     },
---     sections = process_sections {
---       lualine_a = { 'mode' },
---       lualine_b = {
---         'branch',
---         'diff',
---         {
---           'diagnostics',
---           source = { 'nvim' },
---           sections = { 'error' },
---           diagnostics_color = { error = { bg = colors.red, fg = colors.white } },
---         },
---         {
---           'diagnostics',
---           source = { 'nvim' },
---           sections = { 'warn' },
---           diagnostics_color = { warn = { bg = colors.orange, fg = colors.white } },
---         },
---         { 'filename', file_status = false, path = 1 },
---         { modified, color = { bg = colors.red } },
---         {
---           '%w',
---           cond = function()
---             return vim.wo.previewwindow
---           end,
---         },
---         {
---           '%r',
---           cond = function()
---             return vim.bo.readonly
---           end,
---         },
---         {
---           '%q',
---           cond = function()
---             return vim.bo.buftype == 'quickfix'
---           end,
---         },
---       },
---       lualine_c = {},
---       lualine_x = {},
---       lualine_y = { search_result, 'filetype' },
---       lualine_z = { '%l:%c', '%p%%/%L' },
---     },
---     inactive_sections = {
---       lualine_c = { '%f %y %m' },
---       lualine_x = {},
---     },
---   }
--- }
