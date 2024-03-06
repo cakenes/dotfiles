@@ -11,24 +11,25 @@ return {
                 ['cmp.entry.get_documentation'] = true,
             },
         },
-    },
-    routes = {
-        {
-            filter = {
-                event = 'msg_show',
-                any = {
-                    { find = '%d+L, %d+B' },
-                    { find = '; after #%d+' },
-                    { find = '; before #%d+' },
+        routes = {
+            {
+                filter = {
+                    event = 'msg_show',
+                    any = {
+                        { find = '%d+L, %d+B' },
+                        { find = '; after #%d+' },
+                        { find = '; before #%d+' },
+                    },
                 },
+                view = 'mini',
             },
-            view = 'mini',
         },
-    },
-    presets = {
-        bottom_search = true,
-        command_palette = true,
-        long_message_to_split = true,
-        inc_rename = true,
+        presets = {
+            bottom_search = false,
+            command_palette = true,
+            long_message_to_split = true,
+            inc_rename = true,
+            lsp_doc_border = false,
+        },
     },
 }

@@ -27,9 +27,9 @@ end
 
 return {
   check = function()
-    vim.health.start
+    -- vim.health.start
 
-    vim.health.info
+    -- vim.health.info
 
     local uv = vim.uv or vim.loop
     vim.health.info('System Information: ' .. vim.inspect(uv.os_uname()))
