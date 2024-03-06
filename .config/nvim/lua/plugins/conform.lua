@@ -1,6 +1,5 @@
 return {
     "stevearc/conform.nvim",
-    lazy = true,
     opts = {
         notify_on_error = false,
         format_on_save = {
@@ -8,7 +7,9 @@ return {
             lsp_fallback = true,
         },
         formatters_by_ft = {
-        --     lua = { 'stylua' },
+            lua = { "stylua" },
+            fish = { "fish_indent" },
+            sh = { "shfmt" },
         },
     },
 }
