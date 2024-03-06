@@ -45,7 +45,7 @@ vim.keymap.set("n", "<leader>tq", "<cmd>TroubleToggle quickfix<cr>", { desc = "T
 
 -- Telescope
 vim.keymap.set("n", "<leader><space>", "<cmd>Telescope git_files<cr>", { desc = "Find: Git" })
-vim.keymap.set("n", "<leader>fg", "<cmd>Telescope git_files<cr>", { desc = "Find: Git" })
+vim.keymap.set("n", "<leader>fg", "<cmd>Telescope live_grep follow=true no_ignore=true hidden=true<cr>", { desc = "Find: Grep" })
 vim.keymap.set("n", "<leader>fr", "<cmd>Telescope oldfiles<cr>", { desc = "Find: Recent" })
 vim.keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "Find: Files" })
 vim.keymap.set("n", "<leader>fa", "<cmd>Telescope find_files follow=true no_ignore=true hidden=true<cr>", { desc = "Find: All" })
