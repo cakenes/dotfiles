@@ -1,18 +1,17 @@
 local colors = {
     red = "#f44747",
-    grey = "#a0a1a7",
-    black = "#383a42",
-    white = "#1e1e1e",
-    light_green = "#5cb6f8",
+    grey = "#383a42",
+    black = "#1e1e1e",
+    light_blue = "#5cb6f8",
     orange = "#ffaf00",
-    green = "#0a7aca",
+    blue = "#0a7aca",
 }
 
 local function process_sections(sections)
     for name, section in pairs(sections) do
         local left = name:sub(9, 10) < "x"
         for pos = 1, name ~= "lualine_z" and #section or #section - 1 do
-            table.insert(section, pos * 2, { color = { fg = colors.white, bg = colors.white } })
+            table.insert(section, pos * 2, { color = { fg = colors.black, bg = colors.black } })
         end
         for id, comp in ipairs(section) do
             if type(comp) ~= "table" then
@@ -64,14 +63,14 @@ return {
             options = {
                 theme = {
                     normal = {
-                        a = { fg = colors.green, bg = colors.black },
-                        b = { fg = colors.white, bg = colors.green },
-                        c = { fg = colors.black, bg = colors.white },
-                        z = { fg = colors.green, bg = colors.black },
+                        a = { fg = colors.blue, bg = colors.grey },
+                        b = { fg = colors.blue, bg = colors.black },
+                        c = { fg = colors.grey, bg = colors.black },
+                        z = { fg = colors.blue, bg = colors.grey },
                     },
-                    insert = { a = { fg = colors.black, bg = colors.light_green } },
-                    visual = { a = { fg = colors.black, bg = colors.orange } },
-                    replace = { a = { fg = colors.black, bg = colors.green } },
+                    insert = { a = { fg = colors.black, bg = colors.light_blue } },
+                    visual = { a = { fg = colors.grey, bg = colors.orange } },
+                    replace = { a = { fg = colors.grey, bg = colors.blue } },
                 },
             },
             sections = process_sections({
@@ -83,16 +82,16 @@ return {
                         "diagnostics",
                         source = { "nvim" },
                         sections = { "error" },
-                        diagnostics_color = { error = { bg = colors.red, fg = colors.white } },
+                        diagnostics_color = { error = { bg = colors.black, fg = colors.red } },
                     },
                     {
                         "diagnostics",
                         source = { "nvim" },
                         sections = { "warn" },
-                        diagnostics_color = { warn = { bg = colors.orange, fg = colors.white } },
+                        diagnostics_color = { warn = { bg = colors.black, fg = colors.orange } },
                     },
                     { "filename", file_status = false, path = 1 },
-                    { modified, color = { bg = colors.red } },
+                    { modified, color = { bg = colors.black, fg = colors.red } },
                     {
                         "%w",
                         cond = function()
