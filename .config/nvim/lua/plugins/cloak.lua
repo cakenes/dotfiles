@@ -2,17 +2,19 @@ return {
     {
         "laytan/cloak.nvim",
         enabled = true,
-        cloak_character = "*",
-        highlight_group = "Comment",
-        patterns = {
-            {
-                file_pattern = {
-                    ".env*",
-                    "wrangler.toml",
-                    ".dev.vars",
+        opts = function(_, opts)
+            opts.cloak_character = "*"
+            opts.highlight_group = "Comment"
+            opts.patterns = {
+                {
+                    file_pattern = {
+                        ".env*",
+                        "wrangler.toml",
+                        ".dev.vars",
+                    },
+                    cloak_pattern = "=.+",
                 },
-                cloak_pattern = "=.+",
-            },
-        },
+            }
+        end,
     },
 }

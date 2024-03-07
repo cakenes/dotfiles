@@ -1,7 +1,6 @@
 return {
-    {
-        "folke/trouble.nvim",
-        opts = { use_diagnostic_signs = true },
-    },
+    'folke/trouble.nvim',
+    cmd = { 'TroubleToggle', 'Trouble' },
+    opts = { use_diagnostic_signs = true },
 }
 
