@@ -47,6 +47,10 @@ end
 
 return {
     "nvim-lualine/lualine.nvim",
+    dependencies = {
+        "echasnovski/mini.bufremove",
+        version = false,
+    },
     init = function()
         vim.g.lualine_laststatus = vim.o.laststatus
         if vim.fn.argc(-1) > 0 then
