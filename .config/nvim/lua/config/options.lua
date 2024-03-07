@@ -25,3 +25,14 @@ vim.opt.expandtab = true
 vim.opt.smartindent = true
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
+
+vim.api.nvim_create_autocmd("VimEnter", {
+    pattern = "*",
+    group = vim.api.nvim_create_augroup("NeotreeOnOpen", { clear = true }),
+    once = true,
+    callback = function()
+        if vim.fn.argc() == 0 then
+            vim.cmd("Neotree git_status")
+        end
+    end,
+})

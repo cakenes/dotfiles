@@ -10,6 +10,7 @@ return {
             if stat and stat.type == "directory" then
                 require("neo-tree")
             end
+            vim.cmd("Neotree git_status")
         end
     end,
     opts = {

@@ -41,6 +41,7 @@ return {
             completion = { completeopt = "menu,menuone,noinsert", scrollbar = false },
             mapping = cmp.mapping.preset.insert({
                 ["<CR>"] = cmp.mapping.confirm({ select = true }),
+                ["<Esc>"] = cmp.mapping.close(),
                 ["<Tab>"] = cmp.mapping(function(fallback)
                     if copilot.is_visible() then
                         copilot.accept()

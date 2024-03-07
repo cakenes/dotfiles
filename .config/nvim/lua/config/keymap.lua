@@ -9,6 +9,10 @@ vim.keymap.set("n", "<C-Left>", "<C-w>h", { desc = "Window: Go left", remap = tr
 vim.keymap.set("n", "<C-Down>", "<C-w>j", { desc = "Window: Go down", remap = true })
 vim.keymap.set("n", "<C-Up>", "<C-w>k", { desc = "Window: Go up", remap = true })
 vim.keymap.set("n", "<C-Right>", "<C-w>l", { desc = "Window: Go right", remap = true })
+vim.keymap.set("n", "<D-Left>", "<C-w>h", { desc = "Window: Go left", remap = true }) -- For Mac
+vim.keymap.set("n", "<D-Down>", "<C-w>j", { desc = "Window: Go down", remap = true }) -- For Mac
+vim.keymap.set("n", "<D-Up>", "<C-w>k", { desc = "Window: Go up", remap = true }) -- For Mac
+vim.keymap.set("n", "<D-Right>", "<C-w>l", { desc = "Window: Go right", remap = true }) -- For Mac
 vim.keymap.set("n", "<C-k>", "<cmd>resize +2<cr>", { desc = "Window: Increase height" })
 vim.keymap.set("n", "<C-j>", "<cmd>resize -2<cr>", { desc = "Window: Decrease height" })
 vim.keymap.set("n", "<C-h>", "<cmd>vertical resize -2<cr>", { desc = "Window: Decrease width" })
@@ -66,4 +70,3 @@ vim.keymap.set("n", "<leader>ee", "<cmd>Neotree<cr>", { desc = "Explorer: Toggle
 vim.keymap.set("n", "<leader>eg", "<cmd>Neotree git_status<cr>", { desc = "Explorer: Git status" })
 vim.keymap.set("n", "<leader>eb", "<cmd>Neotree buffers<cr>", { desc = "Explorer: Buffers" })
 vim.keymap.set("n", "<leader>ef", "<cmd>Neotree float<cr>", { desc = "Explorer: Float" })
-
