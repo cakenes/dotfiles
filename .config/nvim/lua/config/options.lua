@@ -19,6 +19,7 @@ vim.opt.scrolloff = 15
 vim.opt.hlsearch = true
 vim.opt.relativenumber = true
 vim.opt.number = true
+vim.opt.wrap = false
 
 -- Indentation
 vim.opt.expandtab = true
