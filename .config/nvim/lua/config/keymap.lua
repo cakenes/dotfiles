@@ -29,10 +29,10 @@ vim.keymap.set("n", "<C-Esc>", "<cmd>bdelete<cr>", { desc = "Buffer: Delete" })
 
 -- Debug
 vim.keymap.set("n", "<leader>ds", "<cmd>DapContinue<cr>", { desc = "Debug: Start/Continue" })
-vim.keymap.set("n", "<leader>di", "<cmd>DapStepInto<cr>", { desc = "Debug: Step Into" })
-vim.keymap.set("n", "<leader>dO", "<cmd>DapStepOver<cr>", { desc = "Debug: Step Over" })
-vim.keymap.set("n", "<leader>do", "<cmd>DapStepOut<cr>", { desc = "Debug: Step Out" })
-vim.keymap.set("n", "<leader>db", "<cmd>DapToggleBreakpoint<cr>", { desc = "Debug: Toggle Breakpoint" })
+vim.keymap.set("n", "<leader>di", "<cmd>DapStepInto<cr>", { desc = "Debug: Step into" })
+vim.keymap.set("n", "<leader>dO", "<cmd>DapStepOver<cr>", { desc = "Debug: Step over" })
+vim.keymap.set("n", "<leader>do", "<cmd>DapStepOut<cr>", { desc = "Debug: Step out" })
+vim.keymap.set("n", "<leader>db", "<cmd>DapToggleBreakpoint<cr>", { desc = "Debug: Toggle breakpoint" })
 
 -- Trouble
 vim.keymap.set("n", "<leader>tt", "<cmd>TroubleToggle<cr>", { desc = "Trouble: Toggle" })
@@ -49,6 +49,9 @@ vim.keymap.set("n", "<leader>fg", "<cmd>Telescope live_grep follow=true no_ignor
 vim.keymap.set("n", "<leader>fr", "<cmd>Telescope oldfiles<cr>", { desc = "Find: Recent" })
 vim.keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "Find: Files" })
 vim.keymap.set("n", "<leader>fa", "<cmd>Telescope find_files follow=true no_ignore=true hidden=true<cr>", { desc = "Find: All" })
+vim.keymap.set("n", "<leader>fb", "<cmd>Telescope git_commits<cr>", { desc = "Find: Git commit" })
+vim.keymap.set("n", "<leader>fc", "<cmd>Telescope git_bcommits<cr>", { desc = "Find: Git commit (current file)" })
+vim.keymap.set("n", "<leader>fs", "<cmd>Telescope git_stash<cr>", { desc = "Find: Git stash" })
 
 -- Goto
 vim.keymap.set("n", "<leader>gd", "<cmd>Telescope lsp_definitions<cr>", { desc = "Goto: Definitions" })
