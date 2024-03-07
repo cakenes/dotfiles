@@ -1,5 +1,6 @@
 -- Common
 vim.keymap.set("n", "<leader>L", "<cmd>Lazy<cr>", { desc = "Open lazy" })
+vim.keymap.set("n", "<leader>T", "<cmd>ToggleTerm direction=float<cr>", { desc = "Open terminal" })
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
 vim.keymap.set({ "i", "x", "n", "s" }, "<C-s>", "<cmd>w<cr><esc>", { desc = "Save file" })
