@@ -19,6 +19,7 @@ vim.opt.scrolloff = 15
 vim.opt.hlsearch = true
 vim.opt.relativenumber = true
 vim.opt.number = true
+vim.opt.wrap = false
 
 -- Indentation
 vim.opt.expandtab = true
@@ -26,13 +27,13 @@ vim.opt.smartindent = true
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 
+-- Restore session
 vim.api.nvim_create_autocmd("VimEnter", {
-    pattern = "*",
-    group = vim.api.nvim_create_augroup("NeotreeOnOpen", { clear = true }),
-    once = true,
+    group = vim.api.nvim_create_augroup("restore_session", { clear = true }),
     callback = function()
-        if vim.fn.argc() == 0 then
-            vim.cmd("Neotree git_status")
+        if vim.fn.getcwd() ~= vim.env.HOME then
+            require("persistence").load()
         end
     end,
+    nested = true,
 })
