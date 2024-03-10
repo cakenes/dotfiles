@@ -179,7 +179,6 @@ for_window [class="btop"] floating enable
 # steam
 for_window [class="steam" title="Friends List"] floating enable
 for_window [class="steam" title="Settings"] floating enable
-for_window [class="steam" title="Friends List"] floating enable
 
 # games
 for_window [class="trackmania.exe"] floating enable
@@ -201,6 +200,7 @@ bindsym F1 --release		exec --no-startup-id ~/.config/scripts/poe-logout.sh
 bindsym F5 --release		exec --no-startup-id ~/.config/scripts/poe-hideout.sh
 
 # autostart
+exec_always --no-startup-id i3-autotiler
 exec_always --no-startup-id nm-applet
 exec_always --no-startup-id blueman-applet
 exec_always --no-startup-id feh --bg-center ~/pictures/wallpapers/current.jpg

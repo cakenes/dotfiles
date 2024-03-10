@@ -33,6 +33,10 @@ export XSECURELOCK_BLANK_TIMEOUT=60
 export XSECURELOCK_AUTH_TIMEOUT=30
 export XSECURELOCK_DISCARD_FIRST_KEYPRESS=0
 
+export HISTSIZE=
+export HISTFILESIZE=
+export PROMPT_COMMAND='history -a'
+
 # autostart xfce
 #[ "$(tty)" = "/dev/tty1" ] && ! pgrep -x xfce4-session >/dev/null && exec startx
 

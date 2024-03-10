@@ -4,12 +4,8 @@
 stty stop ''
 stty start ''
 setxkbmap -option ctrl:nocaps
-
-# history
-shopt -s autocd       # Allows cd without cd.
-shopt -s checkwinsize # Check window size.
-export HISTSIZE=
-export HISTFILESIZE= # Infinite history.
+shopt -s autocd
+shopt -s checkwinsize
 
 # alias
 alias ls="ls --color=auto"
