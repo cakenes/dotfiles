@@ -36,6 +36,14 @@ return {
             completion = { completeopt = "menu,menuone,noinsert", scrollbar = false },
             mapping = cmp.mapping.preset.insert({
                 ["<CR>"] = cmp.mapping.confirm({ select = true }),
+                ["<Left>"] = cmp.mapping(function(fallback)
+                    cmp.close()
+                    fallback()
+                end, { "i", "s" }),
+                ["<Right>"] = cmp.mapping(function(fallback)
+                    cmp.close()
+                    fallback()
+                end, { "i", "s" }),
                 ["<Esc>"] = cmp.mapping(function(fallback)
                     if copilot.is_visible() or cmp.visible() then
                         copilot.dismiss()
