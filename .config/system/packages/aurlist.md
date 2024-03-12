@@ -3,6 +3,7 @@ chromium-extension-web-store
 cockpit-navigator
 fnm
 geekbench
+i3-autotiler-git
 i3ipc-glib-git
 mkinitcpio-firmware
 postman-bin

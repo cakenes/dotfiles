@@ -19,6 +19,7 @@ vim.keymap.set("n", "<leader>bd", "<cmd>bdelete<cr>", { desc = "Buffer: Delete" 
 vim.keymap.set("n", "<leader>bo", "<cmd>BufferLineCloseOthers<cr>", { desc = "Buffer: Delete other" })
 vim.keymap.set("n", "<leader>br", "<cmd>BufferLineCloseRight<cr>", { desc = "Buffer: Delete to the right" })
 vim.keymap.set("n", "<leader>bl", "<cmd>BufferLineCloseLeft<cr>", { desc = "Buffer: Delete to the left" })
+vim.keymap.set("n", "<leader>bf", "<cmd>bdelete!<cr>", { desc = "Buffer: Force delete" })
 vim.keymap.set("n", "<leader>bp", "<cmd>BufferLineTogglePin<cr>", { desc = "Buffer: Toggle pin" })
 vim.keymap.set("n", "[b", "<cmd>BufferLineCyclePrev<cr>", { desc = "Buffer: Prev" })
 vim.keymap.set("n", "]b", "<cmd>BufferLineCycleNext<cr>", { desc = "Buffer: Next" })

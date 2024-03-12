@@ -27,8 +27,10 @@ dnsmasq
 dosfstools
 efibootmgr
 exo
+fd
 feh
 file-roller
+fzf
 galculator
 gameconqueror
 garcon
@@ -41,7 +43,6 @@ gptfdisk
 grub
 gtk-engines
 gvfs
-htop
 i3-wm
 imagemagick
 inetutils
@@ -52,6 +53,7 @@ jdk11-openjdk
 jdk17-openjdk
 jdk8-openjdk
 kdiskmark
+lazygit
 lib32-giflib
 lib32-gnutls
 lib32-gst-plugins-base-libs
@@ -115,6 +117,7 @@ qemu-base
 qemu-img
 ristretto
 rofi
+screenkey
 speedtest-cli
 starship
 steam
@@ -243,3 +246,4 @@ xorg-xwininfo
 xorg-xwud
 xprintidle
 xsecurelock
+zoxide
