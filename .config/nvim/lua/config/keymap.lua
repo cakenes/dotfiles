@@ -50,7 +50,7 @@ vim.keymap.set("n", "<leader>gt", "<cmd>Telescope lsp_type_definitions<cr>", { d
 vim.keymap.set("n", "<leader>gs", "<cmd>Telescope lsp_document_symbols<cr>", { desc = "Goto: Symbols" })
 
 -- Explorer
-vim.keymap.set("n", "<leader>ee", "<cmd>Neotree<cr>", { desc = "Explorer: Toggle" })
+vim.keymap.set("n", "<leader>ee", "<cmd>Neotree toggle<cr>", { desc = "Explorer: Toggle" })
 vim.keymap.set("n", "<leader>eg", "<cmd>Neotree git_status<cr>", { desc = "Explorer: Git status" })
 vim.keymap.set("n", "<leader>eb", "<cmd>Neotree buffers<cr>", { desc = "Explorer: Buffers" })
 vim.keymap.set("n", "<leader>ef", "<cmd>Neotree float<cr>", { desc = "Explorer: Float" })
