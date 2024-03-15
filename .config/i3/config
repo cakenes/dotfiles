@@ -43,10 +43,10 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # resize focus window
-bindsym $mod+Ctrl+Right resize shrink width 5 px or 5 ppt
-bindsym $mod+Ctrl+Up resize grow height 5 px or 5 ppt
-bindsym $mod+Ctrl+Down resize shrink height 5 px or 5 ppt
-bindsym $mod+Ctrl+Left resize grow width 5 px or 5 ppt
+bindsym $mod+Ctrl+Right exec --no-startup-id ~/.config/scripts/i3-resize.sh right left 20 px
+bindsym $mod+Ctrl+Left exec --no-startup-id ~/.config/scripts/i3-resize.sh left right 20 px
+bindsym $mod+Ctrl+Up exec --no-startup-id ~/.config/scripts/i3-resize.sh up down 20 px
+bindsym $mod+Ctrl+Down exec --no-startup-id ~/.config/scripts/i3-resize.sh down up 20 px
 
 # toggle tiling / floating
 bindsym $mod+space floating toggle
