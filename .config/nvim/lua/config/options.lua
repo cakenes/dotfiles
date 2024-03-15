@@ -21,7 +21,7 @@ vim.opt.relativenumber = true
 vim.opt.number = true
 vim.opt.wrap = false
 
--- Indentation
+-- Indentation, sleuth will override these
 vim.opt.expandtab = true
 vim.opt.smartindent = true
 vim.opt.tabstop = 4
