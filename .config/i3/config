@@ -43,10 +43,10 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # resize focus window
-bindsym $mod+Ctrl+Right exec --no-startup-id ~/.config/scripts/i3-resize.sh right left 20 px
-bindsym $mod+Ctrl+Left exec --no-startup-id ~/.config/scripts/i3-resize.sh left right 20 px
-bindsym $mod+Ctrl+Up exec --no-startup-id ~/.config/scripts/i3-resize.sh up down 20 px
-bindsym $mod+Ctrl+Down exec --no-startup-id ~/.config/scripts/i3-resize.sh down up 20 px
+bindsym $mod+Ctrl+Right exec --no-startup-id ~/.config/scripts/i3-resize.sh right left 40 px
+bindsym $mod+Ctrl+Left exec --no-startup-id ~/.config/scripts/i3-resize.sh left right 40 px
+bindsym $mod+Ctrl+Up exec --no-startup-id ~/.config/scripts/i3-resize.sh up down 40 px
+bindsym $mod+Ctrl+Down exec --no-startup-id ~/.config/scripts/i3-resize.sh down up 40 px
 
 # toggle tiling / floating
 bindsym $mod+space floating toggle
@@ -73,14 +73,14 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 
 # i3wm
 client.focused		#195092 #195092 #FFFFFF #195092 #195092
+client.focused_inactive	#000000 #000000 #195092 #195092 #000000
+client.unfocused	#000000 #000000 #195092 #195092 #000000
 client.urgent		#5294e2 #5294e2 #FFFFFF #5294e2 #5294e2
-#client.focused		#5294e2 #5294e2 #FFFFFF #5294e2 #5294e2
-#client.urgent		#3f5ea8 #3f5ea8 #FFFFFF #3f5ea8 #3f5ea8
-#client.focused		#207e6b #207e6b #FFFFFF #207e6b #207e6b
-#client.urgent		#2eb398 #2eb398 #FFFFFF #2eb398 #2eb398
+client.placeholder	#000000 #000000 #195092 #195092 #000000
+client.background       #000000
 
 # i3gaps
-for_window [class="^.*"] border pixel 1
+default_border pixel 1
 gaps inner 8
 gaps outer 0
 
