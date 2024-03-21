@@ -43,10 +43,10 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # resize focus window
-bindsym $mod+Ctrl+Right exec --no-startup-id ~/.config/scripts/i3-resize.sh right left 40 px
-bindsym $mod+Ctrl+Left exec --no-startup-id ~/.config/scripts/i3-resize.sh left right 40 px
-bindsym $mod+Ctrl+Up exec --no-startup-id ~/.config/scripts/i3-resize.sh up down 40 px
-bindsym $mod+Ctrl+Down exec --no-startup-id ~/.config/scripts/i3-resize.sh down up 40 px
+bindsym $mod+Ctrl+Right exec --no-startup-id i3-resizer right left 40 px
+bindsym $mod+Ctrl+Left exec --no-startup-id i3-resizer left right 40 px
+bindsym $mod+Ctrl+Up exec --no-startup-id i3-resizer up down 40 px
+bindsym $mod+Ctrl+Down exec --no-startup-id i3-resizer down up 40 px
 
 # toggle tiling / floating
 bindsym $mod+space floating toggle
@@ -81,6 +81,7 @@ client.background       #000000
 
 # i3gaps
 default_border pixel 1
+default_floating_border pixel 1
 gaps inner 8
 gaps outer 0
 
