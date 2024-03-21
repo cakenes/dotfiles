@@ -1,7 +1,7 @@
 ---@disable format
 -- Common
 vim.keymap.set("n", "<leader>L", "<cmd>Lazy<cr>", { desc = "Open lazy" })
-vim.keymap.set("n", "<leader>T", "<cmd>ToggleTerm direction=float<cr>", { desc = "Open terminal" })
+vim.keymap.set("n", "<leader>T", "<cmd>terminal<cr>", { desc = "Open terminal" })
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
 vim.keymap.set({ "i", "x", "n", "s" }, "<C-s>", "<cmd>w<cr><esc>", { desc = "Save file" })
@@ -65,13 +65,16 @@ vim.keymap.set("n", "<leader>fb", "<cmd>Telescope git_commits<cr>", { desc = "Fi
 vim.keymap.set("n", "<leader>fc", "<cmd>Telescope git_bcommits<cr>", { desc = "Find: Git commit (current file)" })
 vim.keymap.set("n", "<leader>fs", "<cmd>Telescope git_stash<cr>", { desc = "Find: Git stash" })
 
--- Trouble
+-- Test
+vim.keymap.set("n", "<leader>tr", "<cmd>Neotest run<cr>", { desc = "Neotest: Run nearest" })
+vim.keymap.set("n", "<leader>tl", "<cmd>Neotest run last<cr>", { desc = "Neotest: Run last" })
+vim.keymap.set("n", "<leader>tf", "<cmd>Neotest run file<cr>", { desc = "Neotest: Run file" })
 vim.keymap.set("n", "<leader>tt", "<cmd>TroubleToggle<cr>", { desc = "Trouble: Toggle" })
-vim.keymap.set("n", "<leader>tr", "<cmd>TroubleToggle lsp_references<cr>", { desc = "Trouble: References" })
+vim.keymap.set("n", "<leader>tR", "<cmd>TroubleToggle lsp_references<cr>", { desc = "Trouble: References" })
 vim.keymap.set("n", "<leader>td", "<cmd>TroubleToggle lsp_definitions<cr>", { desc = "Trouble: Definitions" })
 vim.keymap.set("n", "<leader>ti", "<cmd>TroubleToggle lsp_implementations<cr>", { desc = "Trouble: Implementations" })
-vim.keymap.set("n", "<leader>td", "<cmd>TroubleToggle lsp_diagnostics<cr>", { desc = "Trouble: Diagnostics" })
-vim.keymap.set("n", "<leader>tl", "<cmd>TroubleToggle loclist<cr>", { desc = "Trouble: Location list" })
+vim.keymap.set("n", "<leader>tD", "<cmd>TroubleToggle lsp_diagnostics<cr>", { desc = "Trouble: Diagnostics" })
+vim.keymap.set("n", "<leader>tL", "<cmd>TroubleToggle loclist<cr>", { desc = "Trouble: Location list" })
 vim.keymap.set("n", "<leader>tq", "<cmd>TroubleToggle quickfix<cr>", { desc = "Trouble: Quickfix list" })
 
 -- Window

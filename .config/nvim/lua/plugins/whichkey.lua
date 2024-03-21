@@ -3,7 +3,7 @@ return {
     event = "VimEnter",
     config = function()
         require("which-key").setup()
-        require("which-key").register {
+        require("which-key").register({
             ["<leader>b"] = { name = "[B]uffer", _ = "which_key_ignore" },
             ["<leader>c"] = { name = "[C]ode", _ = "which_key_ignore" },
             ["<leader>d"] = { name = "[D]ebug", _ = "which_key_ignore" },
@@ -13,7 +13,7 @@ return {
             ["<leader>s"] = { name = "[S]earch", _ = "which_key_ignore" },
             ["<leader>w"] = { name = "[W]orkspace", _ = "which_key_ignore" },
             ["<leader>e"] = { name = "[E]xplorer", _ = "which_key_ignore" },
-            ["<leader>t"] = { name = "[T]rouble", _ = "which_key_ignore" },
-        }
+            ["<leader>t"] = { name = "[T]est", _ = "which_key_ignore" },
+        })
     end,
 }
