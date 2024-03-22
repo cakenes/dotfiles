@@ -27,6 +27,8 @@ vim.opt.smartindent = true
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 
+vim.g.gitblame_hightlight_group = "Question"
+
 -- Restore session
 vim.api.nvim_create_autocmd("VimEnter", {
     group = vim.api.nvim_create_augroup("restore_session", { clear = true }),
