@@ -6,6 +6,7 @@ stty start ''
 setxkbmap -option ctrl:nocaps
 shopt -s autocd
 shopt -s checkwinsize
+shopt -s histappend
 
 # alias
 alias ls="ls --color=auto"

@@ -35,7 +35,8 @@ export XSECURELOCK_DISCARD_FIRST_KEYPRESS=0
 
 export HISTSIZE=
 export HISTFILESIZE=
-export PROMPT_COMMAND='history -a'
+export HISTCONTROL=ignoredups:erasedups
+export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
 
 # autostart xfce
 #[ "$(tty)" = "/dev/tty1" ] && ! pgrep -x xfce4-session >/dev/null && exec startx
