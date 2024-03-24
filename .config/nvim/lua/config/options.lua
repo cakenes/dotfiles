@@ -27,8 +27,6 @@ vim.opt.smartindent = true
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 
-vim.g.gitblame_hightlight_group = "Question"
-
 -- Restore session
 vim.api.nvim_create_autocmd("VimEnter", {
     group = vim.api.nvim_create_augroup("restore_session", { clear = true }),
@@ -39,12 +37,3 @@ vim.api.nvim_create_autocmd("VimEnter", {
     end,
     nested = true,
 })
-
--- vim.api.nvim_create_autocmd("BufWritePre", {
---     callback = function()
---         local line = vim.api.nvim_buf_get_lines(0, 0, 1, false)
---         if line[1] ~= ("---@disable format" or "##disable format") then
---             vim.lsp.buf.format()
---         end
---     end
--- })
