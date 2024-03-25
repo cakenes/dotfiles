@@ -37,12 +37,3 @@ vim.api.nvim_create_autocmd("VimEnter", {
     end,
     nested = true,
 })
-
--- vim.api.nvim_create_autocmd("BufWritePre", {
---     callback = function()
---         local line = vim.api.nvim_buf_get_lines(0, 0, 1, false)
---         if line[1] ~= ("---@disable format" or "##disable format") then
---             vim.lsp.buf.format()
---         end
---     end
--- })

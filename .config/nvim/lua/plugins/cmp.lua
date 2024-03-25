@@ -19,8 +19,8 @@ return {
     config = function()
         local cmp = require("cmp")
         local luasnip = require("luasnip")
-        local copilot = require("copilot.suggestion")
         luasnip.config.setup({})
+
         ---@diagnostic disable-next-line: redundant-parameter
         cmp.setup({
             snippet = {
@@ -45,21 +45,8 @@ return {
                     fallback()
                 end, { "i", "s" }),
                 ["<Esc>"] = cmp.mapping(function(fallback)
-                    if copilot.is_visible() or cmp.visible() then
-                        copilot.dismiss()
-                        cmp.close()
-                    else
-                        fallback()
-                    end
-                end, { "i", "s" }),
-                ["<Tab>"] = cmp.mapping(function(fallback)
-                    if copilot.is_visible() then
-                        copilot.accept()
-                    elseif luasnip.expand_or_jumpable() then
-                        luasnip.expand_or_jump()
-                    else
-                        fallback()
-                    end
+                    cmp.close()
+                    fallback()
                 end, { "i", "s" }),
             }),
             sources = {
