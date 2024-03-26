@@ -1,4 +1,3 @@
----@disable format
 -- Common
 vim.keymap.set("n", "<leader>L", "<cmd>Lazy<cr>", { desc = "Open lazy" })
 vim.keymap.set("n", "<leader>T", "<cmd>terminal<cr>", { desc = "Open terminal" })
@@ -21,6 +20,8 @@ vim.keymap.set("n", "<leader>br", "<cmd>BufferLineCloseRight<cr>", { desc = "Buf
 vim.keymap.set("n", "<leader>bl", "<cmd>BufferLineCloseLeft<cr>", { desc = "Buffer: Delete to the left" })
 vim.keymap.set("n", "<leader>bf", "<cmd>bdelete!<cr>", { desc = "Buffer: Force delete" })
 vim.keymap.set("n", "<leader>bp", "<cmd>BufferLineTogglePin<cr>", { desc = "Buffer: Toggle pin" })
+vim.keymap.set("n", "<leader>ba", "<cmd>bufdo bdelete<cr>", { desc = "Buffer: Delete all saved" })
+vim.keymap.set("n", "<leader>bA", "<cmd>bufdo bdelete!<cr>", { desc = "Buffer: Force delete all" })
 vim.keymap.set("n", "[b", "<cmd>BufferLineCyclePrev<cr>", { desc = "Buffer: Prev" })
 vim.keymap.set("n", "]b", "<cmd>BufferLineCycleNext<cr>", { desc = "Buffer: Next" })
 vim.keymap.set("n", "<C-Tab>", "<cmd>bprevious<cr>", { desc = "Buffer: Prev" })
@@ -64,6 +65,10 @@ vim.keymap.set("n", "<leader>fa", "<cmd>Telescope find_files follow=true no_igno
 vim.keymap.set("n", "<leader>fb", "<cmd>Telescope git_commits<cr>", { desc = "Find: Git commit" })
 vim.keymap.set("n", "<leader>fc", "<cmd>Telescope git_bcommits<cr>", { desc = "Find: Git commit (current file)" })
 vim.keymap.set("n", "<leader>fs", "<cmd>Telescope git_stash<cr>", { desc = "Find: Git stash" })
+
+-- Split
+vim.keymap.set("n", "<leader>sh", "<cmd>split<cr>", { desc = "Split: Horizontal" })
+vim.keymap.set("n", "<leader>sv", "<cmd>vsplit<cr>", { desc = "Split: Vertical" })
 
 -- Test
 vim.keymap.set("n", "<leader>tr", "<cmd>Neotest run<cr>", { desc = "Neotest: Run nearest" })

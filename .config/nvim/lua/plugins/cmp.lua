@@ -21,6 +21,21 @@ return {
         local luasnip = require("luasnip")
         luasnip.config.setup({})
 
+        local function is_copilot_visible()
+            local namespaces = vim.api.nvim_get_namespaces()
+            local id = namespaces["github-copilot"]
+            if id then
+                local marks = vim.api.nvim_buf_get_extmarks(0, id, 0, -1, {})
+                for _, mark in ipairs(marks) do
+                    local _, _, details = unpack(mark)
+                    if details then
+                        return true
+                    end
+                end
+            end
+            return false
+        end
+
         ---@diagnostic disable-next-line: redundant-parameter
         cmp.setup({
             snippet = {
@@ -45,8 +60,12 @@ return {
                     fallback()
                 end, { "i", "s" }),
                 ["<Esc>"] = cmp.mapping(function(fallback)
-                    cmp.close()
-                    fallback()
+                    if cmp.visible() or is_copilot_visible() then
+                        vim.cmd("call copilot#Dismiss()")
+                        cmp.close()
+                    else
+                        fallback()
+                    end
                 end, { "i", "s" }),
             }),
             sources = {
