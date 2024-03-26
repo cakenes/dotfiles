@@ -66,6 +66,10 @@ vim.keymap.set("n", "<leader>fb", "<cmd>Telescope git_commits<cr>", { desc = "Fi
 vim.keymap.set("n", "<leader>fc", "<cmd>Telescope git_bcommits<cr>", { desc = "Find: Git commit (current file)" })
 vim.keymap.set("n", "<leader>fs", "<cmd>Telescope git_stash<cr>", { desc = "Find: Git stash" })
 
+-- Split
+vim.keymap.set("n", "<leader>sh", "<cmd>split<cr>", { desc = "Split: Horizontal" })
+vim.keymap.set("n", "<leader>sv", "<cmd>vsplit<cr>", { desc = "Split: Vertical" })
+
 -- Test
 vim.keymap.set("n", "<leader>tr", "<cmd>Neotest run<cr>", { desc = "Neotest: Run nearest" })
 vim.keymap.set("n", "<leader>tl", "<cmd>Neotest run last<cr>", { desc = "Neotest: Run last" })
