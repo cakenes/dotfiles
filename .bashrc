@@ -24,6 +24,7 @@ alias inhibit="echo Power: && dbus-send --session --print-reply --dest=org.freed
 alias pacman-backup="pacman -Qqen > ~/.config/system/packages/pkglist.md && pacman -Qqem > ~/.config/system/packages/aurlist.md"
 alias pacman-restore="yay -S --needed - < ~/.config/system/packages/pkglist.md && yay -S --needed - < ~/.config/system/packages/aurlist.md"
 alias type="smassh"
+alias gow="gow -e=go,mod,html run ."
 
 # logs
 function log-search() { sudo grep -rsh $1 /var/log | sort; }
