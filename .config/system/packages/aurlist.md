@@ -1,6 +1,6 @@
 android-studio
+arduino-ide-bin
 chromium-extension-web-store
-cockpit-navigator
 fnm
 geekbench
 i3-autotiler-git

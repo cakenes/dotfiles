@@ -14,9 +14,6 @@ bluez-utils
 btop
 btrfs-progs
 clinfo
-cockpit
-cockpit-machines
-cockpit-podman
 cronie
 cuda
 dbeaver
@@ -24,6 +21,7 @@ dialog
 discord
 dmidecode
 dnsmasq
+docker-compose
 dosfstools
 efibootmgr
 exo
@@ -117,6 +115,7 @@ qemu-base
 qemu-img
 ristretto
 rofi
+ruby
 screenkey
 speedtest-cli
 starship
@@ -127,6 +126,7 @@ thunar
 thunar-archive-plugin
 thunar-media-tags-plugin
 thunar-volman
+timeshift
 tk
 tmux
 ttf-0xproto-nerd
@@ -182,8 +182,6 @@ ttf-ubuntu-nerd
 ttf-victor-mono-nerd
 tumbler
 vdpauinfo
-virt-install
-virt-manager
 wget
 wine-staging
 wmctrl
