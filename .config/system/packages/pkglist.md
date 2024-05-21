@@ -23,11 +23,13 @@ dmidecode
 dnsmasq
 docker-compose
 dosfstools
+dotnet-sdk
 efibootmgr
 exo
 fd
 feh
 file-roller
+firefox
 fzf
 galculator
 gameconqueror
@@ -50,6 +52,7 @@ jdk-openjdk
 jdk11-openjdk
 jdk17-openjdk
 jdk8-openjdk
+kdenlive
 kdiskmark
 lazygit
 lib32-giflib
@@ -100,6 +103,7 @@ otf-hermit-nerd
 otf-monaspace-nerd
 otf-opendyslexic-nerd
 otf-overpass-nerd
+pacman-contrib
 papirus-icon-theme
 parole
 pavucontrol
@@ -181,7 +185,9 @@ ttf-ubuntu-mono-nerd
 ttf-ubuntu-nerd
 ttf-victor-mono-nerd
 tumbler
+unhide
 vdpauinfo
+vlc
 wget
 wine-staging
 wmctrl

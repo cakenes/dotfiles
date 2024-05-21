@@ -3,6 +3,7 @@ arduino-ide-bin
 chromium-extension-web-store
 fnm
 geekbench
+godot-mono-bin
 i3-autotiler-git
 i3ipc-glib-git
 mkinitcpio-firmware
@@ -10,7 +11,7 @@ postman-bin
 proton-ge-custom-bin
 smassh
 tpm
-ungoogled-chromium-bin
+ungoogled-chromium
 unigine-heaven
 visual-studio-code-bin
 yay
