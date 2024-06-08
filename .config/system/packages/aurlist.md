@@ -11,7 +11,7 @@ postman-bin
 proton-ge-custom-bin
 smassh
 tpm
-ungoogled-chromium
+ungoogled-chromium-bin
 unigine-heaven
 visual-studio-code-bin
 yay

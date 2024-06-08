@@ -133,6 +133,7 @@ thunar-volman
 timeshift
 tk
 tmux
+transmission-cli
 ttf-0xproto-nerd
 ttf-3270-nerd
 ttf-agave-nerd
@@ -199,6 +200,7 @@ xdotool
 xf86-video-vesa
 xfburn
 xfce4-clipman-plugin
+xfce4-notifyd
 xfce4-panel
 xfce4-pulseaudio-plugin
 xfce4-screenshooter
