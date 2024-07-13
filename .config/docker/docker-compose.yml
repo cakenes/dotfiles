@@ -2,9 +2,10 @@ services:
   pihole:
     container_name: pihole
     image: pihole/pihole:latest
+    restart: unless-stopped
     ports:
-      - 53:53/tcp
       - 53:53/udp
+      - 53:53/tcp
       - 8002:8002
     dns:
       - 127.0.0.1
@@ -16,11 +17,10 @@ services:
       - /etc/localtime:/etc/localtime:ro
     cap_add:
       - NET_ADMIN
-    restart: unless-stopped
 
   mosquitto:
-    image: eclipse-mosquitto
     container_name: mosquitto
+    image: eclipse-mosquitto
     restart: unless-stopped
     volumes:
       - /opt/mosquitto:/mosquitto
@@ -32,7 +32,7 @@ services:
 
   homeassistant:
     container_name: homeassistant
-    image: ghcr.io/home-assistant/home-assistant:stable
+    image: ghcr.io/home-assistant/home-assistant:latest
     privileged: true
     ports:
       - 8001:8123
@@ -55,3 +55,13 @@ services:
       - PASSWORD=changeme
     devices:
       - /dev/ttyUSB0:/dev/ttyUSB0
+
+  nodered:
+    container_name: nodered
+    image: nodered/node-red
+    restart: unless-stopped
+    ports:
+      - 1880:1880
+    volumes:
+      - /opt/node-red:/data
+      - /etc/localtime:/etc/localtime:ro
