@@ -34,6 +34,7 @@ vim.keymap.set("n", "<leader>ca", "<cmd>vim.lsp.buf.code_action<cr>", { desc = "
 vim.keymap.set("n", "<leader>cf", "<cmd>vim.lsp.buf.format<cr>", { desc = "Code: Format" })
 vim.keymap.set("n", "<leader>cd", "<cmd>Telescope lsp_definitions<cr>", { desc = "Code: Definition" })
 vim.keymap.set("n", "<leader>ci", "<cmd>Telescope lsp_implementations<cr>", { desc = "Code: Implementation" })
+vim.keymap.set("n", "<leader>cc", "<cmd>CopilotChatToggle<cr>", { desc = "Code: Copilot chat toggle" })
 
 -- Debug
 vim.keymap.set("n", "<leader>ds", "<cmd>DapContinue<cr>", { desc = "Debug: Start/Continue" })

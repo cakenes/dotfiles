@@ -1,6 +1,6 @@
 # Programs
 ctrl + cmd - return : open -na /Applications/Alacritty.app/
-ctrl + cmd - w : open -na '/Applications/Brave Browser.app/'
+ctrl + cmd - w : open -na '/Applications/Chromium.app/'
 ctrl + cmd - e : open ~/
 ctrl - q : kill $(yabai -m query --windows --window | jq .pid)
 
