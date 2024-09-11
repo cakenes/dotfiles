@@ -50,7 +50,11 @@ function shell-listen() { sudo nc -nvlp "$1"; }
 # color
 PS1="\[\033[01;34m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ "
 
+# setup
 eval "$(starship init bash)"
 eval "$(pyenv init -)"
 eval "$(fnm env --use-on-cd)"
 eval "$(zoxide init bash --cmd cd)"
+
+# keyring
+echo -n '' | secret-tool store --label='Automatic unlock' '' ''

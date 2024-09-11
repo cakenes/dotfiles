@@ -176,6 +176,7 @@ for_window [class="iriunwebcam"] floating enable
 for_window [title="Emulator"] floating enable
 for_window [class="Nvidia-settings"] floating enable
 for_window [class="btop"] floating enable
+for_window [class="pika-backup"] floating enable
 
 # steam
 for_window [class="steam" title="Friends List"] floating enable
@@ -201,6 +202,7 @@ bindsym F1 --release		exec --no-startup-id ~/.config/scripts/poe-logout.sh
 bindsym F5 --release		exec --no-startup-id ~/.config/scripts/poe-hideout.sh
 
 # autostart
+exec_always --no-startup-id pika-backup-monitor
 exec_always --no-startup-id i3-autotiler
 exec_always --no-startup-id nm-applet
 exec_always --no-startup-id blueman-applet

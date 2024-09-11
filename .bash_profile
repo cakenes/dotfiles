@@ -39,6 +39,7 @@ export HISTCONTROL=ignoredups:erasedups
 export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
 
 export DOCKER_HOST=unix:///var/run/docker.sock
+export DESKTOP_SESSION=i3wm
 
 # autostart xfce
 #[ "$(tty)" = "/dev/tty1" ] && ! pgrep -x xfce4-session >/dev/null && exec startx
