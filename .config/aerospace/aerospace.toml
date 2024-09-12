@@ -1,7 +1,5 @@
 after-startup-command = [
-    # JankyBorders has a built-in detection of already running process,
-    # so it won't be run twice on AeroSpace restart
-    'exec-and-forget borders active_color=0xffe1e3e4 inactive_color=0x00000000 width=5.0'
+    'exec-and-forget borders active_color=0xff195092 inactive_color=0x00000000 width=5.0'
 ]
 
 start-at-login = true
@@ -10,9 +8,6 @@ enable-normalization-opposite-orientation-for-nested-containers = true
 
 default-root-container-orientation = 'auto'
 default-root-container-layout = 'tiles'
-
-# focus-follows-mouse = true
-
 on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 
 [gaps]
@@ -45,32 +40,19 @@ alt-ctrl-down = 'resize height -50'
 
 alt-f = 'fullscreen'
 alt-space = 'layout floating tiling'
-
-alt-shift-s = 'layout h_accordion'
-alt-ctrl-s = 'layout h_accordion'
 alt-s = 'layout tiles horizontal vertical'
 
-alt-1 = 'workspace 1'
-alt-2 = 'workspace 2'
-alt-3 = 'workspace 3'
-alt-4 = 'workspace 4'
-alt-5 = 'workspace 5'
-alt-6 = 'workspace 6'
-alt-7 = 'workspace 7'
-alt-8 = 'workspace 8'
-alt-9 = 'workspace 9'
-alt-0 = 'workspace 10'
+alt-1 = 'exec-and-forget sh /Users/Used/.config/aerospace/workspace.sh 1 workspace'
+alt-2 = 'exec-and-forget sh /Users/Used/.config/aerospace/workspace.sh 2 workspace'
+alt-3 = 'exec-and-forget sh /Users/Used/.config/aerospace/workspace.sh 3 workspace'
+alt-4 = 'exec-and-forget sh /Users/Used/.config/aerospace/workspace.sh 4 workspace'
+alt-5 = 'exec-and-forget sh /Users/Used/.config/aerospace/workspace.sh 5 workspace'
 
-alt-shift-1 = 'move-node-to-workspace 1'
-alt-shift-2 = 'move-node-to-workspace 2'
-alt-shift-3 = 'move-node-to-workspace 3'
-alt-shift-4 = 'move-node-to-workspace 4'
-alt-shift-5 = 'move-node-to-workspace 5'
-alt-shift-6 = 'move-node-to-workspace 6'
-alt-shift-7 = 'move-node-to-workspace 7'
-alt-shift-8 = 'move-node-to-workspace 8'
-alt-shift-9 = 'move-node-to-workspace 9'
-alt-shift-0 = 'move-node-to-workspace 10'
+alt-shift-1 = 'exec-and-forget sh /Users/Used/.config/aerospace/workspace.sh 1 move-node-to-workspace'
+alt-shift-2 = 'exec-and-forget sh /Users/Used/.config/aerospace/workspace.sh 2 move-node-to-workspace'
+alt-shift-3 = 'exec-and-forget sh /Users/Used/.config/aerospace/workspace.sh 3 move-node-to-workspace'
+alt-shift-4 = 'exec-and-forget sh /Users/Used/.config/aerospace/workspace.sh 4 move-node-to-workspace'
+alt-shift-5 = 'exec-and-forget sh /Users/Used/.config/aerospace/workspace.sh 5 move-node-to-workspace'
 
 alt-shift-r = 'reload-config'
 alt-r = 'mode resize'
@@ -91,6 +73,6 @@ alt-r = 'mode resize'
 enter = 'mode main'
 esc = 'mode main'
 
-[[on-window-detected]]
-if.app-id = 'com.apple.iphonesimulator'
-run = 'layout floating'
+# [[on-window-detected]]
+# if.app-id = 'com.apple.iphonesimulator'
+# run = 'layout floating'
