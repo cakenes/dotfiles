@@ -24,7 +24,7 @@ return {
             buffer_selected = {
                 fg = colors.blue,
                 bg = colors.black,
-                italic = false,
+                bold = true,
             },
         },
         options = {

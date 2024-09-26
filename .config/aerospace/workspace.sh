@@ -20,6 +20,7 @@ fi
 
 # Get the active workspace from mouse
 output=$(aerospace list-monitors --mouse)
+current=$(aerospace list-workspaces --focused)
 
 # We only care about the screen number
 first_char="${output:0:1}"
