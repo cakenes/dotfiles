@@ -162,6 +162,8 @@ assign [class="bottles"] $ws2
 assign [class="battle.net.exe"] $ws2
 assign [class="riotclientux.exe"] $ws2
 
+for_window [class=".*"] fullscreen disable
+
 # floating
 for_window [class="Galculator"] floating enable
 for_window [class="Pavucontrol"] floating enable
@@ -184,7 +186,7 @@ for_window [class="steam" title="Settings"] floating enable
 
 # games
 for_window [class="trackmania.exe"] floating enable
-for_window [title="World of Warracft"] windowed
+for_window [title="World of Warracft"] windowed enable
 for_window [class="Minecraft*"] floating enable
 for_window [class="d2r.exe"] floating enable
 for_window [class="Project Zomboid"] floating enable
@@ -208,7 +210,7 @@ exec_always --no-startup-id nm-applet
 exec_always --no-startup-id blueman-applet
 exec_always --no-startup-id feh --bg-center ~/pictures/wallpapers/current.jpg
 exec_always --no-startup-id barriers --no-tray --disable-crypto --no-restart --name arch -c /home/used/.config/barrier.conf  --address :24800
-exec --no-startup-id xrandr --output DP-2 --mode 3440x1440 --rate 75 --output DP-0 --off
+exec --no-startup-id xrandr --output DP-2 --mode 3440x1440 --rate 75 --output DP-0 --mode 3440x1440 --rate 120 --left-of DP-2
 exec --no-startup-id xfce4-panel -d
 exec --no-startup-id xautolock -time 30 -locker xsecurelock
 
