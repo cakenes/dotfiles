@@ -11,6 +11,7 @@ vim.keymap.set({ "i", "x", "n" }, "<A-Up>", "<cmd>m -2<cr>", { desc = "Move line
 vim.keymap.set({ "i", "x", "n" }, "<A-Down>", "<cmd>m +1<cr>", { desc = "Move line down" })
 vim.keymap.set("n", "<cr>", "o<Esc>", { desc = "Insert new line below" })
 vim.keymap.set("n", "<S-cr>", "O<Esc>", { desc = "Insert new line above" })
+vim.keymap.set({ "n", "i", "v", "s", "t" }, "~", "<Esc>", { desc = "Map tilde to Esc in all modes" })
 
 -- Buffer
 vim.keymap.set("n", "<leader>bb", "<cmd>Telescope buffers sort_mru=true sort_lastused=true<cr>", { desc = "Buffer: List" })
