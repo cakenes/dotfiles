@@ -1,67 +1,12 @@
 services:
-  pihole:
-    container_name: pihole
-    image: pihole/pihole:latest
+  postgresql:
+    image: postgres:latest
     restart: unless-stopped
+    env_file:
+     - .env
     ports:
-      - 53:53/udp
-      - 53:53/tcp
-      - 8002:8002
-    dns:
-      - 127.0.0.1
-    environment:
-      WEB_PORT: 8002
+     - 5432:5432
     volumes:
-      - /opt/pihole/pihole:/etc/pihole
-      - /opt/pihole/dnsmasq.d:/etc/dnsmasq.d
-      - /etc/localtime:/etc/localtime:ro
-    cap_add:
-      - NET_ADMIN
+     - /opt/postgresql:/var/lib/postgresql/data
+     - /etc/localtime:/etc/localtime:ro
 
-  mosquitto:
-    container_name: mosquitto
-    image: eclipse-mosquitto
-    restart: unless-stopped
-    volumes:
-      - /opt/mosquitto:/mosquitto
-      - /opt/mosquitto/data:/mosquitto/data
-      - /opt/mosquitto/log:/mosquitto/log
-    ports:
-      - 1883:1883
-      - 9001:9001
-
-  homeassistant:
-    container_name: homeassistant
-    image: ghcr.io/home-assistant/home-assistant:latest
-    privileged: true
-    ports:
-      - 8001:8123
-    volumes:
-      - /opt/home-assistant/config:/config
-      - /etc/localtime:/etc/localtime:ro
-    restart: unless-stopped
-
-  esphome:
-    container_name: esphome
-    image: esphome/esphome
-    restart: unless-stopped
-    privileged: true
-    network_mode: host
-    volumes:
-      - /opt/esphome:/config
-      - /etc/localtime:/etc/localtime:ro
-    environment:
-      - USERNAME=changeme
-      - PASSWORD=changeme
-    devices:
-      - /dev/ttyUSB0:/dev/ttyUSB0
-
-  nodered:
-    container_name: nodered
-    image: nodered/node-red
-    restart: unless-stopped
-    ports:
-      - 1880:1880
-    volumes:
-      - /opt/node-red:/data
-      - /etc/localtime:/etc/localtime:ro

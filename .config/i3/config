@@ -193,6 +193,8 @@ for_window [class="Project Zomboid"] floating enable
 for_window [class="scrcpy"] floating enable
 for_window [title="Vampire Survivors"] floating enable
 for_window [class="d2r.exe"] floating enable
+#for_window [title="Xenimus"] floating enable
+#for_window [title="Xenimus"] resize set 1920 900
 
 # border
 for_window [title="xfce4-panel"] border none
@@ -201,7 +203,8 @@ for_window [class="steam_app.*"] border none
 
 # custom macros
 bindsym F1 --release		exec --no-startup-id ~/.config/scripts/poe-logout.sh
-bindsym F5 --release		exec --no-startup-id ~/.config/scripts/poe-hideout.sh
+bindsym F5 --reslease		exec --no-startup-id ~/.config/scripts/poe-hideout.sh
+bindsym button2 --release	exec --no-startup-id ~/.config/scripts/key-repeater.sh
 
 # autostart
 exec_always --no-startup-id pika-backup-monitor
