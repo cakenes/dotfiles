@@ -1,0 +1,8 @@
+[user]
+	name = cakenes
+[receive]
+        denyNonFastForwards = true
+[push]
+        autoSetupRemote = true
+[alias]
+	undo = reset --soft HEAD~1
