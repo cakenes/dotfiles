@@ -4,6 +4,7 @@ return {
     config = function()
         require("which-key").setup()
         require("which-key").register({
+            ["<leader>a"] = { name = "[A]vante", _ = "which_key_ignore" },
             ["<leader>b"] = { name = "[B]uffer", _ = "which_key_ignore" },
             ["<leader>c"] = { name = "[C]ode", _ = "which_key_ignore" },
             ["<leader>d"] = { name = "[D]ebug", _ = "which_key_ignore" },

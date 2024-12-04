@@ -193,8 +193,8 @@ for_window [class="Project Zomboid"] floating enable
 for_window [class="scrcpy"] floating enable
 for_window [title="Vampire Survivors"] floating enable
 for_window [class="d2r.exe"] floating enable
-#for_window [title="Xenimus"] floating enable
-#for_window [title="Xenimus"] resize set 1920 900
+for_window [title="Brighter Shores"] floating enable
+for_window [title="Brighter Shores"] resize set 1920 900
 
 # border
 for_window [title="xfce4-panel"] border none
