@@ -14,9 +14,10 @@ vim.keymap.set("n", "<S-cr>", "O<Esc>", { desc = "Insert new line above" })
 vim.keymap.set({ "n", "i", "v", "s", "t" }, "~", "<Esc>", { desc = "Map tilde to Esc in all modes" })
 
 -- Avante
-vim.keymap.set({"n", "v"}, "<leader>aa", "<cmd>AvanteFocus<cr>", { desc = "Avante: Focus / Ask" })
+vim.keymap.set("n", "<leader>aa", "<cmd>AvanteFocus<cr>", { desc = "Avante: Ask" })
+vim.keymap.set("v", "<leader>aa", "<cmd>AvanteAsk<cr>", { desc = "Avante: Ask" })
 vim.keymap.set("v", "<leader>ae", "<cmd>AvanteEdit<cr>", { desc = "Avante: Edit" })
-vim.keymap.set({ "n", "i", "v", "s", "t" }, "<leader>at", "<cmd>AvanteToggle<cr>", { desc = "Avante: Toggle" })
+vim.keymap.set("n", "<leader>at", "<cmd>AvanteToggle<cr>", { desc = "Avante: Toggle" })
 
 -- Buffer
 vim.keymap.set("n", "<leader>bb", "<cmd>Telescope buffers sort_mru=true sort_lastused=true<cr>", { desc = "Buffer: List" })
