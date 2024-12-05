@@ -1,4 +1,3 @@
-live_config_reload = true
 
 [bell]
 animation = "EaseOutExpo"
@@ -382,3 +381,6 @@ startup_mode = "Windowed"
 [window.padding]
 x = 14
 y = 14
+
+[general]
+live_config_reload = true
