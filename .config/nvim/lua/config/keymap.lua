@@ -14,8 +14,7 @@ vim.keymap.set("n", "<S-cr>", "O<Esc>", { desc = "Insert new line above" })
 vim.keymap.set({ "n", "i", "v", "s", "t" }, "~", "<Esc>", { desc = "Map tilde to Esc in all modes" })
 
 -- Avante
-vim.keymap.set("n", "<leader>aa", "<cmd>AvanteFocus<cr>", { desc = "Avante: Ask" })
-vim.keymap.set("v", "<leader>aa", "<cmd>AvanteAsk<cr>", { desc = "Avante: Ask" })
+vim.keymap.set({"n", "v"}, "<leader>aa", "<cmd>AvanteChat<cr>", { desc = "Avante: Chat" })
 vim.keymap.set("v", "<leader>ae", "<cmd>AvanteEdit<cr>", { desc = "Avante: Edit" })
 vim.keymap.set("n", "<leader>at", "<cmd>AvanteToggle<cr>", { desc = "Avante: Toggle" })
 
@@ -36,9 +35,9 @@ vim.keymap.set("n", "<Tab>", "<cmd>bnext<cr>", { desc = "Buffer: Next" })
 vim.keymap.set("n", "<C-Esc>", "<cmd>bdelete<cr>", { desc = "Buffer: Delete" })
 
 -- Code
-vim.keymap.set("n", "<leader>cr", "<cmd>vim.lsp.buf.rename<cr>", { desc = "Code: Rename" })
-vim.keymap.set("n", "<leader>ca", "<cmd>vim.lsp.buf.code_action<cr>", { desc = "Code: Action" })
-vim.keymap.set("n", "<leader>cf", "<cmd>vim.lsp.buf.format<cr>", { desc = "Code: Format" })
+vim.keymap.set("n", "<leader>cr", "<cmd>lua vim.lsp.buf.rename()<CR>", { desc = "Code: Rename" })
+vim.keymap.set("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", { desc = "Code: Action" })
+vim.keymap.set("n", "<leader>cf", "<cmd>lua vim.lsp.buf.format()<CR>", { desc = "Code: Format" })
 vim.keymap.set("n", "<leader>cd", "<cmd>Telescope lsp_definitions<cr>", { desc = "Code: Definition" })
 vim.keymap.set("n", "<leader>ci", "<cmd>Telescope lsp_implementations<cr>", { desc = "Code: Implementation" })
 
