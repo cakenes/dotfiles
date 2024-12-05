@@ -3,16 +3,17 @@ return {
     event = "VimEnter",
     config = function()
         require("which-key").setup()
-        require("which-key").register({
-            ["<leader>a"] = { name = "[A]vante", _ = "which_key_ignore" },
-            ["<leader>b"] = { name = "[B]uffer", _ = "which_key_ignore" },
-            ["<leader>c"] = { name = "[C]ode", _ = "which_key_ignore" },
-            ["<leader>d"] = { name = "[D]ebug", _ = "which_key_ignore" },
-            ["<leader>e"] = { name = "[E]xplorer", _ = "which_key_ignore" },
-            ["<leader>f"] = { name = "[F]ind", _ = "which_key_ignore" },
-            ["<leader>g"] = { name = "[G]oto", _ = "which_key_ignore" },
-            ["<leader>s"] = { name = "[S]plit", _ = "which_key_ignore" },
-            ["<leader>t"] = { name = "[T]est", _ = "which_key_ignore" },
+        require("which-key").add({
+            {"<leader>a", group = "[A]vante" },
+            {"<leader>b", group = "[B]uffer" },
+            {"<leader>c", group = "[C]ode" },
+            {"<leader>d", group = "[D]ebug" },
+            {"<leader>e", group = "[E]xplorer" },
+            {"<leader>f", group = "[F]ind" },
+            {"<leader>g", group = "[G]oto" },
+            {"<leader>s", group = "[S]plit" },
+            {"<leader>t", group = "[T]est" },
         })
     end,
 }
+    
