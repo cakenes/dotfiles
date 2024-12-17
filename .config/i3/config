@@ -202,9 +202,11 @@ for_window [class="OxygenNotIncluded"] border none
 for_window [class="steam_app.*"] border none
 
 # custom macros
-bindsym F1 --release		exec --no-startup-id ~/.config/scripts/poe-logout.sh
-bindsym F5 --reslease		exec --no-startup-id ~/.config/scripts/poe-hideout.sh
-bindsym button2 --release	exec --no-startup-id ~/.config/scripts/key-repeater.sh
+#bindsym F1 --release		exec --no-startup-id ~/.config/scripts/poe-logout.sh
+#bindsym F2 --release		exec --no-startup-id ~/.config/scripts/names/names.sh
+#bindsym F5 --reslease		exec --no-startup-id ~/.config/scripts/poe-hideout.sh
+#bindsym button2 --release	exec --no-startup-id ~/.config/scripts/key-repeater.sh
+
 
 # autostart
 exec_always --no-startup-id pika-backup-monitor
