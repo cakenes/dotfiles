@@ -1,3 +1,4 @@
+
 # keybind
 # KP_0 KP_1 ... KP_9 KP_Add KP_Subtract KP_Multiply KP_Divide KP_Enter KP_Separator
 
@@ -7,7 +8,7 @@ floating_modifier Mod1
 
 # start program
 bindsym $mod+e			exec --no-startup-id thunar
-bindsym $mod+w                  exec --no-startup-id chromium
+bindsym $mod+w                  exec --no-startup-id firefox
 bindsym $mod+Return		exec --no-startup-id alacritty
 bindsym Print                   exec --no-startup-id xfce4-screenshooter -f
 bindsym $mod+Print		exec --no-startup-id xfce4-screenshooter -w -c
@@ -201,12 +202,15 @@ for_window [title="xfce4-panel"] border none
 for_window [class="OxygenNotIncluded"] border none
 for_window [class="steam_app.*"] border none
 
+# sticky
+for_window [class="firefox" title="Picture-in-Picture"] sticky enable
+
 # custom macros
 #bindsym F1 --release		exec --no-startup-id ~/.config/scripts/poe-logout.sh
 #bindsym F2 --release		exec --no-startup-id ~/.config/scripts/names/names.sh
 #bindsym F5 --reslease		exec --no-startup-id ~/.config/scripts/poe-hideout.sh
 #bindsym button2 --release	exec --no-startup-id ~/.config/scripts/key-repeater.sh
-
+bindsym F11 --release		exec --no-startup-id killall buy.sh
 
 # autostart
 exec_always --no-startup-id pika-backup-monitor
@@ -227,5 +231,5 @@ exec --no-startup-id "i3-msg 'workspace 2; exec steam'"
 
 # workspace 1
 exec --no-startup-id "i3-msg 'workspace 1; exec discord'"
-exec --no-startup-id "i3-msg 'workspace 1; exec chromium https://music.youtube.com/'"
+exec --no-startup-id "i3-msg 'workspace 1; exec firefox https://music.youtube.com/'"
 exec --no-startup-id "i3-msg 'workspace 1; exec alacritty'"
