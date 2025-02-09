@@ -9,7 +9,6 @@ return {
 
         local c = require("vscode.colors").get_colors()
 
-        -- vim.api.nvim_set_hl(0, "@type", { fg = c.vscLightBlue, bg = "NONE" }) -- Global typing
         vim.api.nvim_set_hl(0, "DiagnosticInfo", { fg = c.vscLineNumber, bg = "NONE" })
         vim.api.nvim_set_hl(0, "DiagnosticHint", { fg = c.vscLineNumber, bg = "NONE" })
         vim.api.nvim_set_hl(0, "DiagnosticUnderLineInfo", { fg = c.vscLineNumber, bg = "NONE" })
