@@ -30,12 +30,14 @@ vim.keymap.set("n", "<Tab>", "<cmd>bnext<cr>", { desc = "Buffer: Next" })
 vim.keymap.set("n", "<C-Esc>", "<cmd>bdelete<cr>", { desc = "Buffer: Delete" })
 
 -- Code
-vim.keymap.set("n", "<leader>cr", "<cmd>vim.lsp.buf.rename<cr>", { desc = "Code: Rename" })
-vim.keymap.set("n", "<leader>ca", "<cmd>vim.lsp.buf.code_action<cr>", { desc = "Code: Action" })
-vim.keymap.set("n", "<leader>cf", "<cmd>vim.lsp.buf.format<cr>", { desc = "Code: Format" })
+vim.keymap.set("n", "<leader>cb", function() Copilot_chat("CopilotChatBuffer") end, { desc = "Code: Copilot - Current buffer" })
+vim.keymap.set({"n", "v"}, "<leader>cc", function() Copilot_chat("CopilotChatAllBuffer") end, { desc = "Code: Copilot - All buffers" })
+vim.keymap.set({"n", "v"}, "<leader>cq", "<cmd>CopilotChatClose<cr>", { desc = "Code: Copilot - Close" })
+vim.keymap.set("n", "<leader>cr", "<cmd>lua vim.lsp.buf.rename()<CR>", { desc = "Code: Rename" })
+vim.keymap.set("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", { desc = "Code: Action" })
+vim.keymap.set("n", "<leader>cf", "<cmd>lua vim.lsp.buf.format()<CR>", { desc = "Code: Format" })
 vim.keymap.set("n", "<leader>cd", "<cmd>Telescope lsp_definitions<cr>", { desc = "Code: Definition" })
 vim.keymap.set("n", "<leader>ci", "<cmd>Telescope lsp_implementations<cr>", { desc = "Code: Implementation" })
-vim.keymap.set("n", "<leader>cc", "<cmd>CopilotChatToggle<cr>", { desc = "Code: Copilot chat toggle" })
 
 -- Debug
 vim.keymap.set("n", "<leader>ds", "<cmd>DapContinue<cr>", { desc = "Debug: Start/Continue" })
