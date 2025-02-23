@@ -21,7 +21,7 @@ bindsym $mod+l			exec --no-startup-id xsecurelock
 bindsym $mod+Shift+F9		exec --no-startup-id xrandr --output DP-2 --off --output DP-0 --off
 bindsym $mod+Shift+F12		exec --no-startup-id xrandr --output DP-2 --mode 3440x1440 --rate 75 --output DP-0 --mode 3440x1440 --rate 120 --left-of DP-2
 bindsym $mod+Shift+F11		exec --no-startup-id xrandr --output DP-2 --mode 3440x1440 --rate 75 --output DP-0 --off
-bindsym $mod+Shift+F10		exec --no-startup-id xrandr --output DP-2 --mode 1720x1440 --rate 60
+bindsym $mod+Shift+F10		exec --no-startup-id xrandr --output DP-2 --mode 1680x1050 --rate 60
 
 # kill focused window
 bindsym $mod+q			exec --no-startup-id ~/.config/scripts/kill.sh

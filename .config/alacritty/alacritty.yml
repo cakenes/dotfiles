@@ -31,14 +31,6 @@ colors:
         magenta: '#9b59b6'
         cyan: '#1abc9c'
         white: '#fcfcfc'
-        # black: "#31363b"
-        # red: "#783228"
-        # green: "#17a262"
-        # yellow: "#b65619"
-        # blue: "#1b668f"
-        # magenta: "#614a73"
-        # cyan: "#186c60"
-        # white: "#63686d"
 
     # Bright colors
     bright:
@@ -50,14 +42,3 @@ colors:
         magenta: "#8e44ad"
         cyan: "#16a085"
         white: "#ffffff"
-
-    # Dim colors
-    dim:
-        # black: '#31363b'
-        # red: '#783228'
-        # green: '#17a262'
-        # yellow: '#b65619'
-        # blue: '#1b668f'
-        # magenta: '#614a73'
-        # cyan: '#186c60'
-        # white: '#63686d'
