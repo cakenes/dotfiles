@@ -8,6 +8,8 @@ alias grep="grep --color=auto"
 alias xcode="open -a Xcode"
 alias android="open -a Android\ Studio"
 alias simulator="open -a Simulator.app"
+alias quarantine="xattr -dr com.apple.quarantine"
+alias check="yarn format:check && yarn typecheck:partial && yarn lint"
 
 setopt autocd
 HISTSIZE=999999999
@@ -27,13 +29,6 @@ export PYENV_ROOT="$HOME/.pyenv"
 export NVM_DIR="$HOME/.nvm"
 export PATH="$PYENV_ROOT/bin:$PATH"
 export EDITOR=nano
-
-alias run-pihlapotilas="cd ~/git/pihlapotilas && yarn start"
-alias run-pihlaserver="cd ~/git/pihla-server && yarn run local"
-alias run-prosecco="cd ~/git/prosecco && yarn local"
-alias run-pihladoctor="cd ~/git/pihla-doctor && yarn local"
-
-alias check="yarn format:check && yarn typecheck:partial && yarn lint"
 
 function git-merges() { git --no-pager log $1..$2 --merges --pretty=format:%b; }
 alias git-pr="gh search prs --state=open --review-requested=@me"
