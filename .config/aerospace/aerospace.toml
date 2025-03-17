@@ -42,7 +42,7 @@ cmd-ctrl-down = 'resize height -50'
 
 ctrl-f = 'fullscreen'
 ctrl-space = 'layout floating tiling'
-ctrl-s = 'layout tiles horizontal vertical'
+ctrl-s = 'layout tiles horizontal h_accordion'
 
 # ctrl-1 = 'exec-and-forget sh /Users/Used/.config/aerospace/workspace.sh 1 workspace'
 # ctrl-2 = 'exec-and-forget sh /Users/Used/.config/aerospace/workspace.sh 2 workspace'
@@ -79,16 +79,16 @@ cmd-ctrl-0 = 'move-node-to-workspace 10'
 cmd-shift-r = 'reload-config'
 
 [workspace-to-monitor-force-assignment]
-1 = 1
-2 = 1
-3 = 1
-4 = 1
-5 = 1
-6 = 2
-7 = 2
-8 = 2
-9 = 2
-10 = 2
+1 = 2
+2 = 2
+3 = 2
+4 = 2
+5 = 2
+6 = 1
+7 = 1
+8 = 1
+9 = 1
+10 = 1
 
 [mode.resize.binding]
 enter = 'mode main'

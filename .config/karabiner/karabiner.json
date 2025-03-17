@@ -1,0 +1,149 @@
+{
+  "profiles": [
+    {
+      "complex_modifications": {
+        "rules": [
+          {
+            "description": "Custom € mapping",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "e",
+                  "modifiers": { "mandatory": ["option"] }
+                },
+                "to": [
+                  {
+                    "key_code": "4",
+                    "modifiers": ["shift"]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "Custom | mapping",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "non_us_backslash",
+                  "modifiers": { "mandatory": ["right_option"] }
+                },
+                "to": [
+                  {
+                    "key_code": "7",
+                    "modifiers": ["option"]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "Custom ~ mapping",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "close_bracket",
+                  "modifiers": { "mandatory": ["option"] }
+                },
+                "to": [
+                  {
+                    "key_code": "close_bracket",
+                    "modifiers": ["command", "option"]
+                  },
+                  { "key_code": "spacebar" }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "Custom forced <>| mapping",
+            "enabled": false,
+            "manipulators": [
+              {
+                "from": { "key_code": "non_us_backslash" },
+                "to": [{ "key_code": "grave_accent_and_tilde" }],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "non_us_backslash",
+                  "modifiers": { "mandatory": ["shift"] }
+                },
+                "to": [
+                  {
+                    "key_code": "grave_accent_and_tilde",
+                    "modifiers": ["shift"]
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "non_us_backslash",
+                  "modifiers": { "mandatory": ["right_option"] }
+                },
+                "to": [
+                  {
+                    "key_code": "7",
+                    "modifiers": ["option"]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          }
+        ]
+      },
+      "devices": [
+        {
+          "identifiers": {
+            "is_keyboard": true,
+            "product_id": 834,
+            "vendor_id": 1452
+          },
+          "ignore": true,
+          "simple_modifications": [
+            {
+              "from": { "key_code": "non_us_backslash" },
+              "to": [{ "key_code": "a" }]
+            }
+          ]
+        },
+        {
+          "identifiers": {
+            "is_keyboard": true,
+            "is_pointing_device": true,
+            "product_id": 24926,
+            "vendor_id": 7504
+          },
+          "ignore": false,
+          "simple_modifications": [
+            {
+              "from": { "key_code": "left_command" },
+              "to": [{ "key_code": "left_control" }]
+            },
+            {
+              "from": { "key_code": "left_control" },
+              "to": [{ "key_code": "left_command" }]
+            }
+          ]
+        },
+        {
+          "identifiers": {
+            "is_keyboard": true,
+            "product_id": 50495,
+            "vendor_id": 1133
+          },
+          "ignore": true
+        }
+      ],
+      "name": "Default profile",
+      "selected": true,
+      "virtual_hid_keyboard": { "keyboard_type_v2": "iso" }
+    }
+  ]
+}
+
