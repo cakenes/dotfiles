@@ -52,3 +52,9 @@ if [ -f '/Users/Used/git/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/Used/g
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/Used/git/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/Used/git/google-cloud-sdk/completion.zsh.inc'; fi
+
+# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=(/Users/Used/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
+# End of Docker CLI completions
