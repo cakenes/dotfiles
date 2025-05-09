@@ -133,6 +133,16 @@ bindsym $mod+Shift+7 move container to workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 
+bindsym $mod+Alt+1 move container to workspace $ws9
+bindsym $mod+Alt+2 move container to workspace $ws9
+bindsym $mod+Alt+3 move container to workspace $ws9
+bindsym $mod+Alt+4 move container to workspace $ws9
+bindsym $mod+Alt+5 move container to workspace $ws9
+bindsym $mod+Alt+6 move container to workspace $ws9
+bindsym $mod+Alt+7 move container to workspace $ws9
+bindsym $mod+Alt+8 move container to workspace $ws9
+bindsym $mod+Alt+9 move container to workspace $ws9
+
 # move alternative
 bindsym $mod+Ctrl+1 move container to workspace $ws1
 bindsym $mod+Ctrl+2 move container to workspace $ws2
