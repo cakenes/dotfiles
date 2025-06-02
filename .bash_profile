@@ -19,6 +19,8 @@ export ANDROID_SDK_ROOT=/opt/android-sdk
 export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
 export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
 
+export PATH=$HOME/.local/bin:$PATH
+
 export HISTSIZE=
 export HISTFILESIZE=
 export HISTCONTROL=ignoredups:erasedups
