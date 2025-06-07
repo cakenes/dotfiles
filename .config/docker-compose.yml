@@ -1,0 +1,116 @@
+services:
+  cloudflare-ddns-cakenes:
+    image: favonia/cloudflare-ddns:latest
+    container_name: cloudflare-ddns-cakenes
+    network_mode: host
+    restart: always
+    user: "1000:1000"
+    read_only: true
+    cap_drop: [all]
+    security_opt: [no-new-privileges:true]
+    environment:
+      - CLOUDFLARE_API_TOKEN=XXX
+      - DOMAINS=XXX,XXX
+      - PROXIED=false
+
+  cloudflare-ddns-golf-gps:
+    image: favonia/cloudflare-ddns:latest
+    container_name: cloudflare-ddns-golf-gps
+    network_mode: host
+    restart: always
+    user: "1000:1000"
+    read_only: true
+    cap_drop: [all]
+    security_opt: [no-new-privileges:true]
+    environment:
+      - CLOUDFLARE_API_TOKEN=XXX
+      - DOMAINS=XXX
+      - PROXIED=true
+
+  wireguard:
+    container_name: wireguard
+    image: ghcr.io/wg-easy/wg-easy
+    restart: unless-stopped
+    ports:
+      - 51820:51820/udp
+      - 51821:51821/tcp
+    volumes:
+      - /opt/wireguard/config:/etc/wireguard
+      - /opt/wireguard/lib/modules:/lib/modules
+      - /etc/localtime:/etc/localtime:ro
+    environment:
+      PASSWORD_HASH: "XXX"
+      WG_HOST: "XXX"
+      WG_DEFAULT_ADDRESS: "192.168.2.x"
+      WG_DEFAULT_DNS: "192.168.1.12"
+    cap_add:
+      - NET_ADMIN
+      - SYS_MODULE
+    sysctls:
+      - net.ipv4.ip_forward=1
+      - net.ipv4.conf.all.src_valid_mark=1
+
+  pihole:
+    container_name: pihole
+    image: pihole/pihole:latest
+    restart: unless-stopped
+    volumes:
+      - /opt/pihole/pihole:/etc/pihole
+      - /opt/pihole/dnsmasq.d:/etc/dnsmasq.d
+      - /etc/localtime:/etc/localtime:ro
+    network_mode: host
+    dns:
+      - 127.0.0.1
+    environment:
+      WEB_PORT: "8002"
+    cap_add:
+      - NET_ADMIN
+
+  mosquitto:
+    container_name: mosquitto
+    image: eclipse-mosquitto
+    restart: unless-stopped
+    volumes:
+      - /opt/mosquitto:/mosquitto
+      - /opt/mosquitto/data:/mosquitto/data
+      - /opt/mosquitto/log:/mosquitto/log
+    ports:
+      - 1883:1883
+      - 9001:9001
+
+  homeassistant:
+    container_name: homeassistant
+    image: ghcr.io/home-assistant/home-assistant:latest
+    privileged: true
+    ports:
+      - 8001:8123
+    volumes:
+      - /opt/homeassistant/config:/config
+      - /opt/homeassistant/logs:/config/logs
+      - /etc/localtime:/etc/localtime:ro
+    restart: unless-stopped
+
+  esphome:
+    container_name: esphome
+    image: esphome/esphome
+    restart: unless-stopped
+    privileged: true
+    network_mode: host
+    volumes:
+      - /opt/esphome:/config
+      - /etc/localtime:/etc/localtime:ro
+    environment:
+      USERNAME: "XXX"
+      PASSWORD: "XXX"
+    devices:
+      - /dev/ttyUSB0:/dev/ttyUSB0
+
+  nodered:
+    container_name: nodered
+    image: nodered/node-red
+    restart: unless-stopped
+    ports:
+      - 1880:1880
+    volumes:
+      - /opt/nodered:/data
+      - /etc/localtime:/etc/localtime:ro

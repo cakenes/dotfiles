@@ -16,7 +16,6 @@ alias code="code ."
 alias vim="nvim"
 function git-merges() { git --no-pager log "$1".."$2" --merges --pretty=format:%b; }
 alias cpu-stats="watch -n1 'cat /proc/cpuinfo | grep \"^[c]pu MHz\" && echo ----- && sensors | grep Core && echo ----- && sensors | grep fan'"
-alias inhibit="echo Power: && dbus-send --session --print-reply --dest=org.freedesktop.PowerManagement /org/freedesktop/PowerManagement/Inhibit org.freedesktop.PowerManagement.Inhibit.GetInhibitors && echo Screensaver: && dbus-send --session --print-reply --dest=org.xfce.ScreenSaver / org.xfce.ScreenSaver.GetInhibitors"
 alias gow="gow -e=go,mod,html run ."
 
 # logs
