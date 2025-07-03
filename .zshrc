@@ -30,6 +30,9 @@ export NVM_DIR="$HOME/.nvm"
 export PATH="$PYENV_ROOT/bin:$PATH"
 export EDITOR=nano
 
+export LDFLAGS="-L/opt/homebrew/opt/node@22/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/node@22/include"
+
 function git-merges() { git --no-pager log $1..$2 --merges --pretty=format:%b; }
 alias git-pr="gh search prs --state=open --review-requested=@me"
 alias git-pp-local="pushd ~/git/pihlapotilas && arch -x86_64 npx react-native run-ios --scheme 'pihlapotilas local' --simulator='iPhone 15 Pro' && popd"
