@@ -17,7 +17,7 @@ vim.opt.inccommand = "split"
 vim.opt.cursorline = true
 vim.opt.scrolloff = 15
 vim.opt.hlsearch = true
-vim.opt.relativenumber = true
+vim.opt.relativenumber = false
 vim.opt.number = true
 vim.opt.wrap = false
 
