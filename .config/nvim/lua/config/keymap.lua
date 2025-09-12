@@ -30,8 +30,8 @@ vim.keymap.set("n", "<Tab>", "<cmd>bnext<cr>", { desc = "Buffer: Next" })
 vim.keymap.set("n", "<C-Esc>", "<cmd>bdelete<cr>", { desc = "Buffer: Delete" })
 
 -- Code
-vim.keymap.set("n", "<leader>cb", function() copilot_chat("CopilotChatBuffer") end, { desc = "Code: Copilot - Current buffer" })
-vim.keymap.set({"n", "v"}, "<leader>cc", function() copilot_chat("CopilotChatAllBuffer") end, { desc = "Code: Copilot - All buffers" })
+vim.keymap.set("n", "<leader>cb", function() Copilot_chat("CopilotChatBuffer") end, { desc = "Code: Copilot - Current buffer" })
+vim.keymap.set({"n", "v"}, "<leader>cc", function() Copilot_chat("CopilotChatAllBuffer") end, { desc = "Code: Copilot - All buffers" })
 vim.keymap.set({"n", "v"}, "<leader>cq", "<cmd>CopilotChatClose<cr>", { desc = "Code: Copilot - Close" })
 vim.keymap.set("n", "<leader>cr", "<cmd>lua vim.lsp.buf.rename()<CR>", { desc = "Code: Rename" })
 vim.keymap.set("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", { desc = "Code: Action" })

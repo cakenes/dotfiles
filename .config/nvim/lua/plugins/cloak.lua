@@ -1,6 +1,6 @@
 return {
     "laytan/cloak.nvim",
-    enabled = true,
+    enabled = false,
     opts = function(_, opts)
         opts.cloak_character = "*"
         opts.highlight_group = "Comment"
@@ -16,4 +16,3 @@ return {
         }
     end,
 }
-
