@@ -8,6 +8,14 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+vim.api.nvim_create_autocmd("VimEnter", {
+    callback = function()
+        vim.defer_fn(function()
+            vim.cmd("Neotree show filesystem left")
+        end, 100)
+    end,
+})
+
 require("config.keymap")
 require("config.options")
 require("config.helper")
