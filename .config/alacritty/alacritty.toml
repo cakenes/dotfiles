@@ -25,7 +25,7 @@ dim_foreground = "#eff0f1"
 foreground = "#e5e6e8"
 
 [font]
-size = 9
+size = 10
 
 [font.normal]
 family = "NotoMono Nerd Font"
