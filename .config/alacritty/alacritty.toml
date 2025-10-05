@@ -25,10 +25,10 @@ dim_foreground = "#eff0f1"
 foreground = "#e5e6e8"
 
 [font]
-size = 10
+size = 9
 
 [font.normal]
-family = "NotoMono Nerd Font"
+family = "FiraCode Nerd Font Mono Light"
 style = "Regular"
 
 [window.padding]
