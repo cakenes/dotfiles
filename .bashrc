@@ -30,6 +30,12 @@ PS1="\[\033[01;34m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ "
 
 # setup
 eval "$(starship init bash)"
-
 export PATH="$HOME/.local/bin:$PATH"
 eval "$(zoxide init bash --cmd cd)"
+
+# fnm
+FNM_PATH="/home/used/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="$FNM_PATH:$PATH"
+  eval "`fnm env`"
+fi
