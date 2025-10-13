@@ -106,6 +106,6 @@ vim.keymap.set("n", "<C-l>", "<cmd>vertical resize +2<cr>", { desc = "Window: In
 -- Github
 vim.keymap.set("n", "<leader>ii", "<cmd>Octo issue list<cr>", { desc = "Github: Issues" })
 vim.keymap.set("n", "<leader>ip", "<cmd>Octo pr list<cr>", { desc = "Github: Pull requests" })
-vim.keymap.set("n", "<leader>iw", "<cmd>Octo Workflow list<cr>", { desc = "Github: Workflow list" })
+vim.keymap.set("n", "<leader>iw", "<cmd>Octo workflow list<cr>", { desc = "Github: Workflow list" })
 vim.keymap.set("n", "<leader>ir", "<cmd>Octo run list<cr>", { desc = "Github: Run list" })
 vim.keymap.set("n", "<leader>ic", "<cmd>Octo issue create<cr>", { desc = "Github: Create issue" })
