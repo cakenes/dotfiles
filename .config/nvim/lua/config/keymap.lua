@@ -15,6 +15,7 @@ vim.keymap.set({ "n", "i", "v", "s", "t" }, "§", "<Esc>", { desc = "Map tilde t
 
 -- Buffer
 vim.keymap.set("n", "<leader>bb", "<cmd>Telescope buffers sort_mru=true sort_lastused=true<cr>", { desc = "Buffer: List" })
+vim.keymap.set("n", "<leader>bn", "<cmd>enew<cr>", { desc = "Buffer: New" })
 vim.keymap.set("n", "<leader>bd", "<cmd>bdelete<cr>", { desc = "Buffer: Delete" })
 vim.keymap.set("n", "<leader>bo", "<cmd>BufferLineCloseOthers<cr>", { desc = "Buffer: Delete other" })
 vim.keymap.set("n", "<leader>br", "<cmd>BufferLineCloseRight<cr>", { desc = "Buffer: Delete to the right" })
