@@ -11,7 +11,8 @@ vim.opt.rtp:prepend(lazypath)
 vim.api.nvim_create_autocmd("VimEnter", {
     callback = function()
         vim.defer_fn(function()
-            vim.cmd("Neotree show filesystem left")
+            vim.cmd("Neotree show git_status left")
+            vim.cmd("belowright split | Neotree show filesystem")
         end, 100)
     end,
 })
