@@ -30,9 +30,9 @@ vim.keymap.set("n", "<Tab>", "<cmd>bnext<cr>", { desc = "Buffer: Next" })
 vim.keymap.set("n", "<C-Esc>", "<cmd>bdelete<cr>", { desc = "Buffer: Delete" })
 
 -- Code
-vim.keymap.set("n", "<leader>cb", function() Copilot_chat("CopilotChatBuffer") end, { desc = "Code: Copilot - Current buffer" })
-vim.keymap.set({"n", "v"}, "<leader>cc", function() Copilot_chat("CopilotChatAllBuffer") end, { desc = "Code: Copilot - All buffers" })
-vim.keymap.set({"n", "v"}, "<leader>cq", "<cmd>CopilotChatClose<cr>", { desc = "Code: Copilot - Close" })
+vim.keymap.set("n", "<leader>cb", function() Copilot_chat("CopilotChatBuffer") end, { desc = "Code: Copilot in current buffer" })
+vim.keymap.set({"n", "v"}, "<leader>cc", function() Copilot_chat("CopilotChatAllBuffer") end, { desc = "Code: Copilot in all buffers" })
+vim.keymap.set({"n", "v"}, "<leader>cq", "<cmd>CopilotChatClose<cr>", { desc = "Code: Copilot close" })
 vim.keymap.set("n", "<leader>cr", "<cmd>lua vim.lsp.buf.rename()<CR>", { desc = "Code: Rename" })
 vim.keymap.set("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", { desc = "Code: Action" })
 vim.keymap.set("n", "<leader>cf", "<cmd>lua vim.lsp.buf.format()<CR>", { desc = "Code: Format" })
@@ -40,21 +40,22 @@ vim.keymap.set("n", "<leader>cd", "<cmd>Telescope lsp_definitions<cr>", { desc =
 vim.keymap.set("n", "<leader>ci", "<cmd>Telescope lsp_implementations<cr>", { desc = "Code: Implementation" })
 vim.keymap.set("n", "<leader>cE", "<cmd>Telescope diagnostics<cr>", { desc = "Code: Diagnostics" })
 vim.keymap.set("n", "<leader>ce", "<cmd>lua vim.diagnostic.open_float()<cr>", { desc = "Code: Line diagnostics" })
+vim.keymap.set("n", "<leader>cs", "<cmd>Telescope lsp_document_symbols<cr>", { desc = "Code: Symbols" })
 
 -- Debug
-vim.keymap.set("n", "<leader>ds", "<cmd>DapContinue<cr>", { desc = "Debug: Start/Continue" })
+vim.keymap.set("n", "<leader>ds", "<cmd>DapContinue<cr>", { desc = "Debug: Start/continue" })
 vim.keymap.set("n", "<leader>di", "<cmd>DapStepInto<cr>", { desc = "Debug: Step into" })
 vim.keymap.set("n", "<leader>dO", "<cmd>DapStepOver<cr>", { desc = "Debug: Step over" })
 vim.keymap.set("n", "<leader>do", "<cmd>DapStepOut<cr>", { desc = "Debug: Step out" })
 vim.keymap.set("n", "<leader>db", "<cmd>DapToggleBreakpoint<cr>", { desc = "Debug: Toggle breakpoint" })
 
--- Goto
-vim.keymap.set("n", "<leader>gd", "<cmd>Telescope lsp_definitions<cr>", { desc = "Goto: Definitions" })
-vim.keymap.set("n", "<leader>gD", "<cmd>Telescope lsp_definitions<cr>", { desc = "Goto: Definitions" })
-vim.keymap.set("n", "<leader>gr", "<cmd>Telescope lsp_references<cr>", { desc = "Goto: References" })
-vim.keymap.set("n", "<leader>gi", "<cmd>Telescope lsp_implementations<cr>", { desc = "Goto: Implementations" })
-vim.keymap.set("n", "<leader>gt", "<cmd>Telescope lsp_type_definitions<cr>", { desc = "Goto: References" })
-vim.keymap.set("n", "<leader>gs", "<cmd>Telescope lsp_document_symbols<cr>", { desc = "Goto: Symbols" })
+-- Git
+vim.keymap.set("n", "<leader>gd", "<cmd>Telescope git_status<cr>", { desc = "Git: Diff/status" })
+vim.keymap.set("n", "<leader>gi", "<cmd>Octo issue list<cr>", { desc = "Git: Github issues" })
+vim.keymap.set("n", "<leader>gp", "<cmd>Octo pr list<cr>", { desc = "Git: Github pull requests" })
+vim.keymap.set("n", "<leader>gw", "<cmd>Octo workflow list<cr>", { desc = "Git: Github workflow list" })
+vim.keymap.set("n", "<leader>gr", "<cmd>Octo run list<cr>", { desc = "Git: Github run list" })
+vim.keymap.set("n", "<leader>gc", "<cmd>Octo issue create<cr>", { desc = "Git: Github create issue" })
 
 -- Explorer
 vim.keymap.set("n", "<leader>ee", function () Dual_neotree() end, { desc = "Explorer: Toggle" })
@@ -103,9 +104,4 @@ vim.keymap.set("n", "<C-j>", "<cmd>resize -2<cr>", { desc = "Window: Decrease he
 vim.keymap.set("n", "<C-h>", "<cmd>vertical resize -2<cr>", { desc = "Window: Decrease width" })
 vim.keymap.set("n", "<C-l>", "<cmd>vertical resize +2<cr>", { desc = "Window: Increase width" })
 
--- Github
-vim.keymap.set("n", "<leader>ii", "<cmd>Octo issue list<cr>", { desc = "Github: Issues" })
-vim.keymap.set("n", "<leader>ip", "<cmd>Octo pr list<cr>", { desc = "Github: Pull requests" })
-vim.keymap.set("n", "<leader>iw", "<cmd>Octo workflow list<cr>", { desc = "Github: Workflow list" })
-vim.keymap.set("n", "<leader>ir", "<cmd>Octo run list<cr>", { desc = "Github: Run list" })
-vim.keymap.set("n", "<leader>ic", "<cmd>Octo issue create<cr>", { desc = "Github: Create issue" })
+

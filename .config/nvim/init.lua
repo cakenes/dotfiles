@@ -13,6 +13,10 @@ vim.api.nvim_create_autocmd("VimEnter", {
         vim.defer_fn(function()
             vim.cmd("Neotree show git_status left")
             vim.cmd("belowright split | Neotree show filesystem")
+
+            vim.defer_fn(function()
+                vim.cmd("wincmd l")
+            end, 100)
         end, 100)
     end,
 })
