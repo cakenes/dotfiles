@@ -23,7 +23,6 @@ alias cpu-stats="watch -n1 'cat /proc/cpuinfo | grep \"^[c]pu MHz\" && echo ----
 alias inhibit="echo Power: && dbus-send --session --print-reply --dest=org.freedesktop.PowerManagement /org/freedesktop/PowerManagement/Inhibit org.freedesktop.PowerManagement.Inhibit.GetInhibitors && echo Screensaver: && dbus-send --session --print-reply --dest=org.xfce.ScreenSaver / org.xfce.ScreenSaver.GetInhibitors"
 alias pacman-backup="pacman -Qqen > ~/.config/system/packages/pkglist.md && pacman -Qqem > ~/.config/system/packages/aurlist.md"
 alias pacman-restore="yay -S --needed - < ~/.config/system/packages/pkglist.md && yay -S --needed - < ~/.config/system/packages/aurlist.md"
-#alias type="smassh"
 alias gow="gow -e=go,mod,html run ."
 
 # logs
@@ -55,6 +54,3 @@ eval "$(starship init bash)"
 eval "$(pyenv init -)"
 eval "$(fnm env --use-on-cd)"
 eval "$(zoxide init bash --cmd cd)"
-
-# keyring
-echo -n '' | secret-tool store --label='Automatic unlock' '' ''

@@ -1,5 +1,6 @@
 [user]
 	name = cakenes
+	email = jyri.kurtakko@gmail.com
 [receive]
         denyNonFastForwards = true
 [push]
