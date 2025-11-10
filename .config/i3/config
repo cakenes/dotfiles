@@ -4,7 +4,7 @@
 
 set $mod Mod4
 font pango:NotoMono Nerd Font 10
-floating_modifier Mod1
+floating_modifier Mod4
 
 # start program
 bindsym $mod+e exec --no-startup-id thunar
@@ -190,7 +190,7 @@ for_window [class="btop"] floating enable
 for_window [class="pika-backup"] floating enable
 
 # steam
-for_window [class="steam" title="Friends List"] floating enable
+# for_window [class="steam" title="Friends List"] floating enable
 for_window [class="steam" title="Settings"] floating enable
 
 # games
@@ -208,7 +208,7 @@ for_window [title="Brighter Shores"] resize set 1920 900
 # border
 for_window [title="xfce4-panel"] border none
 for_window [class="OxygenNotIncluded"] border none
-for_window [class="steam_app.*"] border none
+for_window [class="^steam_app.*"] border none
 
 # sticky
 for_window [class="firefox" title="Picture-in-Picture"] sticky enable

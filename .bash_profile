@@ -18,6 +18,7 @@ export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 export ANDROID_SDK_ROOT=/opt/android-sdk
 export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
 export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
+export CAPACITOR_ANDROID_STUDIO_PATH=/opt/android-studio/bin/studio
 
 export QT_STYLE_OVERIDE=GTK+
 export QT_QPA_PLATFORMTHEME=qt5ct
