@@ -65,8 +65,8 @@ vim.keymap.set("n", "<leader>ef", "<cmd>Neotree float<cr>", { desc = "Explorer: 
 
 -- Find
 vim.keymap.set("n", "<leader><space>", "<cmd>Telescope git_files<cr>", { desc = "Find: Git" })
-vim.keymap.set("n", "<leader>fG", "<cmd>Telescope live_grep<cr>", { desc = "Find: Grep" })
-vim.keymap.set("n", "<leader>fg", function() Grep_cached_files() end, { desc = "Find: Cached grep" })
+vim.keymap.set("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", { desc = "Find: Grep" })
+vim.keymap.set("n", "<leader>fG", function() Grep_cached_files() end, { desc = "Find: Cached grep" })
 vim.keymap.set("n", "<leader>fr", "<cmd>Telescope oldfiles<cr>", { desc = "Find: Recent" })
 vim.keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "Find: Files" })
 vim.keymap.set("n", "<leader>fa", "<cmd>Telescope find_files follow=true no_ignore=true hidden=true<cr>", { desc = "Find: All" })
