@@ -20,6 +20,13 @@ return {
         vim.api.nvim_set_hl(0, "DiagnosticInfo", { fg = c.vscLineNumber, bg = "NONE" })
         vim.api.nvim_set_hl(0, "DiagnosticHint", { fg = c.vscLineNumber, bg = "NONE" })
         vim.api.nvim_set_hl(0, "DiagnosticUnderLineInfo", { fg = c.vscLineNumber, bg = "NONE" })
-        vim.api.nvim_set_hl(0, "DiagnosticUnderLineHint", { fg = c.vscLineNuumber, bg = "NONE" })
+        vim.api.nvim_set_hl(0, "DiagnosticUnderLineHint", { fg = c.vscLineNumber, bg = "NONE" })
+        vim.api.nvim_set_hl(0, "NeoTreeCursorLine", { bg = c.vscDarkBlue })
+
+        vim.api.nvim_set_hl(0, "GitSignsAddLn", { bg = "#222522" })
+        vim.api.nvim_set_hl(0, "GitSignsChangeLn", { bg = "#22221F" })
+        vim.api.nvim_set_hl(0, "GitSignsDeleteLn", { bg = "#221F1F" })
+
+        vim.api.nvim_set_hl(0, "NeoTreeFileNameOpened", { fg = c.vscBlue, bg = "NONE", bold = true })
     end,
 }
