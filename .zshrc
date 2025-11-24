@@ -1,5 +1,7 @@
 # ~/.zshrc
 
+source ~/.npm_profile
+
 alias vim="nvim"
 alias ls="ls --color=auto"
 alias df="df -Tha --total"
