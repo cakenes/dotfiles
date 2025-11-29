@@ -21,21 +21,6 @@ return {
         local luasnip = require("luasnip")
         luasnip.config.setup({})
 
-        local function is_copilot_visible()
-            local namespaces = vim.api.nvim_get_namespaces()
-            local id = namespaces["github-copilot"]
-            if id then
-                local marks = vim.api.nvim_buf_get_extmarks(0, id, 0, -1, {})
-                for _, mark in ipairs(marks) do
-                    local _, _, details = unpack(mark)
-                    if details then
-                        return true
-                    end
-                end
-            end
-            return false
-        end
-
         ---@diagnostic disable-next-line: redundant-parameter
         cmp.setup({
             snippet = {
@@ -59,8 +44,30 @@ return {
                     cmp.close()
                     fallback()
                 end, { "i", "s" }),
+                ["<Tab>"] = cmp.mapping(function(fallback)
+                    if Copilot_Is_Visible() then
+                        if not Copilot_Suggestion_Starts_With_Whitespace() then
+                            local keys = vim.fn["copilot#Accept"]("<CR>")
+                            if keys and keys ~= "" then
+                                vim.api.nvim_feedkeys(keys, "n", false)
+                                return
+                            end
+                        end
+                        fallback()
+                        return
+                    end
+                    if cmp.visible() then
+                        cmp.select_next_item()
+                        return
+                    end
+                    if luasnip.expand_or_jumpable() then
+                        luasnip.expand_or_jump()
+                        return
+                    end
+                    fallback()
+                end, { "i", "s" }),
                 ["<Esc>"] = cmp.mapping(function(fallback)
-                    if cmp.visible() or is_copilot_visible() then
+                    if cmp.visible() or Copilot_Is_Visible() then
                         vim.cmd("call copilot#Dismiss()")
                         cmp.close()
                     else

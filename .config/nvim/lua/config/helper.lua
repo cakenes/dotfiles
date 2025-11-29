@@ -5,6 +5,46 @@ function Copilot_chat(command)
     end
 end
 
+function Copilot_Is_Visible()
+    local ns = vim.api.nvim_get_namespaces()["github-copilot"]
+    if not ns then
+        return false
+    end
+    local line0 = vim.fn.line(".") - 1
+    local marks = vim.api.nvim_buf_get_extmarks(0, ns, { line0, 0 }, { line0, -1 }, { details = true })
+    return #marks > 0
+end
+
+function Copilot_Suggestion_Text()
+    local ns = vim.api.nvim_get_namespaces()["github-copilot"]
+    if not ns then
+        return nil
+    end
+    local line0 = vim.fn.line(".") - 1
+    local marks = vim.api.nvim_buf_get_extmarks(0, ns, { line0, 0 }, { line0, -1 }, { details = true })
+    if #marks == 0 then
+        return nil
+    end
+    local _, _, _, details = unpack(marks[1])
+    if not details or not details.virt_text then
+        return nil
+    end
+    local s = ""
+    for _, chunk in ipairs(details.virt_text) do
+        s = s .. (chunk[1] or "")
+    end
+    return s ~= "" and s or nil
+end
+
+function Copilot_Suggestion_Starts_With_Whitespace()
+    local s = Copilot_Suggestion_Text()
+    if not s then
+        return false
+    end
+    local first = s:sub(1, 1)
+    return first == " " or first == "\t"
+end
+
 function Grep_cached_files()
     local builtin = require("telescope.builtin")
     local files = vim.fn.systemlist("git ls-files --cached")
