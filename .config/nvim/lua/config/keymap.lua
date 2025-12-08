@@ -26,14 +26,12 @@ vim.keymap.set("n", "<leader>ba", "<cmd>bufdo bdelete<cr>", { desc = "Buffer: De
 vim.keymap.set("n", "<leader>bA", "<cmd>bufdo bdelete!<cr>", { desc = "Buffer: Force delete all" })
 vim.keymap.set("n", "[b", "<cmd>BufferLineCyclePrev<cr>", { desc = "Buffer: Prev" })
 vim.keymap.set("n", "]b", "<cmd>BufferLineCycleNext<cr>", { desc = "Buffer: Next" })
-vim.keymap.set("n", "<C-Tab>", "<cmd>bprevious<cr>", { desc = "Buffer: Prev" })
-vim.keymap.set("n", "<Tab>", "<cmd>bnext<cr>", { desc = "Buffer: Next" })
 vim.keymap.set("n", "<C-Esc>", "<cmd>bdelete<cr>", { desc = "Buffer: Delete" })
 
 -- Code
 vim.keymap.set("n", "<leader>cb", function() Copilot_chat("CopilotChatBuffer") end, { desc = "Code: Copilot in current buffer" })
 vim.keymap.set({"n", "v"}, "<leader>cc", function() Copilot_chat("CopilotChatAllBuffer") end, { desc = "Code: Copilot in all buffers" })
-vim.keymap.set({"n", "v"}, "<leader>ct", "<cmd>CopilotChatToggle<cr>", { desc = "Code: Copilot toggle" })
+vim.keymap.set({"n", "v"}, "<leader>ct", "<cmd>CopilotChatOpen<cr>", { desc = "Code: Copilot toggle" })
 vim.keymap.set({"n", "v"}, "<F2>", "<cmd>lua vim.lsp.buf.rename()<CR>", { desc = "Code: Rename" })
 vim.keymap.set("n", "<leader>cr", "<cmd>lua vim.lsp.buf.rename()<CR>", { desc = "Code: Rename" })
 vim.keymap.set("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", { desc = "Code: Action" })

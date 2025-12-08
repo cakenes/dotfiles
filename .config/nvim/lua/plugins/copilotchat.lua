@@ -7,7 +7,8 @@ return {
     build = "make tiktoken",
     opts = {
         window = {
-            layout = "vertical",
+            layout = "float",
+            border = "rounded",
         },
     },
     config = function(_, opts)
@@ -25,3 +26,4 @@ return {
         end, { nargs = "*", range = true })
     end,
 }
+
