@@ -105,5 +105,3 @@ vim.keymap.set("n", "<C-k>", "<cmd>resize +2<cr>", { desc = "Window: Increase he
 vim.keymap.set("n", "<C-j>", "<cmd>resize -2<cr>", { desc = "Window: Decrease height" })
 vim.keymap.set("n", "<C-h>", "<cmd>vertical resize -2<cr>", { desc = "Window: Decrease width" })
 vim.keymap.set("n", "<C-l>", "<cmd>vertical resize +2<cr>", { desc = "Window: Increase width" })
-
-
