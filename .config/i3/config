@@ -6,6 +6,10 @@ set $mod Mod4
 font pango:NotoMono Nerd Font 10
 floating_modifier Mod4
 
+mode "Nomod" {
+    bindsym $mod+Shift+e mode "default"
+}
+
 # start program
 bindsym $mod+e exec --no-startup-id thunar
 bindsym $mod+w exec --no-startup-id firefox
@@ -205,6 +209,7 @@ for_window [class="d2r.exe"] floating enable
 for_window [title="Brighter Shores"] floating enable
 for_window [title="Brighter Shores"] resize set 1920 900
 
+
 # border
 for_window [title="xfce4-panel"] border none
 for_window [class="OxygenNotIncluded"] border none
@@ -225,6 +230,7 @@ exec_always --no-startup-id barriers --no-tray --disable-crypto --no-restart --n
 exec --no-startup-id xrandr --output DP-2 --mode 3440x1440 --rate 75 --output DP-0 --mode 3440x1440 --rate 120 --left-of DP-2
 exec --no-startup-id xfce4-panel -d
 exec --no-startup-id xautolock -time 30 -locker xsecurelock
+exec --no-startup-id /usr/local/bin/nomod
 
 # layout
 exec --no-startup-id "i3-msg 'workspace 1; append_layout /home/used/.config/i3/workspace-1.json'"
