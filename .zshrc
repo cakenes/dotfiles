@@ -41,16 +41,23 @@ alias git-pp-local="pushd ~/git/pihlapotilas && arch -x86_64 npx react-native ru
 alias git-pp-local-se="pushd ~/git/pihlapotilas && arch -x86_64 npx react-native run-ios --scheme 'pihlapotilas local' --simulator='iPhone SE (3rd generation)' && popd"
 alias git-pp-staging="pushd ~/git/pihlapotilas && arch -x86_64 npx react-native run-ios --scheme 'pihlapotilas staging' --simulator='iPhone 15 Pro' && popd"
 
-[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
-[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
-
 source ~/.docker/init-zsh.sh || true # Added by Docker Desktop
 
 eval "$(fnm env --use-on-cd)"
 eval "$(starship init zsh)"
-eval "$(rbenv init - )"
-eval "$(pyenv init --path)"
 eval "$(zoxide init zsh --cmd cd)"
+
+rbenv() {
+  unset -f rbenv
+  eval "$(rbenv init -)"
+  rbenv "$@"
+}
+
+pyenv() {
+  unset -f pyenv
+  eval "$(pyenv init --path)"
+  pyenv "$@"
+}
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/Used/git/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/Used/git/google-cloud-sdk/path.zsh.inc'; fi
@@ -59,7 +66,21 @@ if [ -f '/Users/Used/git/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/Used/g
 if [ -f '/Users/Used/git/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/Used/git/google-cloud-sdk/completion.zsh.inc'; fi
 
 # The following lines have been added by Docker Desktop to enable Docker CLI completions.
-fpath=(/Users/Used/.docker/completions $fpath)
-autoload -Uz compinit
-compinit
+# fpath=(/Users/Used/.docker/completions $fpath)
+# autoload -Uz compinit
+# compinit
 # End of Docker CLI completions
+
+git-find() {
+  if [ -z "$1" ]; then
+    echo "Usage: gfindfile <pattern>"
+    return 1
+  fi
+
+  local pattern="$1"
+
+  git branch -a | sed 's/*//' | while IFS= read -r b; do
+    git ls-tree -r --name-only "$b" 2>/dev/null | grep -q "$pattern" && echo "$b"
+  done
+}
+
