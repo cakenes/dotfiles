@@ -71,11 +71,11 @@
        "y": 38
     },
     "marks": [],
-    "name": "YouTube Music - Mozilla Firefox",
+    "name": "YouTube Music - Chromium",
     "percent": 0.55,
     "swallows": [
        {
-       "class": "^firefox$"
+       "class": "^Chromium$"
        }
     ],
     "type": "con"

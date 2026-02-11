@@ -12,7 +12,7 @@ mode "Nomod" {
 
 # start program
 bindsym $mod+e exec --no-startup-id thunar
-bindsym $mod+w exec --no-startup-id firefox
+bindsym $mod+w exec --no-startup-id chromium
 bindsym $mod+Return exec --no-startup-id alacritty
 bindsym Print exec --no-startup-id xfce4-screenshooter -f
 bindsym $mod+Print exec --no-startup-id xfce4-screenshooter -w -c
@@ -240,5 +240,5 @@ exec --no-startup-id "i3-msg 'workspace 2; exec steam'"
 
 # workspace 1
 exec --no-startup-id "i3-msg 'workspace 1; exec discord'"
-exec --no-startup-id "i3-msg 'workspace 1; exec firefox https://music.youtube.com/'"
+exec --no-startup-id "i3-msg 'workspace 1; exec chromium https://music.youtube.com/'"
 exec --no-startup-id "i3-msg 'workspace 1; exec alacritty'"
