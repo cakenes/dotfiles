@@ -1,4 +1,3 @@
-
 # keybind
 # KP_0 KP_1 ... KP_9 KP_Add KP_Subtract KP_Multiply KP_Divide KP_Enter KP_Separator
 
@@ -19,13 +18,14 @@ bindsym $mod+Print exec --no-startup-id xfce4-screenshooter -w -c
 bindsym $mod+Shift+Print exec --no-startup-id xfce4-screenshooter -r -c 
 bindsym $mod+Ctrl+y exec --no-startup-id xfce4-settings-manager
 bindsym $mod+c exec --no-startup-id galculator
-bindsym $mod+n exec --no-startup-id alacritty --class btop -o "window.dimensions.lines=40" -o "window.dimensions.columns=180" -e btop
+bindsym $mod+n exec --no-startup-id kitty --class btop -o "window.dimensions.lines=60" -o "window.dimensions.columns=120" -e btop
 bindsym $mod+d exec --no-startup-id rofi -show run
 bindsym $mod+l exec --no-startup-id xsecurelock
 bindsym $mod+Shift+F9 exec --no-startup-id xrandr --output DP-2 --off --output DP-0 --off
 bindsym $mod+Shift+F12 exec --no-startup-id xrandr --output DP-2 --mode 3440x1440 --rate 75 --output DP-0 --mode 3440x1440 --rate 120 --left-of DP-2
 bindsym $mod+Shift+F11 exec --no-startup-id xrandr --output DP-2 --mode 3440x1440 --rate 75 --output DP-0 --off
 bindsym $mod+Shift+F10 exec --no-startup-id xrandr --output DP-2 --mode 1680x1050 --rate 60
+bindsym aring exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
 
 # kill focused window
 bindsym $mod+q exec --no-startup-id ~/.config/scripts/kill.sh
