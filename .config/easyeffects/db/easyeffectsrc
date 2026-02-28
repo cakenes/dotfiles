@@ -1,0 +1,15 @@
+[StreamInputs]
+inputDevice=alsa_input.usb-MICE_MICROPHONE_USB_MICROPHONE_201308-00.mono-fallback
+plugins=rnnoise#0,echo_canceller#0
+visiblePage=pluginsPage
+visiblePlugin=rnnoise#0
+
+[StreamOutputs]
+outputDevice=bluez_output.30:7A:D2:0D:07:53
+visiblePage=pluginsPage
+
+[Window]
+autostartOnLogin=true
+height=715
+visiblePage=inputPage
+width=988
