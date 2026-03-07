@@ -5,7 +5,7 @@ visiblePage=pluginsPage
 visiblePlugin=rnnoise#0
 
 [StreamOutputs]
-outputDevice=bluez_output.30:7A:D2:0D:07:53
+outputDevice=alsa_output.pci-0000_02_00.0.hdmi-stereo-extra1
 visiblePage=pluginsPage
 
 [Window]
