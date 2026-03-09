@@ -4,6 +4,48 @@
             "complex_modifications": {
                 "rules": [
                     {
+                        "description": "Swap left_control ↔ left_option",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "left_control",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "key_code": "left_option" }],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "left_option",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "key_code": "left_control" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Swap left_option ↔ left_command",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "left_option",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "key_code": "left_command" }],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "left_command",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "key_code": "left_option" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "Custom € mapping",
                         "manipulators": [
                             {
@@ -67,40 +109,12 @@
                         "product_id": 834,
                         "vendor_id": 1452
                     },
-                    "ignore": true,
                     "simple_modifications": [
                         {
                             "from": { "key_code": "non_us_backslash" },
                             "to": [{ "key_code": "a" }]
                         }
                     ]
-                },
-                {
-                    "identifiers": {
-                        "is_keyboard": true,
-                        "is_pointing_device": true,
-                        "product_id": 24926,
-                        "vendor_id": 7504
-                    },
-                    "ignore": false,
-                    "simple_modifications": [
-                        {
-                            "from": { "key_code": "left_command" },
-                            "to": [{ "key_code": "left_control" }]
-                        },
-                        {
-                            "from": { "key_code": "left_control" },
-                            "to": [{ "key_code": "left_command" }]
-                        }
-                    ]
-                },
-                {
-                    "identifiers": {
-                        "is_keyboard": true,
-                        "product_id": 50495,
-                        "vendor_id": 1133
-                    },
-                    "ignore": true
                 }
             ],
             "name": "Default profile",
