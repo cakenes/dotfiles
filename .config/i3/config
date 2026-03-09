@@ -215,7 +215,7 @@ for_window [class="btop"] floating enable
 for_window [class="pika-backup"] floating enable
 
 # steam
-# for_window [class="steam" title="Friends List"] floating enable
+for_window [class="steam" title="Friends List"] floating enable
 for_window [class="steam" title="Settings"] floating enable
 
 # games
