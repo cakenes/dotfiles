@@ -42,23 +42,23 @@ print_events = false
 render_timer = false
 
 [font]
-size = 18
+size = 16.5
 
 [font.bold]
-family = "Menlo"
-style = "Bold"
+family = "FiraCode Nerd Font Mono"
+style = "Medium"
 
 [font.glyph_offset]
 x = 0
 y = 0
 
 [font.italic]
-family = "Menlo"
-style = "Italic"
+family = "FiraCode Nerd Font Mono"
+style = "Light Italic"
 
 [font.normal]
-family = "Menlo"
-style = "Regular"
+family = "FiraCode Nerd Font Mono"
+style = "Light"
 
 [font.offset]
 x = 0
