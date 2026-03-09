@@ -2,14 +2,16 @@
 inputDevice=alsa_input.usb-MICE_MICROPHONE_USB_MICROPHONE_201308-00.mono-fallback
 plugins=rnnoise#0,echo_canceller#0
 visiblePage=pluginsPage
-visiblePlugin=rnnoise#0
+visiblePlugin=echo_canceller#0
 
 [StreamOutputs]
-outputDevice=alsa_output.pci-0000_02_00.0.hdmi-stereo-extra1
+outputDevice=bluez_output.30:7A:D2:0D:07:53
 visiblePage=pluginsPage
 
 [Window]
 autostartOnLogin=true
 height=1395
 visiblePage=inputPage
-width=1133
+visiblePipeWirePage=testSignalsPage
+visiblePresetSheetPage=communityPage
+width=1137
