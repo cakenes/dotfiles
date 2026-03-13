@@ -1,5 +1,6 @@
 [sie][RNNoise#0]
 enableVad=true
+vadThres=75
 
 [soe][RNNoise#0]
 enableVad=true
