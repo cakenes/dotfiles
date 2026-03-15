@@ -39,7 +39,7 @@ bindsym $mod+Print exec --no-startup-id xfce4-screenshooter -w -c
 bindsym $mod+Shift+Print exec --no-startup-id xfce4-screenshooter -r -c 
 bindsym $mod+Ctrl+y exec --no-startup-id xfce4-settings-manager
 bindsym $mod+c exec --no-startup-id galculator
-bindsym $mod+n exec --no-startup-id kitty --class btop -o "window.dimensions.lines=60" -o "window.dimensions.columns=120" -e btop
+bindsym $mod+n exec --no-startup-id alacritty --class btop -o "window.dimensions.lines=40" -o "window.dimensions.columns=180" -e btop
 bindsym $mod+d exec --no-startup-id rofi -show run
 bindsym $mod+l exec --no-startup-id xsecurelock
 bindsym $mod+Shift+F9 exec --no-startup-id xrandr --output DP-2 --off --output DP-0 --off
