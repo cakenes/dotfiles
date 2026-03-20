@@ -1,0 +1,6 @@
+gui:
+  theme:
+    activeBorderColor:
+      - "#0D73CC"
+    inactiveBorderColor:
+      - "#5A5A5A"

@@ -253,6 +253,7 @@ exec --no-startup-id xrandr --output DP-2 --mode 3440x1440 --rate 75 --output DP
 exec --no-startup-id xfce4-panel -d
 exec --no-startup-id xautolock -time 30 -locker xsecurelock
 exec --no-startup-id /usr/local/bin/nomod
+exec --no-startup-id /usr/bin/easyeffects
 
 # layout
 exec --no-startup-id "i3-msg 'workspace 1; append_layout /home/used/.config/i3/workspace-1.json'"
