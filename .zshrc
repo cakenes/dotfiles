@@ -35,6 +35,8 @@ export EDITOR=nano
 export LDFLAGS="-L/opt/homebrew/opt/node@22/lib"
 export CPPFLAGS="-I/opt/homebrew/opt/node@22/include"
 
+export CHROME_PATH="/Applications/Chromium.app/Contents/MacOS/Chromium"
+
 function git-merges() { git --no-pager log $1..$2 --merges --pretty=format:%b; }
 alias git-pr="gh search prs --state=open --review-requested=@me"
 alias git-pp-local="pushd ~/git/pihlapotilas && arch -x86_64 npx react-native run-ios --scheme 'pihlapotilas local' --simulator='iPhone 15 Pro' && popd"
@@ -83,4 +85,3 @@ git-find() {
     git ls-tree -r --name-only "$b" 2>/dev/null | grep -q "$pattern" && echo "$b"
   done
 }
-

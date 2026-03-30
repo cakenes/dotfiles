@@ -20,7 +20,7 @@ outer.right =      10
 
 # All possible modifiers: cmd, alt, ctrl, shift
 [mode.main.binding]
-ctrl-enter = 'exec-and-forget open -na /Applications/kitty.app/'
+ctrl-enter = 'exec-and-forget open -na /Applications/Alacritty.app/'
 ctrl-w = 'exec-and-forget open -na /Applications/Firefox.app/'
 ctrl-e = 'exec-and-forget open -n /Users/Used'
 ctrl-q = 'close'
