@@ -9,7 +9,7 @@ white = "#ECEFF4"
 yellow = "#EBCB8B"
 
 [colors.normal]
-black = "#2E3440"
+black = "#1F242C"
 blue = "#81A1C1"
 cyan = "#88C0D0"
 green = "#A3BE8C"
@@ -19,7 +19,7 @@ white = "#D8DEE9"
 yellow = "#EBCB8B"
 
 [colors.primary]
-background = "#2E3440"
+background = "#1F242C"
 bright_foreground = "#ECEFF4"
 dim_foreground = "#E5E9F0"
 foreground = "#D8DEE9"
