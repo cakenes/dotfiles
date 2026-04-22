@@ -33,7 +33,7 @@ mode "Game" {
 # start program
 bindsym $mod+e exec --no-startup-id thunar
 bindsym $mod+w exec --no-startup-id chromium
-bindsym $mod+Return exec --no-startup-id kitty
+bindsym $mod+Return exec --no-startup-id alacritty
 bindsym Print exec --no-startup-id xfce4-screenshooter -f
 bindsym $mod+Print exec --no-startup-id xfce4-screenshooter -w -c
 bindsym $mod+Shift+Print exec --no-startup-id xfce4-screenshooter -r -c 
@@ -247,7 +247,7 @@ exec_always --no-startup-id i3-autotiler
 exec_always --no-startup-id nm-applet
 exec_always --no-startup-id blueman-applet
 exec_always --no-startup-id deskflow
-exec_always --no-startup-id feh --bg-center ~/pictures/wallpapers/current.jpg
+exec_always --no-startup-id feh --bg-center --no-xinerama ~/pictures/wallpapers/32.jpg
 # exec_always --no-startup-id barriers --no-tray --disable-crypto --no-restart --name arch -c /home/used/.config/barrier.conf  --address :24800
 exec --no-startup-id xrandr --output DP-2 --mode 3440x1440 --rate 75 --output DP-0 --mode 3440x1440 --rate 120 --left-of DP-2
 exec --no-startup-id xfce4-panel -d
