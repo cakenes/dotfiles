@@ -13,7 +13,7 @@ binds {
     Mod+D                               hotkey-overlay-title="Open App Launcher: noctalia launcher" { spawn-sh "qs -c noctalia-shell ipc call launcher toggle"; }
     Mod+W                               hotkey-overlay-title="Open Browser: chromium" { spawn "chromium"; }
     Mod+C                               hotkey-overlay-title="Open Galculator" { spawn "galculator"; }
-    Mod+ALT+L                           hotkey-overlay-title="Lock Screen: noctalia lock" { spawn-sh "qs -c noctalia-shell ipc call lockScreen lock"; }
+    Mod+L                               hotkey-overlay-title="Lock Screen: noctalia lock" { spawn-sh "qs -c noctalia-shell ipc call lockScreen lock"; }
     Mod+Shift+Q                         hotkey-overlay-title="Session Menu: noctalia sessionMenu" { spawn-sh "qs -c noctalia-shell ipc call sessionMenu toggle"; }
 
     // Please choose your own file manager.
@@ -39,7 +39,7 @@ binds {
     Mod+Left                            { focus-column-left; }
     Mod+H                               { focus-column-left; }
     Mod+Right                           { focus-column-right; }
-    Mod+L                               { focus-column-right; }
+    // Mod+L                               { focus-column-right; }
     Mod+Up                              { focus-window-up; }
     Mod+K                               { focus-window-up; }
     Mod+Down                            { focus-window-down; }
