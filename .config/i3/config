@@ -59,8 +59,8 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focus workspace
-bindsym $mod+Mod1+Right move workspace to output right
-bindsym $mod+Mod1+Left move workspace to output left
+#bindsym $mod+Mod1+Right move workspace to output right
+#bindsym $mod+Mod1+Left move workspace to output left
 
 # move focus window
 bindsym $mod+Shift+Left move left
@@ -93,8 +93,8 @@ bindsym $mod+Shift+s layout tabbed
 bindsym $mod+Ctrl+s layout tabbed
 
 # reload, restart, exit
-bindsym $mod+Shift+c reload
-bindsym $mod+Shift+r restart
+bindsym $mod+Shift+r reload
+bindsym $mod+Shift+c restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # i3wm
@@ -205,7 +205,6 @@ for_window [class="Galculator"] floating enable
 for_window [class="Pavucontrol"] floating enable
 for_window [class="Nm-connection-editor"] floating enable
 for_window [class="Blueman-manager"] floating enable
-for_window [class="Usbimager"] floating enable
 for_window [class="qt5ct"] floating enable
 for_window [class="Xfce4-.*settings.*"] floating enable
 for_window [class="Xfce4-.*manager.*"] floating enable

@@ -10,6 +10,13 @@ shopt -s histappend
 
 # alias
 alias ls="ls --color=auto"
+#setxkbmap -option ctrl:nocaps
+shopt -s autocd # allows cd without cd
+shopt -s checkwinsize # check window size
+HISTSIZE= HISTFILESIZE= # infinite history
+
+# alias
+alias ls="ls --color=auto"
 alias df="df -Tha --total"
 alias free="free -mt"
 alias grep="grep --color=auto"
@@ -24,6 +31,7 @@ alias inhibit="echo Power: && dbus-send --session --print-reply --dest=org.freed
 alias pacman-backup="pacman -Qqen > ~/.config/system/packages/pkglist.md && pacman -Qqem > ~/.config/system/packages/aurlist.md"
 alias pacman-restore="yay -S --needed - < ~/.config/system/packages/pkglist.md && yay -S --needed - < ~/.config/system/packages/aurlist.md"
 alias gow="gow -e=go,mod,html run ."
+
 
 # logs
 function log-search() { sudo grep -rsh $1 /var/log | sort; }
