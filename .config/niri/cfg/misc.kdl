@@ -11,7 +11,7 @@
     }
 
     cursor {
-        xcursor-theme "capitaine-cursors"
+        xcursor-theme "Breeze_Light"
         xcursor-size 24
     }
 
