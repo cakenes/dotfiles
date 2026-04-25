@@ -15,7 +15,8 @@ window-rule {
     open-focused false
 }
 window-rule {
-    match app-id="steam" title="Friend List"
+    match app-id="steam"
+    match title="Friend List"
     open-floating false
     default-column-width {
         proportion 0.2
@@ -25,6 +26,7 @@ window-rule {
     match app-id="Alacritty"
     match app-id="chromium"
     match app-id="discord"
+    match app-id="steam" title="^[Ss]team$"
     default-column-width {
         proportion 0.8
     }
