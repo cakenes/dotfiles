@@ -81,7 +81,7 @@
                 {
                     "characterCount": 2,
                     "colorizeIcons": false,
-                    "emptyColor": "secondary",
+                    "emptyColor": "none",
                     "enableScrollWheel": true,
                     "focusedColor": "primary",
                     "followFocusedScreen": false,
@@ -91,12 +91,12 @@
                     "iconScale": 0.8,
                     "id": "Workspace",
                     "labelMode": "index",
-                    "occupiedColor": "secondary",
+                    "occupiedColor": "tertiary",
                     "pillSize": 0.6,
                     "showApplications": false,
                     "showApplicationsHover": false,
                     "showBadge": true,
-                    "showLabelsOnlyWhenOccupied": true,
+                    "showLabelsOnlyWhenOccupied": false,
                     "unfocusedIconsOpacity": 1
                 }
             ],
@@ -203,16 +203,6 @@
                     "textColor": "none"
                 },
                 {
-                    "colorizeDistroLogo": false,
-                    "colorizeSystemIcon": "none",
-                    "colorizeSystemText": "none",
-                    "customIconPath": "",
-                    "enableColorization": false,
-                    "icon": "noctalia",
-                    "id": "ControlCenter",
-                    "useDistroLogo": false
-                },
-                {
                     "defaultSettings": {
                         "connectedColor": "primary",
                         "disableToastNotifications": false,
@@ -246,6 +236,16 @@
                         "showCloseButton": true
                     },
                     "id": "plugin:clipper"
+                },
+                {
+                    "colorizeDistroLogo": false,
+                    "colorizeSystemIcon": "none",
+                    "colorizeSystemText": "none",
+                    "customIconPath": "",
+                    "enableColorization": false,
+                    "icon": "noctalia",
+                    "id": "ControlCenter",
+                    "useDistroLogo": false
                 }
             ]
         }
@@ -478,14 +478,14 @@
     },
     "location": {
         "analogClockInCalendar": false,
-        "autoLocate": false,
-        "firstDayOfWeek": -1,
+        "autoLocate": true,
+        "firstDayOfWeek": 1,
         "hideWeatherCityName": false,
         "hideWeatherTimezone": false,
-        "name": "",
+        "name": "Málaga",
         "showCalendarEvents": true,
         "showCalendarWeather": true,
-        "showWeekNumberInCalendar": false,
+        "showWeekNumberInCalendar": true,
         "use12hourFormat": false,
         "useFahrenheit": false,
         "weatherEnabled": true,
@@ -495,10 +495,10 @@
     "network": {
         "bluetoothAutoConnect": true,
         "bluetoothDetailsViewMode": "grid",
-        "bluetoothHideUnnamedDevices": false,
+        "bluetoothHideUnnamedDevices": true,
         "bluetoothRssiPollIntervalMs": 60000,
         "bluetoothRssiPollingEnabled": false,
-        "disableDiscoverability": false,
+        "disableDiscoverability": true,
         "networkPanelView": "wifi",
         "wifiDetailsViewMode": "grid"
     },
@@ -659,7 +659,7 @@
     "templates": {
         "activeTemplates": [
         ],
-        "enableUserTheming": false
+        "enableUserTheming": true
     },
     "ui": {
         "boxBorderEnabled": true,
