@@ -6,21 +6,21 @@
 
 @define-color accent_color #8fbcbb;
 @define-color accent_bg_color #8fbcbb;
-@define-color accent_fg_color #1f242c;
+@define-color accent_fg_color #2e3440;
 
 @define-color destructive_bg_color #bf616a;
-@define-color destructive_fg_color #1f242c;
+@define-color destructive_fg_color #2e3440;
 
 @define-color error_bg_color #bf616a;
-@define-color error_fg_color #1f242c;
+@define-color error_fg_color #2e3440;
 
-@define-color window_bg_color #1f242c;
+@define-color window_bg_color #2e3440;
 @define-color window_fg_color #eceff4;
 
-@define-color view_bg_color #1f242c;
+@define-color view_bg_color #2e3440;
 @define-color view_fg_color #eceff4;
 
-@define-color headerbar_bg_color #1f242c;
+@define-color headerbar_bg_color #2e3440;
 @define-color headerbar_fg_color #eceff4;
 @define-color headerbar_backdrop_color @window_bg_color;
 
@@ -30,7 +30,7 @@
 @define-color card_bg_color #3b4252;
 @define-color card_fg_color #eceff4;
 
-@define-color dialog_bg_color #1f242c;
+@define-color dialog_bg_color #2e3440;
 @define-color dialog_fg_color #eceff4;
 
 @define-color overview_bg_color #3b4252;
@@ -41,7 +41,7 @@
 @define-color sidebar_backdrop_color @window_bg_color;
 @define-color sidebar_border_color @window_bg_color;
 
-@define-color secondary_sidebar_bg_color #1f242c;
+@define-color secondary_sidebar_bg_color #2e3440;
 @define-color secondary_sidebar_fg_color #eceff4;
 
 /* Backdrop/unfocused states */
@@ -55,22 +55,22 @@
 :root {
   --accent-color: #8fbcbb;
   --accent-bg-color: #8fbcbb;
-  --accent-fg-color: #1f242c;
+  --accent-fg-color: #2e3440;
 
   --destructive-bg-color: #bf616a;
-  --destructive-fg-color: #1f242c;
+  --destructive-fg-color: #2e3440;
 
   --error-bg-color: #bf616a;
-  --error-fg-color: #1f242c;
+  --error-fg-color: #2e3440;
   --error-color: #bf616a;
 
-  --window-bg-color: #1f242c;
+  --window-bg-color: #2e3440;
   --window-fg-color: #eceff4;
 
-  --view-bg-color: #1f242c;
+  --view-bg-color: #2e3440;
   --view-fg-color: #eceff4;
 
-  --headerbar-bg-color: #1f242c;
+  --headerbar-bg-color: #2e3440;
   --headerbar-fg-color: #eceff4;
   --headerbar-backdrop-color: @window_bg_color;
 
