@@ -1,11 +1,5 @@
 binds {
 
-    // ────────────── Keybindings ──────────────
-    // https://github.com/YaLTeR/niri/wiki/Configuration:-Key-Bindings
-
-    // ─── noctalia-shell keybinds ───
-    // https://docs.noctalia.dev/getting-started/keybinds/
-
     Mod+Shift+ESCAPE                     { show-hotkey-overlay; }
 
     // ─── Applications ───
@@ -14,6 +8,7 @@ binds {
     Mod+W                               hotkey-overlay-title="Open Browser: chromium" { spawn "chromium"; }
     Mod+C                               hotkey-overlay-title="Open Galculator" { spawn "galculator"; }
     Mod+L                               hotkey-overlay-title="Lock Screen: noctalia lock" { spawn-sh "qs -c noctalia-shell ipc call lockScreen lock"; }
+    Mod+N                               hotkey-overlay-title="Open Btop" { spawn-sh "alacritty --class btop -o 'window.dimensions.lines=40' -o 'window.dimensions.columns=180' -e btop"; }
     Mod+Shift+Q                         hotkey-overlay-title="Session Menu: noctalia sessionMenu" { spawn-sh "qs -c noctalia-shell ipc call sessionMenu toggle"; }
 
     // Please choose your own file manager.
