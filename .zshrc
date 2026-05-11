@@ -22,6 +22,7 @@ export LDFLAGS="-L/opt/homebrew/opt/postgresql@15/lib"
 export CPPFLAGS="-I/opt/homebrew/opt/postgresql@15/include"
 export PKG_CONFIG_PATH="/opt/homebrew/opt/postgresql@15/lib/pkgconfig"
 
+# Homebrew
 export PATH="/opt/homebrew/opt/openssl@1.1/bin:$PATH"
 export PATH=/opt/homebrew/bin:$PATH
 export PATH="/opt/homebrew/sbin:$PATH"
@@ -30,12 +31,13 @@ export PS1=$'\033[01;34m%n\033[01;34m:\033[00m%~\033[m\$ '
 export PYENV_ROOT="$HOME/.pyenv"
 export NVM_DIR="$HOME/.nvm"
 export PATH="$PYENV_ROOT/bin:$PATH"
-export EDITOR=nano
 
 export LDFLAGS="-L/opt/homebrew/opt/node@22/lib"
 export CPPFLAGS="-I/opt/homebrew/opt/node@22/include"
 
 export CHROME_PATH="/Applications/Chromium.app/Contents/MacOS/Chromium"
+
+export EDITOR="nvim"
 
 function git-merges() { git --no-pager log $1..$2 --merges --pretty=format:%b; }
 alias git-pr="gh search prs --state=open --review-requested=@me"
