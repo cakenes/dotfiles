@@ -1,7 +1,11 @@
 window-rule {
     geometry-corner-radius 8
     clip-to-geometry true
+    default-column-width {
+        proportion 1.0
+    }
 }
+
 window-rule {
     match app-id="steam"
     match app-id="galculator"
@@ -9,17 +13,13 @@ window-rule {
     exclude title="^[Ss]team$"
     open-floating true
 }
-window-rule {
-    match app-id="btop"
-    default-column-width {
-        proportion 0.8
-    }
-}
+
 window-rule {
     match app-id="steam" title="^notificationtoasts_\\d+_desktop$"
     default-floating-position x=10 y=10 relative-to="bottom-right"
     open-focused false
 }
+
 window-rule {
     match app-id="steam"
     match title="Friend List"
@@ -28,15 +28,26 @@ window-rule {
         proportion 0.2
     }
 }
+
+// ─── Workspace 1 Layout ───
 window-rule {
-    match app-id="Alacritty"
-    match app-id="chromium"
     match app-id="discord"
-    match app-id="steam" title="^[Ss]team$"
-    default-column-width {
-        proportion 0.8
-    }
+    open-on-workspace "1"
+    default-column-width { proportion 0.4; }
+    default-window-height { proportion 0.9; }
 }
+
+window-rule {
+    match app-id="ws1-term"
+    open-on-workspace "1"
+    default-window-height { proportion 0.1; }
+}
+
+window-rule {
+    match app-id="librewolf"
+    default-column-width { proportion 1.0; }
+}
+
 layer-rule {
     match namespace="^noctalia-wallpaper*"
     place-within-backdrop true
