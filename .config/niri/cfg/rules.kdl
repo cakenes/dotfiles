@@ -29,25 +29,6 @@ window-rule {
     }
 }
 
-// ─── Workspace 1 Layout ───
-window-rule {
-    match app-id="discord"
-    open-on-workspace "1"
-    default-column-width { proportion 0.4; }
-    default-window-height { proportion 0.9; }
-}
-
-window-rule {
-    match app-id="ws1-term"
-    open-on-workspace "1"
-    default-window-height { proportion 0.1; }
-}
-
-window-rule {
-    match app-id="librewolf"
-    default-column-width { proportion 1.0; }
-}
-
 layer-rule {
     match namespace="^noctalia-wallpaper*"
     place-within-backdrop true
