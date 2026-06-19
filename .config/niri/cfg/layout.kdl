@@ -2,6 +2,7 @@
         gaps 8
         center-focused-column "never"
         background-color "transparent"
+        default-column-width { proportion 1.0; }
 	
 	focus-ring {
 	    width 1

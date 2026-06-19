@@ -1,4 +1,11 @@
-workspace "1"
+workspace "1" {
+    layout {
+        default-column-width {
+            proportion 0.5
+        }
+    }
+}
+
 workspace "2"
 workspace "3"
 workspace "4"
