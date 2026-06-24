@@ -71,11 +71,11 @@
        "y": 38
     },
     "marks": [],
-    "name": "YouTube Music - Chromium",
+    "name": "YouTube Music - Librewolf",
     "percent": 0.55,
     "swallows": [
        {
-       "class": "^Chromium$"
+       "class": "^Librewolf$"
        }
     ],
     "type": "con"
