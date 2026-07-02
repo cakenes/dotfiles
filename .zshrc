@@ -87,3 +87,8 @@ git-find() {
     git ls-tree -r --name-only "$b" 2>/dev/null | grep -q "$pattern" && echo "$b"
   done
 }
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/used/.lmstudio/bin"
+# End of LM Studio CLI section
+
