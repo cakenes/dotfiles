@@ -47,16 +47,23 @@ export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; histor
 export DOCKER_HOST=unix:///var/run/docker.sock
 export DESKTOP_SESSION=i3wm
 
+export PATH="$PATH:/home/used/.lmstudio/bin"
+
+# wayland
+export XDG_CURRENT_DESKTOP=sway
+export XDG_SESSION_TYPE=wayland
+export GBM_BACKEND=nvidia-drm
+export __GLX_VENDOR_LIBRARY_NAME=nvidia
+export WLR_NO_HARDWARE_CURSORS=1
+
 # autostart xfce
 #[ "$(tty)" = "/dev/tty1" ] && ! pgrep -x xfce4-session >/dev/null && exec startx
 
 # autostart i3
-[ "$(tty)" = "/dev/tty1" ] && ! pgrep -x i3 >/dev/null && exec startx
+#[ "$(tty)" = "/dev/tty1" ] && ! pgrep -x i3 >/dev/null && exec startx
 
 # autostart kde
 #[ "$(tty)" = "/dev/tty1" ] && ! pgrep -x plasmashell >/dev/null && exec startx
 
-# Added by LM Studio CLI (lms)
-export PATH="$PATH:/home/used/.lmstudio/bin"
-# End of LM Studio CLI section
-
+# autostart sway
+[ "$(tty)" = "/dev/tty1" ] && ! pgrep -x sway >/dev/null && exec sway --unsupported-gpu

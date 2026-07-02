@@ -3,7 +3,7 @@
 # settings
 stty stop ''
 stty start ''
-setxkbmap -option ctrl:nocaps
+# setxkbmap -option ctrl:nocaps
 shopt -s autocd
 shopt -s checkwinsize
 shopt -s histappend
