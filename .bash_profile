@@ -4,6 +4,10 @@ if [ -f ~/.bashrc ]; then
   . ~/.bashrc
 fi
 
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS=@im=fcitx
+
 export TERM=linux
 export FILE=thunar
 export EDITOR=/usr/bin/nano
@@ -51,3 +55,8 @@ export DESKTOP_SESSION=i3wm
 
 # autostart kde
 #[ "$(tty)" = "/dev/tty1" ] && ! pgrep -x plasmashell >/dev/null && exec startx
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/home/used/.lmstudio/bin"
+# End of LM Studio CLI section
+

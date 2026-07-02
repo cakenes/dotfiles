@@ -54,3 +54,8 @@ eval "$(starship init bash)"
 eval "$(pyenv init -)"
 eval "$(fnm env --use-on-cd)"
 eval "$(zoxide init bash --cmd cd)"
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/home/used/.lmstudio/bin"
+# End of LM Studio CLI section
+
