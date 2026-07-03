@@ -45,7 +45,7 @@ alias git-pp-local="pushd ~/git/pihlapotilas && arch -x86_64 npx react-native ru
 alias git-pp-local-se="pushd ~/git/pihlapotilas && arch -x86_64 npx react-native run-ios --scheme 'pihlapotilas local' --simulator='iPhone SE (3rd generation)' && popd"
 alias git-pp-staging="pushd ~/git/pihlapotilas && arch -x86_64 npx react-native run-ios --scheme 'pihlapotilas staging' --simulator='iPhone 15 Pro' && popd"
 
-source ~/.docker/init-zsh.sh || true # Added by Docker Desktop
+# source ~/.docker/init-zsh.sh || true # Added by Docker Desktop
 
 eval "$(fnm env --use-on-cd)"
 eval "$(starship init zsh)"
@@ -88,7 +88,4 @@ git-find() {
   done
 }
 
-# Added by LM Studio CLI (lms)
 export PATH="$PATH:/Users/used/.lmstudio/bin"
-# End of LM Studio CLI section
-
