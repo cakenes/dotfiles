@@ -10,7 +10,7 @@ input "type:pointer" {
     pointer_accel 0
 }
 
-seat * xcursor_theme BreezeX-Light 24
+seat * xcursor_theme Breeze_Light 24
 
 # Workspace names
 set $ws1 "1"
@@ -49,16 +49,16 @@ mode "Game" {
     bindsym $mod+Shift+9 move container to workspace $ws9
 }
 
-bindsym $mod+e exec --no-startup-id thunar
+bindsym $mod+e exec --no-startup-id nautilus -w
 bindsym $mod+w exec --no-startup-id librewolf
 bindsym $mod+Return exec --no-startup-id kitty
-bindsym Print exec --no-startup-id grimblast --notify --cursor copysave area ~/Pictures
-bindsym $mod+Print exec --no-startup-id grimblast --notify --cursor copysave active ~/Pictures
-bindsym $mod+Shift+Print exec --no-startup-id grimblast --notify --cursor copysave window ~/Pictures 
+bindsym Print exec grimshot copy screen
+bindsym $mod+Print exec grimshot copy active
+bindsym $mod+Shift+Print exec grimshot copy area
 bindsym $mod+Ctrl+y exec --no-startup-id xfce4-settings-manager
 bindsym $mod+c exec --no-startup-id galculator
-bindsym $mod+n exec --no-startup-id alacritty --class btop -o "window.dimensions.lines=40" -o "window.dimensions.columns=180" -e btop
-bindsym $mod+d exec --no-startup-id rofi -show run
+bindsym $mod+n exec --no-startup-id btop
+bindsym $mod+d exec --no-startup-id qs -c noctalia-shell ipc call launcher toggle
 bindsym $mod+l exec --no-startup-id qs -c noctalia-shell ipc call lockScreen lock
 bindsym $mod+Shift+F8 exec --no-startup-id swaymsg "output HDMI-A-1 res 3440x1440 pos 0 0; output DP-1 disable; output DP-2 disable"
 bindsym $mod+Shift+F9 exec --no-startup-id swaymsg "output DP-2 disable; output DP-1 disable; output HDMI-A-1 disable"
@@ -250,8 +250,6 @@ for_window [class="firefox" title="Picture-in-Picture"] sticky enable
 bindsym F11 --release exec --no-startup-id killall buy.sh
 
 # Autostart
-# exec_always --no-startup-id nm-applet
-# exec_always --no-startup-id blueman-applet
 exec_always --no-startup-id swaymsg "output DP-1 res 3440x1440 pos 0 0; output DP-2 res 3440x1440 pos 3440 0; output HDMI-A-1 disable"
 
 exec --no-startup-id qs -c noctalia-shell
@@ -259,6 +257,7 @@ exec --no-startup-id fcitx5 -d
 exec --no-startup-id swayidle -w timeout 1800 'qs -c noctalia-shell ipc call lockScreen lock'
 exec --no-startup-id /usr/local/bin/nomod
 exec --no-startup-id /usr/bin/easyeffects
+exec --no-startup-id /usr/bin/mousehop daemon
 
 # Media keys
 bindsym XF86AudioRaiseVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+
@@ -266,3 +265,8 @@ bindsym XF86AudioLowerVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
 bindsym XF86AudioMute exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
 bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioStop exec playerctl play-pause
+bindsym XF86AudioNext exec qs -c noctalia-shell ipc call media next
+bindsym XF86AudioPrev exec qs -c noctalia-shell ipc call media previous
+
+include ~/.config/sway/noctalia
+

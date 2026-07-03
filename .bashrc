@@ -1,5 +1,7 @@
 # ~/.bashrc
 
+PS1='[\u@\h \W]\$ '
+
 # settings
 stty stop ''
 stty start ''
@@ -20,7 +22,7 @@ alias yayskip="yay -S --mflags --skipinteg --sudoloop"
 alias yay="yay --sudoloop"
 function git-merges() { git --no-pager log "$1".."$2" --merges --pretty=format:%b; }
 alias cpu-stats="watch -n1 'cat /proc/cpuinfo | grep \"^[c]pu MHz\" && echo ----- && sensors | grep Core && echo ----- && sensors | grep fan'"
-alias inhibit="echo Power: && dbus-send --session --print-reply --dest=org.freedesktop.PowerManagement /org/freedesktop/PowerManagement/Inhibit org.freedesktop.PowerManagement.Inhibit.GetInhibitors && echo Screensaver: && dbus-send --session --print-reply --dest=org.xfce.ScreenSaver / org.xfce.ScreenSaver.GetInhibitors"
+alias inhibit="echo Power: && dbus-send --session --print-reply --dest=org.freedesktop.PowerManagement /org/freedesktop/PowerManagement/Inhibit org.freedesktop.PowerManagement.Inhibit.GetInhibitors && echo S>
 alias pacman-backup="pacman -Qqen > ~/.config/system/packages/pkglist.md && pacman -Qqem > ~/.config/system/packages/aurlist.md"
 alias pacman-restore="yay -S --needed - < ~/.config/system/packages/pkglist.md && yay -S --needed - < ~/.config/system/packages/aurlist.md"
 alias gow="gow -e=go,mod,html run ."
@@ -46,16 +48,8 @@ function air-decrypt() { sudo aircrack-ng -z "$1" -w "$2"; }
 function shell-connect() { bash -i >&/dev/tcp/"$1"/"$2" 0>&1; }
 function shell-listen() { sudo nc -nvlp "$1"; }
 
-# color
-PS1="\[\033[01;34m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ "
-
 # setup
 eval "$(starship init bash)"
 eval "$(pyenv init -)"
 eval "$(fnm env --use-on-cd)"
 eval "$(zoxide init bash --cmd cd)"
-
-# Added by LM Studio CLI (lms)
-export PATH="$PATH:/home/used/.lmstudio/bin"
-# End of LM Studio CLI section
-
