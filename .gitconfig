@@ -1,6 +1,8 @@
 [user]
 	name = cakenes
 	email = jyri.kurtakko@gmail.com
+[advice]
+	addIngoredFile = false
 [receive]
         denyNonFastForwards = true
 [push]

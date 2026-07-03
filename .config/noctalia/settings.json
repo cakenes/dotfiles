@@ -435,6 +435,7 @@
         "lockScreenBlur": 0,
         "lockScreenCountdownDuration": 10000,
         "lockScreenMonitors": [
+            "DP-2"
         ],
         "lockScreenTint": 0,
         "passwordChars": false,
@@ -448,7 +449,7 @@
         "showChangelogOnStartup": true,
         "showHibernateOnLockScreen": false,
         "showScreenCorners": false,
-        "showSessionButtonsOnLockScreen": true,
+        "showSessionButtonsOnLockScreen": false,
         "smoothScrollEnabled": true,
         "telemetryEnabled": false
     },
@@ -725,7 +726,7 @@
     "wallpaper": {
         "automationEnabled": false,
         "directory": "/home/used/pictures/wallpapers",
-        "enableMultiMonitorDirectories": false,
+        "enableMultiMonitorDirectories": true,
         "enabled": true,
         "favorites": [
         ],
@@ -740,7 +741,7 @@
         "overviewTint": 0.6,
         "panelPosition": "follow_bar",
         "randomIntervalSec": 300,
-        "setWallpaperOnAllMonitors": true,
+        "setWallpaperOnAllMonitors": false,
         "showHiddenFiles": false,
         "skipStartupTransition": true,
         "solidColor": "#1a1a2e",

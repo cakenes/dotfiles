@@ -1,0 +1,8 @@
+[[clients]]
+hostname = "192.168.2.11"
+ips = []
+position = "left"
+activate_on_startup = true
+clipboard_send = true
+
+[authorized_fingerprints]
