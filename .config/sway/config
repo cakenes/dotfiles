@@ -51,13 +51,13 @@ mode "Game" {
 
 bindsym $mod+e exec --no-startup-id nautilus -w
 bindsym $mod+w exec --no-startup-id librewolf
-bindsym $mod+Return exec --no-startup-id kitty
+bindsym $mod+Return exec --no-startup-id alacritty
 bindsym Print exec grimshot copy screen
 bindsym $mod+Print exec grimshot copy active
 bindsym $mod+Shift+Print exec grimshot copy area
 bindsym $mod+Ctrl+y exec --no-startup-id xfce4-settings-manager
 bindsym $mod+c exec --no-startup-id galculator
-bindsym $mod+n exec --no-startup-id btop
+bindsym $mod+n exec --no-startup-id alacritty --class btop -o "window.dimensions.lines=40" -o "window.dimensions.columns=180" -e btop
 bindsym $mod+d exec --no-startup-id qs -c noctalia-shell ipc call launcher toggle
 bindsym $mod+l exec --no-startup-id qs -c noctalia-shell ipc call lockScreen lock
 bindsym $mod+Shift+F8 exec --no-startup-id swaymsg "output HDMI-A-1 res 3440x1440 pos 0 0; output DP-1 disable; output DP-2 disable"
@@ -208,20 +208,28 @@ assign [class="battle.net.exe"] $ws2
 assign [class="riotclientux.exe"] $ws2
 
 for_window [class=".*"] fullscreen disable
+for_window [app_id=".*"] fullscreen disable
 
-# Floating windows
+# Floating windows (class = XWayland, app_id = native Wayland)
 for_window [class="Galculator"] floating enable
+for_window [app_id="galculator"] floating enable
 for_window [class="Pavucontrol"] floating enable
+for_window [app_id="pavucontrol"] floating enable
 for_window [class="Nm-connection-editor"] floating enable
+for_window [app_id="nm-connection-editor"] floating enable
 for_window [class="Blueman-manager"] floating enable
+for_window [app_id="blueman-manager"] floating enable
 for_window [class="Usbimager"] floating enable
+for_window [app_id="usbimager"] floating enable
 for_window [class="qt5ct"] floating enable
+for_window [app_id="qt5ct"] floating enable
 for_window [class="Xfce4-.*settings.*"] floating enable
 for_window [class="Xfce4-.*manager.*"] floating enable
 for_window [title="Emulator"] floating enable
 for_window [class="Nvidia-settings"] floating enable
+for_window [app_id="nvidia-settings"] floating enable
 for_window [class="btop"] floating enable
-for_window [class="pika-backup"] floating enable
+for_window [app_id="btop"] floating enable
 
 # Steam specific
 for_window [class="steam" title="Friends List"] floating enable
