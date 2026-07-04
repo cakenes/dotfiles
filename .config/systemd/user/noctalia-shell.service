@@ -1,0 +1,12 @@
+[Unit]
+Description=Noctalia Shell (Quickshell)
+After=sway-session.target
+PartOf=sway-session.target
+
+[Service]
+ExecStart=/usr/bin/qs -c noctalia-shell
+Restart=on-failure
+RestartSec=2s
+
+[Install]
+WantedBy=sway-session.target
