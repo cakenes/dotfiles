@@ -218,6 +218,7 @@ for_window [class="Nvidia-settings"] floating enable
 for_window [app_id="nvidia-settings"] floating enable
 for_window [class="btop"] floating enable
 for_window [app_id="btop"] floating enable
+for_window [app_id="anki"] floating enable
 
 # Steam specific
 for_window [class="steam" title="Friends List"] floating enable
