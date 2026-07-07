@@ -1,0 +1,12 @@
+[Unit]
+Description=Mousehop Daemon
+After=sway-session.target
+PartOf=sway-session.target
+
+[Service]
+ExecStart=/usr/bin/mousehop daemon
+Restart=on-failure
+RestartSec=2s
+
+[Install]
+WantedBy=sway-session.target
