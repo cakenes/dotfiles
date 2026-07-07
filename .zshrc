@@ -109,12 +109,4 @@ eval "$(starship init zsh)"
 eval "$(pyenv init -)"
 eval "$(fnm env --use-on-cd)"
 
-# Wayland / NVIDIA environment (set before sway launches)
-export XDG_CURRENT_DESKTOP=sway
-export XDG_SESSION_TYPE=wayland
-export GBM_BACKEND=nvidia-drm
-export __GLX_VENDOR_LIBRARY_NAME=nvidia
-export WLR_NO_HARDWARE_CURSORS=1
-export WLR_RENDERER=vulkan
-
 [ "$(tty)" = "/dev/tty1" ] && ! pgrep -x sway >/dev/null && exec sway --unsupported-gpu
