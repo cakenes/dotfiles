@@ -11,7 +11,8 @@ input "type:pointer" {
 }
 
 seat * xcursor_theme Breeze_Light 24
-output * adaptive_sync on
+# adaptive_sync disabled — unreliable with NVIDIA + sway --unsupported-gpu
+# output * adaptive_sync on
 
 # Workspace names
 set $ws1 "1"
@@ -44,7 +45,7 @@ mode "Game" {
     bindsym $mod+Shift+3 move container to workspace $ws3
     bindsym $mod+Shift+4 move container to workspace $ws4
     bindsym $mod+Shift+5 move container to workspace $ws5
-    bindsym $mod+Shift+6 move container to workspace $ws6
+    bindsym $mod+Shift+6 move container to workspace $ws6
     bindsym $mod+Shift+7 move container to workspace $ws7
     bindsym $mod+Shift+8 move container to workspace $ws8
     bindsym $mod+Shift+9 move container to workspace $ws9
@@ -254,7 +255,6 @@ exec --no-startup-id fcitx5 -d
 exec --no-startup-id swayidle -w timeout 1800 'qs -c noctalia-shell ipc call lockScreen lock'
 exec --no-startup-id /usr/local/bin/nomod
 exec --no-startup-id /usr/bin/easyeffects
-exec --no-startup-id /usr/bin/mousehop daemon
 
 # Media keys
 bindsym XF86AudioRaiseVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+
