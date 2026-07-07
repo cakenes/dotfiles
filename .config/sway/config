@@ -251,6 +251,7 @@ bindsym F11 --release exec --no-startup-id killall buy.sh
 exec_always --no-startup-id swaymsg "output DP-1 res 3440x1440 pos 0 0; output DP-2 res 3440x1440 pos 3440 0; output HDMI-A-1 disable"
 
 exec --no-startup-id systemctl --user import-environment WAYLAND_DISPLAY SWAYSOCK && systemctl --user start sway-session.target
+exec --no-startup-id echo "" | /usr/bin/gnome-keyring-daemon --unlock
 exec --no-startup-id fcitx5 -d
 exec --no-startup-id swayidle -w timeout 1800 'qs -c noctalia-shell ipc call lockScreen lock'
 exec --no-startup-id /usr/local/bin/nomod
