@@ -23,9 +23,14 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-[[ -z "${plugins[*]}" ]] && plugins=(git fzf extract)
+[[ -z "${plugins[*]}" ]] && plugins=(fzf extract)
 
 source $ZSH/oh-my-zsh.sh
+
+# Disable zsh completion, use bash-completion instead
+autoload bashcompinit 2>/dev/null
+bashcompinit 2>/dev/null
+complete -o default -o nospace git 2>/dev/null
 
 # User configuration
 
@@ -110,3 +115,5 @@ eval "$(pyenv init -)"
 eval "$(fnm env --use-on-cd)"
 
 [ "$(tty)" = "/dev/tty1" ] && ! pgrep -x sway >/dev/null && exec sway --unsupported-gpu
+
+. "$HOME/.local/bin/env"

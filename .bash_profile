@@ -62,3 +62,5 @@ export WLR_NO_HARDWARE_CURSORS=1
 
 # autostart sway
 [ "$(tty)" = "/dev/tty1" ] && ! pgrep -x sway >/dev/null && exec sway --unsupported-gpu
+
+. "$HOME/.local/bin/env"

@@ -53,3 +53,5 @@ eval "$(starship init bash)"
 eval "$(pyenv init -)"
 eval "$(fnm env --use-on-cd)"
 eval "$(zoxide init bash --cmd cd)"
+
+. "$HOME/.local/bin/env"
