@@ -19,6 +19,12 @@
           "name": "Qwen 3.6 27B",
           "tool_call": true,
           "temperature": true
+        },
+        "qwen/qwen3.6-35b-a3b": {
+          "id": "qwen/qwen3.6-35b-a3b",
+          "name": "Qwen 3.6 35B A3B",
+          "tool_call": true,
+          "temperature": true
         }
       }
     }
