@@ -4,95 +4,26 @@
     "ollama"
   ],
   "provider": {
-    "ollama": {
-      "npm": "@ai-sdk/openai-compatible",
-      "name": "Local Ollama LAN",
+    "unsloth": {
+      "api": "http://192.168.2.11:8888/v1",
       "options": {
-        "baseURL": "http://192.168.2.11:11434/v1"
+        "baseURL": "http://192.168.2.11:8888/v1",
+        "apiKey": ""
       },
       "models": {
-        "qwen3.6:35b-a3b": {
-          "name": "qwen3.6:35b-a3b",
+        "unsloth/Qwen3.6-27B-MTP-GGUF": {
+          "id": "unsloth/Qwen3.6-27B-MTP-GGUF",
+          "name": "unsloth/Qwen3.6-27B-MTP-GGUF",
+          "tool_call": true,
+          "temperature": true,
           "options": {
-            "reasoningEffort": "high",
-            "textVerbosity": "normal",
-            "reasoningSummary": "all"
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "top_k": 20,
+            "min_p": 0.6
           }
         }
       }
     }
-  },
-  "permission": {
-    "read": "allow",
-    "grep": "allow",
-    "glob": "allow",
-    "edit": "allow",
-    "write": "allow",
-    "bash": {
-      "ls": "allow",
-      "curl": "allow",
-      "wget": "allow",
-      "git": "allow",
-      "npm": "allow",
-      "npx": "allow",
-      "node": "allow",
-      "python3": "allow",
-      "python": "allow",
-      "pip": "allow",
-      "pip3": "allow",
-      "docker": "allow",
-      "make": "allow",
-      "cmake": "allow",
-      "grep": "allow",
-      "rg": "allow",
-      "find": "allow",
-      "cat": "allow",
-      "head": "allow",
-      "tail": "allow",
-      "wc": "allow",
-      "awk": "allow",
-      "sed": "allow",
-      "sort": "allow",
-      "uniq": "allow",
-      "diff": "allow",
-      "touch": "allow",
-      "mkdir": "allow",
-      "cp": "ask",
-      "mv": "ask",
-      "rm": "ask",
-      "rmdir": "ask",
-      "chmod": "deny",
-      "chown": "deny",
-      "du": "allow",
-      "df": "allow",
-      "ps": "allow",
-      "top": "allow",
-      "htop": "allow",
-      "uname": "allow",
-      "env": "allow",
-      "echo": "allow",
-      "date": "allow",
-      "which": "allow",
-      "whereis": "allow",
-      "man": "allow",
-      "ping": "allow",
-      "ssh": "deny",
-      "scp": "deny",
-      "rsync": "deny",
-      "tar": "allow",
-      "gzip": "allow",
-      "unzip": "allow",
-      "lsblk": "allow",
-      "mount": "ask",
-      "systemctl": "allow",
-      "journalctl": "allow",
-      "hostname": "allow",
-      "whoami": "allow",
-      "id": "allow",
-      "uptime": "allow",
-      "free": "allow",
-      "kill": "ask"
-    },
-    "webfetch": "allow"
   }
 }

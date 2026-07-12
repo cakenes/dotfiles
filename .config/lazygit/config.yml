@@ -1,4 +1,9 @@
 quitOnTopLevelReturn: true
+os:
+  editInTerminal: false
+  edit: 'nvim --server "$NVIM" --remote-tab {{filename}} && nvim --server "$NVIM" --remote-send "<Cmd>lua _G.LazygitCloseFloat()<CR>"'
+  editAtLine: 'nvim --server "$NVIM" --remote-tab {{filename}} && nvim --server "$NVIM" --remote-send ":{{line}}<CR>" && nvim --server "$NVIM" --remote-send "<Cmd>lua _G.LazygitCloseFloat()<CR>"'
+  open: 'nvim --server "$NVIM" --remote-tab {{filename}} && nvim --server "$NVIM" --remote-send "<Cmd>lua _G.LazygitCloseFloat()<CR>"'
 gui:
   theme:
     activeBorderColor:

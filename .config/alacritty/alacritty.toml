@@ -24,7 +24,7 @@ bright_foreground = "#ECEFF4"
 foreground = "#D8DEE9"
 
 [font]
-size = 12
+size = 14
 
 [font.normal]
 family = "FiraCode Nerd Font Mono Light"
