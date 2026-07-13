@@ -5,7 +5,7 @@ binds {
     // ─── Applications ───
     Mod+Return                          hotkey-overlay-title="Open Terminal: Alacritty" { spawn "alacritty"; }
     Mod+D                               hotkey-overlay-title="Open App Launcher: noctalia launcher" { spawn-sh "qs -c noctalia-shell ipc call launcher toggle"; }
-    Mod+W                               hotkey-overlay-title="Open Browser: Librewolf" { spawn "librewolf"; }
+    Mod+W                               hotkey-overlay-title="Open Browser: Waterfox" { spawn "waterfox"; }
     Mod+C                               hotkey-overlay-title="Open Galculator" { spawn "galculator"; }
     Mod+L                               hotkey-overlay-title="Lock Screen: noctalia lock" { spawn-sh "qs -c noctalia-shell ipc call lockScreen lock"; }
     Mod+N                               hotkey-overlay-title="Open Btop" { spawn-sh "alacritty --class btop -o 'window.dimensions.lines=40' -o 'window.dimensions.columns=180' -e btop"; }

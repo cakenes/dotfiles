@@ -161,6 +161,14 @@
             ],
             "right": [
                 {
+                    "hideWhenZero": false,
+                    "hideWhenZeroUnread": false,
+                    "iconColor": "none",
+                    "id": "NotificationHistory",
+                    "showUnreadBadge": true,
+                    "unreadBadgeColor": "primary"
+                },
+                {
                     "blacklist": [
                     ],
                     "chevronColor": "none",
@@ -172,12 +180,10 @@
                     ]
                 },
                 {
-                    "hideWhenZero": false,
-                    "hideWhenZeroUnread": false,
-                    "iconColor": "none",
-                    "id": "NotificationHistory",
-                    "showUnreadBadge": true,
-                    "unreadBadgeColor": "primary"
+                    "defaultSettings": {
+                        "mode": "region"
+                    },
+                    "id": "plugin:screenshot"
                 },
                 {
                     "deviceNativePath": "__default__",
@@ -213,10 +219,10 @@
                     "useDistroLogo": false
                 },
                 {
-                    "defaultSettings": {
-                        "mode": "region"
-                    },
-                    "id": "plugin:screenshot"
+                    "displayMode": "onhover",
+                    "iconColor": "none",
+                    "id": "Bluetooth",
+                    "textColor": "none"
                 },
                 {
                     "defaultSettings": {
