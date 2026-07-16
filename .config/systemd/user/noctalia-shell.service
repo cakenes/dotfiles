@@ -7,6 +7,7 @@ PartOf=sway-session.target
 ExecStart=/usr/bin/qs -c noctalia-shell
 Restart=on-failure
 RestartSec=2s
+LimitNOFILE=65536
 
 [Install]
 WantedBy=sway-session.target
