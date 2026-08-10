@@ -31,7 +31,7 @@ export PS1=$'\033[01;34m%n\033[01;34m:\033[00m%~\033[m\$ '
 export PYENV_ROOT="$HOME/.pyenv"
 export NVM_DIR="$HOME/.nvm"
 export PATH="$PYENV_ROOT/bin:$PATH"
-
+export PATH="$HOME/.unsloth/studio/unsloth_studio/bin:$PATH"
 export LDFLAGS="-L/opt/homebrew/opt/node@22/lib"
 export CPPFLAGS="-I/opt/homebrew/opt/node@22/include"
 
@@ -89,3 +89,5 @@ git-find() {
 }
 
 export PATH="$PATH:/Users/used/.lmstudio/bin"
+
+. "$HOME/.local/bin/env"
