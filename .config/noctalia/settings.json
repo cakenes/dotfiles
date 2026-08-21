@@ -18,6 +18,15 @@
         "ignoreMouseInput": false,
         "overviewLayer": false,
         "pinnedApps": [
+            {
+                "desktopFile": "res-dual.desktop"
+            },
+            {
+                "desktopFile": "res-single.desktop"
+            },
+            {
+                "desktopFile": "res-triple.desktop"
+            }
         ],
         "position": "center",
         "screenshotAnnotationTool": "",
