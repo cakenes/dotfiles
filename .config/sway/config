@@ -52,7 +52,7 @@ mode "Game" {
 }
 
 bindsym $mod+e exec --no-startup-id nautilus -w
-bindsym $mod+w exec --no-startup-id waterfox
+bindsym $mod+w exec --no-startup-id chromium
 bindsym $mod+Return exec --no-startup-id alacritty
 bindsym Print exec grimshot copy screen
 bindsym $mod+Print exec grimshot copy active
