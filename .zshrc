@@ -1,5 +1,7 @@
 # ~/.zshrc
 
+export XDG_CONFIG_HOME="$HOME/.config"
+
 source ~/.npm_profile
 
 alias vim="nvim"
@@ -51,11 +53,7 @@ eval "$(fnm env --use-on-cd)"
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh --cmd cd)"
 
-rbenv() {
-  unset -f rbenv
-  eval "$(rbenv init -)"
-  rbenv "$@"
-}
+eval "$(rbenv init - zsh)"
 
 pyenv() {
   unset -f pyenv

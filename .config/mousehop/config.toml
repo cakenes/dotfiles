@@ -1,4 +1,4 @@
-release_threshold_px = 0
+release_threshold_px = 20
 
 [authorized_fingerprints."4a:e6:55:a4:40:53:61:05:68:1c:48:eb:1e:c7:62:96:4e:f9:20:3e:a2:b5:c1:85:65:c0:8a:93:77:04:6f:a4"]
 description = "Linux"
