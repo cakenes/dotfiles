@@ -1,0 +1,216 @@
+# Noctalia v5 config - migrated from settings.json (v4)
+
+[shell]
+font_family = "Adwaita Sans"
+time_format = "{:%H:%M}"
+date_format = "%A, %x"
+telemetry_enabled = false
+show_location = true
+avatar_path = "/home/used/.face"
+polkit_agent = true
+clipboard_enabled = true
+clipboard_history_max_entries = 100
+clipboard_keep_from_closed_apps = true
+
+[shell.animation]
+enabled = false
+speed = 1.0
+
+[shell.shadow]
+direction = "down_right"
+
+[shell.launcher]
+compact = true
+sort_by_usage = true
+pinned = ["res-dual.desktop", "res-single.desktop", "res-triple.desktop"]
+
+[shell.panel]
+launcher_placement = "attached"
+clipboard_placement = "attached"
+control_center_placement = "attached"
+wallpaper_placement = "attached"
+open_near_click_control_center = true
+
+[theme]
+mode = "dark"
+source = "builtin"
+builtin = "Nord"
+
+[theme.templates]
+enable_builtin_templates = true
+builtin_ids = ["gtk3", "gtk4", "qt", "kcolorscheme", "sway", "starship", "btop", "alacritty", "kitty"]
+enable_community_templates = true
+community_ids = ["steam", "vscode", "discord"]
+
+# ── Bar ───────────────────────────────────────────────────────────────────────
+
+[bar.main]
+position = "top"
+thickness = 28
+background_opacity = 0.93
+radius = 12
+margin_edge = 4
+margin_ends = 100
+padding = 2
+widget_spacing = 6
+capsule = true
+reserve_space = true
+auto_hide = false
+show_on_workspace_switch = true
+compositor_blur = true
+concave_edge_corners = true
+contact_shadow = false
+hover_highlight = true
+layer = "top"
+panel_overlap = 1
+scale = 1.0
+shadow = true
+show_tooltip = false
+smart_auto_hide = false
+start = ["control-center", "sysmon-cpu", "sysmon-ram", "sysmon-gpu-temp", "launcher", "active_window"]
+center = ["media", "workspaces"]
+end = ["tray", "screenshot", "notifications", "volume", "clipboard", "bluetooth", "network", "clock"]
+
+# v4 showed the bar only on eDP-1 / DP-2
+[bar.main.monitor.dp1]
+match = "DP-1"
+enabled = false
+
+# ── Bar widgets ───────────────────────────────────────────────────────────────
+
+[widget.sysmon-cpu]
+type = "sysmon"
+stat = "cpu_usage"
+visualization = "none"
+
+[widget.sysmon-ram]
+type = "sysmon"
+stat = "ram_used"
+visualization = "none"
+
+[widget.sysmon-gpu-temp]
+type = "sysmon"
+stat = "gpu_temp"
+visualization = "none"
+
+[widget.launcher]
+glyph = "rocket"
+
+[widget.active_window]
+max_length = 145
+title_scroll = "on_hover"
+
+[widget.media]
+max_length = 145
+artist_first = true
+title_scroll = "on_hover"
+hide_when_no_media = true
+
+[widget.workspaces]
+style = "regular"
+label_source = "id"
+max_label_chars = 2
+labels_only_when_occupied = true
+pill_scale = 0.8
+
+[widget.tray]
+hide_passive = false
+
+[widget.volume]
+show_label = false
+
+[widget.volume.actions]
+middle = "exec pwvucontrol || pavucontrol"
+
+[widget.bluetooth]
+show_label = false
+
+[widget.network]
+show_label = false
+vpn_status = "replace"
+
+[widget.clock]
+format = "{:%H:%M %a, %b %d}"
+tooltip_format = "{:%H:%M %a, %b %d}"
+
+# ── Services ──────────────────────────────────────────────────────────────────
+
+[notification]
+background_opacity = 1.0
+keep_dismissed_in_history = true
+layer = "overlay"
+monitors = ["DP-2"]
+
+[osd]
+hide_delay_ms = 2000
+background_opacity = 1.0
+
+[lockscreen]
+monitors = ["DP-2"]
+transition = []
+blur_intensity = 0.0
+tint_intensity = 0.0
+
+[wallpaper]
+enabled = true
+directory = "/home/used/pictures/wallpapers"
+fill_mode = "stretch"
+fill_color = "#000000"
+transition = ["fade", "disc", "stripes", "wipe", "honeycomb"]
+transition_duration = 500
+edge_smoothness = 0.0
+
+[weather]
+enabled = true
+unit = "celsius"
+effects = true
+
+[control_center.calendar]
+show_week_numbers = true
+
+[audio]
+enable_overdrive = false
+
+[brightness]
+enable_ddcutil = false
+
+[nightlight]
+enabled = false
+temperature_day = 6500
+temperature_night = 4000
+
+[location]
+address = "Säkylä"
+
+[idle.behavior.screen-off]
+enabled = true
+timeout = 600
+action = "screen_off"
+
+[idle.behavior.lock]
+enabled = true
+timeout = 660
+action = "lock"
+
+[system.monitor]
+enabled = true
+
+# ── Control Center (max 6 shortcuts) ──────────────────────────────────────────
+
+[[control_center.shortcuts]]
+type = "wifi"
+
+[[control_center.shortcuts]]
+type = "bluetooth"
+
+[[control_center.shortcuts]]
+type = "notification"
+
+[[control_center.shortcuts]]
+type = "power_profile"
+
+[[control_center.shortcuts]]
+type = "caffeine"
+
+[[control_center.shortcuts]]
+type = "nightlight"

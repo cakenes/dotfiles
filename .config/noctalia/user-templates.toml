@@ -1,0 +1,8 @@
+# User-defined templates for Noctalia v5
+# Add your custom templates below using [theme.templates.user.NAME]
+#
+# Example:
+# [theme.templates.user.myapp]
+# input_path = "~/.config/noctalia/templates/myapp.css"
+# output_path = "~/.config/myapp/theme.css"
+# post_hook = "myapp --reload-theme"
