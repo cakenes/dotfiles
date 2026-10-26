@@ -1,33 +1,37 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "enabled_providers": [
-    "unsloth"
-  ],
   "provider": {
     "unsloth": {
-      "api": "http://192.168.2.11:8888/v1",
+      "name": "Unsloth Local API",
+      "npm": "@ai-sdk/openai-compatible",
       "options": {
         "baseURL": "http://192.168.2.11:8888/v1",
         "apiKey": ""
       },
       "models": {
         "unsloth/Qwen3-Coder-30B-A3B-Instruct-GGUF": {
-          "id": "unsloth/Qwen3-Coder-30B-A3B-Instruct-GGUF",
           "name": "Qwen3-Coder-30B-A3B-Instruct",
           "tool_call": true,
-          "temperature": true,
           "options": {
-            "temperature": 0.7,
-            "top_p": 0.8,
+            "temperature": 0.6,
+            "top_p": 0.9,
             "top_k": 20,
-            "repetition_penalty": 1.05
+            "repetition_penalty": 1.0
+          }
+        },
+        "DavidAU/Qwen3.8-27B-TURBO-Fable-Cold-Fusion-735-882-Heretic-Uncensored-NEO-CODER-MAX-MTP-GGUF": {
+          "name": "DavidAU/Qwen3.8-27B-TURBO-Fable-Cold-Fusion-735-882-Heretic-Uncensored-NEO-CODER-MAX-MTP-GGUF",
+          "tool_call": true,
+          "options": {
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "top_k": 20,
+            "min_p": 0.0
           }
         },
         "unsloth/Qwen3.6-27B-MTP-GGUF": {
-          "id": "unsloth/Qwen3.6-27B-MTP-GGUF",
           "name": "unsloth/Qwen3.6-27B-MTP-GGUF",
           "tool_call": true,
-          "temperature": true,
           "options": {
             "temperature": 0.6,
             "top_p": 0.95,
