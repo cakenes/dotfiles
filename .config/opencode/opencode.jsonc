@@ -6,7 +6,7 @@
       "npm": "@ai-sdk/openai-compatible",
       "options": {
         "baseURL": "http://192.168.2.11:8888/v1",
-        "apiKey": ""
+        "apiKey": "sk-unsloth-ef12b0e861442c5a2ef6e2f53fe311b5"
       },
       "models": {
         "unsloth/Qwen3-Coder-30B-A3B-Instruct-GGUF": {

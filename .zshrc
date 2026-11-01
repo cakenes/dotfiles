@@ -111,6 +111,8 @@ export QT_QPA_PLATFORMTHEME=gtk3
 export PROTON_ENABLE_WAYLAND=1
 export PROTON_DXVK_LOWLATENCY=1
 export CAPACITOR_ANDROID_STUDIO_PATH=/usr/bin/android-studio
+export GH_TELEMETRY=false
+export DO_NOT_TRACK=true
 
 eval "$(zoxide init zsh --cmd cd)"
 eval "$(starship init zsh)"
