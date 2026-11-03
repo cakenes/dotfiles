@@ -276,4 +276,3 @@ bindsym XF86AudioNext exec noctalia msg media next
 bindsym XF86AudioPrev exec noctalia msg media previous
 
 include ~/.config/sway/noctalia
-
