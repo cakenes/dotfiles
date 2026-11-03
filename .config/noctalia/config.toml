@@ -142,6 +142,7 @@ layer = "overlay"
 monitors = ["DP-2"]
 
 [osd]
+position = "top_right"
 hide_delay_ms = 2000
 background_opacity = 1.0
 
