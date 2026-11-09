@@ -75,6 +75,7 @@ alias rmpkg="sudo pacman -Rsn"
 alias cleanch="sudo pacman -Scc"
 alias fixpacman="sudo rm /var/lib/pacman/db.lck"
 alias update="sudo pacman -Syu"
+alias dual="pactl load-module module-combine-sink sink_name=dual_bt sink_properties=device.description="Dual_Bluetooth" slaves=$(pactl list short sinks | grep bluez_output | awk '{print $2}' | paste -sd,)"
 
 # Help people new to Arch
 alias apt="man pacman"
